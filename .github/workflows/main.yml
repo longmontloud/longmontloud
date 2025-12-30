@@ -1,0 +1,39 @@
+name: Update Longmont Music Calendar
+
+on:
+  schedule:
+    # Runs at 10:00 AM UTC (3:00 AM MST) every Monday
+    - cron: '0 10 * * 1'
+  workflow_dispatch: # This allows you to run it manually via a button
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    # This permission is CRITICAL for the script to save the .ics file back to your repo
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.9'
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Run Scraper
+        run: python ldda-events-scrape.py
+
+      - name: Commit and Push Calendar
+        run: |
+          git config --global user.name "GitHub Action"
+          git config --global user.email "actions@github.com"
+          git add longmont_music_final.ics  # Make sure this matches the filename in your script
+          # This line prevents the action from failing if there are no new events
+          git diff --quiet && git diff --staged --quiet || (git commit -m "Auto-update calendar" && git push)
