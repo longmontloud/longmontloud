@@ -129,21 +129,26 @@ def main():
         start_dt, end_dt = parse_time(time_div.get_text(strip=True) if time_div else "", base_date)
 
         print(f"  [+] {title} - Scraping details...")
-        description = get_event_description(event_url)
-
-        # 5. Fetch Details
+        
+        # 1. Fetch Details (Only once!)
         description = get_event_description(event_url)
         
-        # --- NEW GENRE TAGGING ---
+        # 2. Genre Tagging
         genre_tag = detect_genre(title, description)
 
-        # 6. Add to Calendar
+        # 3. Create the Event
         e = Event()
-        # This will result in: 🎵 [Rock] Band Name
         e.name = f"🎵 {genre_tag}{title}"
         e.begin = start_dt
         e.end = end_dt
+        e.location = venue
+        e.description = f"{description}\n\nLink: {event_url}"
+        
+        # 4. CRITICAL: Add the event to the calendar and increment the count
+        cal.events.add(e)
+        count += 1
 
+    # --- After the for loop finishes ---
     if count > 0:
         with open(OUTPUT_FILE, 'w', encoding='utf-8') as f:
             f.writelines(cal.serialize_iter())
