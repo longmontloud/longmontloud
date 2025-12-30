@@ -18,6 +18,27 @@ EXCLUDE = ['karaoke', 'open mic', 'trivia', 'bingo', 'workshop', 'class', 'your 
 MUSIC_KEYWORDS = ['music', 'band', 'concert', 'live', 'symphony', 'acoustic', 'jazz', 'blues', 'rock', 'singer', 'songwriter', 'orchestra', 'dj', 'tribute', 'performance', 'punk', 'noise', 'experimental', 'hip-hop', 'rap', 'electronic']
 TRUSTED_VENUES = ['bootstrap brewing', '300 suns brewing', 'wibby brewing', 'bricks on main', 'the dickens', 'abbott & wallace']
 
+# --- GENRE CONFIG ---
+GENRE_MAP = {
+    'Jazz': ['jazz', 'swing', 'big band'],
+    'Rock': ['rock', 'punk', 'metal', 'electric guitar', 'indie'],
+    'Folk/Acoustic': ['folk', 'acoustic', 'bluegrass', 'singer-songwriter', 'unplugged', 'banjo'],
+    'Blues': ['blues', 'harmonica'],
+    'Electronic': ['dj', 'electronic', 'synth', 'techno', 'house music'],
+    'Classical': ['orchestra', 'symphony', 'classical', 'chamber', 'choir'],
+	'Hip-Hop': ['hip-hop', 'hip hop', 'rap'],
+	'R&B': ['R&B', 'soul'],
+	'Funk': ['funk']
+}
+
+def detect_genre(title, description):
+    """Scans text for keywords and returns a bracketed tag like [Rock]."""
+    combined_text = f"{title} {description}".lower()
+    for genre, keywords in GENRE_MAP.items():
+        if any(word in combined_text for word in keywords):
+            return f"[{genre}] "
+    return "" # Returns empty if no match found
+
 def get_event_description(url):
     """Deep scrapes the event page for the actual description text."""
     try:
@@ -110,14 +131,18 @@ def main():
         print(f"  [+] {title} - Scraping details...")
         description = get_event_description(event_url)
 
+        # 5. Fetch Details
+        description = get_event_description(event_url)
+        
+        # --- NEW GENRE TAGGING ---
+        genre_tag = detect_genre(title, description)
+
+        # 6. Add to Calendar
         e = Event()
-        e.name = f"🎵 {title}"
+        # This will result in: 🎵 [Rock] Band Name
+        e.name = f"🎵 {genre_tag}{title}"
         e.begin = start_dt
         e.end = end_dt
-        e.location = venue
-        e.description = f"{description}\n\nLink: {event_url}"
-        cal.events.add(e)
-        count += 1
 
     if count > 0:
         with open(OUTPUT_FILE, 'w', encoding='utf-8') as f:
