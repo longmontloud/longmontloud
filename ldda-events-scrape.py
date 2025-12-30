@@ -32,11 +32,17 @@ GENRE_MAP = {
 }
 
 def detect_genre(title, description):
-    """Scans text for keywords and returns a bracketed tag like [Rock]."""
+    """Scans text for whole words only using Regex to avoid 'Bootstrap'/'Rap' issues."""
     combined_text = f"{title} {description}".lower()
+    
     for genre, keywords in GENRE_MAP.items():
-        if any(word in combined_text for word in keywords):
-            return f"[{genre}] "
+        for keyword in keywords:
+            # \b creates a "word boundary"
+            # This ensures 'rap' matches 'rap music' but NOT 'bootstrap'
+            pattern = rf"\b{re.escape(keyword.lower())}\b"
+            if re.search(pattern, combined_text):
+                return f"[{genre}] "
+                
     return "" # Returns empty if no match found
 
 def get_event_description(url):
