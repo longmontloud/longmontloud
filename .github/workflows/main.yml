@@ -28,7 +28,7 @@ jobs:
           pip install -r requirements.txt
 
       - name: Run Scraper
-        run: python longmont_music.py
+        run: python ldda-events-scrape.py
 
       - name: Commit and Push Calendar
         run: |
