@@ -2,196 +2,20 @@ BEGIN:VCALENDAR
 VERSION:2.0
 PRODID:ics.py - http://git.io/lLljaA
 BEGIN:VEVENT
-DESCRIPTION:Book your reservation for 1/2 Price Bottle Night and live music with Tom Moran. Music is from 5pm-8pm.\n\nLink: https://www.downtownlongmont.com/do/half-price-bottle-night-and-live-music-1
-DTEND:20260227T040000Z
-LOCATION:Kuper Wine Bar
-DTSTART:20260226T220000Z
-SUMMARY:🎵 Half Price Bottle Night & Live Music
-UID:e905e6d4-71e6-42b5-a454-a0fd60695ae4@e905.org
+DESCRIPTION:AoxomoxoA plays music from the Grateful Dead universe\, and add our unique jamming style to keep the bus rollin! Powered by double drums\, our unique instrumentation allows us to play a wide range of dead tunes\, and take the jams to the outer reaches of space and time...\n\nLink: https://www.downtownlongmont.com/do/aoxomoxoa-at-bootstrap-brewing-4
+DTEND:20260207T040000Z
+LOCATION:Bootstrap Brewing
+DTSTART:20260207T010000Z
+SUMMARY:🎵 AoxomoxoA at Bootstrap Brewing!
+UID:dd1ec2ba-caaa-4392-8590-4f8e1a1070e1@dd1e.org
 END:VEVENT
 BEGIN:VEVENT
-DESCRIPTION:AoxomoxoA is a Boulder County based band that plays music from the Grateful Dead universe. With strong vocals\, creative interpretations\, and the love of all things Grateful Dead\, AoxomoxoA plays all over the Front Range region and puts on a professional and fan friendly show!\n\nLink: https://www.downtownlongmont.com/do/music-at-bricks-on-main-aoxomoxoa
-DTEND:20260110T040000Z
+DESCRIPTION:MMB3 Organ Trio feature Ryan McCurry on Hammond Organ and vocals\, John Massone on guitar and vocals\, and Steve Balgooyen on drums and vocals. MMB3 plays a mix of classic funk\, soul and blues—originals and creative takes on classic covers—with a New Orleans sensibility.\n\nLink: https://www.downtownlongmont.com/do/music-at-bricks-on-main-mmb3-organ-trio
+DTEND:20260202T030000Z
 LOCATION:Bricks on Main
-DTSTART:20260110T010000Z
-SUMMARY:🎵 Music at Bricks on Main "AoxomoxoA"
-UID:b18ef991-8c47-43fe-a24e-bbffa47733d2@b18e.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Deborah Stafford & The Night Stalkers plays the kind of Funky Blues and Soul that makes you want to get up and shake what your mama gave ya'! Soulful vocals and Sax make this Blues Band a step above the rest.\n\nLink: https://www.downtownlongmont.com/do/deborah-stafford-and-the-night-stalkers-at-bootstrap-brewing-1
-DTEND:20260131T040000Z
-LOCATION:Bootstrap Brewing
-DTSTART:20260131T010000Z
-SUMMARY:🎵 [Blues] Deborah Stafford and the Night Stalkers at Bootstrap Brewing!
-UID:2241e7c2-9b88-4fda-9ca5-e780eb322fc4@2241.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Book your reservation for 1/2 Price Bottle Night and live music with Tom Moran. Music is from 5pm-8pm.\n\nLink: https://www.downtownlongmont.com/do/half-price-bottle-night-and-live-music-1
-DTEND:20260116T040000Z
-LOCATION:Kuper Wine Bar
-DTSTART:20260115T220000Z
-SUMMARY:🎵 Half Price Bottle Night & Live Music
-UID:aacf4f32-7fec-4487-9369-501898e7d794@aacf.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Enjoy an evening of beautiful classical guitar with Tony.  And\, we never know who else might jump on the stage with him!\n\nLink: https://www.downtownlongmont.com/do/tony-crank-and-friends-at-bootstrap-brewing-4
-DTEND:20260109T040000Z
-LOCATION:Bootstrap Brewing
-DTSTART:20260109T010000Z
-SUMMARY:🎵 [Classical] Tony Crank and Friends at Bootstrap Brewing!
-UID:191ee5fc-7e31-4707-a116-eab5db15279c@191e.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Trio made up of Kenny Peralez\, Thomas Gronberg and Dan Crecco always bring an amazing show. Come hang out for a bit\, you never know until you know!\n\nLink: https://www.downtownlongmont.com/do/music-at-bricks-on-main-minstrel-in-the-galaxy-1
-DTEND:20260123T030000Z
-LOCATION:Bricks on Main
-DTSTART:20260123T010000Z
-SUMMARY:🎵 Music at Bricks on Main "Minstrel in the Galaxy"
-UID:a389006c-7def-4d61-8e97-ad004b81b804@a389.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Kingpin Posse\, a dynamic country and rock band known for their electrifying live performances and their distinctive fusion of classic country and southern rock hits. Colorado Country Music Hall of Fame winners of the 2024 "Newcomer of the Year"\, Kingpin Posse captivates audiences with their high-energy sound and infectious stage presence.\n\nLink: https://www.downtownlongmont.com/do/kingpin-posse-at-bootstrap-brewing-2
-DTEND:20260118T040000Z
-LOCATION:Bootstrap Brewing
-DTSTART:20260118T010000Z
-SUMMARY:🎵 [Rock] Kingpin Posse at Bootstrap Brewing!
-UID:a52bb447-f466-4015-ba6b-305c3b9ba74c@a52b.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:All your favorite rock hits from the 90s\, 00s\, and more. Lead vocalist Travis Ross\, along with AJ Scifres on keys and vocals\, Randy McCoy on bass\, Mike Dudley on drums\, and Mical Coblentz on lead guitar\, form a powerhouse ensemble that delivers killer harmonies and infectious energy with every performance.\n\nLink: https://www.downtownlongmont.com/do/ten-cent-profit-at-bootstrap-brewing
-DTEND:20260110T040000Z
-LOCATION:Bootstrap Brewing
-DTSTART:20260110T010000Z
-SUMMARY:🎵 [Rock] Ten Cent Profit at Bootstrap Brewing!
-UID:a43110ba-3874-4047-862c-b839a218b967@a431.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Join the Longmont Symphony for a whimsical and unforgettable journey through Michael Close’s A Child’s Book of Animals\, where you’ll hop with frogs\, soar with seagulls\, dive with octopuses and meet a swan with big dreams of becoming a rapper. The program also features the exhilarating finale of Sibelius’ Symphony No. 2\, performed side-by-side with the talented musicians from the Longmont Youth Symphony\, and a showcase of the winner of our new Concerto Competition. It’s a concert full of imagination\, inspiration and extraordinary music for all ages.\n\nLink: https://www.downtownlongmont.com/do/lso-family-concert-a-childs-book-of-animals
-DTEND:20260118T000000Z
-LOCATION:Longmont Symphony Orchestra
-DTSTART:20260117T230000Z
-SUMMARY:🎵 [Classical] LSO Family Concert: A Child’s Book of Animals
-UID:530784f7-993a-433d-85a0-63bfd7bb4d63@5307.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:$25 cover\nBuy your pre-sales tickets in the taproom or at https://www.ticketleap.events/tickets/lmoe-1-24-26.\nPre-sales end on 1/23 and then you can buy your tickets at the door after pre-sale ticket holders get in to choose their favorite seat. Additional parking available along 2nd Avenue and Pratt Street.\nLast Men On Earth have been one of the most popular variety rock bands in Northern Colorado for over 10 years.\nAlso featuring members of The Long Run\, and other Northern CO bands\, they have built a reputation for years of not being able to be ‘pigeon-holed’ into one category of music.\nYou will hear hits from rock bands like Journey\, Toto\, Foreigner\, Van Halen\, but you’ll also hear hits from bands like The Commodores\, Zac Brown\, Golden Earring\, Bryan Adams\, and everything in between.\nLast Men On Earth will leave you guessing what lost radio hit they will play next\, that you forgot you loved!\n\nLink: https://www.downtownlongmont.com/do/last-men-on-earth-at-bootstrap-brewing-1
-DTEND:20260125T040000Z
-LOCATION:Bootstrap Brewing
-DTSTART:20260125T010000Z
-SUMMARY:🎵 [Rock] Last Men on Earth at Bootstrap Brewing!
-UID:4d839621-fd49-4cab-8908-1c114fee9b9f@4d83.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Come enjoy some Colorado original\, soulful\, folk and blues music by Thomas! Some tasty covers available as well!\n\nLink: https://www.downtownlongmont.com/do/thomas-dow-live-music
-DTEND:20260111T030000Z
-LOCATION:300 Suns Brewing
-DTSTART:20260111T010000Z
-SUMMARY:🎵 [Folk/Acoustic] Thomas Dow - Live Music
-UID:e371eeda-4fa8-4396-a232-1baa3c37600d@e371.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:While playing the I25 corridor from Colorado to Montana for over 10 years\, Lyons based Americana artist Jay Stott has been a finalist in songwriting competitions in Texas\, Colorado and Montana\, and performed at Rail on the River and Boulder’s Big Hootenanny this year.\n\nLink: https://www.downtownlongmont.com/do/music-at-bricks-on-main-jay-stott-band
-DTEND:20260116T030000Z
-LOCATION:Bricks on Main
-DTSTART:20260116T010000Z
-SUMMARY:🎵 Music at Bricks on Main "Jay Stott Band"
-UID:25b7bec7-feb9-4cc6-871b-2b268148a507@25b7.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:New Wave Sensation performs all your favorite New Wave classics from the 80's.\n\nLink: https://www.downtownlongmont.com/do/new-wave-sensation-at-bootstrap-brewing
-DTEND:20260117T040000Z
-LOCATION:Bootstrap Brewing
-DTSTART:20260117T010000Z
-SUMMARY:🎵 New Wave Sensation at Bootstrap Brewing!
-UID:bd3ef0e3-28eb-4952-bf4a-3829688e57b3@bd3e.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Book your reservation for 1/2 Price Bottle Night and live music with Tom Moran. Music is from 5pm-8pm.\n\nLink: https://www.downtownlongmont.com/do/half-price-bottle-night-and-live-music-1
-DTEND:20260109T040000Z
-LOCATION:Kuper Wine Bar
-DTSTART:20260108T220000Z
-SUMMARY:🎵 Half Price Bottle Night & Live Music
-UID:2213c8c1-76e9-495f-aa3c-d306aedcc28f@2213.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Featuring Clancy Newman\, Cello | Clancy Newman is back with the Longmont Symphony to continue exploring the cello repertoire in all its glory. In Strauss’s 45-minute tone poem\, the solo cello represents the Don — a self-proclaimed (and not so sound of mind!) knight errant who believes windmills are giants and sheep are an invading army. Also on the program is Tchaikovsky’s Variations for Cello and Orchestra “on a Rococo Theme\,” paired with a symphony by Tchaikovsky’s favorite composer\, Mozart.\nJoin us for the Pre-Concert Talk at 6pm.\n\nLink: https://www.downtownlongmont.com/do/lso-concert-cello-explorations-strauss-and-tchaikovsky
-DTEND:20260222T040000Z
-LOCATION:Longmont Symphony Orchestra
-DTSTART:20260222T020000Z
-SUMMARY:🎵 [Classical] LSO Concert Cello Explorations: Strauss & Tchaikovsky
-UID:cb1f287e-fcd3-48b7-a321-201240e94141@cb1f.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:The M.O.B. plays what you want to hear! From Allmans to ZZ Top with some Motown\, Funk\, Country and Blues tossed in.\nFeaturing Mike Ortiz (vox\,guit)\, Rick Davie (bass\,vox)\, Bunk Hess (drums\,vox)\, Kenny Peralez (guit\,vox) and Stephen Angus (sax\,flute\,perc\,vox).\n\nLink: https://www.downtownlongmont.com/do/music-at-bricks-on-main-the-mob-mike-ortiz-band
-DTEND:20260117T040000Z
-LOCATION:Bricks on Main
-DTSTART:20260117T010000Z
-SUMMARY:🎵 [Blues] Music at Bricks on Main "The M.O.B. (Mike Ortiz Band)"
-UID:dda245dc-4a76-4162-93e2-77fefd7db980@dda2.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Morpheus is Colorado's musical tribute to the band Morphine.\n\nLink: https://www.downtownlongmont.com/do/morpheus-dreaming-at-bootstrap-brewing-10
-DTEND:20260130T040000Z
-LOCATION:Bootstrap Brewing
-DTSTART:20260130T010000Z
-SUMMARY:🎵 Morpheus Dreaming at Bootstrap Brewing!
-UID:8fcc684b-9dd8-4b17-88bd-99e691d1d485@8fcc.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Guitars\, Cadillacs\, and hillbilly music from this singer/songwriter based in Lyons\, CO\n\nLink: https://www.downtownlongmont.com/do/jake-edmoundson-live-music
-DTEND:20260208T030000Z
-LOCATION:300 Suns Brewing
-DTSTART:20260208T010000Z
-SUMMARY:🎵 Jake Edmoundson - Live Music
-UID:255a1f9c-1f03-471a-a7ca-d63ac6133008@255a.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:An Owsley-Grade Grateful Dead Experience.\n\nLink: https://www.downtownlongmont.com/do/music-at-bricks-on-main-crick-wooder
-DTEND:20260118T040000Z
-LOCATION:Bricks on Main
-DTSTART:20260118T010000Z
-SUMMARY:🎵 Music at Bricks on Main "Crick Wooder"
-UID:68c63422-9c8f-4bf7-b5b8-65fbffce8744@68c6.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Blending tight grooves\, infectious energy\, and a mix of rock\, funk\, and soul\, Boogie River delivers a sound that’s both nostalgic and fresh. With each member bringing years of experience from their previous bands\, the result is a powerhouse of musicianship\, creativity\, and pure fun.\n\nLink: https://www.downtownlongmont.com/do/music-at-bricks-on-main-boogie-river
-DTEND:20260126T030000Z
-LOCATION:Bricks on Main
-DTSTART:20260126T000000Z
-SUMMARY:🎵 [Rock] Music at Bricks on Main "Boogie River"
-UID:e7291c8d-7d4d-4f1d-a558-0e2773ac962c@e729.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Book your reservation for 1/2 Price Bottle Night and live music with Tom Moran. Music is from 5pm-8pm.\n\nLink: https://www.downtownlongmont.com/do/half-price-bottle-night-and-live-music-1
-DTEND:20260213T040000Z
-LOCATION:Kuper Wine Bar
-DTSTART:20260212T220000Z
-SUMMARY:🎵 Half Price Bottle Night & Live Music
-UID:f3a395a2-fe8d-4806-9573-bfbb27fc69cd@f3a3.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Book your reservation for 1/2 Price Bottle Night and live music with Tom Moran. Music is from 5pm-8pm.\n\nLink: https://www.downtownlongmont.com/do/half-price-bottle-night-and-live-music-1
-DTEND:20260220T040000Z
-LOCATION:Kuper Wine Bar
-DTSTART:20260219T220000Z
-SUMMARY:🎵 Half Price Bottle Night & Live Music
-UID:985621d6-aff5-49fc-80de-5ad4de96e104@9856.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Book your reservation for 1/2 Price Bottle Night and live music with Tom Moran. Music is from 5pm-8pm.\n\nLink: https://www.downtownlongmont.com/do/half-price-bottle-night-and-live-music-1
-DTEND:20260130T040000Z
-LOCATION:Kuper Wine Bar
-DTSTART:20260129T220000Z
-SUMMARY:🎵 Half Price Bottle Night & Live Music
-UID:18f0acb8-252d-4d41-ae81-7ec26dcec262@18f0.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Book your reservation for 1/2 Price Bottle Night and live music with Tom Moran. Music is from 5pm-8pm.\n\nLink: https://www.downtownlongmont.com/do/half-price-bottle-night-and-live-music-1
-DTEND:20260123T040000Z
-LOCATION:Kuper Wine Bar
-DTSTART:20260122T220000Z
-SUMMARY:🎵 Half Price Bottle Night & Live Music
-UID:c52cdef9-351c-4af7-b108-f08638d7176e@c52c.org
+DTSTART:20260202T000000Z
+SUMMARY:🎵 [Blues] Music at Bricks on Main "MMB3 Organ Trio"
+UID:860320ba-a433-4af6-8ea0-3bcd2bf84768@8603.org
 END:VEVENT
 BEGIN:VEVENT
 DESCRIPTION:Longmont local.. come on out for an enjoyable night of music with no cover.\n\nLink: https://www.downtownlongmont.com/do/music-at-bricks-on-main-john-mckay-band
@@ -199,79 +23,55 @@ DTEND:20260124T040000Z
 LOCATION:Bricks on Main
 DTSTART:20260124T010000Z
 SUMMARY:🎵 Music at Bricks on Main "John McKay Band"
-UID:8d91fcf0-c7c2-4881-95c6-ca78481a098b@8d91.org
+UID:e762fb82-63c8-44a1-8c8d-dd874fbc1b10@e762.org
 END:VEVENT
 BEGIN:VEVENT
-DESCRIPTION:Still the Same – A Bob Seger Tribute performs the timeless roots-rock hits of Detroit singer-songwriter-musician Bob Seger.\n\nLink: https://www.downtownlongmont.com/do/still-the-same-a-bob-segar-tribute-at-bootstrap-brewing
-DTEND:20260201T040000Z
+DESCRIPTION:Blending tight grooves\, infectious energy\, and a mix of rock\, funk\, and soul\, Boogie River delivers a sound that’s both nostalgic and fresh. With each member bringing years of experience from their previous bands\, the result is a powerhouse of musicianship\, creativity\, and pure fun.\n\nLink: https://www.downtownlongmont.com/do/music-at-bricks-on-main-boogie-river
+DTEND:20260126T030000Z
+LOCATION:Bricks on Main
+DTSTART:20260126T000000Z
+SUMMARY:🎵 [Rock] Music at Bricks on Main "Boogie River"
+UID:9e9caac4-a818-4664-8af2-5e5acb29bd24@9e9c.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Joe C. Wails Gang is more than just your normal run of the mill\, classic rock band. We focus on bringing smokin’\, groove-oriented music from the funky 70’s to modern classics of the times. The intent is to provide the audience with more than just music to tap your toes\, but grooves to move your body to.\n\nLink: https://www.downtownlongmont.com/do/joe-c-wails-gang-at-bootstrap-brewing-4
+DTEND:20260208T040000Z
 LOCATION:Bootstrap Brewing
-DTSTART:20260201T010000Z
-SUMMARY:🎵 [Rock] Still the Same- a Bob Segar Tribute at Bootstrap Brewing!
-UID:9dffc854-6859-45bb-8ac0-e54c5d8da472@9dff.org
+DTSTART:20260208T010000Z
+SUMMARY:🎵 [Rock] Joe C. Wails Gang at Bootstrap Brewing!
+UID:0121e452-a99e-495a-ace7-ab5c236dcaff@0121.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:The Steel Monkey Band is a tribute band dedicated to celebrating the music of Ian Anderson and Jethro Tull\, known for their distinctive blend of progressive rock\, folk\, and classical influences. The bands dedication to authenticity and musicianship positions them as a noteworthy act as a tribute.\n\nLink: https://www.downtownlongmont.com/do/music-at-bricks-on-main-steel-monkey
+DTEND:20260221T040000Z
+LOCATION:Bricks on Main
+DTSTART:20260221T010000Z
+SUMMARY:🎵 [Rock] Music at Bricks on Main "Steel Monkey"
+UID:ec67fab7-9d61-43ef-97e4-56d77b36b6c5@ec67.org
 END:VEVENT
 BEGIN:VEVENT
 DESCRIPTION:Book your reservation for 1/2 Price Bottle Night and live music with Tom Moran. Music is from 5pm-8pm.\n\nLink: https://www.downtownlongmont.com/do/half-price-bottle-night-and-live-music-1
-DTEND:20260306T040000Z
+DTEND:20260116T040000Z
 LOCATION:Kuper Wine Bar
-DTSTART:20260305T220000Z
+DTSTART:20260115T220000Z
 SUMMARY:🎵 Half Price Bottle Night & Live Music
-UID:88ae7011-eed5-47f8-9186-13feaa60a6e9@88ae.org
+UID:9be9476c-d868-47a1-b488-00a3e0582bab@9be9.org
 END:VEVENT
 BEGIN:VEVENT
-DESCRIPTION:Folk\, soul\, blues and rockin’ powerful vocals from this local singer-songwriter.\n\nLink: https://www.downtownlongmont.com/do/andy-eppler-live-music
-DTEND:20260118T030000Z
-LOCATION:300 Suns Brewing
-DTSTART:20260118T010000Z
-SUMMARY:🎵 [Folk/Acoustic] Andy Eppler - Live Music
-UID:10149fb6-15de-4cd7-8a11-2ef7151728bb@1014.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:The West Hwy 7 Band is an Outlaw Country Honky Tonk machine. This band honors the old school country legends like Cash\, Hag\, Willie\, Waylon\, Paycheck\, Jones\, the CDB\, Dwight. No sissy snowflake country pop here just the raw unfiltered Boom Chick Twang that makes your MaMa proud.\n\nLink: https://www.downtownlongmont.com/do/west-hwy-7-at-bootstrap-brewing-1
-DTEND:20260124T040000Z
-LOCATION:Bootstrap Brewing
-DTSTART:20260124T010000Z
-SUMMARY:🎵 West Hwy 7 at Bootstrap Brewing!
-UID:2f3f3f9a-ec0c-437b-bae1-32d2c7e3538c@2f3f.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Grab your ticket\nand head downtown for a day and night of what Longmont does best - live local music\, unique venues\, good vibes\, and community spirit! Presented by Flatirons Bank.\nWith 60 performances at 16 venues throughout Downtown Longmont\, you don’t want to miss out on this day of fun and live music Downtown! We're so excited to bring our 2025 headliner Erica Brown to the WWMS! Full performance lineup and schedule are available on our website. This year's lineup won't disappoint\, and you don't want to miss out!\nGet your tickets before they sell out!\nFind all the information at the\nWinter Walkabout webpage\nHuge THANK YOU to all of our fantastic sponsors who make this event possible:\nThe Longmont Downtown Development Authority\, Longmont Creative District\, SouthState Bank\, Audio Curations\, 105.5 The Colorado Sound\, and all of our venues. We couldn't do this without you!\n\nLink: https://www.downtownlongmont.com/do/winter-walkabout-music-showcase
-DTEND:20260208T043000Z
-LOCATION:Downtown Longmont
-DTSTART:20260207T210000Z
-SUMMARY:🎵 2026 Winter Walkabout Music Showcase
-UID:d0b26d35-6e94-4d54-b789-465f1bd891dd@d0b2.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Join us for a special Songwriters in the Round style concert to benefit Recovery Cafe Longmont!\nConnected by Music is proud to support Recovery Cafe Longmont with a special no-tickets music show.\nThis event will feature talented local singer-songwriters:\nMarilyn Walker\nKaren Horan\nRobby Layton\nRecovery Café Longmont is growing and expanding in their capability to support the community. With the purchase and renovation of 801 Main Street\, they will be able to provide more opportunities for community in a healing\, supportive space.\nPlease RSVP at https://www.connectedbymusic.org/event-details/2026-benefit-for-recovery-cafe-longmont\nTime: 4:00 PM -5:30 PM\nLocation: Longmont Central Presbyterian Church\, 402 Kimbark St\, Longmont\, CO 80501\,\nCost: No cost to attend\, donations to Connected by Music with all funds going to Recovery Cafe Longmont\n\nLink: https://www.downtownlongmont.com/do/benefit-concert-for-recovery-cafe-longmont
-DTEND:20260222T003000Z
-LOCATION:Central Longmont Presbyterian Church
-DTSTART:20260221T230000Z
-SUMMARY:🎵 Benefit Concert for Recovery Cafe Longmont
-UID:ed692685-8e43-444a-9a98-e3b10df67df2@ed69.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Curious about what it takes to spin records like a pro? Join us for a hands-on “Try It” class where local Longmont DJ Antonette will introduce you to the art of vinyl DJing. Antonette will walk you through the basics—gear\, beat-matching\, mixing and how DJs shape the vibe of a room—while giving a live demonstration on the decks.\nBring one or two of your own dance records if you’d like\; we'll work them into a set so you can hear your favorite tunes in the mix!\nNo experience needed—just a love of music and a willingness to try something new.Come hang out\, learn something cool\, and discover the magic behind the turntables.\n\nLink: https://www.downtownlongmont.com/do/try-it-series-dj-using-vinyl-with-dj-antonette
-DTEND:20260110T230000Z
-LOCATION:Butterscotch Studios
-DTSTART:20260110T210000Z
-SUMMARY:🎵 [Electronic] Try It Series: DJ using vinyl with DJ Antonette
-UID:fad99ba0-2672-42ef-a243-f79b3c9fed62@fad9.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:This is an intimate live show in downtown Longmont\, Colorado presented by The Soundpost Sessions at The Times Collaborative featuring two songwriters and host Monica Marie LaBonte all on stage swapping songs and stories in-the-round. Music is from 7:30-9:30\, doors at 7:00. Join us for this very special ongoing musical series every other month!\n$18 Advance (reserved seating)\n$20 Day of Show\nThe Artists:\nBritt Devens https://www.brittdevens.com/\nBritt Devens is a musician who writes songs about hope\, heartbreak\, and recovery. A native of Fort Collins\, CO\, Devens uses her music to explore the vulnerabilities of her own experiences in life and to remind her audience of the importance of self-care. Promoting the message “Take Care of You” both mentally and physically - Devens’ music is for people who can relate to a struggle but still continue to have hope for a brighter day. She shares her story through the intimate lyrics and songs that she creates. Strong\, emotive vocals complement her unique guitar style\, making her a real standout in a sea of singer-songwriters. “If just one person can resonate with my music\, then I will have given back hope like music has given me hope through some of my hardest times.” Britt has released a number of singles and EPs\; her most recent effort\, “Here I Go Again” was released on August 25\, 2023\nEllsworth www.ellsworththefolksinger.com\nMaybe it’s their sincere lyrics or humorous stage presence that makes first time listeners become devoted fans of ELLSWORTH after only two songs. Maybe it’s the way ELLSWORTH presents themselves\, so natural and authentic\, with the fluidity of their gender finding its moment on stage and in their music. Either way\, ELLSWORTH “has a remarkable way of cracking open your soul and finding the hidden corners of your heart you've too long forgotten or didn't even know existed” (Sway Wild\, Dave McGraw and Mandy Fer).With a uniquely powerful voice and a knack for lyrical storytelling\, ELLSWORTH is an artist on the rise in Denver and around the world.Currently\, ELLSWORTH is a finalist in the 2022 Great American Song Contest\, and they recently placed their song\, Growing Pains\, in the Disney+ show Diary of a Future President. “[ELLSWORTH has] a stunningly pure voice\, boundless enthusiasm and a way with words that hugs deep into our hearts. They are a singer-songwriter that is finding their feet and it feels like they will only get better and better through time. Having talent is one thing but being sincere\, putting in the hard work and going for your dreams through undoubted trial and error\, is how you become truly great at what you set your mind to” (AnR Factory\, London\, UK).\nMonica Marie LaBonte monicamariemusic.com\nFrom a wide-eyed tike delicately pressing the keys of her mother’s upright piano to a seasoned artist taking various stages across the country\, Monica Marie LaBonte has always been guided by song.With the sharp ability to craft tracks that speak to the fragility and wonder of life\, the crystalline vocalist continues to attract listeners with her stirring blend of folk and country. At times\, her lyrics come across as wise whisperings from a dear friend. At others\, they hold all the vulnerability and transparency of raw confessions. A keen observer\, LaBonte bears witness to life’s magic and heartache and artfully weaves the intricacies of the human condition into tunes that possess undeniable intimacy\, grace and grit.In her over 10-year career\, the Colorado native has played hundreds of venues\, including the historic Gold Hill Inn and Planet Bluegrass. Whether belting out ballads in a small listening room or playing to tens of thousands at an open-air venue\, she brings a palpable authenticity to each gig.Known for her stint in mystic-Americana band Monocle\, her stellar musicianship and gift for commanding a stage shines just as bright in her solo work.Armed with an acoustic and her truth\, it’s clear LaBonte is pursuing her art for all the right reasons. Although her creative pursuits are guided by pure passion\, LaBonte hasn’t escaped critical praise and success. A finalist In the 2018 Songwriter Showcase\, at Rocky Mountain Folks Fest in Lyons\, Colo.\, she continues to impress with her art.A natural-born wordsmith — in the vein of Joni Mitchell and Alison Krauss — it’s easy to see why the songstress has packed coffeehouses\, held her own on the lineup at the Telluride Bluegrass Festival and been hailed as having “a voice I trust” by fellow musician Daniel Rodriguez (founding member of Elephant Revival).Powerful\, yet understated — poetic\, yet real — LaBonte remains one to watch.\n\nLink: https://www.downtownlongmont.com/do/mixtape-songwriter-showcase-featuring-britt-devens-and-ellsworth
-DTEND:20260109T043000Z
-LOCATION:The Times Collaborative / 338 Main St
-DTSTART:20260109T023000Z
-SUMMARY:🎵 [Folk/Acoustic] MIXTAPE: Songwriter Showcase featuring Britt Devens and Ellsworth
-UID:ee1307e6-da75-4f04-b577-30f89a130682@ee13.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:The Delta Sonics music takes a Chicago Blues base and seasons it with Swing\, Delta\, N’awlins R&B and some early Rock n' Roll . This hard -working band averages over 200 shows a year. They have been featured at many of the major festivals in Colorado and have been the back-up band for nationally known Blues artists.\n\nLink: https://www.downtownlongmont.com/do/music-at-bricks-on-main-the-delta-sonics
-DTEND:20260125T040000Z
+DESCRIPTION:Alt Country & Roots Rock Excitement!\n\nLink: https://www.downtownlongmont.com/do/music-at-bricks-on-main-the-big-spenders
+DTEND:20260214T040000Z
 LOCATION:Bricks on Main
-DTSTART:20260125T010000Z
-SUMMARY:🎵 [Jazz] Music at Bricks on Main "The Delta Sonics"
-UID:5b812c51-caf7-454c-98b3-41e19709d873@5b81.org
+DTSTART:20260214T010000Z
+SUMMARY:🎵 [Rock] Music at Bricks on Main "The Big Spenders"
+UID:b6d556d7-4d39-4f3e-a6e2-ebdab031aaeb@b6d5.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Book your reservation for 1/2 Price Bottle Night and live music with Tom Moran. Music is from 5pm-8pm.\n\nLink: https://www.downtownlongmont.com/do/half-price-bottle-night-and-live-music-1
+DTEND:20260313T030000Z
+LOCATION:Kuper Wine Bar
+DTSTART:20260312T210000Z
+SUMMARY:🎵 Half Price Bottle Night & Live Music
+UID:aa7265d5-f7e3-41a8-a54d-5f874bd46f20@aa72.org
 END:VEVENT
 BEGIN:VEVENT
 DESCRIPTION:Join us for a Sing-A-Long of Old School Hymns mixed in with Cheesy Love Songs from all decades! Sing Like No One's Listening! General Admission $ 10. Limited Vip Table Options. Tickets in web link or search "Beer and Hymns Cheesy Love Songs" in EventBrite.\nBeer and Hymns is a sing-along event! Come sing your favorite hymns and pop hits from every decade—with voices strong and glasses raised!\nAbout Beer and Hymns Northern Colorado:Music is good for the soul! Beer and Hymns is a casual gathering for all people who love the idea of singing old-school songs of hope mixed with favorite pop tunes—all while enjoying quality craft beer (or soda\, if that’s your thing). Join us and “Sing Like No One's Listening!”\nYou can bring your own food to this event: Your favorite\, pizza\, burgers etc. or even just snacks. ALL BEVERAGES must be purchased from our host Bootstrap Brewing.\n\nLink: https://www.downtownlongmont.com/do/beer-and-hymns-cheesy-love-songs-edition
@@ -279,15 +79,159 @@ DTEND:20260216T030000Z
 LOCATION:Bootstrap Brewing
 DTSTART:20260216T010000Z
 SUMMARY:🎵 [R&B] Beer and Hymns "Cheesy Love Songs" Edition!
-UID:5df8f4e7-36cc-48c2-a06a-476d9585bb9c@5df8.org
+UID:99641ac1-3ecb-452e-ba49-e81316de9ca5@9964.org
 END:VEVENT
 BEGIN:VEVENT
-DESCRIPTION:The “Joe Cool Band” is a 6 piece high energy variety dance band that will “ROCK” your event. Our goal is simple\, to give you a night to remember\, a celebration filled with fun\, laughter\, family and friends\, GREAT MUSIC and a PACKED DANCE FLOOR.\n\nLink: https://www.downtownlongmont.com/do/music-at-bricks-on-main-joe-cool-band-1
-DTEND:20260111T040000Z
+DESCRIPTION:Longmont's very own DJ Drake will share the stage with longtime friend and renowned DJ Uplifter (now based in Kona)\, for the ultimate tribute to our top two legends\, Michael Jackson and Prince. Get ready to dance to the all the hits and some supporting artists\, like The Jacksons\, Morris Day\, Janet\,\n\nLink: https://www.downtownlongmont.com/do/music-at-bricks-on-main-dj-drake
+DTEND:20260222T050000Z
 LOCATION:Bricks on Main
-DTSTART:20260111T010000Z
-SUMMARY:🎵 [Rock] Music at Bricks on Main "Joe Cool Band"
-UID:1172a09b-2542-494c-b7c5-0bce60f5a360@1172.org
+DTSTART:20260222T020000Z
+SUMMARY:🎵 [Electronic] Music at Bricks on Main "DJ Drake"
+UID:67685635-dc96-42c7-b168-da9aa7a44929@6768.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Morpheus is Colorado's musical tribute to the band Morphine.\n\nLink: https://www.downtownlongmont.com/do/morpheus-dreaming-at-bootstrap-brewing-10
+DTEND:20260130T040000Z
+LOCATION:Bootstrap Brewing
+DTSTART:20260130T010000Z
+SUMMARY:🎵 Morpheus Dreaming at Bootstrap Brewing!
+UID:889c6d4a-3189-476b-92af-7f32af44c5a4@889c.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Still the Same – A Bob Seger Tribute performs the timeless roots-rock hits of Detroit singer-songwriter-musician Bob Seger.\n\nLink: https://www.downtownlongmont.com/do/still-the-same-a-bob-segar-tribute-at-bootstrap-brewing
+DTEND:20260201T040000Z
+LOCATION:Bootstrap Brewing
+DTSTART:20260201T010000Z
+SUMMARY:🎵 [Rock] Still the Same- a Bob Segar Tribute at Bootstrap Brewing!
+UID:5c5da9a6-9ef9-4f76-b624-e2719577fcd0@5c5d.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Trio made up of Kenny Peralez\, Thomas Gronberg and Dan Crecco always bring an amazing show. Come hang out for a bit\, you never know until you know!\n\nLink: https://www.downtownlongmont.com/do/music-at-bricks-on-main-minstrel-in-the-galaxy-1
+DTEND:20260123T030000Z
+LOCATION:Bricks on Main
+DTSTART:20260123T010000Z
+SUMMARY:🎵 Music at Bricks on Main "Minstrel in the Galaxy"
+UID:91c62398-6866-43b1-8e09-875a6b374ad8@91c6.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:The M.O.B. plays what you want to hear! From Allmans to ZZ Top with some Motown\, Funk\, Country and Blues tossed in.\nFeaturing Mike Ortiz (vox\,guit)\, Rick Davie (bass\,vox)\, Bunk Hess (drums\,vox)\, Kenny Peralez (guit\,vox) and Stephen Angus (sax\,flute\,perc\,vox).\n\nLink: https://www.downtownlongmont.com/do/music-at-bricks-on-main-the-mob-mike-ortiz-band
+DTEND:20260117T040000Z
+LOCATION:Bricks on Main
+DTSTART:20260117T010000Z
+SUMMARY:🎵 [Blues] Music at Bricks on Main "The M.O.B. (Mike Ortiz Band)"
+UID:f043fce2-8da7-4899-a0b0-77a48d182b78@f043.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:An Owsley-Grade Grateful Dead Experience.\n\nLink: https://www.downtownlongmont.com/do/music-at-bricks-on-main-crick-wooder
+DTEND:20260118T040000Z
+LOCATION:Bricks on Main
+DTSTART:20260118T010000Z
+SUMMARY:🎵 Music at Bricks on Main "Crick Wooder"
+UID:b00bc67d-b55a-4e59-bfeb-2fff51fc94ed@b00b.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:ony Trahan and the BlueKrewe play a mix of Swampy Louisiana Roots Music straight from the Bayous of South Louisiana. Like a good Cajun Gumbo they like to add some different seasonings to the pot\, so\, while cooking they will add a pinch of Zesty Zydeco\, some Cajun Injections\, some Bayou Blues\, a bit of Mardi Gras flavoring and a heaping helping of New Orleans Funk. All this is served up as a side dish\, the main course is their Originals\, a mix of Swamp Rockin' Blues and Funky Instrumentals... Cest' Bon\, your taste buds are sure to be satisfied....iieee. http://www.bluekrewe.com/\n\nLink: https://www.downtownlongmont.com/do/mardigras-party-with-tony-trahan-and-the-blue-krewe-at-bootstrap-brewing
+DTEND:20260214T160000Z
+LOCATION:Bootstrap Brewing
+DTSTART:20260214T010000Z
+SUMMARY:🎵 [Blues] Mardigras party with Tony Trahan & the Blue Krewe at Bootstrap Brewing!
+UID:5c707beb-3f9c-409c-85fb-4367e63c463f@5c70.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:The Saints is a 6-piece band that has an authentic New Orleans feel. We play a mix of funk\, R&B\, soul\, and rock\, featuring both original tunes and cover songs. We have three vocalists who all sing lead (providing a lot of variety)\, and we have tight 3-part harmonies\, which are a huge crowd-pleaser.\n\nLink: https://www.downtownlongmont.com/do/music-at-bricks-on-main-the-saints-1
+DTEND:20260218T040000Z
+LOCATION:Bricks on Main
+DTSTART:20260218T010000Z
+SUMMARY:🎵 [Rock] Music at Bricks on Main "The Saints"
+UID:4b9d30fd-10db-48b4-a27a-b10af7a4d463@4b9d.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Book your reservation for 1/2 Price Bottle Night and live music with Tom Moran. Music is from 5pm-8pm.\n\nLink: https://www.downtownlongmont.com/do/half-price-bottle-night-and-live-music-1
+DTEND:20260220T040000Z
+LOCATION:Kuper Wine Bar
+DTSTART:20260219T220000Z
+SUMMARY:🎵 Half Price Bottle Night & Live Music
+UID:62e9ae73-8445-4d65-ac7f-6bed73b0a46f@62e9.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Steve and the Cruisers play the fun stuff...sounds of the 60's and beyond...sing along to your favorites classics of an ERA gone by...three/ four part harmonies...fiddling with a fiddle...girls with the hair...so every guy grab a girl...\n\nLink: https://www.downtownlongmont.com/do/steve-and-the-cruisers-at-bootstrap-brewing-7
+DTEND:20260228T040000Z
+LOCATION:Bootstrap Brewing
+DTSTART:20260228T010000Z
+SUMMARY:🎵 Steve and the Cruisers at Bootstrap Brewing!
+UID:edb10b80-2ef1-415c-8fce-c8f149bea91d@edb1.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Join us Sunday\, January 18 | 4–6 PM for an intimate set with Joe Kuckla\, a singer-songwriter from Lyons\, Colorado known for his great voice and heartfelt original music.\nCome enjoy cozy vibes\, great tunes\, and all your Pelo’s favorites while you listen. Bring a friend and make an afternoon of it—we’ll see you Sunday!\n\nLink: https://www.downtownlongmont.com/do/live-music--pelos-with-joe-kuckla
+DTEND:20260119T010000Z
+LOCATION:Pelo's Deli and Provisions
+DTSTART:20260118T230000Z
+SUMMARY:🎵 [Folk/Acoustic] Live Music @ Pelo's with Joe Kuckla
+UID:53d76b8f-32ea-4210-ae23-176a2ea9adb1@53d7.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Book your reservation for 1/2 Price Bottle Night and live music with Tom Moran. Music is from 5pm-8pm.\n\nLink: https://www.downtownlongmont.com/do/half-price-bottle-night-and-live-music-1
+DTEND:20260213T040000Z
+LOCATION:Kuper Wine Bar
+DTSTART:20260212T220000Z
+SUMMARY:🎵 Half Price Bottle Night & Live Music
+UID:d283f85f-b91e-42ff-9361-104a78a14c5b@d283.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Al Laughlin\, an original member of the Samples\, plays original reggae and ska music for the masses! Join us on the dancefloor with Al's Hwy50.\n\nLink: https://www.downtownlongmont.com/do/music-at-bricks-on-main-als-hwy50
+DTEND:20260228T040000Z
+LOCATION:Bricks on Main
+DTSTART:20260228T010000Z
+SUMMARY:🎵 Music at Bricks on Main "Al's Hwy50"
+UID:41813017-01d9-4385-a50d-e433122ff709@4181.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Join us for our second annual Reggae Fest\n\nLink: https://www.downtownlongmont.com/do/2nd-anuual-reggae-fest-at-bootstrap-brewing
+DTEND:20260222T040000Z
+LOCATION:Bootstrap Brewing
+DTSTART:20260221T190000Z
+SUMMARY:🎵 2nd Anuual Reggae Fest at Bootstrap Brewing!
+UID:3882e1dd-0c71-43f1-91ee-0ce7abef538a@3882.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:While playing the I25 corridor from Colorado to Montana for over 10 years\, Lyons based Americana artist Jay Stott has been a finalist in songwriting competitions in Texas\, Colorado and Montana\, and performed at Rail on the River and Boulder’s Big Hootenanny this year.\n\nLink: https://www.downtownlongmont.com/do/music-at-bricks-on-main-jay-stott-band
+DTEND:20260116T030000Z
+LOCATION:Bricks on Main
+DTSTART:20260116T010000Z
+SUMMARY:🎵 Music at Bricks on Main "Jay Stott Band"
+UID:e108ee02-87b3-44fb-af4d-d9e75890f014@e108.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Book your reservation for 1/2 Price Bottle Night and live music with Tom Moran. Music is from 5pm-8pm.\n\nLink: https://www.downtownlongmont.com/do/half-price-bottle-night-and-live-music-1
+DTEND:20260306T040000Z
+LOCATION:Kuper Wine Bar
+DTSTART:20260305T220000Z
+SUMMARY:🎵 Half Price Bottle Night & Live Music
+UID:22d72464-31eb-4edf-87b4-fc88e74b4b3d@22d7.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:$25 cover\nBuy your pre-sales tickets in the taproom or at https://www.ticketleap.events/tickets/lmoe-1-24-26.\nPre-sales end on 1/23 and then you can buy your tickets at the door after pre-sale ticket holders get in to choose their favorite seat. Additional parking available along 2nd Avenue and Pratt Street.\nLast Men On Earth have been one of the most popular variety rock bands in Northern Colorado for over 10 years.\nAlso featuring members of The Long Run\, and other Northern CO bands\, they have built a reputation for years of not being able to be ‘pigeon-holed’ into one category of music.\nYou will hear hits from rock bands like Journey\, Toto\, Foreigner\, Van Halen\, but you’ll also hear hits from bands like The Commodores\, Zac Brown\, Golden Earring\, Bryan Adams\, and everything in between.\nLast Men On Earth will leave you guessing what lost radio hit they will play next\, that you forgot you loved!\n\nLink: https://www.downtownlongmont.com/do/last-men-on-earth-at-bootstrap-brewing-1
+DTEND:20260125T040000Z
+LOCATION:Bootstrap Brewing
+DTSTART:20260125T010000Z
+SUMMARY:🎵 [Rock] Last Men on Earth at Bootstrap Brewing!
+UID:959cdf28-6a9a-4cc1-9db9-137687c6c284@959c.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Performer/singer/songwriter Shawn Camden performs his own original songs\, mostly about comical aspects of life\, love\, and storytelling and implements rock\, funk\, reggae\, country\, cumbia and blues into his music style. Shawn also throws in vocal impersonations of the Bee Gees\, Neil Young\, Elvis Presley\, Bruce Springsteen\, ACDC\, Adam Sandler\, and Franki Valli. Shawn Camden is most known as the band leader and singer for the popular Colorado band\, Los Cheesies.\n\nLink: https://www.downtownlongmont.com/do/the-shawn-camden-show-at-bootstrap-brewing
+DTEND:20260206T040000Z
+LOCATION:Bootstrap Brewing
+DTSTART:20260206T010000Z
+SUMMARY:🎵 [Rock] The Shawn Camden Show at Bootstrap Brewing!
+UID:7b91ffa4-0f54-472b-9370-eee95c5654f6@7b91.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Lauren Michaels and Tumbleweed Road are redefining the sound of Country Rock. Fronted by Lauren Michaels\, the 2021 Colorado Country Hall of Fame Female Vocalist of the Year\, the band radiates authenticity\, passion\, and undeniable talent.\nDrawing inspiration from both the raw grit of classic rock and the soulful twang of traditional country\, their music creates a rich and dynamic listening experience. With deeply personal lyrics and infectious melodies\, Lauren Michaels and Tumbleweed Road craft songs that resonate long after the final note fades. Their sound is a heartfelt journey\, equally at home on a dusty backroad or a bustling city stage.\nThe Band\nAt the heart of the band’s dynamic sound is Sandy Craig – a talented guitarist\, vocalist\, and songwriter\, and a longtime member of all Lauren’s musical projects. His deep-rooted connection to the band brings both consistency and creativity to their songwriting and live performances.\nJeffery Golden\, a long-time Colorado favorite and winner of the 2024 Colorado Country Music Hall of Fame Instrumentalist of the Year\, drives the band’s energy with his masterful guitar work and powerful harmonies.\nOn bass and harmony vocals\, Mike Wysocki brings a commanding presence\, balancing rhythmic precision with soulful depth. A third-place winner of the 2013 International Blues Challenge in Memphis\, TN\, his expertise adds a rich groove and undeniable chemistry to the band’s foundation.\nHolding down the rhythm section is Carl Holtz\, an accomplished studio drummer from Washington\, DC\, whose sharp instincts and dynamic percussion tie the band’s sound together seamlessly.\nA Legacy of Music\nLauren’s rich history in the music industry includes extensive touring alongside Ryan Crys and the Rough Cuts\, as well as two celebrated albums with The Trubeloes and the Lauren Michaels Band. Now\, with Tumbleweed Road\, she leads a dynamic ensemble that blends rugged\, down-home charm with electrifying rock energy.\nRooted in tradition but unafraid to push boundaries\, Lauren Michaels and Tumbleweed Road deliver unforgettable performances and songs that strike a chord with fans of all walks of life. Whether rocking sold-out venues or serenading intimate gatherings\, this female-fronted force proves time and again that they’re a band to watch—and a band to love.\n\nLink: https://www.downtownlongmont.com/do/lauren-michaels-and-tumbleweed-road-at-bootstrap-brewing-1
+DTEND:20260215T040000Z
+LOCATION:Bootstrap Brewing
+DTSTART:20260215T010000Z
+SUMMARY:🎵 [Rock] Lauren Michaels & Tumbleweed Road at Bootstrap Brewing!
+UID:3bd458be-8617-40bb-a4a1-e687cf6fed2d@3bd4.org
 END:VEVENT
 BEGIN:VEVENT
 DESCRIPTION:Book your reservation for 1/2 Price Bottle Night and live music with Tom Moran. Music is from 5pm-8pm.\n\nLink: https://www.downtownlongmont.com/do/half-price-bottle-night-and-live-music-1
@@ -295,6 +239,222 @@ DTEND:20260206T040000Z
 LOCATION:Kuper Wine Bar
 DTSTART:20260205T220000Z
 SUMMARY:🎵 Half Price Bottle Night & Live Music
-UID:f56930d2-8a04-4d95-8f56-8d74b5a56b07@f569.org
+UID:ded18875-463e-498b-804d-d5d721106ba6@ded1.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:The Southern Rock Experience - Essential cuts from legends like The Allman Brothers\, Blackberry Smoke\, Lynyrd Skynyrd\, Marshall Tucker\, Molly Hatchet\, ZZ Top and more seamlessly blended with hard-hitting originals forged in the same timeless southern rock spirit.\n\nLink: https://www.downtownlongmont.com/do/music-at-bricks-on-main-wandering-roads
+DTEND:20260227T030000Z
+LOCATION:Bricks on Main
+DTSTART:20260227T010000Z
+SUMMARY:🎵 [Rock] Music at Bricks on Main "Wandering Roads"
+UID:43ef20e5-c397-4a1b-86ce-07ddd482f148@43ef.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:The Delta Sonics music takes a Chicago Blues base and seasons it with Swing\, Delta\, N’awlins R&B and some early Rock n' Roll . This hard -working band averages over 200 shows a year. They have been featured at many of the major festivals in Colorado and have been the back-up band for nationally known Blues artists.\n\nLink: https://www.downtownlongmont.com/do/music-at-bricks-on-main-the-delta-sonics
+DTEND:20260125T040000Z
+LOCATION:Bricks on Main
+DTSTART:20260125T010000Z
+SUMMARY:🎵 [Jazz] Music at Bricks on Main "The Delta Sonics"
+UID:412a7789-ef3c-4bfa-80e4-1ea9894476a7@412a.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Join us at Pelo’s Deli & Provisions for live music on Sunday\, January 25th from 4–6pm featuring Derek Dames Ohl.\nDerek is a singer-songwriter rooted in folk tradition\, bringing thoughtful lyrics\, warm melodies\, and an easy\, acoustic sound that’s perfect for a relaxed Sunday afternoon. Settle in with good food\, a drink in hand\, and enjoy an intimate set of original music in a laid-back\, welcoming space.\n\nLink: https://www.downtownlongmont.com/do/live-music--pelos-with-derek-dames-ohl
+DTEND:20260126T010000Z
+LOCATION:Pelo's Deli and Provisions
+DTSTART:20260125T230000Z
+SUMMARY:🎵 [Folk/Acoustic] Live Music @ Pelo's with Derek Dames Ohl
+UID:c6fa489f-1fa8-4a2f-8181-c0bc117d0a5f@c6fa.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Deborah Stafford & The Night Stalkers plays the kind of Funky Blues and Soul that makes you want to get up and shake what your mama gave ya'! Soulful vocals and Sax make this Blues Band a step above the rest.\n\nLink: https://www.downtownlongmont.com/do/deborah-stafford-and-the-night-stalkers-at-bootstrap-brewing-1
+DTEND:20260131T040000Z
+LOCATION:Bootstrap Brewing
+DTSTART:20260131T010000Z
+SUMMARY:🎵 [Blues] Deborah Stafford and the Night Stalkers at Bootstrap Brewing!
+UID:8dfa2eba-3dec-41ff-9f70-fe4442fb35ae@8dfa.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Join us for a special Songwriters in the Round style concert to benefit Recovery Cafe Longmont!\nConnected by Music is proud to support Recovery Cafe Longmont with a special no-tickets music show.\nThis event will feature talented local singer-songwriters:\nMarilyn Walker\nKaren Horan\nRobby Layton\nRecovery Café Longmont is growing and expanding in their capability to support the community. With the purchase and renovation of 801 Main Street\, they will be able to provide more opportunities for community in a healing\, supportive space.\nPlease RSVP at https://www.connectedbymusic.org/event-details/2026-benefit-for-recovery-cafe-longmont\nTime: 4:00 PM -5:30 PM\nLocation: Longmont Central Presbyterian Church\, 402 Kimbark St\, Longmont\, CO 80501\,\nCost: No cost to attend\, donations to Connected by Music with all funds going to Recovery Cafe Longmont\n\nLink: https://www.downtownlongmont.com/do/benefit-concert-for-recovery-cafe-longmont
+DTEND:20260222T003000Z
+LOCATION:Central Longmont Presbyterian Church
+DTSTART:20260221T230000Z
+SUMMARY:🎵 Benefit Concert for Recovery Cafe Longmont
+UID:b836509f-59c4-4f52-aff2-7c808b1f48d4@b836.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:The West Hwy 7 Band is an Outlaw Country Honky Tonk machine. This band honors the old school country legends like Cash\, Hag\, Willie\, Waylon\, Paycheck\, Jones\, the CDB\, Dwight. No sissy snowflake country pop here just the raw unfiltered Boom Chick Twang that makes your MaMa proud.\n\nLink: https://www.downtownlongmont.com/do/west-hwy-7-at-bootstrap-brewing-1
+DTEND:20260124T040000Z
+LOCATION:Bootstrap Brewing
+DTSTART:20260124T010000Z
+SUMMARY:🎵 West Hwy 7 at Bootstrap Brewing!
+UID:812465c4-74c7-4591-89b3-42b3cf098119@8124.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Book your reservation for 1/2 Price Bottle Night and live music with Tom Moran. Music is from 5pm-8pm.\n\nLink: https://www.downtownlongmont.com/do/half-price-bottle-night-and-live-music-1
+DTEND:20260227T040000Z
+LOCATION:Kuper Wine Bar
+DTSTART:20260226T220000Z
+SUMMARY:🎵 Half Price Bottle Night & Live Music
+UID:365c5f70-529b-488c-afc8-75096b1897a0@365c.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:This is an intimate live show in downtown Longmont\, Colorado presented by The Soundpost Sessions at The Times Collaborative featuring two songwriters and host Monica Marie LaBonte all on stage swapping songs and stories in-the-round. Music is from 7:30-9:30\, doors at 7:00. Join us for this very special ongoing musical series every other month!\n$18 Advance (reserved seating)\n$20 Day of Show\nThe Artists:\nJohn Statz https://johnstatz.com/\nIt was somewhere in England while on tour in September of 2019 that Colorado songwriter John Statz – stressed out by rainy days\, Brexit anxiety\, and a disintegrating relationship back home – began to feel optimistic and plan his new record. Early Riser is a balancing act between the experiences in modern life that cause us worry or pain and those that bring us joy. The album is very much a product of the year 2019 and the cultural scene at the end of a decade\, with songs referencing political divisions over Brexit\, the destruction of Notre Dame\, and the racist dog-whistles of a xenophobic president. John presents those weighty topics alongside more personal songs of reverence for travel and the outdoors\, falling in and out of love\, and his parents’ relationship. These songs are brought to life by an ace band featuring Billy Conway (Morphine) on drums\, Jeremy Moses Curtis (Booker T) on bass\, and Denver multi-instrumentalist Kate Hannington on keys\, backing vocals\, woodwinds\, and guitars.\nOne of the more prolific thirty-something songwriters working in the Folk/Americana genre today\, John Statz has released nine studio albums and performed all over North America and Europe over the course of his fifteen-year career. The Boston Globe has called John’s music electric\, urgent folk\; aching\, sweet country-rock while American Songwriter has said that he writes the kind of songs that float through your mind and stay nestled in your thoughts long after listening. John has worked with some of the best producers in the genre\, including Bo Ramsey (Lucinda Williams\, Greg Brown) on his 2012 release Old Fashioned\, Jeffrey Foucault (Kris Delmhorst\, Caitlin Canty) on a 2015 album TULSA\, and Denver songwriting friend Megan Burtt on 2017’s The Fire Sermon. He’s more recently taken a turn towards the production chair\, self-producing 2018’s Darkness on the San Juans and co-producing 2020’s Early Riser\, along with Kate Hannington\, Billy Conway\, and Jeremy Moses Curtis.\nJohn Statz was given a guitar by his grandmother when he was fifteen\, which turned out to be perfectly timed for an easily-distracted Wisconsin teenager who\, after ten years of piano lessons\, had lost interest in classical music and had taken to learning John Lennon and Elton John tunes. It wasn’t until Statz was nineteen and attending university in Oshkosh that he began writing songs. The spark lit after attending a show at the storied Café Carpe in Fort Atkinson\, Wisconsin featuring Jeffrey Foucault and Peter Mulvey\, who quickly became heroes\, and\, later on\, friends and collaborators. John moved to Denver in 2010 where he escapes to the mountains as much as possible to hike and camp\, cooks almost entirely in cast-iron cookware\, and reads presidential biographies in chronological order.\nMartin Gilmore https://www.martingilmore.com/\nWith a diverse and extensive repertoire\, Martin Gilmore’s soulful voice navigates a wide range of sounds with traditional and original songs. His easy-going style explores the depths of folk music with authentic reproductions\, creative reimaginations\, and unique original songs. His robust vocals\, and impressive guitar work combine to bring color to new and old songs alike. Gilmore’s strong desire to let his authenticity blaze a trail leaves no doubt about his sincerity or artistry.\n​\nMartin Gilmore released his debut self-titled record in 2009 which was produced by Infamous Stringdusters bassist Travis Book. The record also featured members of FY5\, Open Road\, and Pete Wernick of Hot Rize. In 2017\, Martin released his EP East-West also featuring Eslam Elabaty\, which was recorded in Cairo\, Egypt where Martin lived from 2015-2017. Martin’s 2021 release The Martin Gilmore Trio featured the talents of mandolinist Nick Amodeo and bassist Ian Haegele\, who play regularly with Martin. The record also features Tim O’Brien\, Courtney Hartman\, and Mollie O’Brien. The Martin Gilmore trio have played all over the United States and Ireland\, and were one of the official showcase groups at the International Bluegrass Music Associations World of Bluegrass conference in 2021.\n​\nIn 2017\, Martin joined the faculty at the University of Northern Colorado as part of the Folk and Bluegrass program in the School of Music. As part of the program he has conducted lessons in bluegrass guitar\, singing\, composition & songwriting\, and has led the bluegrass ensemble. Martin has also been an instructor at Swallow Hill Music Association in Denver since 2008\, where he leads classes about songwriting\, guitar\, singing\, and directs bluegrass ensembles and the Swallow Hill Bluegrass Band. He also has taught courses on bluegrass music\, the banjo\, country music\, and cowboy songs for the University of Denver’s Enrichment Program.\n​\nMartin has opened for groups such as The Infamous Stringdusters\, Stephen Stills\, Judy Collins\, amongst others. He has toured all over the world as a solo act\, as well as with the Martin Gilmore Trio\, and his bluegrass band Long Road Home. He also won the 2024 Telluride Bluegrass Festival Troubadour songwriting competition and the 2024 Rocky Mountain Folks Festival Songwriters Showcase competition. He is a winner of the 2025 New Folk Competition at the Kerrville Folk Festival.\nMonica Marie LaBonte monicamariemusic.com\nFrom a wide-eyed tike delicately pressing the keys of her mother’s upright piano to a seasoned artist taking various stages across the country\, Monica Marie LaBonte has always been guided by song.With the sharp ability to craft tracks that speak to the fragility and wonder of life\, the crystalline vocalist continues to attract listeners with her stirring blend of folk and country. At times\, her lyrics come across as wise whisperings from a dear friend. At others\, they hold all the vulnerability and transparency of raw confessions. A keen observer\, LaBonte bears witness to life’s magic and heartache and artfully weaves the intricacies of the human condition into tunes that possess undeniable intimacy\, grace and grit.In her over 10-year career\, the Colorado native has played hundreds of venues\, including the historic Gold Hill Inn and Planet Bluegrass. Whether belting out ballads in a small listening room or playing to tens of thousands at an open-air venue\, she brings a palpable authenticity to each gig.Known for her stint in mystic-Americana band Monocle\, her stellar musicianship and gift for commanding a stage shines just as bright in her solo work.Armed with an acoustic and her truth\, it’s clear LaBonte is pursuing her art for all the right reasons. Although her creative pursuits are guided by pure passion\, LaBonte hasn’t escaped critical praise and success. A finalist In the 2018 Songwriter Showcase\, at Rocky Mountain Folks Fest in Lyons\, Colo.\, she continues to impress with her art.A natural-born wordsmith — in the vein of Joni Mitchell and Alison Krauss — it’s easy to see why the songstress has packed coffeehouses\, held her own on the lineup at the Telluride Bluegrass Festival and been hailed as having “a voice I trust” by fellow musician Daniel Rodriguez (founding member of Elephant Revival).Powerful\, yet understated — poetic\, yet real — LaBonte remains one to watch.\n\nLink: https://www.downtownlongmont.com/do/mixtape-songwriter-showcase-featuring-john-statz-and-martin-gilmore
+DTEND:20260313T033000Z
+LOCATION:The Times Collaborative / 338 Main St
+DTSTART:20260313T013000Z
+SUMMARY:🎵 [Rock] MIXTAPE: Songwriter Showcase featuring John Statz and Martin Gilmore
+UID:3194d001-7d4e-4ae9-9fb2-a27bc4c615db@3194.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Grab your ticket\nand head downtown for a day and night of what Longmont does best - live local music\, unique venues\, good vibes\, and community spirit! Presented by Flatirons Bank.\nWith 60 performances at 16 venues throughout Downtown Longmont\, you don’t want to miss out on this day of fun and live music Downtown! We're so excited to bring our 2025 headliner Erica Brown to the WWMS! Full performance lineup and schedule are available on our website. This year's lineup won't disappoint\, and you don't want to miss out!\nGet your tickets before they sell out!\nFind all the information at the\nWinter Walkabout webpage\nHuge THANK YOU to all of our fantastic sponsors who make this event possible:\nThe Longmont Downtown Development Authority\, Longmont Creative District\, SouthState Bank\, Audio Curations\, 105.5 The Colorado Sound\, and all of our venues. We couldn't do this without you!\n\nLink: https://www.downtownlongmont.com/do/winter-walkabout-music-showcase
+DTEND:20260208T043000Z
+LOCATION:Downtown Longmont
+DTSTART:20260207T210000Z
+SUMMARY:🎵 2026 Winter Walkabout Music Showcase
+UID:dd617524-4256-4045-9725-61c23ed56de1@dd61.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Los Cheesies is a high energy 6 piece party band made up of loco Gringos and Mexicans. We perform original world rock fusion style music compositions in English and Spanish influenced by U.S.\, Latin American\, and European countries. We play a fusion of rock\, ska\, reggae cumbia\, and hip hop\, as well as cheesiefied cover songs from the 60s\, 70s\, and 80s.\n\nLink: https://www.downtownlongmont.com/do/los-cheesies-at-bootstrap-brewing-4
+DTEND:20260301T040000Z
+LOCATION:Bootstrap Brewing
+DTSTART:20260301T010000Z
+SUMMARY:🎵 [Rock] Los Cheesies! at Bootstrap Brewing!
+UID:045b85a0-daf6-4faf-87f4-5a0aa4dadcbf@045b.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Enjoy an evening of beautiful classical guitar with Tony.  And\, we never know who else might jump on the stage with him!\n\nLink: https://www.downtownlongmont.com/do/tony-crank-and-friends-at-bootstrap-brewing-5
+DTEND:20260213T040000Z
+LOCATION:Bootstrap Brewing
+DTSTART:20260213T010000Z
+SUMMARY:🎵 [Classical] Tony Crank and Friends at Bootstrap Brewing!
+UID:8a0740db-9726-4967-8c5a-27574370eb18@8a07.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Tenbucksixer is an original band with folk-rock songs that can take you by surprise\, with lyrics and tunes that are sometimes whimsical\, sometimes serious\, but always witty\, poetic\, and insightful. they will tickle you with fun\, prod you with clever\, and touch you with soulful tunes.\n\nLink: https://www.downtownlongmont.com/do/music-at-bricks-on-main-tenbucksixer-2
+DTEND:20260201T040000Z
+LOCATION:Bricks on Main
+DTSTART:20260201T010000Z
+SUMMARY:🎵 [Rock] Music at Bricks on Main "Tenbucksixer"
+UID:efe06aa8-4730-4287-b620-aebcc2978dff@efe0.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Rex Peoples is a 7 time winner of "Best Blues Vocalist of the Year" from the Colorado Blues Society.  Don't miss this high-energy funk and R&B musical celebration for fans of all ages!\n\nLink: https://www.downtownlongmont.com/do/rex-peoples-and-xfactr-band-at-bootstrap-brewing-2
+DTEND:20260221T040000Z
+LOCATION:Bootstrap Brewing
+DTSTART:20260221T010000Z
+SUMMARY:🎵 [Blues] Rex Peoples & XFactr Band at Bootstrap Brewing!
+UID:9c4e7c7c-45fe-47ee-9fd4-f9511972e0b3@9c4e.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Folk\, soul\, blues and rockin’ powerful vocals from this local singer-songwriter.\n\nLink: https://www.downtownlongmont.com/do/andy-eppler-live-music
+DTEND:20260118T030000Z
+LOCATION:300 Suns Brewing
+DTSTART:20260118T010000Z
+SUMMARY:🎵 [Folk/Acoustic] Andy Eppler - Live Music
+UID:bebc81ea-f015-486f-87d0-216ff242060d@bebc.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Book your reservation for 1/2 Price Bottle Night and live music with Tom Moran. Music is from 5pm-8pm.\n\nLink: https://www.downtownlongmont.com/do/half-price-bottle-night-and-live-music-1
+DTEND:20260123T040000Z
+LOCATION:Kuper Wine Bar
+DTSTART:20260122T220000Z
+SUMMARY:🎵 Half Price Bottle Night & Live Music
+UID:1d6bd404-61b6-4729-a8d3-ad82362e4eab@1d6b.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Join the Longmont Symphony for a whimsical and unforgettable journey through Michael Close’s A Child’s Book of Animals\, where you’ll hop with frogs\, soar with seagulls\, dive with octopuses and meet a swan with big dreams of becoming a rapper. The program also features the exhilarating finale of Sibelius’ Symphony No. 2\, performed side-by-side with the talented musicians from the Longmont Youth Symphony\, and a showcase of the winner of our new Concerto Competition. It’s a concert full of imagination\, inspiration and extraordinary music for all ages.\n\nLink: https://www.downtownlongmont.com/do/lso-family-concert-a-childs-book-of-animals
+DTEND:20260118T000000Z
+LOCATION:Longmont Symphony Orchestra
+DTSTART:20260117T230000Z
+SUMMARY:🎵 [Classical] LSO Family Concert: A Child’s Book of Animals
+UID:8e0aceb5-de6d-4ae4-b859-982713e4655f@8e0a.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Kingpin Posse\, a dynamic country and rock band known for their electrifying live performances and their distinctive fusion of classic country and southern rock hits. Colorado Country Music Hall of Fame winners of the 2024 "Newcomer of the Year"\, Kingpin Posse captivates audiences with their high-energy sound and infectious stage presence.\n\nLink: https://www.downtownlongmont.com/do/kingpin-posse-at-bootstrap-brewing-2
+DTEND:20260118T040000Z
+LOCATION:Bootstrap Brewing
+DTSTART:20260118T010000Z
+SUMMARY:🎵 [Rock] Kingpin Posse at Bootstrap Brewing!
+UID:3290e25a-eb90-45ee-b86d-a924ed5fdfc1@3290.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Tony will be SHREDDING some Tedeschi Trucks\, Jimmy Hendrix\, Pink Floyd\, Prince and Big Head Todd solos among others. For those of you who know Tony - you know!!\nThe Mountain ReVerb Band is noted for their quality percussion dynamic instrumentals\, powerful guitar leads and unique vocal stylings.\n\nLink: https://www.downtownlongmont.com/do/music-at-bricks-on-main-mountain-reverb
+DTEND:20260131T040000Z
+LOCATION:Bricks on Main
+DTSTART:20260131T010000Z
+SUMMARY:🎵 Music at Bricks on Main "Mountain ReVerb"
+UID:7031c502-9bfe-4b5e-8b3e-f924fdfb81ea@7031.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Wylie Jones is a multi instrumentalist one man band loop artist like the great Keller Williams\, with the spirit of Toots\, Bob Marley and Metallica wrapped into one.\n\nLink: https://www.downtownlongmont.com/do/music-at-bricks-on-main-wylie-jones
+DTEND:20260207T040000Z
+LOCATION:Bricks on Main
+DTSTART:20260207T010000Z
+SUMMARY:🎵 Music at Bricks on Main "Wylie Jones"
+UID:620d2a2f-3c5b-478c-b2c7-fe6245cec66d@620d.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Guitars\, Cadillacs\, and hillbilly music from this singer/songwriter based in Lyons\, CO\n\nLink: https://www.downtownlongmont.com/do/jake-edmoundson-live-music
+DTEND:20260208T030000Z
+LOCATION:300 Suns Brewing
+DTSTART:20260208T010000Z
+SUMMARY:🎵 Jake Edmoundson - Live Music
+UID:f43df777-05ba-4d4c-835d-c151ba0aeb62@f43d.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Featuring Clancy Newman\, Cello | Clancy Newman is back with the Longmont Symphony to continue exploring the cello repertoire in all its glory. In Strauss’s 45-minute tone poem\, the solo cello represents the Don — a self-proclaimed (and not so sound of mind!) knight errant who believes windmills are giants and sheep are an invading army. Also on the program is Tchaikovsky’s Variations for Cello and Orchestra “on a Rococo Theme\,” paired with a symphony by Tchaikovsky’s favorite composer\, Mozart.\nJoin us for the Pre-Concert Talk at 6pm.\n\nLink: https://www.downtownlongmont.com/do/lso-concert-cello-explorations-strauss-and-tchaikovsky
+DTEND:20260222T040000Z
+LOCATION:Longmont Symphony Orchestra
+DTSTART:20260222T020000Z
+SUMMARY:🎵 [Classical] LSO Concert Cello Explorations: Strauss & Tchaikovsky
+UID:1ba93195-d1ca-42af-8411-40c2c55b3e82@1ba9.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:New Wave Sensation performs all your favorite New Wave classics from the 80's.\n\nLink: https://www.downtownlongmont.com/do/new-wave-sensation-at-bootstrap-brewing
+DTEND:20260117T040000Z
+LOCATION:Bootstrap Brewing
+DTSTART:20260117T010000Z
+SUMMARY:🎵 New Wave Sensation at Bootstrap Brewing!
+UID:eb6fc645-7a96-4902-b771-ea3dcd24f5f2@eb6f.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Asteria Jazz Collective is a dynamic ensemble led by the captivating vocalist Stephany Prodromos and masterful bassist and musical director John Sleet Johnson.\n\nLink: https://www.downtownlongmont.com/do/music-at-bricks-on-main-asteria-jazz-collective-4
+DTEND:20260223T030000Z
+LOCATION:Bricks on Main
+DTSTART:20260223T000000Z
+SUMMARY:🎵 [Jazz] Music at Bricks on Main "Asteria Jazz Collective"
+UID:68434b2a-8639-4efc-ba78-43da8bdd9b08@6843.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:John Bunzli is a Loveland based songwriter who has been writing a new song a week for 5 years. To Celebrate year 5 of writing John has gathered some of the best singer/songwriters in the area and they will each perform one of his songs. It will be an evening of great playing and great singing!!\n\nLink: https://www.downtownlongmont.com/do/music-at-bricks-on-main-john-bunzli-cafe-con-leche-songs
+DTEND:20260130T040000Z
+LOCATION:Bricks on Main
+DTSTART:20260130T010000Z
+SUMMARY:🎵 Music at Bricks on Main "John Bunzli: Cafe Con Leche Songs"
+UID:c47be6e7-ee39-4b3c-aa22-1e4f26358da6@c47b.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Live music and craft beer!\nDaron Tate is an Oklahoma-born\, Colorado-based artist playing new music at the crossroads of Americana and Red Dirt Country.\nBootstrap Brewing is an independent\, family-owned\, 100% craft brewery deeply rooted in the local community.\nSee you 1/22/26 for good tunes\, cold brews\, and a great night 🍺 ✨\nhttp://www.instagram.com/DaronTateMusic\nEvents\n\nLink: https://www.downtownlongmont.com/do/daron-tate-at-bootstrap-brewing
+DTEND:20260123T040000Z
+LOCATION:Bootstrap Brewing
+DTSTART:20260123T010000Z
+SUMMARY:🎵 Daron Tate at Bootstrap Brewing!
+UID:a2c93eb4-925a-4449-a004-95bc436b61e2@a2c9.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Join us for Live Music at Pelo’s Deli & Provisions with Vinyl Music Lounge on Friday\, February 6th from 8–11pm.\nIt’s a chill night with local vinyl DJs\, spinning soulful cuts\, deep grooves\, and laid-back selections. Settle in with a drink\, enjoy the easygoing atmosphere\, and ease into your Friday night with great music.\n\nLink: https://www.downtownlongmont.com/do/live-music--pelos-with-vinyl-music-lounge
+DTEND:20260207T060000Z
+LOCATION:Pelo's Deli and Provisions
+DTSTART:20260207T030000Z
+SUMMARY:🎵 Live Music @ Pelo's with Vinyl Music Lounge
+UID:dd4bb13e-03be-43bd-97f1-9798bf35464e@dd4b.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Book your reservation for 1/2 Price Bottle Night and live music with Tom Moran. Music is from 5pm-8pm.\n\nLink: https://www.downtownlongmont.com/do/half-price-bottle-night-and-live-music-1
+DTEND:20260130T040000Z
+LOCATION:Kuper Wine Bar
+DTSTART:20260129T220000Z
+SUMMARY:🎵 Half Price Bottle Night & Live Music
+UID:f8a438a7-dbd8-404e-a69d-be8af18176f9@f8a4.org
 END:VEVENT
 END:VCALENDAR
