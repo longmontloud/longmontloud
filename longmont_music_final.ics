@@ -2,20 +2,20 @@ BEGIN:VCALENDAR
 VERSION:2.0
 PRODID:ics.py - http://git.io/lLljaA
 BEGIN:VEVENT
-DESCRIPTION:Sugar Britches are a blend of mischievous and witty lyricists with eclectic and talented musicians from genres such as bluegrass\, folk\, rock and honky tonk.\n\nLink: https://www.downtownlongmont.com/do/music-at-bricks-on-main-sugar-britches-2
-DTEND:20260320T020000Z
-LOCATION:Bricks on Main
-DTSTART:20260320T000000Z
-SUMMARY:🎵 [Rock] Music at Bricks on Main "Sugar Britches"
-UID:eeddd13d-d944-41e8-8087-005f16114d2b@eedd.org
-END:VEVENT
-BEGIN:VEVENT
 DESCRIPTION:Discovery Days is an early childhood program that encourages children ages 2 to 6 and their caregivers to have fun together through educational\, hands-on art\, music\, and movement activities. When you attend Discovery Days at the Longmont Museum with your child\, you will help them cultivate important school-readiness skills\, such as language development\, attention\, concentration\, fine motor skills\, emotional regulation\, and play and social abilities.\nOccurs weekly on Tuesdays Jan. 13-May 5\, 2026. Three 45 minute-1 hour sessions available: 9:15am\, 10:45am\, and 1pm.\nAttend a session that fits your schedule\, no registration needed. Learn more online and explore weekly themes at https://longmontcolorado.gov/museum/education/discovery-days/ or by calling 303-651-8374.\n\nLink: https://www.downtownlongmont.com/do/discovery-days-music-and-movement-with-ms-ragen-5
 DTEND:20260324T200000Z
 LOCATION:Longmont Museum
 DTSTART:20260324T151500Z
 SUMMARY:🎵 Discovery Days: Music & Movement with Ms. Ragen
-UID:73f96cb2-c937-412e-bf82-f5ec42e2c887@73f9.org
+UID:fd5e60fd-f8d8-4f2c-9698-f7bdbac715ab@fd5e.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:The Longmont All Star Jazz Band is playing soft/quiet jazz!\nPerforming Live at The Passenger\nThe Passenger has food and drink specials until 6pm and an amazing menu otherwise! Check our this local band performing in our bar area!\nThe Longmont All-Star Jazz Band (LASJB) is comprised of the finest musicians from the greater Boulder County area currently enrolled in their local high school music programs who want to pursue a fun\, professional\, and challenging environment. The All-Stars aim to grow students' musical and interpersonal skills\, while giving them the opportunities to work together\, improvise\, and perform a wide variety of styles and genres within jazz.\n\nLink: https://www.downtownlongmont.com/do/longmont-all-star-jazz-band-free-performance-1
+DTEND:20260322T020000Z
+LOCATION:The Passenger
+DTSTART:20260321T230000Z
+SUMMARY:🎵 [Jazz] Longmont All Star Jazz Band Free Performance!
+UID:c88fe936-8af7-4a56-8122-c52cf28b8d35@c88f.org
 END:VEVENT
 BEGIN:VEVENT
 DESCRIPTION:Known for their driving rhythms and innovative approaches to the traditional music of Eastern Europe\, this 11-piece brass band brings the sounds of the Old World to the Rocky Mountains performing high-energy Balkan and Klezmer music.\nThis concert is part of the Longmont Museum’s Friday Afternoon Concert Series.  Enjoy an afternoon of live music in our Stewart Auditorium this fall featuring an eclectic array of musical acts from up and down the Front Range.\nLearn more and buy tickets online at https://longmontcolorado.gov/event/gora-gora-orkestar/ or by calling 303-651-8374.\n\nLink: https://www.downtownlongmont.com/do/friday-afternoon-concert-gora-gora-orkestar
@@ -23,135 +23,7 @@ DTEND:20260313T223000Z
 LOCATION:Longmont Museum
 DTSTART:20260313T203000Z
 SUMMARY:🎵 Friday Afternoon Concert: Gora Gora Orkestar
-UID:cc6e6890-2a07-428f-951e-1a7da80c6c95@cc6e.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Local 3 piece classic rock\, will keep you on the dance floor\, come out and have a great time!\n\nLink: https://www.downtownlongmont.com/do/music-at-bricks-on-main-the-motors-1
-DTEND:20260321T030000Z
-LOCATION:Bricks on Main
-DTSTART:20260321T000000Z
-SUMMARY:🎵 [Rock] Music at Bricks on Main "The Motors"
-UID:627699d2-bb25-4fac-b518-0f5078a33ef5@6276.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Inspired by Scandinavian folk art\, we will paint stylized floral patterns on rocks. Take them home and decorate your windowsill or your emerging garden with reminders that spring has begun.\nThis program is part of our Thursday Nights @ the Museum. Learn more and register online at https://longmontcolorado.gov/event/art-sip-floral-rock-painting/  or by calling 303-651-8374.\n\nLink: https://www.downtownlongmont.com/do/art-and-sip-floral-rock-printing-1
-DTEND:20260327T023000Z
-LOCATION:Longmont Museum
-DTSTART:20260327T003000Z
-SUMMARY:🎵 [Rock] Art & Sip: Floral Rock Printing
-UID:caf1fd99-6efa-474e-93ba-75269f8cc7ef@caf1.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Consisting of three prominent Fort Collins musicians\, Ansel and the Brain Tattoos is a powerhouse trio. Featuring the songwriting of Ansel Foxley and the incomparable musicianship of Taylor Tesler on upright bass\, and Darren Radach on mandolin - this band is not to be missed!\n\nLink: https://www.downtownlongmont.com/do/music-at-bricks-on-main-ansel-and-the-brain-tattoos
-DTEND:20260323T020000Z
-LOCATION:Bricks on Main
-DTSTART:20260322T230000Z
-SUMMARY:🎵 Music at Bricks on Main "Ansel and the Brain Tattoos"
-UID:1878c341-0966-418f-b2fe-f64238e86e68@1878.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:First Friday Jazz with Mojazz Trio\nSlide into the weekend with the smooth tunes of Mojazz.\nOur neighbors at the Mojo Studio are part of the Mojomama band\, and they always lay down the right vibe.\nKitchen Open until 8pm.\n\nLink: https://www.downtownlongmont.com/do/first-friday-with-mojazz
-DTEND:20260404T020000Z
-LOCATION:Abbott & Wallace Distilling
-DTSTART:20260404T000000Z
-SUMMARY:🎵 [Jazz] First Friday with Mojazz
-UID:7cf043b7-b505-44fa-af7e-097e96fabe00@7cf0.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Asteria Jazz Collective is a dynamic ensemble led by the captivating vocalist Stephany Prodromos and masterful bassist and musical director John Sleet Johnson.\n\nLink: https://www.downtownlongmont.com/do/music-at-bricks-on-main-asteria-jazz-collective-5
-DTEND:20260316T020000Z
-LOCATION:Bricks on Main
-DTSTART:20260315T230000Z
-SUMMARY:🎵 [Jazz] Music at Bricks on Main "Asteria Jazz Collective"
-UID:52b98cc4-1d0b-4052-a081-9fd3ae4e5b0e@52b9.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Strangebyrds are an original “Blue Collar Folk-Americana” Duo who whose influences are Neil Young\, Gillian Welch & Buddy & Julie Miller.\n\nLink: https://www.downtownlongmont.com/do/strangebyrds-live-music
-DTEND:20260329T020000Z
-LOCATION:300 Suns Brewing
-DTSTART:20260329T000000Z
-SUMMARY:🎵 [Folk/Acoustic] Strangebyrds - Live Music
-UID:d38e4d18-6587-46f8-88c9-3a06a50c1fbe@d38e.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Award-winning songwriter and powerhouse performer Megan Burtt has a voice that aches\, uplifts\, and lingers long after the last note. A storyteller at heart\, she transforms life’s moments into melody\, weaving emotion and meaning through every song she sings.\nDoors at 6:30 pm.\nDavid Burchfield writes Americana that swaggers wildly through raw emotion within a meticulously written and arranged package. With connections to his indie folk\, classic country\, and bluegrass roots\, Burchfield carves a unique path in the folk rock world with his powerful 5-piece\, the Fire Guild.\n\nLink: https://www.downtownlongmont.com/do/megan-burtt-with-david-burchfield-a-living-room-concert
-DTEND:20260307T033000Z
-LOCATION:Butterscotch Studios
-DTSTART:20260307T013000Z
-SUMMARY:🎵 [Rock] Megan Burtt with David Burchfield (a living room concert)
-UID:d8509ba0-5266-4b9a-bb80-36dd736407fa@d850.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Discovery Days is an early childhood program that encourages children ages 2 to 6 and their caregivers to have fun together through educational\, hands-on art\, music\, and movement activities. When you attend Discovery Days at the Longmont Museum with your child\, you will help them cultivate important school-readiness skills\, such as language development\, attention\, concentration\, fine motor skills\, emotional regulation\, and play and social abilities.\nOccurs weekly on Tuesdays Jan. 13-May 5\, 2026. Three 45 minute-1 hour sessions available: 9:15am\, 10:45am\, and 1pm.\nAttend a session that fits your schedule\, no registration needed. Learn more online and explore weekly themes at https://longmontcolorado.gov/museum/education/discovery-days/ or by calling 303-651-8374.\n\nLink: https://www.downtownlongmont.com/do/discovery-days-music-and-movement-with-ms-ragen-5
-DTEND:20260303T210000Z
-LOCATION:Longmont Museum
-DTSTART:20260303T161500Z
-SUMMARY:🎵 Discovery Days: Music & Movement with Ms. Ragen
-UID:f7f9bf83-586e-4eb3-ac2a-8bfa6b3dff61@f7f9.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Formed in 2008\, the Buzz Brothers deliver hard-charging boogie and blues\, with grooves deep enough to twist your ankle in!\n\nLink: https://www.downtownlongmont.com/do/music-at-bricks-on-main-the-buzz-brothers-band
-DTEND:20260315T030000Z
-LOCATION:Bricks on Main
-DTSTART:20260315T000000Z
-SUMMARY:🎵 [Blues] Music at Bricks on Main "The Buzz Brothers Band"
-UID:5efff907-c454-4b5f-a02b-f9e09c434ad4@5eff.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Game Night Returns to Abbott & Wallace!\nCard\, Board Games & Magic: The Gathering\n$2 Off Draft Beer & Pizza\n\nLink: https://www.downtownlongmont.com/do/game-night
-DTEND:20260326T040000Z
-LOCATION:Abbott & Wallace Distilling
-DTSTART:20260325T230000Z
-SUMMARY:🎵 Game Night!
-UID:a7176127-b5c7-4825-ac82-dcf2948569f0@a717.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Mackenzie Rae & Buckshot Moon are an Americana band based in Boulder\, Colorado. From tender ballads to raucous rockabilly\, they tell stories through rich harmonies\, nuanced instrumentals\, and a unique balance of high energy and sensitivity.\n\nLink: https://www.downtownlongmont.com/do/music-at-bricks-on-main-mackenzie-rae-and-buckshot-moon
-DTEND:20260404T030000Z
-LOCATION:Bricks on Main
-DTSTART:20260404T000000Z
-SUMMARY:🎵 Music at Bricks on Main "Mackenzie Rae and Buckshot Moon"
-UID:72625b1e-622f-42d1-90bf-814ddbef7459@7262.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Join other crafty folks for a cozy night at the distillery!\nSip on your favorite cocktails while working on your projects.\nLooking for small business partners!\n\nLink: https://www.downtownlongmont.com/do/crafts-and-cocktails
-DTEND:20260319T030000Z
-LOCATION:Abbott & Wallace Distilling
-DTSTART:20260319T000000Z
-SUMMARY:🎵 Crafts & Cocktails
-UID:71922107-61ba-4a8f-8929-c04b729d3e26@7192.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Book your reservation for 1/2 Price Bottle Night and live music with Tom Moran. Music is from 5pm-8pm.\n\nLink: https://www.downtownlongmont.com/do/half-price-bottle-night-and-live-music-1
-DTEND:20260403T030000Z
-LOCATION:Kuper Wine Bar
-DTSTART:20260402T210000Z
-SUMMARY:🎵 Half Price Bottle Night & Live Music
-UID:e1b57125-1fd3-4c01-9425-63ecd65348c6@e1b5.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Book your reservation for 1/2 Price Bottle Night and live music with Tom Moran. Music is from 5pm-8pm.\n\nLink: https://www.downtownlongmont.com/do/half-price-bottle-night-and-live-music-1
-DTEND:20260306T040000Z
-LOCATION:Kuper Wine Bar
-DTSTART:20260305T220000Z
-SUMMARY:🎵 Half Price Bottle Night & Live Music
-UID:0e8516be-1090-4f4f-82e4-1fb587b330b8@0e85.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Colorado's Santana tribute band!\n\nLink: https://www.downtownlongmont.com/do/bandana-a-santana-tribute-at-bootstrap-brewing-2
-DTEND:20260307T040000Z
-LOCATION:Bootstrap Brewing
-DTSTART:20260307T010000Z
-SUMMARY:🎵 Bandana- a Santana Tribute at Bootstrap Brewing!
-UID:6ccbf9d3-6575-4be5-b35a-46e881b99346@6ccb.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Join us for our 13th Annual St. Patrick's Day Celebration and Sing-Along\nSing-Along will begin at 6pm with Kevin Dooley Band & Irish Table O’Singers\nPrize for best dressed 7:00pm\nCorned Beef and Rye on special (while it lasts!)\nIrish drink specials\n\nLink: https://www.downtownlongmont.com/do/st-patricks-day-party-and-sing-along-13th-annual
-DTEND:20260318T020000Z
-LOCATION:300 Suns Brewing
-DTSTART:20260318T000000Z
-SUMMARY:🎵 St Patrick's Day Party and Sing-Along - 13th Annual
-UID:9765cff0-622c-4151-b2fe-ba81fa4a6367@9765.org
+UID:807fdaf8-10da-4bc3-89f6-f13090d45fdc@807f.org
 END:VEVENT
 BEGIN:VEVENT
 DESCRIPTION:This is an intimate live show in downtown Longmont\, Colorado presented by The Soundpost Sessions at The Times Collaborative featuring two songwriters and host Monica Marie LaBonte all on stage swapping songs and stories in-the-round. Music is from 7:30-9:30\, doors at 7:00. Join us for this very special ongoing musical series every other month!\n$18 Advance (reserved seating)\n$20 Day of Show\nThe Artists:\nJohn Statz https://johnstatz.com/\nIt was somewhere in England while on tour in September of 2019 that Colorado songwriter John Statz – stressed out by rainy days\, Brexit anxiety\, and a disintegrating relationship back home – began to feel optimistic and plan his new record. Early Riser is a balancing act between the experiences in modern life that cause us worry or pain and those that bring us joy. The album is very much a product of the year 2019 and the cultural scene at the end of a decade\, with songs referencing political divisions over Brexit\, the destruction of Notre Dame\, and the racist dog-whistles of a xenophobic president. John presents those weighty topics alongside more personal songs of reverence for travel and the outdoors\, falling in and out of love\, and his parents’ relationship. These songs are brought to life by an ace band featuring Billy Conway (Morphine) on drums\, Jeremy Moses Curtis (Booker T) on bass\, and Denver multi-instrumentalist Kate Hannington on keys\, backing vocals\, woodwinds\, and guitars.\nOne of the more prolific thirty-something songwriters working in the Folk/Americana genre today\, John Statz has released nine studio albums and performed all over North America and Europe over the course of his fifteen-year career. The Boston Globe has called John’s music electric\, urgent folk\; aching\, sweet country-rock while American Songwriter has said that he writes the kind of songs that float through your mind and stay nestled in your thoughts long after listening. John has worked with some of the best producers in the genre\, including Bo Ramsey (Lucinda Williams\, Greg Brown) on his 2012 release Old Fashioned\, Jeffrey Foucault (Kris Delmhorst\, Caitlin Canty) on a 2015 album TULSA\, and Denver songwriting friend Megan Burtt on 2017’s The Fire Sermon. He’s more recently taken a turn towards the production chair\, self-producing 2018’s Darkness on the San Juans and co-producing 2020’s Early Riser\, along with Kate Hannington\, Billy Conway\, and Jeremy Moses Curtis.\nJohn Statz was given a guitar by his grandmother when he was fifteen\, which turned out to be perfectly timed for an easily-distracted Wisconsin teenager who\, after ten years of piano lessons\, had lost interest in classical music and had taken to learning John Lennon and Elton John tunes. It wasn’t until Statz was nineteen and attending university in Oshkosh that he began writing songs. The spark lit after attending a show at the storied Café Carpe in Fort Atkinson\, Wisconsin featuring Jeffrey Foucault and Peter Mulvey\, who quickly became heroes\, and\, later on\, friends and collaborators. John moved to Denver in 2010 where he escapes to the mountains as much as possible to hike and camp\, cooks almost entirely in cast-iron cookware\, and reads presidential biographies in chronological order.\nMartin Gilmore https://www.martingilmore.com/\nWith a diverse and extensive repertoire\, Martin Gilmore’s soulful voice navigates a wide range of sounds with traditional and original songs. His easy-going style explores the depths of folk music with authentic reproductions\, creative reimaginations\, and unique original songs. His robust vocals\, and impressive guitar work combine to bring color to new and old songs alike. Gilmore’s strong desire to let his authenticity blaze a trail leaves no doubt about his sincerity or artistry.\n​\nMartin Gilmore released his debut self-titled record in 2009 which was produced by Infamous Stringdusters bassist Travis Book. The record also featured members of FY5\, Open Road\, and Pete Wernick of Hot Rize. In 2017\, Martin released his EP East-West also featuring Eslam Elabaty\, which was recorded in Cairo\, Egypt where Martin lived from 2015-2017. Martin’s 2021 release The Martin Gilmore Trio featured the talents of mandolinist Nick Amodeo and bassist Ian Haegele\, who play regularly with Martin. The record also features Tim O’Brien\, Courtney Hartman\, and Mollie O’Brien. The Martin Gilmore trio have played all over the United States and Ireland\, and were one of the official showcase groups at the International Bluegrass Music Associations World of Bluegrass conference in 2021.\n​\nIn 2017\, Martin joined the faculty at the University of Northern Colorado as part of the Folk and Bluegrass program in the School of Music. As part of the program he has conducted lessons in bluegrass guitar\, singing\, composition & songwriting\, and has led the bluegrass ensemble. Martin has also been an instructor at Swallow Hill Music Association in Denver since 2008\, where he leads classes about songwriting\, guitar\, singing\, and directs bluegrass ensembles and the Swallow Hill Bluegrass Band. He also has taught courses on bluegrass music\, the banjo\, country music\, and cowboy songs for the University of Denver’s Enrichment Program.\n​\nMartin has opened for groups such as The Infamous Stringdusters\, Stephen Stills\, Judy Collins\, amongst others. He has toured all over the world as a solo act\, as well as with the Martin Gilmore Trio\, and his bluegrass band Long Road Home. He also won the 2024 Telluride Bluegrass Festival Troubadour songwriting competition and the 2024 Rocky Mountain Folks Festival Songwriters Showcase competition. He is a winner of the 2025 New Folk Competition at the Kerrville Folk Festival.\nMonica Marie LaBonte monicamariemusic.com\nFrom a wide-eyed tike delicately pressing the keys of her mother’s upright piano to a seasoned artist taking various stages across the country\, Monica Marie LaBonte has always been guided by song.With the sharp ability to craft tracks that speak to the fragility and wonder of life\, the crystalline vocalist continues to attract listeners with her stirring blend of folk and country. At times\, her lyrics come across as wise whisperings from a dear friend. At others\, they hold all the vulnerability and transparency of raw confessions. A keen observer\, LaBonte bears witness to life’s magic and heartache and artfully weaves the intricacies of the human condition into tunes that possess undeniable intimacy\, grace and grit.In her over 10-year career\, the Colorado native has played hundreds of venues\, including the historic Gold Hill Inn and Planet Bluegrass. Whether belting out ballads in a small listening room or playing to tens of thousands at an open-air venue\, she brings a palpable authenticity to each gig.Known for her stint in mystic-Americana band Monocle\, her stellar musicianship and gift for commanding a stage shines just as bright in her solo work.Armed with an acoustic and her truth\, it’s clear LaBonte is pursuing her art for all the right reasons. Although her creative pursuits are guided by pure passion\, LaBonte hasn’t escaped critical praise and success. A finalist In the 2018 Songwriter Showcase\, at Rocky Mountain Folks Fest in Lyons\, Colo.\, she continues to impress with her art.A natural-born wordsmith — in the vein of Joni Mitchell and Alison Krauss — it’s easy to see why the songstress has packed coffeehouses\, held her own on the lineup at the Telluride Bluegrass Festival and been hailed as having “a voice I trust” by fellow musician Daniel Rodriguez (founding member of Elephant Revival).Powerful\, yet understated — poetic\, yet real — LaBonte remains one to watch.\n\nLink: https://www.downtownlongmont.com/do/mixtape-songwriter-showcase-featuring-john-statz-and-martin-gilmore
@@ -159,79 +31,31 @@ DTEND:20260313T033000Z
 LOCATION:The Times Collaborative / 338 Main St
 DTSTART:20260313T013000Z
 SUMMARY:🎵 [Rock] MIXTAPE: Songwriter Showcase featuring John Statz and Martin Gilmore
-UID:fc9208da-8f01-474c-915b-90caf6ca1d88@fc92.org
+UID:dfbca3e0-9b74-42ce-93e6-67b3c6e83d51@dfbc.org
 END:VEVENT
 BEGIN:VEVENT
-DESCRIPTION:Morpheus is Colorado's musical tribute to the band Morphine.\n\nLink: https://www.downtownlongmont.com/do/morpheus-dreaming-at-bootstrap-brewing-11
-DTEND:20260306T040000Z
-LOCATION:Bootstrap Brewing
-DTSTART:20260306T010000Z
-SUMMARY:🎵 Morpheus Dreaming at Bootstrap Brewing!
-UID:384e5d72-0169-425d-aaaa-aed699374769@384e.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:The Luck o' The Irish returns March 14th with our St. Patrick's Day Party!\nIrish Dancing with Avoca Irish Dance Academy\nLive Music\, Green Beer & Irish Car Bombs\nMouth-Watering Smoked Reubens\nAnd the return of our Irish Cream Competition! This year\, everyone can taste and vote on the final round of entries! Sign up today for a $20 Bottle of Malt Whiskey. We need one bottle of Irish Cream by March 13th.\nSláinte!\n\nLink: https://www.downtownlongmont.com/do/st-patricks-day-party
-DTEND:20260315T040000Z
-LOCATION:Abbott & Wallace Distilling
-DTSTART:20260314T220000Z
-SUMMARY:🎵 St. Patrick's Day Party
-UID:a1cc6897-7106-4a35-b089-047cd8bc75d9@a1cc.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Colorado's tribute to the Doors!\n\nLink: https://www.downtownlongmont.com/do/the-doors-jam-at-bootstrap-brewing
-DTEND:20260308T040000Z
-LOCATION:Bootstrap Brewing
-DTSTART:20260308T010000Z
-SUMMARY:🎵 The Doors Jam at Bootstrap Brewing!
-UID:d06e03a7-e98a-474e-840c-47e44dd18893@d06e.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Book your reservation for 1/2 Price Bottle Night and live music with Tom Moran. Music is from 5pm-8pm.\n\nLink: https://www.downtownlongmont.com/do/half-price-bottle-night-and-live-music-1
-DTEND:20260327T030000Z
-LOCATION:Kuper Wine Bar
-DTSTART:20260326T210000Z
-SUMMARY:🎵 Half Price Bottle Night & Live Music
-UID:28eaa3a6-ad68-47ce-8b5a-e9fc741b4829@28ea.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Discovery Days is an early childhood program that encourages children ages 2 to 6 and their caregivers to have fun together through educational\, hands-on art\, music\, and movement activities. When you attend Discovery Days at the Longmont Museum with your child\, you will help them cultivate important school-readiness skills\, such as language development\, attention\, concentration\, fine motor skills\, emotional regulation\, and play and social abilities.\nOccurs weekly on Tuesdays Jan. 13-May 5\, 2026. Three 45 minute-1 hour sessions available: 9:15am\, 10:45am\, and 1pm.\nAttend a session that fits your schedule\, no registration needed. Learn more online and explore weekly themes at https://longmontcolorado.gov/museum/education/discovery-days/ or by calling 303-651-8374.\n\nLink: https://www.downtownlongmont.com/do/discovery-days-music-and-movement-with-ms-ragen-5
-DTEND:20260310T200000Z
+DESCRIPTION:For more than 20 years\, The Hummin’ Birds have been bringing the spirit of early American music to life. Born out of Minnesota’s bluegrass and old-time scene\, Cami Harris and Mike Silbernagel honed their sound through late-night jams and festival campfires before winning first place in a 2006 Minnesota State Fair duet contest. Now based in Denver\, the duo shares their signature harmonies\, timeless song interpretations\, and heartfelt originals with audiences across the Front Range and Midwest.\nThis concert is part of the Longmont Museum’s Friday Afternoon Concert Series.  Enjoy an afternoon of live music in our Stewart Auditorium this fall featuring an eclectic array of musical acts from up and down the Front Range.\nLearn more and buy tickets online at https://longmontcolorado.gov/event/the-hummin-birds/ or by calling 303-651-8374.\n\nLink: https://www.downtownlongmont.com/do/friday-afternoon-concert-the-hummin-birds
+DTEND:20260410T223000Z
 LOCATION:Longmont Museum
-DTSTART:20260310T151500Z
-SUMMARY:🎵 Discovery Days: Music & Movement with Ms. Ragen
-UID:8d7f399e-e510-49d9-91b0-26341e813063@8d7f.org
+DTSTART:20260410T203000Z
+SUMMARY:🎵 [Folk/Acoustic] Friday Afternoon Concert: The Hummin’ Birds
+UID:3574b028-ede2-4de7-bbbf-3af029ed921a@3574.org
 END:VEVENT
 BEGIN:VEVENT
-DESCRIPTION:Progressive Rock\, Funk\, and Blues band based out of Northern Colorado. Come and rock out with us while sipping on a drink or eating something delicious from Miss Krissy's Bistro.\n\nLink: https://www.downtownlongmont.com/do/music-at-bricks-on-main-audiomedz-2
-DTEND:20260308T040000Z
+DESCRIPTION:Join us for our 13th Annual St. Patrick's Day Celebration and Sing-Along\nSing-Along will begin at 6pm with Kevin Dooley Band & Irish Table O’Singers\nPrize for best dressed 7:00pm\nCorned Beef and Rye on special (while it lasts!)\nIrish drink specials\n\nLink: https://www.downtownlongmont.com/do/st-patricks-day-party-and-sing-along-13th-annual
+DTEND:20260318T020000Z
+LOCATION:300 Suns Brewing
+DTSTART:20260318T000000Z
+SUMMARY:🎵 St Patrick's Day Party and Sing-Along - 13th Annual
+UID:f7f98fe1-07f3-493d-900f-431ad9063efa@f7f9.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Sugar Britches are a blend of mischievous and witty lyricists with eclectic and talented musicians from genres such as bluegrass\, folk\, rock and honky tonk.\n\nLink: https://www.downtownlongmont.com/do/music-at-bricks-on-main-sugar-britches-2
+DTEND:20260320T020000Z
 LOCATION:Bricks on Main
-DTSTART:20260308T010000Z
-SUMMARY:🎵 [Rock] Music at Bricks on Main "AudioMedz"
-UID:ad359492-9329-42bf-a07b-0ef99dad628d@ad35.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Discovery Days is an early childhood program that encourages children ages 2 to 6 and their caregivers to have fun together through educational\, hands-on art\, music\, and movement activities. When you attend Discovery Days at the Longmont Museum with your child\, you will help them cultivate important school-readiness skills\, such as language development\, attention\, concentration\, fine motor skills\, emotional regulation\, and play and social abilities.\nOccurs weekly on Tuesdays Jan. 13-May 5\, 2026. Three 45 minute-1 hour sessions available: 9:15am\, 10:45am\, and 1pm.\nAttend a session that fits your schedule\, no registration needed. Learn more online and explore weekly themes at https://longmontcolorado.gov/museum/education/discovery-days/ or by calling 303-651-8374.\n\nLink: https://www.downtownlongmont.com/do/discovery-days-music-and-movement-with-ms-ragen-5
-DTEND:20260317T200000Z
-LOCATION:Longmont Museum
-DTSTART:20260317T151500Z
-SUMMARY:🎵 Discovery Days: Music & Movement with Ms. Ragen
-UID:4ee23fc1-545e-46d1-99e5-5e4bf60dbddd@4ee2.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Inspired by Scandinavian folk art\, we will paint stylized floral patterns on rocks. Take them home and decorate your windowsill or your emerging garden with reminders that spring has begun.\nThis program is part of our Thursday Nights @ the Museum. Learn more and register online at https://longmontcolorado.gov/event/art-sip-floral-rock-painting/  or by calling 303-651-8374.\n\nLink: https://www.downtownlongmont.com/do/art-and-sip-floral-rock-printing
-DTEND:20260327T000000Z
-LOCATION:Longmont Museum
-DTSTART:20260326T220000Z
-SUMMARY:🎵 [Rock] Art & Sip: Floral Rock Printing
-UID:211289c1-7b61-4cfe-a359-1462121d7aa7@2112.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Come out for some live original Roots-Rock-Jam and Alt-Rock-Pop (plus fun covers) with Teresa Storch Band + Nine Wide Sky!\n\nLink: https://www.downtownlongmont.com/do/music-at-bricks-on-main-teresa-storch-band-and-one-wide-sky
-DTEND:20260314T030000Z
-LOCATION:Bricks on Main
-DTSTART:20260314T000000Z
-SUMMARY:🎵 [Rock] Music at Bricks on Main "Teresa Storch Band & One Wide Sky"
-UID:c21306a0-d9dd-4037-b772-89ddfef9d522@c213.org
+DTSTART:20260320T000000Z
+SUMMARY:🎵 [Rock] Music at Bricks on Main "Sugar Britches"
+UID:0b069ae7-dbf7-4aa4-92c2-dacd866ae40a@0b06.org
 END:VEVENT
 BEGIN:VEVENT
 DESCRIPTION:The beloved children’s tale “The Story of Peter Rabbit” comes to life in the form of “Mini Música” —an interactive\, bilingual story time concert for young audiences ages 0 to 7. Featuring a 16-piece orchestra and a narrator who dances and sings in English and Spanish\, this program is designed to engage young children through a musical telling of a classic children’s story. As part of the Colorado Symphony’s commitment to early childhood education literacy initiatives\, all concert attendees will receive a complimentary bilingual storybook at each concert.\nLearn more and make free reservations online at https://longmontcolorado.gov/event/colorado-symphony-mini-musica-concert-the-story-of-peter-rabbit/ or by calling 303-651-8374.\n\nLink: https://www.downtownlongmont.com/do/colorado-symphony-mini-musica-concert-the-story-of-peter-rabbit
@@ -239,79 +63,7 @@ DTEND:20260404T170000Z
 LOCATION:Longmont Museum
 DTSTART:20260404T160000Z
 SUMMARY:🎵 [Classical] Colorado Symphony Mini Música Concert: The Story of Peter Rabbit
-UID:d6ff49b0-cbe6-4968-87d8-226ad6c35b18@d6ff.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:The beloved children’s tale “The Story of Peter Rabbit” comes to life in the form of “Mini Música” —an interactive\, bilingual story time concert for young audiences ages 0 to 7. Featuring a 16-piece orchestra and a narrator who dances and sings in English and Spanish\, this program is designed to engage young children through a musical telling of a classic children’s story. As part of the Colorado Symphony’s commitment to early childhood education literacy initiatives\, all concert attendees will receive a complimentary bilingual storybook at each concert.\nLearn more and make free reservations online at https://longmontcolorado.gov/event/colorado-symphony-mini-musica-concert-the-story-of-peter-rabbit/ or by calling 303-651-8374.\n\nLink: https://www.downtownlongmont.com/do/colorado-symphony-mini-musica-concert-the-story-of-peter-rabbit-1
-DTEND:20260404T183000Z
-LOCATION:Longmont Museum
-DTSTART:20260404T173000Z
-SUMMARY:🎵 [Classical] Colorado Symphony Mini Música Concert: The Story of Peter Rabbit
-UID:bc435552-0a14-4b28-a100-24ddb3bb0c57@bc43.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Book your reservation for 1/2 Price Bottle Night and live music with Tom Moran. Music is from 5pm-8pm.\n\nLink: https://www.downtownlongmont.com/do/half-price-bottle-night-and-live-music-1
-DTEND:20260313T030000Z
-LOCATION:Kuper Wine Bar
-DTSTART:20260312T210000Z
-SUMMARY:🎵 Half Price Bottle Night & Live Music
-UID:11fae893-a21e-4391-97a7-4847bbadd783@11fa.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Discovery Days is an early childhood program that encourages children ages 2 to 6 and their caregivers to have fun together through educational\, hands-on art\, music\, and movement activities. When you attend Discovery Days at the Longmont Museum with your child\, you will help them cultivate important school-readiness skills\, such as language development\, attention\, concentration\, fine motor skills\, emotional regulation\, and play and social abilities.\nOccurs weekly on Tuesdays Jan. 13-May 5\, 2026. Three 45 minute-1 hour sessions available: 9:15am\, 10:45am\, and 1pm.\nAttend a session that fits your schedule\, no registration needed. Learn more online and explore weekly themes at https://longmontcolorado.gov/museum/education/discovery-days/ or by calling 303-651-8374.\n\nLink: https://www.downtownlongmont.com/do/discovery-days-music-and-movement-with-ms-ragen-5
-DTEND:20260331T200000Z
-LOCATION:Longmont Museum
-DTSTART:20260331T151500Z
-SUMMARY:🎵 Discovery Days: Music & Movement with Ms. Ragen
-UID:57a185ec-d086-4b40-a94f-e85524eb791f@57a1.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:ÓRALE Mundo\, delivers a captivating performance of boogaloo and latin soul\, featuring the timeless music of Willie Bobo\, Tito Puente\, and beautifully rendered reimagined Santana classics that will keep you on your feet!\n\nLink: https://www.downtownlongmont.com/do/music-at-bricks-on-main-Orale-mundo-1
-DTEND:20260327T020000Z
-LOCATION:Bricks on Main
-DTSTART:20260327T000000Z
-SUMMARY:🎵 [R&B] Music at Bricks on Main "Órale Mundo"
-UID:de51b6c4-5b13-4758-96ef-bdaf9f2b4cdb@de51.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Mont Alto Motion Picture Orchestra returns to the Longmont Museum to provide live orchestration for one of the most revered comedies of the silent era. Buster Keaton stars as hapless Southern railroad engineer Johnny Gray who faces off against Union soldiers during the American Civil War.\nThis event is part of Thursday Nights @ the Museum. Learn more and buy tickets online at https://longmontcolorado.gov/event/mont-alto-motion-picture-orchestra-the-general-1926/ or by calling 303-651-8374.\n\nLink: https://www.downtownlongmont.com/do/mont-alto-motion-picture-orchestra-the-general-1926
-DTEND:20260403T030000Z
-LOCATION:Longmont Museum
-DTSTART:20260403T010000Z
-SUMMARY:🎵 [Classical] Mont Alto Motion Picture Orchestra: “The General” (1926)
-UID:445540f7-cbdf-4295-b5f4-175c5fea3b2f@4455.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Get ready to rock out with the dynamic sounds of Ten Cent Prophet\, a versatile band hailing from the front range of Colorado. Whether you're a fan of classic rock\, country\, 90s hits\, or dance tunes\, these guys have got you covered.\n\nLink: https://www.downtownlongmont.com/do/music-at-bricks-on-main-ten-cent-prophet
-DTEND:20260307T040000Z
-LOCATION:Bricks on Main
-DTSTART:20260307T010000Z
-SUMMARY:🎵 [Rock] Music at Bricks on Main "Ten Cent Prophet"
-UID:2a707d96-933a-4eff-a843-30cd4ae455ab@2a70.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Established in September 2018 as a duo with Tony Crank - a current and 30 year established professional studio engineer with over 100 production albums  in Country\, Blues\, Rock and Goth/Metal genre to credit and Carl Hager - a James Taylor / Bob Seger / Bob Dylan influenced musician who has delivered over 60 Denver Region live acoustic performances in 2017-18\, the Mountain ReVerb performance collaboration has grown to include some of the most talented instrumentalists and vocalists in Colorado.\n\nLink: https://www.downtownlongmont.com/do/mountain-reverb-at-bootstrap-brewing-5
-DTEND:20260321T030000Z
-LOCATION:Bootstrap Brewing
-DTSTART:20260321T000000Z
-SUMMARY:🎵 [Rock] Mountain Reverb at Bootstrap Brewing!
-UID:81634a7c-da09-4d8f-b770-b0b679d6a63e@8163.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Potcheen has played thousands of shows from New York to Alaska. Named Colorado’s Top Celtic band\, they continue to play alongside hundreds of the world's best musical acts from Celtic to Bluegrass\, Jam and Rock bands energizing crowds with their high energy foot stomping stage shows. https://www.thepotcheenfolkband.com\n\nLink: https://www.downtownlongmont.com/do/potcheen-at-bootstrap-brewing-2
-DTEND:20260314T030000Z
-LOCATION:Bootstrap Brewing
-DTSTART:20260314T000000Z
-SUMMARY:🎵 [Rock] Potcheen at Bootstrap Brewing!
-UID:efde67a7-ff88-4c26-b9dc-5655f7fba2f8@efde.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:First Friday Jazz with Mojazz Trio\nSlide into the weekend with the smooth tunes of Mojazz.\nOur neighbors at the Mojo Studio are part of the Mojomama band\, and they always lay down the right vibe.\nKitchen Open until 8pm.\n\nLink: https://www.downtownlongmont.com/do/first-friday-with-mojazz
-DTEND:20260307T030000Z
-LOCATION:Abbott & Wallace Distilling
-DTSTART:20260307T010000Z
-SUMMARY:🎵 [Jazz] First Friday with Mojazz
-UID:baa5e5be-4299-4b8e-9894-561b6bf662d1@baa5.org
+UID:7254d8f1-a210-44ca-8d41-fbc3a3efc12d@7254.org
 END:VEVENT
 BEGIN:VEVENT
 DESCRIPTION:Enjoy an evening of beautiful classical guitar with Tony.  And\, we never know who else might jump on the stage with him!\n\nLink: https://www.downtownlongmont.com/do/tony-crank-and-friends-at-bootstrap-brewing-6
@@ -319,23 +71,39 @@ DTEND:20260313T030000Z
 LOCATION:Bootstrap Brewing
 DTSTART:20260313T000000Z
 SUMMARY:🎵 [Classical] Tony Crank and Friends at Bootstrap Brewing!
-UID:00584852-46b9-4ca9-be2f-7900d977b9ac@0058.org
+UID:8d7c1610-564a-438d-a3a0-cf16baafe444@8d7c.org
 END:VEVENT
 BEGIN:VEVENT
-DESCRIPTION:Since 1991\, ADAM REY has been a first call guitarist for many bands in the Colorado Rocky Mountain region.\nCurrently performing with 'The Long Run-Colorado's Tribute to the Eagles' he's now presenting his solo acoustic show. With songs spanning 6 decades of his myriad musical influences\, he'll take you on a engaging musical journey\, all served up in his own stylistic personality.\n\nLink: https://www.downtownlongmont.com/do/adam-rey-at-bootstrap-brewing-1
-DTEND:20260403T030000Z
-LOCATION:Bootstrap Brewing
-DTSTART:20260403T000000Z
-SUMMARY:🎵 [Folk/Acoustic] Adam Rey at Bootstrap Brewing!
-UID:a4e2dea2-b913-4833-83d0-72a61925bd35@a4e2.org
+DESCRIPTION:The Luck o' The Irish returns March 14th with our St. Patrick's Day Party!\nIrish Dancing with Avoca Irish Dance Academy\nLive Music\, Green Beer & Irish Car Bombs\nMouth-Watering Smoked Reubens\nAnd the return of our Irish Cream Competition! This year\, everyone can taste and vote on the final round of entries! Sign up today for a $20 Bottle of Malt Whiskey. We need one bottle of Irish Cream by March 13th.\nSláinte!\n\nLink: https://www.downtownlongmont.com/do/st-patricks-day-party
+DTEND:20260315T040000Z
+LOCATION:Abbott & Wallace Distilling
+DTSTART:20260314T220000Z
+SUMMARY:🎵 St. Patrick's Day Party
+UID:bad01154-31c8-47e7-b8a1-cb723b158539@bad0.org
 END:VEVENT
 BEGIN:VEVENT
-DESCRIPTION:Party DJ with a repertoire of dance classics\, remixes\, and high-quality electronic beats.\n\nLink: https://www.downtownlongmont.com/do/music-at-bricks-on-main-dj-sh34-dance-party
-DTEND:20260330T030000Z
-LOCATION:Bricks on Main
-DTSTART:20260330T000000Z
-SUMMARY:🎵 [Electronic] Music at Bricks on Main "DJ SH34 Dance Party"
-UID:8347f280-658a-4dee-afe2-17712de7d98c@8347.org
+DESCRIPTION:Book your reservation for 1/2 Price Bottle Night and live music with Tom Moran. Music is from 5pm-8pm.\n\nLink: https://www.downtownlongmont.com/do/half-price-bottle-night-and-live-music-1
+DTEND:20260313T030000Z
+LOCATION:Kuper Wine Bar
+DTSTART:20260312T210000Z
+SUMMARY:🎵 Half Price Bottle Night & Live Music
+UID:a78f0416-ebf5-4aba-b6b7-7b26a261cc4f@a78f.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Discovery Days is an early childhood program that encourages children ages 2 to 6 and their caregivers to have fun together through educational\, hands-on art\, music\, and movement activities. When you attend Discovery Days at the Longmont Museum with your child\, you will help them cultivate important school-readiness skills\, such as language development\, attention\, concentration\, fine motor skills\, emotional regulation\, and play and social abilities.\nOccurs weekly on Tuesdays Jan. 13-May 5\, 2026. Three 45 minute-1 hour sessions available: 9:15am\, 10:45am\, and 1pm.\nAttend a session that fits your schedule\, no registration needed. Learn more online and explore weekly themes at https://longmontcolorado.gov/museum/education/discovery-days/ or by calling 303-651-8374.\n\nLink: https://www.downtownlongmont.com/do/discovery-days-music-and-movement-with-ms-ragen-5
+DTEND:20260407T200000Z
+LOCATION:Longmont Museum
+DTSTART:20260407T151500Z
+SUMMARY:🎵 Discovery Days: Music & Movement with Ms. Ragen
+UID:1c5d9df6-56db-4f25-a83f-b8980ccc879a@1c5d.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:✨ Vintage Vibes\, Elevated Lives ✨\nWe’re thrilled to announce our FIRST Annual Dinner Fundraiser & Fashion Show benefiting Elevated Communities!\n📅 Saturday\, April 11th\n🕔 5:00–8:00pm\n📍 Longmont’s Elks Lodge\nDinner\, fashion\, music\, dancing\, a silent auction—and a whole lot of heart 💛\nCome dressed in your favorite decade and help us raise funds for our Navigations Program.\n🎟 Tickets + tables available now!\nhttps://givebutter.com/vintagevibes\nCan't make it? You can still support Elevated Communities by donating to our Vintage Vibes fundraiser 💛 https://live.givebutter.com/c/vintagevibes\n\nLink: https://www.downtownlongmont.com/do/vintage-vibes-elevated-lives-first-annual-fundraiser-and-fashion-show
+DTEND:20260412T020000Z
+LOCATION:Downtown Longmont
+DTSTART:20260411T230000Z
+SUMMARY:🎵 Vintage Vibes - Elevated Lives First Annual Fundraiser and Fashion Show
+UID:c8d8af8b-2f82-48df-be1c-f9e1003a1cfa@c8d8.org
 END:VEVENT
 BEGIN:VEVENT
 DESCRIPTION:Unauthorized Absence is a classic rock cover band playing all your favorite songs to transport you back to the soundtrack of your youth! https://www.unauthorizedabsence.com\n\nLink: https://www.downtownlongmont.com/do/unauthorized-absence-at-bootstrap-brewing-4
@@ -343,47 +111,47 @@ DTEND:20260322T030000Z
 LOCATION:Bootstrap Brewing
 DTSTART:20260322T000000Z
 SUMMARY:🎵 [Rock] Unauthorized Absence at Bootstrap Brewing!
-UID:bf415e30-92db-4787-9692-fe705115012d@bf41.org
+UID:26095cfb-86f2-419a-9ca3-76355bafec01@2609.org
 END:VEVENT
 BEGIN:VEVENT
-DESCRIPTION:Whether it's an all-Motown extravaganza\, a funky display of rhythm and blues mastery\, or a boot-stomping country jam\, we keep the dance floor alive all night long with your favorite tunes from every era.\n\nLink: https://www.downtownlongmont.com/do/midnight-hour-at-bootstrap-brewing-5
-DTEND:20260404T030000Z
-LOCATION:Bootstrap Brewing
-DTSTART:20260404T000000Z
-SUMMARY:🎵 [Blues] Midnight Hour at Bootstrap Brewing!
-UID:5be49b16-6d46-484c-8ad6-7bb2211a7d02@5be4.org
+DESCRIPTION:Inspired by Scandinavian folk art\, we will paint stylized floral patterns on rocks. Take them home and decorate your windowsill or your emerging garden with reminders that spring has begun.\nThis program is part of our Thursday Nights @ the Museum. Learn more and register online at https://longmontcolorado.gov/event/art-sip-floral-rock-painting/  or by calling 303-651-8374.\n\nLink: https://www.downtownlongmont.com/do/art-and-sip-floral-rock-printing
+DTEND:20260327T000000Z
+LOCATION:Longmont Museum
+DTSTART:20260326T220000Z
+SUMMARY:🎵 [Rock] Art & Sip: Floral Rock Printing
+UID:38d1537e-6c38-4610-8803-51ea3ff66e63@38d1.org
 END:VEVENT
 BEGIN:VEVENT
-DESCRIPTION:Indigent Row creates a dynamic blend of traditional Celtic\, rock\, funk\, and jazz. Driving rhythms and fresh tune arrangements fuel their energetic and musical performances. The powerful sound of this innovative band fills big and small venues and keeps audiences of all-ages frolicking.\n\nLink: https://www.downtownlongmont.com/do/indigent-row-celtic-rock-at-bootstrap-brewing
-DTEND:20260315T030000Z
-LOCATION:Bootstrap Brewing
-DTSTART:20260315T000000Z
-SUMMARY:🎵 [Jazz] Indigent Row- Celtic Rock at Bootstrap Brewing!
-UID:8d831660-991c-4829-b78d-3c81d6f07f08@8d83.org
+DESCRIPTION:ÓRALE Mundo\, delivers a captivating performance of boogaloo and latin soul\, featuring the timeless music of Willie Bobo\, Tito Puente\, and beautifully rendered reimagined Santana classics that will keep you on your feet!\n\nLink: https://www.downtownlongmont.com/do/music-at-bricks-on-main-Orale-mundo-1
+DTEND:20260327T020000Z
+LOCATION:Bricks on Main
+DTSTART:20260327T000000Z
+SUMMARY:🎵 [R&B] Music at Bricks on Main "Órale Mundo"
+UID:6b7351ed-cf9f-44ba-b921-45fc249d50e3@6b73.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Party DJ with a repertoire of dance classics\, remixes\, and high-quality electronic beats.\n\nLink: https://www.downtownlongmont.com/do/music-at-bricks-on-main-dj-sh34-dance-party
+DTEND:20260330T030000Z
+LOCATION:Bricks on Main
+DTSTART:20260330T000000Z
+SUMMARY:🎵 [Electronic] Music at Bricks on Main "DJ SH34 Dance Party"
+UID:ab61d7b9-68b9-4457-ad40-8073c48d9447@ab61.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:The Longmont All Star Jazz Band is playing soft/quiet jazz!\nPerforming Live at The Passenger\nThe Passenger has food and drink specials until 6pm and an amazing menu otherwise! Check our this local band performing in our bar area!\nThe Longmont All-Star Jazz Band (LASJB) is comprised of the finest musicians from the greater Boulder County area currently enrolled in their local high school music programs who want to pursue a fun\, professional\, and challenging environment. The All-Stars aim to grow students' musical and interpersonal skills\, while giving them the opportunities to work together\, improvise\, and perform a wide variety of styles and genres within jazz.\n\nLink: https://www.downtownlongmont.com/do/longmont-all-star-jazz-band-free-performance
+DTEND:20260405T020000Z
+LOCATION:The Passenger
+DTSTART:20260404T230000Z
+SUMMARY:🎵 [Jazz] Longmont All Star Jazz Band Free Performance!
+UID:1cd60056-01f8-4d83-b367-3d0edeccae82@1cd6.org
 END:VEVENT
 BEGIN:VEVENT
 DESCRIPTION:Book your reservation for 1/2 Price Bottle Night and live music with Tom Moran. Music is from 5pm-8pm.\n\nLink: https://www.downtownlongmont.com/do/half-price-bottle-night-and-live-music-1
-DTEND:20260320T030000Z
+DTEND:20260410T030000Z
 LOCATION:Kuper Wine Bar
-DTSTART:20260319T210000Z
+DTSTART:20260409T210000Z
 SUMMARY:🎵 Half Price Bottle Night & Live Music
-UID:d3868ee0-a4ad-4ba8-ad56-05c348c302e4@d386.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:A Tom Petty Tribute\n\nLink: https://www.downtownlongmont.com/do/petty-fools-a-tom-petty-tribute-band-at-bootstrap-brewing-1
-DTEND:20260405T030000Z
-LOCATION:Bootstrap Brewing
-DTSTART:20260405T000000Z
-SUMMARY:🎵 Petty Fools- A Tom Petty Tribute Band at Bootstrap Brewing!
-UID:a7468e15-037f-4f18-905d-28110c86c3ea@a746.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:An eclectic acoustic roots & jam band that will fill the dance floor!\n\nLink: https://www.downtownlongmont.com/do/music-at-bricks-on-main-mad-dog-blues-string-band
-DTEND:20260322T030000Z
-LOCATION:Bricks on Main
-DTSTART:20260322T000000Z
-SUMMARY:🎵 [Folk/Acoustic] Music at Bricks on Main "Mad Dog Blues String Band"
-UID:92d2f741-2af1-422d-8d5c-df01229c1799@92d2.org
+UID:3313b328-a386-4f6c-a3c5-5989b6ee9bca@3313.org
 END:VEVENT
 BEGIN:VEVENT
 DESCRIPTION:The Joe Cool Band covers a variety of the very best dance music from the 60’s to today’s hits.\n\nLink: https://www.downtownlongmont.com/do/the-joe-cool-band-at-bootstrap-brewing-7
@@ -391,15 +159,247 @@ DTEND:20260329T030000Z
 LOCATION:Bootstrap Brewing
 DTSTART:20260329T000000Z
 SUMMARY:🎵 The Joe Cool Band at Bootstrap Brewing!
-UID:bd241423-79f1-4d31-b1c1-86cec5f1a552@bd24.org
+UID:f739bb7e-629d-4644-82e9-89ebb838811e@f739.org
 END:VEVENT
 BEGIN:VEVENT
-DESCRIPTION:Combining their passions for jazz\, rock\, & soul music\, The Last American Trio showcase their unique rock-n-soul sound\, peppered with bits of Funk\, Blues and Latin & Americana Jazz. They play great reimagined versions of classic songs along with their dynamic original compositions.\n\nLink: https://www.downtownlongmont.com/do/music-at-bricks-on-main-the-la-trio
-DTEND:20260309T020000Z
+DESCRIPTION:Game Night Returns to Abbott & Wallace!\nCard\, Board Games & Magic: The Gathering\n$2 Off Draft Beer & Pizza\n\nLink: https://www.downtownlongmont.com/do/game-night
+DTEND:20260326T040000Z
+LOCATION:Abbott & Wallace Distilling
+DTSTART:20260325T230000Z
+SUMMARY:🎵 Game Night!
+UID:a7793f4a-96bb-458d-99c7-c227d04b4434@a779.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Potcheen has played thousands of shows from New York to Alaska. Named Colorado’s Top Celtic band\, they continue to play alongside hundreds of the world's best musical acts from Celtic to Bluegrass\, Jam and Rock bands energizing crowds with their high energy foot stomping stage shows. https://www.thepotcheenfolkband.com\n\nLink: https://www.downtownlongmont.com/do/potcheen-at-bootstrap-brewing-2
+DTEND:20260314T030000Z
+LOCATION:Bootstrap Brewing
+DTSTART:20260314T000000Z
+SUMMARY:🎵 [Rock] Potcheen at Bootstrap Brewing!
+UID:57d9df73-ae9d-4703-827d-2e029f924a89@57d9.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Consisting of three prominent Fort Collins musicians\, Ansel and the Brain Tattoos is a powerhouse trio. Featuring the songwriting of Ansel Foxley and the incomparable musicianship of Taylor Tesler on upright bass\, and Darren Radach on mandolin - this band is not to be missed!\n\nLink: https://www.downtownlongmont.com/do/music-at-bricks-on-main-ansel-and-the-brain-tattoos
+DTEND:20260323T020000Z
 LOCATION:Bricks on Main
-DTSTART:20260308T230000Z
-SUMMARY:🎵 [Jazz] Music at Bricks on Main "The LA Trio"
-UID:89646faa-d9dc-4ef5-9234-ac836166eb98@8964.org
+DTSTART:20260322T230000Z
+SUMMARY:🎵 Music at Bricks on Main "Ansel and the Brain Tattoos"
+UID:aa2e6cda-c5c1-4611-a599-600c57365446@aa2e.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Discovery Days is an early childhood program that encourages children ages 2 to 6 and their caregivers to have fun together through educational\, hands-on art\, music\, and movement activities. When you attend Discovery Days at the Longmont Museum with your child\, you will help them cultivate important school-readiness skills\, such as language development\, attention\, concentration\, fine motor skills\, emotional regulation\, and play and social abilities.\nOccurs weekly on Tuesdays Jan. 13-May 5\, 2026. Three 45 minute-1 hour sessions available: 9:15am\, 10:45am\, and 1pm.\nAttend a session that fits your schedule\, no registration needed. Learn more online and explore weekly themes at https://longmontcolorado.gov/museum/education/discovery-days/ or by calling 303-651-8374.\n\nLink: https://www.downtownlongmont.com/do/discovery-days-music-and-movement-with-ms-ragen-5
+DTEND:20260317T200000Z
+LOCATION:Longmont Museum
+DTSTART:20260317T151500Z
+SUMMARY:🎵 Discovery Days: Music & Movement with Ms. Ragen
+UID:8f0bfdf9-ad9d-406d-a9e7-b966fa4088cf@8f0b.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:A Tom Petty Tribute\n\nLink: https://www.downtownlongmont.com/do/petty-fools-a-tom-petty-tribute-band-at-bootstrap-brewing-1
+DTEND:20260405T030000Z
+LOCATION:Bootstrap Brewing
+DTSTART:20260405T000000Z
+SUMMARY:🎵 Petty Fools- A Tom Petty Tribute Band at Bootstrap Brewing!
+UID:bf98cc20-cb32-4345-bc1b-4a3bb0c9a324@bf98.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Friday nights are for live music 🎶\nJoin us at The Passenger on Friday\, March 27th for a live solo set from Denver singer-songwriter Dan Codiga. Blending Alt-Country\, Blues\, and Folk\, Dan brings a laid-back\, soulful sound perfect for kicking off your weekend.\n✨ Happy Hour until 6 PM\n🍻 Drinks + great food\n🎤 Live music in the bar area\nCome grab a drink\, stay for dinner\, and support local music while Dan plays a special set for the evening.\n#DenverLiveMusic #LiveMusicDenver #AltCountry #DenverMusic #SupportLocalMusic #ThePassengerRestaurant\n\nLink: https://www.downtownlongmont.com/do/dan-codiga-performing-live-free--the-passenger
+DTEND:20260328T023000Z
+LOCATION:The Passenger
+DTSTART:20260327T233000Z
+SUMMARY:🎵 [Folk/Acoustic] Dan Codiga Performing Live FREE @ The Passenger
+UID:1beb37fa-95a3-4bfa-982d-ee73a2fe26b6@1beb.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Formed in 2008\, the Buzz Brothers deliver hard-charging boogie and blues\, with grooves deep enough to twist your ankle in!\n\nLink: https://www.downtownlongmont.com/do/music-at-bricks-on-main-the-buzz-brothers-band
+DTEND:20260315T030000Z
+LOCATION:Bricks on Main
+DTSTART:20260315T000000Z
+SUMMARY:🎵 [Blues] Music at Bricks on Main "The Buzz Brothers Band"
+UID:5877d39f-bdaf-4449-bb4d-54ac04f7340c@5877.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Local 3 piece classic rock\, will keep you on the dance floor\, come out and have a great time!\n\nLink: https://www.downtownlongmont.com/do/music-at-bricks-on-main-the-motors-1
+DTEND:20260321T030000Z
+LOCATION:Bricks on Main
+DTSTART:20260321T000000Z
+SUMMARY:🎵 [Rock] Music at Bricks on Main "The Motors"
+UID:62e8b793-42ee-4ac1-a995-d869f530fd93@62e8.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:An eclectic acoustic roots & jam band that will fill the dance floor!\n\nLink: https://www.downtownlongmont.com/do/music-at-bricks-on-main-mad-dog-blues-string-band
+DTEND:20260322T030000Z
+LOCATION:Bricks on Main
+DTSTART:20260322T000000Z
+SUMMARY:🎵 [Folk/Acoustic] Music at Bricks on Main "Mad Dog Blues String Band"
+UID:8cca6bd6-c488-47c9-8e4e-6ee5cf7c5ed7@8cca.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Discovery Days is an early childhood program that encourages children ages 2 to 6 and their caregivers to have fun together through educational\, hands-on art\, music\, and movement activities. When you attend Discovery Days at the Longmont Museum with your child\, you will help them cultivate important school-readiness skills\, such as language development\, attention\, concentration\, fine motor skills\, emotional regulation\, and play and social abilities.\nOccurs weekly on Tuesdays Jan. 13-May 5\, 2026. Three 45 minute-1 hour sessions available: 9:15am\, 10:45am\, and 1pm.\nAttend a session that fits your schedule\, no registration needed. Learn more online and explore weekly themes at https://longmontcolorado.gov/museum/education/discovery-days/ or by calling 303-651-8374.\n\nLink: https://www.downtownlongmont.com/do/discovery-days-music-and-movement-with-ms-ragen-5
+DTEND:20260331T200000Z
+LOCATION:Longmont Museum
+DTSTART:20260331T151500Z
+SUMMARY:🎵 Discovery Days: Music & Movement with Ms. Ragen
+UID:e6847b0a-0b63-4004-b3ee-1eee04352978@e684.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Since 1991\, ADAM REY has been a first call guitarist for many bands in the Colorado Rocky Mountain region.\nCurrently performing with 'The Long Run-Colorado's Tribute to the Eagles' he's now presenting his solo acoustic show. With songs spanning 6 decades of his myriad musical influences\, he'll take you on a engaging musical journey\, all served up in his own stylistic personality.\n\nLink: https://www.downtownlongmont.com/do/adam-rey-at-bootstrap-brewing-1
+DTEND:20260403T030000Z
+LOCATION:Bootstrap Brewing
+DTSTART:20260403T000000Z
+SUMMARY:🎵 [Folk/Acoustic] Adam Rey at Bootstrap Brewing!
+UID:e58b862f-64a9-451f-852d-19d1b45cecf2@e58b.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Discovery Days is an early childhood program that encourages children ages 2 to 6 and their caregivers to have fun together through educational\, hands-on art\, music\, and movement activities. When you attend Discovery Days at the Longmont Museum with your child\, you will help them cultivate important school-readiness skills\, such as language development\, attention\, concentration\, fine motor skills\, emotional regulation\, and play and social abilities.\nOccurs weekly on Tuesdays Jan. 13-May 5\, 2026. Three 45 minute-1 hour sessions available: 9:15am\, 10:45am\, and 1pm.\nAttend a session that fits your schedule\, no registration needed. Learn more online and explore weekly themes at https://longmontcolorado.gov/museum/education/discovery-days/ or by calling 303-651-8374.\n\nLink: https://www.downtownlongmont.com/do/discovery-days-music-and-movement-with-ms-ragen-5
+DTEND:20260310T200000Z
+LOCATION:Longmont Museum
+DTSTART:20260310T151500Z
+SUMMARY:🎵 Discovery Days: Music & Movement with Ms. Ragen
+UID:d4f826bf-5ddd-4e12-b7d3-42100a6219ff@d4f8.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:The beloved children’s tale “The Story of Peter Rabbit” comes to life in the form of “Mini Música” —an interactive\, bilingual story time concert for young audiences ages 0 to 7. Featuring a 16-piece orchestra and a narrator who dances and sings in English and Spanish\, this program is designed to engage young children through a musical telling of a classic children’s story. As part of the Colorado Symphony’s commitment to early childhood education literacy initiatives\, all concert attendees will receive a complimentary bilingual storybook at each concert.\nLearn more and make free reservations online at https://longmontcolorado.gov/event/colorado-symphony-mini-musica-concert-the-story-of-peter-rabbit/ or by calling 303-651-8374.\n\nLink: https://www.downtownlongmont.com/do/colorado-symphony-mini-musica-concert-the-story-of-peter-rabbit-1
+DTEND:20260404T183000Z
+LOCATION:Longmont Museum
+DTSTART:20260404T173000Z
+SUMMARY:🎵 [Classical] Colorado Symphony Mini Música Concert: The Story of Peter Rabbit
+UID:5dad11a1-fa24-44f9-a471-1fb8b69f797d@5dad.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Strangebyrds are an original “Blue Collar Folk-Americana” Duo who whose influences are Neil Young\, Gillian Welch & Buddy & Julie Miller.\n\nLink: https://www.downtownlongmont.com/do/strangebyrds-live-music
+DTEND:20260329T020000Z
+LOCATION:300 Suns Brewing
+DTSTART:20260329T000000Z
+SUMMARY:🎵 [Folk/Acoustic] Strangebyrds - Live Music
+UID:f5cb5251-6ac5-43a2-8089-0735baba88e2@f5cb.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Come out for some live original Roots-Rock-Jam and Alt-Rock-Pop (plus fun covers) with Teresa Storch Band + Nine Wide Sky!\n\nLink: https://www.downtownlongmont.com/do/music-at-bricks-on-main-teresa-storch-band-and-one-wide-sky
+DTEND:20260314T030000Z
+LOCATION:Bricks on Main
+DTSTART:20260314T000000Z
+SUMMARY:🎵 [Rock] Music at Bricks on Main "Teresa Storch Band & One Wide Sky"
+UID:9c26cad9-c6de-4b45-ab92-e165ccc2d02c@9c26.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Indigent Row creates a dynamic blend of traditional Celtic\, rock\, funk\, and jazz. Driving rhythms and fresh tune arrangements fuel their energetic and musical performances. The powerful sound of this innovative band fills big and small venues and keeps audiences of all-ages frolicking.\n\nLink: https://www.downtownlongmont.com/do/indigent-row-celtic-rock-at-bootstrap-brewing
+DTEND:20260315T030000Z
+LOCATION:Bootstrap Brewing
+DTSTART:20260315T000000Z
+SUMMARY:🎵 [Jazz] Indigent Row- Celtic Rock at Bootstrap Brewing!
+UID:bd1019fd-a267-47d7-9cd4-dd700cb7fa4c@bd10.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Featuring Abigail Nims\, Mezzo-Soprano | This exciting program\, inspired by vocal music\, features a world premiere for large orchestra by the Italian composer Massimiliano Messieri. He will join Maestro Moore for a pre-concert talk at 6 PM. The concert also includes mezzo-soprano Abigail Nims performing Amy Beach’s Wand’ring Clouds\, which was the first composition by a woman to be performed by the Symphony Society of New York in 1892. Additionally\, Vaughan Williams' stunning and spiritual blend of ancient and modern elements is showcased in Fantasia on a Theme by Thomas Tallis\, which features two string orchestras. Finally\, Respighi’s Pines of Rome promises to be a sonic spectacle not to be missed!\nJoin us for the Pre-Concert Talk at 6pm.\n\nLink: https://www.downtownlongmont.com/do/lso-concert-pines-of-rome-and-a-world-premiere
+DTEND:20260412T030000Z
+LOCATION:Longmont Symphony Orchestra
+DTSTART:20260412T010000Z
+SUMMARY:🎵 [Classical] LSO Concert Pines of Rome & a World Premiere
+UID:ba56d325-6474-486f-ad68-53c8a842feb7@ba56.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Whether it's an all-Motown extravaganza\, a funky display of rhythm and blues mastery\, or a boot-stomping country jam\, we keep the dance floor alive all night long with your favorite tunes from every era.\n\nLink: https://www.downtownlongmont.com/do/midnight-hour-at-bootstrap-brewing-5
+DTEND:20260404T030000Z
+LOCATION:Bootstrap Brewing
+DTSTART:20260404T000000Z
+SUMMARY:🎵 [Blues] Midnight Hour at Bootstrap Brewing!
+UID:5acaf532-21a0-4003-aca5-8225adb736df@5aca.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Book your reservation for 1/2 Price Bottle Night and live music with Tom Moran. Music is from 5pm-8pm.\n\nLink: https://www.downtownlongmont.com/do/half-price-bottle-night-and-live-music-1
+DTEND:20260403T030000Z
+LOCATION:Kuper Wine Bar
+DTSTART:20260402T210000Z
+SUMMARY:🎵 Half Price Bottle Night & Live Music
+UID:b2a48e07-08eb-499f-a8b2-cea28b71d5f0@b2a4.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Two-time winners of the Mile High Blues Society International Blues Challenge\, 50 SHADES OF BLUE plays a FUNKILICIOUS mix of blues\, funk\, and R&B. We play original tunes\, as well as our take on a number of blues/R&B standards that will get you on your feet.\nCome on out and GET YER' BLUES ON!\n\nLink: https://www.downtownlongmont.com/do/music-at-bricks-on-main-50-shades-of-blue
+DTEND:20260411T030000Z
+LOCATION:Bricks on Main
+DTSTART:20260411T000000Z
+SUMMARY:🎵 [Blues] Music at Bricks on Main "50 Shades of Blue"
+UID:c2fd622d-49ff-47bb-9b39-f0912ab3ea25@c2fd.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Book your reservation for 1/2 Price Bottle Night and live music with Tom Moran. Music is from 5pm-8pm.\n\nLink: https://www.downtownlongmont.com/do/half-price-bottle-night-and-live-music-1
+DTEND:20260327T030000Z
+LOCATION:Kuper Wine Bar
+DTSTART:20260326T210000Z
+SUMMARY:🎵 Half Price Bottle Night & Live Music
+UID:9fed74a1-e85c-430b-bf4d-bf192d8bcc41@9fed.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Inspired by Scandinavian folk art\, we will paint stylized floral patterns on rocks. Take them home and decorate your windowsill or your emerging garden with reminders that spring has begun.\nThis program is part of our Thursday Nights @ the Museum. Learn more and register online at https://longmontcolorado.gov/event/art-sip-floral-rock-painting/  or by calling 303-651-8374.\n\nLink: https://www.downtownlongmont.com/do/art-and-sip-floral-rock-printing-1
+DTEND:20260327T023000Z
+LOCATION:Longmont Museum
+DTSTART:20260327T003000Z
+SUMMARY:🎵 [Rock] Art & Sip: Floral Rock Printing
+UID:78e1ad25-a125-4ec8-9cf8-eb2b330dd18b@78e1.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Established in September 2018 as a duo with Tony Crank - a current and 30 year established professional studio engineer with over 100 production albums  in Country\, Blues\, Rock and Goth/Metal genre to credit and Carl Hager - a James Taylor / Bob Seger / Bob Dylan influenced musician who has delivered over 60 Denver Region live acoustic performances in 2017-18\, the Mountain ReVerb performance collaboration has grown to include some of the most talented instrumentalists and vocalists in Colorado.\n\nLink: https://www.downtownlongmont.com/do/mountain-reverb-at-bootstrap-brewing-5
+DTEND:20260321T030000Z
+LOCATION:Bootstrap Brewing
+DTSTART:20260321T000000Z
+SUMMARY:🎵 [Rock] Mountain Reverb at Bootstrap Brewing!
+UID:a8665a61-0a3c-4635-97f9-5888ee3438ba@a866.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Join other crafty folks for a cozy night at the distillery!\nSip on your favorite cocktails while working on your projects.\nLooking for small business partners!\n\nLink: https://www.downtownlongmont.com/do/crafts-and-cocktails
+DTEND:20260319T030000Z
+LOCATION:Abbott & Wallace Distilling
+DTSTART:20260319T000000Z
+SUMMARY:🎵 Crafts & Cocktails
+UID:b5cef291-cd3f-497b-be90-767e7528a146@b5ce.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:First Friday Jazz with Mojazz Trio\nSlide into the weekend with the smooth tunes of Mojazz.\nOur neighbors at the Mojo Studio are part of the Mojomama band\, and they always lay down the right vibe.\nKitchen Open until 8pm.\n\nLink: https://www.downtownlongmont.com/do/first-friday-with-mojazz
+DTEND:20260404T020000Z
+LOCATION:Abbott & Wallace Distilling
+DTSTART:20260404T000000Z
+SUMMARY:🎵 [Jazz] First Friday with Mojazz
+UID:eeaa071a-8719-4252-b97b-e6dcf3ea5ec4@eeaa.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Mackenzie Rae & Buckshot Moon are an Americana band based in Boulder\, Colorado. From tender ballads to raucous rockabilly\, they tell stories through rich harmonies\, nuanced instrumentals\, and a unique balance of high energy and sensitivity.\n\nLink: https://www.downtownlongmont.com/do/music-at-bricks-on-main-mackenzie-rae-and-buckshot-moon
+DTEND:20260404T030000Z
+LOCATION:Bricks on Main
+DTSTART:20260404T000000Z
+SUMMARY:🎵 Music at Bricks on Main "Mackenzie Rae and Buckshot Moon"
+UID:78318cff-f1e2-4f34-8f86-a6c5a6c7d76d@7831.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Book your reservation for 1/2 Price Bottle Night and live music with Tom Moran. Music is from 5pm-8pm.\n\nLink: https://www.downtownlongmont.com/do/half-price-bottle-night-and-live-music-1
+DTEND:20260320T030000Z
+LOCATION:Kuper Wine Bar
+DTSTART:20260319T210000Z
+SUMMARY:🎵 Half Price Bottle Night & Live Music
+UID:75b447a6-d8e1-4591-82ce-38d21bd548c0@75b4.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Mont Alto Motion Picture Orchestra returns to the Longmont Museum to provide live orchestration for one of the most revered comedies of the silent era. Buster Keaton stars as hapless Southern railroad engineer Johnny Gray who faces off against Union soldiers during the American Civil War.\nThis event is part of Thursday Nights @ the Museum. Learn more and buy tickets online at https://longmontcolorado.gov/event/mont-alto-motion-picture-orchestra-the-general-1926/ or by calling 303-651-8374.\n\nLink: https://www.downtownlongmont.com/do/mont-alto-motion-picture-orchestra-the-general-1926
+DTEND:20260403T030000Z
+LOCATION:Longmont Museum
+DTSTART:20260403T010000Z
+SUMMARY:🎵 [Classical] Mont Alto Motion Picture Orchestra: “The General” (1926)
+UID:c9068413-66ba-4fb8-9137-308be1d2fcd0@c906.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Asteria Jazz Collective is a dynamic ensemble led by the captivating vocalist Stephany Prodromos and masterful bassist and musical director John Sleet Johnson.\n\nLink: https://www.downtownlongmont.com/do/music-at-bricks-on-main-asteria-jazz-collective-5
+DTEND:20260316T020000Z
+LOCATION:Bricks on Main
+DTSTART:20260315T230000Z
+SUMMARY:🎵 [Jazz] Music at Bricks on Main "Asteria Jazz Collective"
+UID:00c711ba-1800-4e30-b52d-d522d2d75ceb@00c7.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:New original music\, classic cover songs\, and good times coming to Bricks in Longmont! Mark Wridt\, Tony Crank\, Rob Gonzales and Rick Marcelina are back together for an amazing live performance as 4TELL & THE ACES.\n\nLink: https://www.downtownlongmont.com/do/music-at-bricks-on-main-4tell-and-the-aces
+DTEND:20260328T030000Z
+LOCATION:Bricks on Main
+DTSTART:20260328T000000Z
+SUMMARY:🎵 Music at Bricks on Main "4Tell & The Aces"
+UID:5419050e-6936-44a3-8d69-d8d90ceffcb1@5419.org
 END:VEVENT
 BEGIN:VEVENT
 DESCRIPTION:Onnika & the Obsession is a Longmont-based soul and blues band bringing raw emotion\, deep grooves\, and nonstop movement to every stage. From timeless blues classics to bold\, unexpected twists on modern hits\, their sets keep crowds dancing from the first note to the last.\n$5 cover charge!\n\nLink: https://www.downtownlongmont.com/do/music-at-bricks-on-main-onnika-and-the-obsession-2
@@ -407,6 +407,6 @@ DTEND:20260405T030000Z
 LOCATION:Bricks on Main
 DTSTART:20260405T000000Z
 SUMMARY:🎵 [Blues] Music at Bricks on Main "Onnika & the Obsession"
-UID:a8719169-65ed-43dc-a97c-90c66ca224fb@a871.org
+UID:650d8fed-1a57-4d07-939b-f098514e2c7e@650d.org
 END:VEVENT
 END:VCALENDAR
