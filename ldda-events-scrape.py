@@ -15,7 +15,7 @@ LOCAL_TZ = pytz.timezone("America/Denver")
 
 # Refined Logic
 EXCLUDE = ['karaoke', 'open mic', 'trivia', 'bingo', 'workshop', 'class', 'your stage', 'meeting', 'comedy', 'yoga', 'drawing', 'jam session', 'uke jam', 'poker']
-MUSIC_KEYWORDS = ['music', 'band', 'concert', 'live', 'symphony', 'acoustic', 'jazz', 'blues', 'rock', 'singer', 'songwriter', 'orchestra', 'dj', 'tribute', 'performance', 'punk', 'noise', 'experimental', 'hip-hop', 'rap', 'electronic']
+MUSIC_KEYWORDS = ['music', 'soundpost', 'band', 'concert', 'live', 'symphony', 'acoustic', 'jazz', 'blues', 'rock', 'singer', 'songwriter', 'orchestra', 'dj', 'tribute', 'performance', 'punk', 'noise', 'experimental', 'hip-hop', 'rap', 'electronic']
 TRUSTED_VENUES = ['bootstrap brewing', '300 suns brewing', 'wibby brewing', 'bricks on main', 'the dickens', 'abbott & wallace']
 
 # --- GENRE CONFIG ---
@@ -112,35 +112,37 @@ def main():
         title = title_div.get_text(strip=True)
         venue = venue_div.get_text(strip=True) if venue_div else "Downtown Longmont"
         
-        # Inclusion/Exclusion Logic
+# Inclusion/Exclusion Logic
         title_low, venue_low = title.lower(), venue.lower()
         if any(x in title_low for x in EXCLUDE): continue
         
+        # Get URL and Scrape Description FIRST
+        try:
+            event_url = BASE_URL + link_tag['href'] if link_tag['href'].startswith('/') else link_tag['href']
+            description = get_event_description(event_url)
+            genre_tag = detect_genre(title, description)
+        except: continue
+
+        # Now check if it's music (using Title, Venue, OR Genre found in Description)
         is_music = any(m in title_low for m in MUSIC_KEYWORDS) or \
-                   any(v in venue_low for v in TRUSTED_VENUES)
+                   any(v in venue_low for v in TRUSTED_VENUES) or \
+                   genre_tag != ""
+        
         if not is_music: continue
 
-        # Date & URL
+        # Date & Time Processing
         try:
             day = link_tag.find(class_='evcard-date-day').get_text(strip=True)
             mon = link_tag.find(class_='evcard-date-month').get_text(strip=True)
             temp_date = datetime.strptime(f"{mon} {day}", "%b %d")
             year = now.year if temp_date.month >= now.month else now.year + 1
             base_date = temp_date.replace(year=year)
-            event_url = BASE_URL + link_tag['href'] if link_tag['href'].startswith('/') else link_tag['href']
         except: continue
 
-        # Final Processing
         time_div = link_tag.find(class_='evcard-content-time')
         start_dt, end_dt = parse_time(time_div.get_text(strip=True) if time_div else "", base_date)
 
-        print(f"  [+] {title} - Scraping details...")
-        
-        # 1. Fetch Details (Only once!)
-        description = get_event_description(event_url)
-        
-        # 2. Genre Tagging
-        genre_tag = detect_genre(title, description)
+        print(f"  [+] {title} - Saved with genre: {genre_tag}")
 
         # 3. Create the Event
         e = Event()
