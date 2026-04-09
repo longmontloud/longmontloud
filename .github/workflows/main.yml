@@ -2,8 +2,8 @@ name: Update Longmont Music Calendar
 
 on:
   schedule:
-    # Runs at 10:00 AM UTC (3:00 AM MST) every Monday
-    - cron: '0 10 * * 1'
+    # Runs at 10:00 AM UTC (3:00 AM MST) every day
+    - cron: '0 10 * * *'
   workflow_dispatch: # This allows you to run it manually via a button
 
 jobs:
