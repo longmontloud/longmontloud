@@ -2,381 +2,59 @@ BEGIN:VCALENDAR
 VERSION:2.0
 PRODID:ics.py - http://git.io/lLljaA
 BEGIN:VEVENT
-DESCRIPTION:Details at link.\n\nLink: https://www.downtownlongmont.com/do/longmont-all-star-jazz-band-free-performance-1
-LOCATION:The Passenger
-DTSTART:20260419T010000Z
-SUMMARY:🎵 [Jazz] Longmont All Star Jazz Band Free Performance!
-UID:534db734-2f96-446e-a98b-52db8fa8e774@534d.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Details at link.\n\nLink: https://www.downtownlongmont.com/do/first-friday-with-mojazz
-LOCATION:Abbott & Wallace Distilling
-DTSTART:20260502T010000Z
-SUMMARY:🎵 First Friday with Mojazz
-UID:bf9655d0-f17a-4416-a2a4-83ebc00aafc5@bf96.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Details at link.\n\nLink: https://www.downtownlongmont.com/do/punk-up-your-prom-dress-for-the-punk-prom
-LOCATION:Downtown Longmont
-DTSTART:20260411T010000Z
-SUMMARY:🎵 [Rock] Punk-Up Your Prom Dress (for the Punk Prom)
-UID:7008d599-0c26-4dd5-a2f8-d45577e08d87@7008.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Details at link.\n\nLink: https://www.downtownlongmont.com/do/vintage-vibes-elevated-lives-first-annual-fundraiser-and-fashion-show
-LOCATION:Downtown Longmont
-DTSTART:20260412T010000Z
-SUMMARY:🎵 Vintage Vibes - Elevated Lives First Annual Fundraiser and Fashion Show
-UID:ae7ecdfa-431d-4cce-b1df-fef66297eb8f@ae7e.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Details at link.\n\nLink: https://www.downtownlongmont.com/do/lso-concert-pops-concert-best-of-broadway
-LOCATION:Longmont Symphony Orchestra
-DTSTART:20260503T010000Z
-SUMMARY:🎵 LSO Concert Pops Concert: Best of Broadway
-UID:e9da0fd9-47c8-422b-a252-6a5e380b81ca@e9da.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Details at link.\n\nLink: https://www.downtownlongmont.com/do/music-at-bricks-on-main-max-mackey-and-travis-bush
-LOCATION:Bricks on Main
-DTSTART:20260413T010000Z
-SUMMARY:🎵 Music at Bricks on Main "Max Mackey & Travis Bush"
-UID:ff47bc1a-f089-421d-b320-81417f8597b2@ff47.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Details at link.\n\nLink: https://www.downtownlongmont.com/do/live-music-at-st-vrain-cidery-philly-in-the-high-ground
-LOCATION:St. Vrain Cidery
-DTSTART:20260412T010000Z
-SUMMARY:🎵 Live Music At St. Vrain Cidery - Philly In The High Ground
-UID:e4c2d792-7aed-4bbf-8162-c1ccf1d296af@e4c2.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Details at link.\n\nLink: https://www.downtownlongmont.com/do/orchard-creek-band-free-performance
-LOCATION:The Passenger
-DTSTART:20260426T010000Z
-SUMMARY:🎵 Orchard Creek Band FREE Performance
-UID:f4abbcf2-7663-433c-8d40-2f8c4d8ed126@f4ab.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Details at link.\n\nLink: https://www.downtownlongmont.com/do/half-price-bottle-night-and-live-music-1
-LOCATION:Kuper Wine Bar
-DTSTART:20260501T010000Z
-SUMMARY:🎵 Half Price Bottle Night & Live Music
-UID:dbd9ad9b-c7c3-4020-b76c-10c856efb176@dbd9.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Details at link.\n\nLink: https://www.barnevents.info/events/2023/7/27/carl-sonny-leyland-trio-68ejz-5j3dg-ahmrh
-LOCATION:The Barn
-DTSTART:20260724T010000Z
-SUMMARY:🎵 Dance Party with the Carl Sonny Leyland Trio
-UID:59b4ef7e-e69d-40c2-8c74-9583a51aee5f@59b4.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Details at link.\n\nLink: https://www.johnsonsstation.com/calendar/nice-work-jazz
+DESCRIPTION:Follow Us\nInstagram\nHours\n\nLink: https://www.johnsonsstation.com/calendar/nice-work-jazz
+DTEND:20260829T030000Z
 LOCATION:Johnson's Station
 DTSTART:20260829T010000Z
 SUMMARY:🎵 [Jazz] Nice Work Jazz
-UID:5c3b61cb-26e2-4728-9c28-d9d53f1b0916@5c3b.org
+UID:0c3e7da2-9f90-480a-9ec3-5e9492b02925@0c3e.org
 END:VEVENT
 BEGIN:VEVENT
-DESCRIPTION:Details at link.\n\nLink: https://www.downtownlongmont.com/do/music-at-bricks-on-main-bandana-a-tribute-to-the-music-of-santana
-LOCATION:Bricks on Main
-DTSTART:20260418T010000Z
-SUMMARY:🎵 Music at Bricks on Main "Bandana" - A Tribute to the Music of Santana
-UID:379c3706-cb29-4eb4-b4fe-b0eaa87b20e6@379c.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Details at link.\n\nLink: https://www.downtownlongmont.com/do/loco-uke-jam-at-bootstrap-brewing-1
-LOCATION:Bootstrap Brewing
-DTSTART:20260413T010000Z
-SUMMARY:🎵 LOCO Uke Jam at Bootstrap Brewing!
-UID:f97286ea-2fc8-4936-93a2-256408b50e3b@f972.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Details at link.\n\nLink: https://www.downtownlongmont.com/do/music-at-bricks-on-main-livewire-and-kickstart-my-heart
-LOCATION:Bricks on Main
-DTSTART:20260425T010000Z
-SUMMARY:🎵 Music at Bricks on Main "Livewire & Kickstart My Heart"
-UID:725c6286-ff26-4c13-a20a-3636ae0e2224@725c.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Details at link.\n\nLink: https://www.downtownlongmont.com/do/art-and-sip-rocky-mountain-national-park-embroidery
-LOCATION:Longmont Museum
-DTSTART:20260501T010000Z
-SUMMARY:🎵 Art & Sip: Rocky Mountain National Park Embroidery
-UID:58b7c3ef-69f9-4a1b-802c-097fdb963f0d@58b7.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Details at link.\n\nLink: https://www.downtownlongmont.com/do/music-at-bricks-on-main-random-pockets
-LOCATION:Bricks on Main
-DTSTART:20260412T010000Z
-SUMMARY:🎵 Music at Bricks on Main "Random Pockets"
-UID:f5e121e6-1e20-4497-b8f9-6c40e66efb35@f5e1.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Details at link.\n\nLink: https://www.downtownlongmont.com/do/your-stage-at-bootstrap-brewing-5
-LOCATION:Bootstrap Brewing
-DTSTART:20260414T010000Z
-SUMMARY:🎵 Your Stage at Bootstrap Brewing!
-UID:c3b39798-58bc-4e2c-a78d-8ad0ce5c62b8@c3b3.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Details at link.\n\nLink: https://www.downtownlongmont.com/do/free-live-music-by-joe-teichman
-LOCATION:The Passenger
-DTSTART:20260418T010000Z
-SUMMARY:🎵 Free Live Music by Joe Teichman
-UID:95265f2b-36dd-44c7-bfb4-dee6c3c189df@9526.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Details at link.\n\nLink: https://www.barnevents.info/events/2026/1/14/dance-party-with-the-lovestruck-balladeers
+DESCRIPTION:Sign up!\nCarl Sonny Leyland was born & raised on the South Coast of England\, growing up close to the city of Southampton. As a child he was drawn to the American music which he heard on LP records his father would play. It was here that he developed an appreciation for Dixieland jazz\, the rock & roll of the 1950s & the country music of Jimmie Rodgers & Hank Williams.Initially influenced by boogie woogie greats Albert Ammons\, Pete Johnson & Meade 'Lux' Lewis\, Leyland went on to fully explore the piano blues genre\, becoming an authority on early & obscure styles such as those played by Cow Cow Davenport\, Little Brother Montgomery\, Montana Taylor & Speckled Red to name a few.Whether playing solo or with his trio\, Leyland's playing displays an infectious spontaneity\, providing plenty of surprises for the listener.  \nMarty Eggers (bass) composed his first rag\, "Front St. Rag\," in 1982. Influenced by New Orleans and San Francisco style bands that played around the Bay Area in the '70s and '80s. Organized the Front St. Wanderers in 1984 and was instrumental in formation of the Sacramento Ragtime Society. Currently he works with the Yerba Buena Stompers\, Butch Thompson Trio\, Royal Society Jazz Orchestra\, Tichenor Family Trio\, and as a soloist at Pier 23 in San Francisco. \n\nLink: https://www.barnevents.info/events/2023/7/27/carl-sonny-leyland-trio-68ejz-5j3dg-ahmrh
+DTEND:20260724T020000Z
 LOCATION:The Barn
-DTSTART:20260418T010000Z
-SUMMARY:🎵 Dance Party with The Lovestruck Balladeers
-UID:ea834812-9e43-4963-ad29-69458768aba3@ea83.org
+DTSTART:20260724T000000Z
+SUMMARY:🎵 [Jazz] Dance Party with the Carl Sonny Leyland Trio
+UID:1d5585da-bd96-4ebc-9d5e-ede0a6ede0e3@1d55.org
 END:VEVENT
 BEGIN:VEVENT
-DESCRIPTION:Details at link.\n\nLink: https://www.downtownlongmont.com/do/music-at-bricks-on-main-cat-jerky
-LOCATION:Bricks on Main
-DTSTART:20260426T010000Z
-SUMMARY:🎵 Music at Bricks on Main "Cat Jerky"
-UID:378b8087-5ea2-4926-ae0d-8c137700df22@378b.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Details at link.\n\nLink: https://www.downtownlongmont.com/do/half-price-bottle-night-and-live-music-1
-LOCATION:Kuper Wine Bar
-DTSTART:20260424T010000Z
-SUMMARY:🎵 Half Price Bottle Night & Live Music
-UID:9bc01dad-0007-4769-b7be-f8ad7c119727@9bc0.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Details at link.\n\nLink: https://www.downtownlongmont.com/do/loco-uke-jam-at-bootstrap-brewing-1
-LOCATION:Bootstrap Brewing
-DTSTART:20260427T010000Z
-SUMMARY:🎵 LOCO Uke Jam at Bootstrap Brewing!
-UID:886859dc-21f5-4aa1-80fc-caa509b0f016@8868.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Details at link.\n\nLink: https://www.barnevents.info/events/2025/1/11/tish-hinojosa-2xad8
+DESCRIPTION:Sign Up\nSugar Britches is a blend of mischievous high-brow honky-tonk with eclectic instrumental accompaniment and clever lyrics\, written by Brian Johanson and performed by a cavalcade of characters. Combining good ‘ol country heartache along with snarky folksy wit\, Sugar Britches has been playing non-stop throughout Colorado and the great West in bars\, parking lots\, weddings\, bat mitzvahs\, rodeos\, amphitheaters and regular-ass theaters since 2017.Sugar Britches have received critical acclaim and plain old criticism\, from music lovers and mothers. They have won hearts and minds and driven audiences wild with their sex appeal\, fanciful stylings and wit. They have opened up for many national touring artists\, including Reckless Kelly\, Wynonna Judd & the Big Noise\, Hannah Dasher\, Jaime Wyatt\, Big Richard\, Midland\, Billy Bob Thornton and the Boxmasters\, Pokey LaFarge\, Corb Lund\, The Reverend Horton Heat and Jason Eady.The band released their first album\, Don’t Make Her a Mixtape Yet You Idiot\, in 2019\, their second album\, No One Cares That It’s Your Birthday in 2022\, and they are currently recording their 3rd AND 4th albums as you read this (check out our Indiegogo campaign). The Band features Brian Johanson on lead vocals and guitar\, Lance Ruby on lead electric guitar\, AJ Knight on drums\, Cameron Collums on upright bass and a rotating cast of amazing guest musicians. Keep your eyes peeled for all of our special guests and show iterations.\nYes\, there will be dancing!\n\nLink: https://www.barnevents.info/events/2025/6/27/sugar-britches
+DTEND:20260530T020000Z
 LOCATION:The Barn
-DTSTART:20261004T010000Z
-SUMMARY:🎵 Tish Hinojosa
-UID:d9215a7b-31bb-4d9f-a484-f5c09117a169@d921.org
+DTSTART:20260530T000000Z
+SUMMARY:🎵 [Rock] Sugar Britches
+UID:f7042594-c469-4221-b015-cc8ad91bedc7@f704.org
 END:VEVENT
 BEGIN:VEVENT
-DESCRIPTION:Details at link.\n\nLink: https://www.downtownlongmont.com/do/sunday-music-series-jazz-with-vic-dillahay-and-doug-carmichael
-LOCATION:Dry Land Distillers
-DTSTART:20260413T010000Z
-SUMMARY:🎵 [Jazz] Sunday Music Series: Jazz with Vic Dillahay and Doug Carmichael
-UID:5cc0b827-d914-4f56-828a-24b3ba941414@5cc0.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Details at link.\n\nLink: https://www.barnevents.info/events/2026/7/17/songs-stories-and-art-lessons-from-strangersa-visual-folk-concert-by-john-john-brown
+DESCRIPTION:Sign up!\nThe Lovestruck Balladeers enchant audiences with their masterful performances and inspired repertoire of ragtime\, jazz and beautiful songs from around the world. Born out of New York’s vibrant classic jazz and traditional music scene\, The Lovestruck Balladeers formed during a series of recording sessions for Jalopy Records' 2018 release\, Estrellas de Radio.  Since their debut at The Brooklyn Folk Festival that same year\,  the versatile quintet has made a name for itself as a compelling act highlighting musical excellence\, fresh arrangements\, original songs and a tightly crafted stage show.\nThe Lovestruck Balladeers are Jake Sanders\, Dennis Lichtman\, Sean Cronin and Dalton Ridenhour.  Featuring special guest Mike Davis.\n\nLink: https://www.barnevents.info/events/2026/1/14/dance-party-with-the-lovestruck-balladeers
+DTEND:20260418T020000Z
 LOCATION:The Barn
-DTSTART:20260718T010000Z
+DTSTART:20260418T000000Z
+SUMMARY:🎵 [Jazz] Dance Party with The Lovestruck Balladeers
+UID:5a3c5db1-93ae-4439-83c3-ce12d4c21909@5a3c.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Sign up!\nTish Hinojosa is a singer-songwriter from Austin\, Texas. Hinojosa’s blend of folk\, country\, Latino\, and pop has an undeniable far reaching appeal\, garnering her accolades such as a White House concert at the invitation of President and Mrs. Clinton and teaming up with artists such as Joan Baez\, Booker T. Jones\, Flaco Jimenez\, Pete Seeger\, and Dwight Yoakam.\nTish is celebrating her new album\, With A Guitar & A Pen\, so expect some lovely new tunes as well as our long-time favorites.\n\nLink: https://www.barnevents.info/events/2025/1/11/tish-hinojosa-2xad8
+DTEND:20261004T020000Z
+LOCATION:The Barn
+DTSTART:20261004T000000Z
+SUMMARY:🎵 [Folk/Acoustic] Tish Hinojosa
+UID:1fa1d9b9-079a-4cd2-8a15-01d699982ac5@1fa1.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Sign up!\nA one-man show where songs become a live graphic novel telling the stories of ordinary people and what saves them.\nThat’s the idea behind Songs\, Stories\, & Art: Lessons from Strangers\, a visually rich and emotionally resonant live show from award-winning songwriter John John Brown. With only a guitar\, a projector\, and a storyteller’s heart\, Brown guides audiences through 14 character-driven portraits\, each one brought to life with original hand-drawn comics and narrative songs.\n\nLink: https://www.barnevents.info/events/2026/7/17/songs-stories-and-art-lessons-from-strangersa-visual-folk-concert-by-john-john-brown
+DTEND:20260718T020000Z
+LOCATION:The Barn
+DTSTART:20260718T000000Z
 SUMMARY:🎵 [Folk/Acoustic] Songs\, Stories\, and Art: Lessons from Strangers—A Visual Folk Concert by John John Brown
-UID:168617c1-4b0a-40ac-a4bf-66ee6330fb01@1686.org
+UID:b7283fc7-6e75-4240-92aa-a92312f2b26d@b728.org
 END:VEVENT
 BEGIN:VEVENT
-DESCRIPTION:Details at link.\n\nLink: https://www.downtownlongmont.com/do/lso-concert-pines-of-rome-and-a-world-premiere
-LOCATION:Longmont Symphony Orchestra
-DTSTART:20260412T010000Z
-SUMMARY:🎵 LSO Concert Pines of Rome & a World Premiere
-UID:2338ea96-4309-447a-bab4-303424796627@2338.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Details at link.\n\nLink: https://www.downtownlongmont.com/do/soundpost-sessions-local-spotlight-sturtz-w-and-holly-lovell
-LOCATION:The Times Collaborative / 338 Main St
-DTSTART:20260417T010000Z
-SUMMARY:🎵 Soundpost Sessions LOCAL SPOTLIGHT: Sturtz w/ Holly Lovell
-UID:fcaf674b-1e21-4b33-9d4a-729a552f6f77@fcaf.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Details at link.\n\nLink: https://www.downtownlongmont.com/do/your-stage-at-bootstrap-brewing-5
-LOCATION:Bootstrap Brewing
-DTSTART:20260428T010000Z
-SUMMARY:🎵 Your Stage at Bootstrap Brewing!
-UID:015a283a-119a-4fa2-96cf-bbf264843719@015a.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Details at link.\n\nLink: https://www.downtownlongmont.com/do/longmont-all-star-jazz-band-free-performance
-LOCATION:The Passenger
-DTSTART:20260503T010000Z
-SUMMARY:🎵 [Jazz] Longmont All Star Jazz Band Free Performance!
-UID:6c038c2f-0fcb-4323-8097-bb9d206e2334@6c03.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Details at link.\n\nLink: https://www.downtownlongmont.com/do/your-stage-at-bootstrap-brewing-5
-LOCATION:Bootstrap Brewing
-DTSTART:20260421T010000Z
-SUMMARY:🎵 Your Stage at Bootstrap Brewing!
-UID:bddaaca7-5278-4049-89df-c20e5c94ab39@bdda.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Details at link.\n\nLink: https://www.downtownlongmont.com/do/music-at-bricks-on-main-50-shades-of-blue
-LOCATION:Bricks on Main
-DTSTART:20260411T010000Z
-SUMMARY:🎵 Music at Bricks on Main "50 Shades of Blue"
-UID:2c35154d-8501-47f4-88a0-fb7a86c11bb9@2c35.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Details at link.\n\nLink: https://www.downtownlongmont.com/do/discovery-days-music-and-movement-with-ms-ragen-5
-LOCATION:Longmont Museum
-DTSTART:20260415T010000Z
-SUMMARY:🎵 Discovery Days: Music & Movement with Ms. Ragen
-UID:1490a158-68cf-4eb1-9694-77f71dd00ecd@1490.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Details at link.\n\nLink: https://www.downtownlongmont.com/do/loco-uke-jam-at-bootstrap-brewing-1
-LOCATION:Bootstrap Brewing
-DTSTART:20260420T010000Z
-SUMMARY:🎵 LOCO Uke Jam at Bootstrap Brewing!
-UID:e61623fc-000e-4981-a71a-cfe5364e6b3f@e616.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Details at link.\n\nLink: https://www.downtownlongmont.com/do/friday-afternoon-concert-the-hummin-birds
-LOCATION:Longmont Museum
-DTSTART:20260411T010000Z
-SUMMARY:🎵 Friday Afternoon Concert: The Hummin’ Birds
-UID:0188c6de-1c65-45cf-9175-1a48d4f1e47f@0188.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Details at link.\n\nLink: https://www.downtownlongmont.com/do/live-music-show
-LOCATION:The Longmonter
-DTSTART:20260411T010000Z
-SUMMARY:🎵 Live Music Show
-UID:b2452969-6041-411b-8fef-db6cdb22e82b@b245.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Details at link.\n\nLink: https://www.downtownlongmont.com/do/music-at-bricks-on-main-foxfeather-full-band
-LOCATION:Bricks on Main
-DTSTART:20260503T010000Z
-SUMMARY:🎵 Music at Bricks on Main "Foxfeather Full Band"
-UID:f4d35930-030e-42ea-ab94-916261d6b416@f4d3.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Details at link.\n\nLink: https://www.barnevents.info/events/2025/6/27/sugar-britches
+DESCRIPTION:Sign up!\nSalomé Songbird is\, at a glance\, a string-band. But between its members – Ariele Macadangdang\, Dr. Joy Adams\, and Bryan Dubrow – their background spans fiddle tunes to free jazz\; and baroque to bebop to bluegrass. As an acoustic trio\, Salomé Songbird channels these influences into original songs inspired by mental health\, religious trauma\, and cartoons.\nJoy and Ariele formed Salomé Songbird in Miami in 2015. In preparing for a small coffee house performance they discovered that their voices and songwriting styles complemented each other perfectly. In 2022 they regrouped in Colorado\, with the addition of Bryan on guitar. All accomplished musicians in their own right\, the band members have performed around the world\, sharing the stage with artists including Darol Anger\, Nathaniel Rateliff\, The Flobots\, Kygo\, Ben Folds\, and Dave Liebman.\n\nLink: https://www.barnevents.info/events/2024/8/25/salome-songbird-and-sarah-dspaw
+DTEND:20260829T020000Z
 LOCATION:The Barn
-DTSTART:20260530T010000Z
-SUMMARY:🎵 Sugar Britches
-UID:8b54a18f-f19d-491f-94d6-772c0c96d862@8b54.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Details at link.\n\nLink: https://www.downtownlongmont.com/do/parchment-doll-live-music
-LOCATION:300 Suns Brewing
-DTSTART:20260412T010000Z
-SUMMARY:🎵 Parchment Doll - Live Music
-UID:c654f615-7afa-4e43-abea-1e80ec24ba23@c654.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Details at link.\n\nLink: https://www.downtownlongmont.com/do/music-at-bricks-on-main-los-cheesies
-LOCATION:Bricks on Main
-DTSTART:20260419T010000Z
-SUMMARY:🎵 Music at Bricks on Main "Los Cheesies"
-UID:405fd037-40da-4211-99df-5f66c8f3e02a@405f.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Details at link.\n\nLink: https://www.downtownlongmont.com/do/music-at-bricks-on-main-sabotage
-LOCATION:Bricks on Main
-DTSTART:20260502T010000Z
-SUMMARY:🎵 Music at Bricks on Main "Sabotage"
-UID:c1bc0dce-a560-455a-a885-ba8d666ea767@c1bc.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Details at link.\n\nLink: https://www.downtownlongmont.com/do/music-at-bricks-on-main-asteria-jazz-collective-6
-LOCATION:Bricks on Main
-DTSTART:20260420T010000Z
-SUMMARY:🎵 [Jazz] Music at Bricks on Main "Asteria Jazz Collective"
-UID:d1cbc894-4aa9-46ab-99f1-20cb22eda98f@d1cb.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Details at link.\n\nLink: https://www.downtownlongmont.com/do/live-music-at-st-vrain-cidery-naked-dawn
-LOCATION:St. Vrain Cidery
-DTSTART:20260411T010000Z
-SUMMARY:🎵 Live Music At St. Vrain Cidery - Naked Dawn
-UID:7a6b248f-a883-4d66-b265-a83caf4fb348@7a6b.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Details at link.\n\nLink: https://www.downtownlongmont.com/do/music-at-bricks-on-main-the-rachel-alena-band
-LOCATION:Bricks on Main
-DTSTART:20260501T010000Z
-SUMMARY:🎵 Music at Bricks on Main "The Rachel Alena Band"
-UID:e4e8d82c-3523-4210-bc0b-a929f1cdd8c9@e4e8.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Details at link.\n\nLink: https://www.downtownlongmont.com/do/recovery-cafe-benefit-concert
-LOCATION:Central Longmont Presbyterian Church
-DTSTART:20260426T010000Z
-SUMMARY:🎵 Recovery Cafe Benefit Concert
-UID:38fa7c38-1875-457c-afea-4655151845ed@38fa.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Details at link.\n\nLink: https://www.downtownlongmont.com/do/an-evening-with-daisy-dog-press-hosted-by-authors-and-musicians-gregory-hill-and-zach-boddicker
-LOCATION:Vintology
-DTSTART:20260419T010000Z
-SUMMARY:🎵 AN EVENING WITH DAISY DOG PRESS - hosted by authors/musicians Gregory Hill and Zach Boddicker
-UID:67556556-2d71-40fd-bc1d-d93142e941be@6755.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Details at link.\n\nLink: https://www.downtownlongmont.com/do/music-at-bricks-on-main-aimee-lynne
-LOCATION:Bricks on Main
-DTSTART:20260424T010000Z
-SUMMARY:🎵 Music at Bricks on Main "Aimee Lynne"
-UID:ba48202e-2e25-49d5-890b-4113da4b4807@ba48.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Details at link.\n\nLink: https://www.downtownlongmont.com/do/half-price-bottle-night-and-live-music-1
-LOCATION:Kuper Wine Bar
-DTSTART:20260417T010000Z
-SUMMARY:🎵 Half Price Bottle Night & Live Music
-UID:25806661-1a77-49f3-96d1-f4eb3948b135@2580.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Details at link.\n\nLink: https://www.downtownlongmont.com/do/discovery-days-music-and-movement-with-ms-ragen-5
-LOCATION:Longmont Museum
-DTSTART:20260422T010000Z
-SUMMARY:🎵 Discovery Days: Music & Movement with Ms. Ragen
-UID:a78dac0f-fcd5-48e2-ad6e-0dc37e3813fb@a78d.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Details at link.\n\nLink: https://www.downtownlongmont.com/do/denny-driscoll-live-music
-LOCATION:300 Suns Brewing
-DTSTART:20260426T010000Z
-SUMMARY:🎵 Denny Driscoll - Live Music
-UID:d3869ffe-d2b0-482c-976e-9ec0552a2e64@d386.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Details at link.\n\nLink: https://www.downtownlongmont.com/do/soundpost-sessions-spotlight-sage-and-aera-w-and-antonio-lopez
-LOCATION:The Times Collaborative / 338 Main St
-DTSTART:20260501T010000Z
-SUMMARY:🎵 Soundpost Sessions SPOTLIGHT: Sage & Aera w/ Antonio Lopez
-UID:6d50c427-c3ea-4441-843c-79208fbf2594@6d50.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Details at link.\n\nLink: https://www.barnevents.info/events/2024/8/25/salome-songbird-and-sarah-dspaw
-LOCATION:The Barn
-DTSTART:20260829T010000Z
-SUMMARY:🎵 Salomé Songbird
-UID:0e70f117-17b9-4e74-9853-0ec6378f28d1@0e70.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Details at link.\n\nLink: https://www.downtownlongmont.com/do/dress-up-downtown-denim-day
-LOCATION:Bricks on Main
-DTSTART:20260426T010000Z
-SUMMARY:🎵 Dress Up Downtown- Denim Day
-UID:9b512998-2459-4be6-9969-1a6479742269@9b51.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Details at link.\n\nLink: https://www.downtownlongmont.com/do/great-american-nowhere-duo-live-music
-LOCATION:300 Suns Brewing
-DTSTART:20260503T010000Z
-SUMMARY:🎵 Great American Nowhere Duo - Live Music
-UID:1e9c68a1-5e74-4912-9303-cb99317b36ad@1e9c.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Details at link.\n\nLink: https://www.downtownlongmont.com/do/discovery-days-music-and-movement-with-ms-ragen-5
-LOCATION:Longmont Museum
-DTSTART:20260429T010000Z
-SUMMARY:🎵 Discovery Days: Music & Movement with Ms. Ragen
-UID:e1030d57-12e7-433d-93ad-7ee95eaf5902@e103.org
+DTSTART:20260829T000000Z
+SUMMARY:🎵 [Jazz] Salomé Songbird
+UID:4ff3c784-4da9-49ae-afa1-61a5a6cfd358@4ff3.org
 END:VEVENT
 END:VCALENDAR
