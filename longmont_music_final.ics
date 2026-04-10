@@ -2,339 +2,346 @@ BEGIN:VCALENDAR
 VERSION:2.0
 PRODID:ics.py - http://git.io/lLljaA
 BEGIN:VEVENT
-DESCRIPTION:Details at venue website.\n\nLink: https://www.downtownlongmont.com/do/loco-uke-jam-at-bootstrap-brewing-1
-LOCATION:Bootstrap Brewing
-DTSTART:20260413T010000Z
-SUMMARY:🎵 LOCO Uke Jam at Bootstrap Brewing!
-UID:9054b20b-f4fe-4ab4-b2fc-229703dd927d@9054.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Details at venue website.\n\nLink: https://www.downtownlongmont.com/do/lso-concert-pops-concert-best-of-broadway
-LOCATION:Longmont Symphony Orchestra
-DTSTART:20260503T010000Z
-SUMMARY:🎵 LSO Concert Pops Concert: Best of Broadway
-UID:c6098822-c0b9-4742-84ec-edb15dcec82e@c609.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Details at venue website.\n\nLink: https://www.downtownlongmont.com/do/music-at-bricks-on-main-random-pockets
-LOCATION:Bricks on Main
-DTSTART:20260412T010000Z
-SUMMARY:🎵 Music at Bricks on Main "Random Pockets"
-UID:71b89f4e-353b-4447-9fdc-2c4cb56236d8@71b8.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Details at venue website.\n\nLink: https://www.downtownlongmont.com/do/live-music-at-st-vrain-cidery-naked-dawn
-LOCATION:St. Vrain Cidery
-DTSTART:20260411T010000Z
-SUMMARY:🎵 Live Music At St. Vrain Cidery - Naked Dawn
-UID:395bdedb-5612-4994-8233-551a93cb4369@395b.org
+DESCRIPTION:Details at venue website.\n\nLink: https://www.downtownlongmont.com/do/half-price-bottle-night-and-live-music-1
+LOCATION:Kuper Wine Bar
+DTSTART:20260501T010000Z
+SUMMARY:🎵 Half Price Bottle Night & Live Music
+UID:0241882e-2742-4f24-bb87-f788d62ca880@0241.org
 END:VEVENT
 BEGIN:VEVENT
 DESCRIPTION:Details at venue website.\n\nLink: https://www.downtownlongmont.com/do/half-price-bottle-night-and-live-music-1
 LOCATION:Kuper Wine Bar
 DTSTART:20260424T010000Z
 SUMMARY:🎵 Half Price Bottle Night & Live Music
-UID:0cf80355-d75c-4b1a-8183-908ae9f9792e@0cf8.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Details at venue website.\n\nLink: https://www.downtownlongmont.com/do/denny-driscoll-live-music
-LOCATION:300 Suns Brewing
-DTSTART:20260426T010000Z
-SUMMARY:🎵 Denny Driscoll - Live Music
-UID:84aa6a92-6553-40e6-81ab-a0051c54f7c0@84aa.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Details at venue website.\n\nLink: https://www.downtownlongmont.com/do/vintage-vibes-elevated-lives-first-annual-fundraiser-and-fashion-show
-LOCATION:Downtown Longmont
-DTSTART:20260412T010000Z
-SUMMARY:🎵 Vintage Vibes - Elevated Lives First Annual Fundraiser and Fashion Show
-UID:5ce0ee09-ca0c-4fba-9d23-9f49894c79ac@5ce0.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Details at venue website.\n\nLink: https://www.downtownlongmont.com/do/friday-afternoon-concert-the-hummin-birds
-LOCATION:Longmont Museum
-DTSTART:20260411T010000Z
-SUMMARY:🎵 Friday Afternoon Concert: The Hummin’ Birds
-UID:58937f8a-1749-4bce-9f9a-734a4e1d33fb@5893.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Details at venue website.\n\nLink: https://www.downtownlongmont.com/do/lso-concert-pines-of-rome-and-a-world-premiere
-LOCATION:Longmont Symphony Orchestra
-DTSTART:20260412T010000Z
-SUMMARY:🎵 LSO Concert Pines of Rome & a World Premiere
-UID:adda017d-9b5f-4d0e-9545-555696454aea@adda.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Details at venue website.\n\nLink: https://www.downtownlongmont.com/do/art-and-sip-rocky-mountain-national-park-embroidery
-LOCATION:Longmont Museum
-DTSTART:20260501T010000Z
-SUMMARY:🎵 Art & Sip: Rocky Mountain National Park Embroidery
-UID:04f75f96-053c-481d-a07f-a1ee0c112d9b@04f7.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Details at venue website.\n\nLink: https://www.downtownlongmont.com/do/sunday-music-series-jazz-with-vic-dillahay-and-doug-carmichael
-LOCATION:Dry Land Distillers
-DTSTART:20260413T010000Z
-SUMMARY:🎵 [Jazz] Sunday Music Series: Jazz with Vic Dillahay and Doug Carmichael
-UID:4fa2051a-5a37-4a73-ae97-ae178ea4ee28@4fa2.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Details at venue website.\n\nLink: https://www.downtownlongmont.com/do/soundpost-sessions-local-spotlight-sturtz-w-and-holly-lovell
-LOCATION:The Times Collaborative / 338 Main St
-DTSTART:20260417T010000Z
-SUMMARY:🎵 Soundpost Sessions LOCAL SPOTLIGHT: Sturtz w/ Holly Lovell
-UID:f89db63e-553b-49cf-b609-340faff42898@f89d.org
+UID:c924c868-f729-4935-89bf-597f3b8ce310@c924.org
 END:VEVENT
 BEGIN:VEVENT
 DESCRIPTION:Details at venue website.\n\nLink: https://www.downtownlongmont.com/do/orchard-creek-band-free-performance
 LOCATION:The Passenger
 DTSTART:20260426T010000Z
 SUMMARY:🎵 Orchard Creek Band FREE Performance
-UID:c8f0ec4a-0ffb-4dc8-85b6-ce295f62b28c@c8f0.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Details at venue website.\n\nLink: https://www.downtownlongmont.com/do/first-friday-with-mojazz
-LOCATION:Abbott & Wallace Distilling
-DTSTART:20260502T010000Z
-SUMMARY:🎵 First Friday with Mojazz
-UID:ae4dce04-0726-4c68-8f11-1af407ab687f@ae4d.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Details at venue website.\n\nLink: https://www.downtownlongmont.com/do/an-evening-with-daisy-dog-press-hosted-by-authors-and-musicians-gregory-hill-and-zach-boddicker
-LOCATION:Vintology
-DTSTART:20260419T010000Z
-SUMMARY:🎵 AN EVENING WITH DAISY DOG PRESS - hosted by authors/musicians Gregory Hill and Zach Boddicker
-UID:6b77feb4-fad2-4f79-8b7c-b3289af34616@6b77.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Details at venue website.\n\nLink: https://www.downtownlongmont.com/do/music-at-bricks-on-main-los-cheesies
-LOCATION:Bricks on Main
-DTSTART:20260419T010000Z
-SUMMARY:🎵 Music at Bricks on Main "Los Cheesies"
-UID:0d7cca12-a724-4658-abfc-2f7177d1ce6f@0d7c.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Details at venue website.\n\nLink: https://www.downtownlongmont.com/do/music-at-bricks-on-main-aimee-lynne
-LOCATION:Bricks on Main
-DTSTART:20260424T010000Z
-SUMMARY:🎵 Music at Bricks on Main "Aimee Lynne"
-UID:61fcccf3-be7f-41cb-ad26-a30590c07be5@61fc.org
+UID:2136d1d6-7784-41f8-a852-f9492e22f103@2136.org
 END:VEVENT
 BEGIN:VEVENT
 DESCRIPTION:Details at venue website.\n\nLink: https://www.downtownlongmont.com/do/loco-uke-jam-at-bootstrap-brewing-1
 LOCATION:Bootstrap Brewing
-DTSTART:20260427T010000Z
-SUMMARY:🎵 LOCO Uke Jam at Bootstrap Brewing!
-UID:ea02e4b7-e953-4d20-9e8d-e4a045e4f486@ea02.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Details at venue website.\n\nLink: https://www.downtownlongmont.com/do/discovery-days-music-and-movement-with-ms-ragen-5
-LOCATION:Longmont Museum
-DTSTART:20260429T010000Z
-SUMMARY:🎵 Discovery Days: Music & Movement with Ms. Ragen
-UID:a002e939-0a77-4930-b6eb-6a396f926bc3@a002.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Details at venue website.\n\nLink: https://www.downtownlongmont.com/do/longmont-all-star-jazz-band-free-performance-1
-LOCATION:The Passenger
-DTSTART:20260419T010000Z
-SUMMARY:🎵 [Jazz] Longmont All Star Jazz Band Free Performance!
-UID:8973d0ed-c831-4a70-b3b4-4c27aa28f616@8973.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Details at venue website.\n\nLink: https://www.downtownlongmont.com/do/soundpost-sessions-spotlight-sage-and-aera-w-and-antonio-lopez
-LOCATION:The Times Collaborative / 338 Main St
-DTSTART:20260501T010000Z
-SUMMARY:🎵 Soundpost Sessions SPOTLIGHT: Sage & Aera w/ Antonio Lopez
-UID:f468b485-ca55-4cb6-b21f-182609721570@f468.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Details at venue website.\n\nLink: https://www.downtownlongmont.com/do/punk-up-your-prom-dress-for-the-punk-prom
-LOCATION:Downtown Longmont
-DTSTART:20260411T010000Z
-SUMMARY:🎵 [Rock] Punk-Up Your Prom Dress (for the Punk Prom)
-UID:026bb1e3-cdf5-4dd3-857c-0136f2c197f7@026b.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Details at venue website.\n\nLink: https://www.downtownlongmont.com/do/live-music-at-st-vrain-cidery-philly-in-the-high-ground
-LOCATION:St. Vrain Cidery
-DTSTART:20260412T010000Z
-SUMMARY:🎵 Live Music At St. Vrain Cidery - Philly In The High Ground
-UID:7c7b336f-2ec7-4e3f-aa16-340444ed8558@7c7b.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Details at venue website.\n\nLink: https://www.downtownlongmont.com/do/music-at-bricks-on-main-asteria-jazz-collective-6
-LOCATION:Bricks on Main
 DTSTART:20260420T010000Z
-SUMMARY:🎵 [Jazz] Music at Bricks on Main "Asteria Jazz Collective"
-UID:1908c7d2-8cad-44e7-b757-0a36f3fb22a3@1908.org
+SUMMARY:🎵 LOCO Uke Jam at Bootstrap Brewing!
+UID:e3c2882d-916e-454c-9f87-e32c0926049d@e3c2.org
 END:VEVENT
 BEGIN:VEVENT
-DESCRIPTION:Details at venue website.\n\nLink: https://www.johnsonsstation.com/calendar/nice-work-jazz
-LOCATION:Johnson's Station
-DTSTART:20260829T010000Z
-SUMMARY:🎵 [Jazz] Nice Work Jazz
-UID:2b8a66f7-9679-4391-a68f-458d4ce2f4b6@2b8a.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Details at venue website.\n\nLink: https://www.downtownlongmont.com/do/music-at-bricks-on-main-max-mackey-and-travis-bush
-LOCATION:Bricks on Main
-DTSTART:20260413T010000Z
-SUMMARY:🎵 Music at Bricks on Main "Max Mackey & Travis Bush"
-UID:6e24aba1-2d0a-4ee1-88cf-1e35d1ac87fb@6e24.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Details at venue website.\n\nLink: https://www.downtownlongmont.com/do/your-stage-at-bootstrap-brewing-5
-LOCATION:Bootstrap Brewing
-DTSTART:20260414T010000Z
-SUMMARY:🎵 Your Stage at Bootstrap Brewing!
-UID:660044e4-814d-44cd-ac08-2bb86e0355e9@6600.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Details at venue website.\n\nLink: https://www.downtownlongmont.com/do/discovery-days-music-and-movement-with-ms-ragen-5
-LOCATION:Longmont Museum
-DTSTART:20260422T010000Z
-SUMMARY:🎵 Discovery Days: Music & Movement with Ms. Ragen
-UID:eaf8d7d8-286b-4b2d-b9d0-d1b285778476@eaf8.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Details at venue website.\n\nLink: https://www.downtownlongmont.com/do/recovery-cafe-benefit-concert
-LOCATION:Central Longmont Presbyterian Church
-DTSTART:20260426T010000Z
-SUMMARY:🎵 Recovery Cafe Benefit Concert
-UID:392db292-5155-4b90-a041-267f231464a0@392d.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Details at venue website.\n\nLink: https://www.downtownlongmont.com/do/free-live-music-by-joe-teichman
-LOCATION:The Passenger
-DTSTART:20260418T010000Z
-SUMMARY:🎵 Free Live Music by Joe Teichman
-UID:1b518c71-9298-436c-a1fa-16945669fd4d@1b51.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Details at venue website.\n\nLink: https://www.downtownlongmont.com/do/your-stage-at-bootstrap-brewing-5
-LOCATION:Bootstrap Brewing
-DTSTART:20260421T010000Z
-SUMMARY:🎵 Your Stage at Bootstrap Brewing!
-UID:ea384ffb-23e2-430c-99ed-dc55cbd5b382@ea38.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Details at venue website.\n\nLink: https://www.downtownlongmont.com/do/discovery-days-music-and-movement-with-ms-ragen-5
-LOCATION:Longmont Museum
-DTSTART:20260415T010000Z
-SUMMARY:🎵 Discovery Days: Music & Movement with Ms. Ragen
-UID:f94519f0-5bbb-4be0-93c4-eedf944cd9c8@f945.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Details at venue website.\n\nLink: https://www.downtownlongmont.com/do/music-at-bricks-on-main-50-shades-of-blue
-LOCATION:Bricks on Main
-DTSTART:20260411T010000Z
-SUMMARY:🎵 Music at Bricks on Main "50 Shades of Blue"
-UID:d9f2a1bd-b099-4c08-bbaa-a5600a2b6ace@d9f2.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Details at venue website.\n\nLink: https://www.downtownlongmont.com/do/great-american-nowhere-duo-live-music
-LOCATION:300 Suns Brewing
-DTSTART:20260503T010000Z
-SUMMARY:🎵 Great American Nowhere Duo - Live Music
-UID:48c70075-c52f-450f-a845-2a5fd2dd20cf@48c7.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Details at venue website.\n\nLink: https://www.downtownlongmont.com/do/longmont-all-star-jazz-band-free-performance
-LOCATION:The Passenger
-DTSTART:20260503T010000Z
-SUMMARY:🎵 [Jazz] Longmont All Star Jazz Band Free Performance!
-UID:348439ad-6ffd-4a8c-8028-55228bd9abe2@3484.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Details at venue website.\n\nLink: https://www.downtownlongmont.com/do/half-price-bottle-night-and-live-music-1
-LOCATION:Kuper Wine Bar
-DTSTART:20260501T010000Z
-SUMMARY:🎵 Half Price Bottle Night & Live Music
-UID:0ece35a2-98b4-44dc-9479-c034d341c0de@0ece.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Details at venue website.\n\nLink: https://www.downtownlongmont.com/do/music-at-bricks-on-main-sabotage
-LOCATION:Bricks on Main
-DTSTART:20260502T010000Z
-SUMMARY:🎵 Music at Bricks on Main "Sabotage"
-UID:7b5aaf04-5356-4ee8-98ef-af62372c80b2@7b5a.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Details at venue website.\n\nLink: https://www.downtownlongmont.com/do/music-at-bricks-on-main-livewire-and-kickstart-my-heart
-LOCATION:Bricks on Main
-DTSTART:20260425T010000Z
-SUMMARY:🎵 Music at Bricks on Main "Livewire & Kickstart My Heart"
-UID:d7eb745f-b7ca-4df7-99dd-32cf720ab99d@d7eb.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Details at venue website.\n\nLink: https://www.downtownlongmont.com/do/your-stage-at-bootstrap-brewing-5
-LOCATION:Bootstrap Brewing
-DTSTART:20260428T010000Z
-SUMMARY:🎵 Your Stage at Bootstrap Brewing!
-UID:0d500ac4-0971-476d-a53b-dc85e6d3177b@0d50.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Details at venue website.\n\nLink: https://www.downtownlongmont.com/do/live-music-show
-LOCATION:The Longmonter
-DTSTART:20260411T010000Z
-SUMMARY:🎵 Live Music Show
-UID:40c72c77-b53f-40ac-b15a-cc5b027984e9@40c7.org
+DESCRIPTION:Details at venue website.\n\nLink: https://www.downtownlongmont.com/do/soundpost-sessions-local-spotlight-sturtz-w-and-holly-lovell
+LOCATION:The Times Collaborative / 338 Main St
+DTSTART:20260417T010000Z
+SUMMARY:🎵 Soundpost Sessions LOCAL SPOTLIGHT: Sturtz w/ Holly Lovell
+UID:ac16967d-5933-495c-98e1-a8b85f6ec2b3@ac16.org
 END:VEVENT
 BEGIN:VEVENT
 DESCRIPTION:Details at venue website.\n\nLink: https://www.downtownlongmont.com/do/music-at-bricks-on-main-bandana-a-tribute-to-the-music-of-santana
 LOCATION:Bricks on Main
 DTSTART:20260418T010000Z
 SUMMARY:🎵 Music at Bricks on Main "Bandana" - A Tribute to the Music of Santana
-UID:3c2015b7-f995-453c-85eb-76d36744cac0@3c20.org
+UID:7702d6c8-f31d-4182-a3d1-a15fae0aef31@7702.org
 END:VEVENT
 BEGIN:VEVENT
-DESCRIPTION:Details at venue website.\n\nLink: https://www.downtownlongmont.com/do/music-at-bricks-on-main-cat-jerky
-LOCATION:Bricks on Main
-DTSTART:20260426T010000Z
-SUMMARY:🎵 Music at Bricks on Main "Cat Jerky"
-UID:fa8523da-8a3f-4aa8-8cb0-23fd265e32e5@fa85.org
+DESCRIPTION:Details at venue website.\n\nLink: https://www.downtownlongmont.com/do/live-music-at-st-vrain-cidery-naked-dawn
+LOCATION:St. Vrain Cidery
+DTSTART:20260411T010000Z
+SUMMARY:🎵 Live Music At St. Vrain Cidery - Naked Dawn
+UID:7154ebba-6633-4d72-a98f-9e90c64cf050@7154.org
 END:VEVENT
 BEGIN:VEVENT
 DESCRIPTION:Details at venue website.\n\nLink: https://www.downtownlongmont.com/do/half-price-bottle-night-and-live-music-1
 LOCATION:Kuper Wine Bar
 DTSTART:20260417T010000Z
 SUMMARY:🎵 Half Price Bottle Night & Live Music
-UID:9c6b782c-9641-4d02-84e0-12c46bab0f84@9c6b.org
+UID:2d655dc3-8baf-4d39-b61c-c9edf526cf50@2d65.org
 END:VEVENT
 BEGIN:VEVENT
-DESCRIPTION:Details at venue website.\n\nLink: https://www.barnevents.info/events/2026/7/17/songs-stories-and-art-lessons-from-strangersa-visual-folk-concert-by-john-john-brown
-LOCATION:The Barn
-DTSTART:20260718T010000Z
-SUMMARY:🎵 [Folk/Acoustic] Songs\, Stories\, and Art: Lessons from Strangers—A Visual Folk Concert by John John Brown
-UID:2aa36ec0-511b-4a9e-8460-1c92dc362a98@2aa3.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Details at venue website.\n\nLink: https://www.downtownlongmont.com/do/music-at-bricks-on-main-the-rachel-alena-band
+DESCRIPTION:Details at venue website.\n\nLink: https://www.downtownlongmont.com/do/music-at-bricks-on-main-sabotage
 LOCATION:Bricks on Main
-DTSTART:20260501T010000Z
-SUMMARY:🎵 Music at Bricks on Main "The Rachel Alena Band"
-UID:5105810b-69b6-4fe3-8c19-e72c10c3cc21@5105.org
+DTSTART:20260502T010000Z
+SUMMARY:🎵 Music at Bricks on Main "Sabotage"
+UID:491f1ac1-76db-4bbb-8907-88345beda387@491f.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Details at venue website.\n\nLink: https://www.johnsonsstation.com/calendar/davy-allard-the-silverwave-band
+LOCATION:Johnson's Station
+DTSTART:20250811T010000Z
+SUMMARY:🎵 Davy Allard & the SilverWave Band
+UID:f2f775f9-852a-4c54-a37e-d85c34a97edb@f2f7.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Details at venue website.\n\nLink: https://www.downtownlongmont.com/do/music-at-bricks-on-main-los-cheesies
+LOCATION:Bricks on Main
+DTSTART:20260419T010000Z
+SUMMARY:🎵 Music at Bricks on Main "Los Cheesies"
+UID:de3722a1-e059-49f0-92f8-c92dbd9e5834@de37.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Details at venue website.\n\nLink: https://www.downtownlongmont.com/do/vintage-vibes-elevated-lives-first-annual-fundraiser-and-fashion-show
+LOCATION:Downtown Longmont
+DTSTART:20260412T010000Z
+SUMMARY:🎵 Vintage Vibes - Elevated Lives First Annual Fundraiser and Fashion Show
+UID:6eb8934f-dd0a-4cf9-9886-1784674be6a1@6eb8.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Details at venue website.\n\nLink: https://www.downtownlongmont.com/do/music-at-bricks-on-main-asteria-jazz-collective-6
+LOCATION:Bricks on Main
+DTSTART:20260420T010000Z
+SUMMARY:🎵 [Jazz] Music at Bricks on Main "Asteria Jazz Collective"
+UID:90fdaadc-2034-4ca5-9a1d-525993e2f590@90fd.org
 END:VEVENT
 BEGIN:VEVENT
 DESCRIPTION:Details at venue website.\n\nLink: https://www.downtownlongmont.com/do/music-at-bricks-on-main-foxfeather-full-band
 LOCATION:Bricks on Main
 DTSTART:20260503T010000Z
 SUMMARY:🎵 Music at Bricks on Main "Foxfeather Full Band"
-UID:7ce768b5-1fb5-413a-8eb6-342143b5022a@7ce7.org
+UID:882c9877-ba9c-486b-aa02-afda8b21e8b6@882c.org
 END:VEVENT
 BEGIN:VEVENT
 DESCRIPTION:Details at venue website.\n\nLink: https://www.downtownlongmont.com/do/parchment-doll-live-music
 LOCATION:300 Suns Brewing
 DTSTART:20260412T010000Z
 SUMMARY:🎵 Parchment Doll - Live Music
-UID:60edef92-0edb-4009-a5c8-94628b75516b@60ed.org
+UID:7a68adec-4462-460e-b7d6-e786985fd7f1@7a68.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Details at venue website.\n\nLink: https://www.downtownlongmont.com/do/music-at-bricks-on-main-livewire-and-kickstart-my-heart
+LOCATION:Bricks on Main
+DTSTART:20260425T010000Z
+SUMMARY:🎵 Music at Bricks on Main "Livewire & Kickstart My Heart"
+UID:d992a2a8-b4e6-44dd-8622-2cc2242e3a2a@d992.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Details at venue website.\n\nLink: https://www.downtownlongmont.com/do/an-evening-with-daisy-dog-press-hosted-by-authors-and-musicians-gregory-hill-and-zach-boddicker
+LOCATION:Vintology
+DTSTART:20260419T010000Z
+SUMMARY:🎵 AN EVENING WITH DAISY DOG PRESS - hosted by authors/musicians Gregory Hill and Zach Boddicker
+UID:7b0e4fc3-0c72-453a-98f2-9b3aceb77b92@7b0e.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Details at venue website.\n\nLink: https://www.downtownlongmont.com/do/lso-concert-pines-of-rome-and-a-world-premiere
+LOCATION:Longmont Symphony Orchestra
+DTSTART:20260412T010000Z
+SUMMARY:🎵 LSO Concert Pines of Rome & a World Premiere
+UID:dbff9993-3a74-40ed-b8a9-f0448b3bce99@dbff.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Details at venue website.\n\nLink: https://www.downtownlongmont.com/do/music-at-bricks-on-main-max-mackey-and-travis-bush
+LOCATION:Bricks on Main
+DTSTART:20260413T010000Z
+SUMMARY:🎵 Music at Bricks on Main "Max Mackey & Travis Bush"
+UID:5203b043-f136-42a9-860b-ad6272d84603@5203.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Details at venue website.\n\nLink: https://www.downtownlongmont.com/do/your-stage-at-bootstrap-brewing-5
+LOCATION:Bootstrap Brewing
+DTSTART:20260414T010000Z
+SUMMARY:🎵 Your Stage at Bootstrap Brewing!
+UID:a5c10d9b-90f1-48d1-8e9a-2c3e9e5107e8@a5c1.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Details at venue website.\n\nLink: https://www.downtownlongmont.com/do/music-at-bricks-on-main-cat-jerky
+LOCATION:Bricks on Main
+DTSTART:20260426T010000Z
+SUMMARY:🎵 Music at Bricks on Main "Cat Jerky"
+UID:a9434391-125e-4b60-8ee3-7a4b0841e3d4@a943.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Details at venue website.\n\nLink: https://www.downtownlongmont.com/do/friday-afternoon-concert-the-hummin-birds
+LOCATION:Longmont Museum
+DTSTART:20260411T010000Z
+SUMMARY:🎵 Friday Afternoon Concert: The Hummin’ Birds
+UID:3f0a990f-8341-44ea-b0da-36852996800e@3f0a.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Details at venue website.\n\nLink: https://www.downtownlongmont.com/do/great-american-nowhere-duo-live-music
+LOCATION:300 Suns Brewing
+DTSTART:20260503T010000Z
+SUMMARY:🎵 Great American Nowhere Duo - Live Music
+UID:d0867604-6c1b-4249-aa06-f8bc08cd44f7@d086.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Details at venue website.\n\nLink: https://www.downtownlongmont.com/do/longmont-all-star-jazz-band-free-performance-1
+LOCATION:The Passenger
+DTSTART:20260419T010000Z
+SUMMARY:🎵 [Jazz] Longmont All Star Jazz Band Free Performance!
+UID:7bd33bbb-5672-4465-8cb7-50622bc44864@7bd3.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Details at venue website.\n\nLink: https://www.downtownlongmont.com/do/music-at-bricks-on-main-aimee-lynne
+LOCATION:Bricks on Main
+DTSTART:20260424T010000Z
+SUMMARY:🎵 Music at Bricks on Main "Aimee Lynne"
+UID:bb3fc3ac-47bf-426e-afc1-229ffca6ad71@bb3f.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Details at venue website.\n\nLink: https://www.downtownlongmont.com/do/live-music-show
+LOCATION:The Longmonter
+DTSTART:20260411T010000Z
+SUMMARY:🎵 Live Music Show
+UID:a218ce15-554d-4510-ab0a-3dc695042fe9@a218.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Details at venue website.\n\nLink: https://www.downtownlongmont.com/do/discovery-days-music-and-movement-with-ms-ragen-5
+LOCATION:Longmont Museum
+DTSTART:20260422T010000Z
+SUMMARY:🎵 Discovery Days: Music & Movement with Ms. Ragen
+UID:742b7445-81b9-4dac-b21f-ff9f5194244c@742b.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Details at venue website.\n\nLink: https://www.downtownlongmont.com/do/lso-concert-pops-concert-best-of-broadway
+LOCATION:Longmont Symphony Orchestra
+DTSTART:20260503T010000Z
+SUMMARY:🎵 LSO Concert Pops Concert: Best of Broadway
+UID:4f7cfd1a-bf71-4175-8108-cc5a67e31c9f@4f7c.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Details at venue website.\n\nLink: https://www.downtownlongmont.com/do/soundpost-sessions-spotlight-sage-and-aera-w-and-antonio-lopez
+LOCATION:The Times Collaborative / 338 Main St
+DTSTART:20260501T010000Z
+SUMMARY:🎵 Soundpost Sessions SPOTLIGHT: Sage & Aera w/ Antonio Lopez
+UID:37acd005-510b-401d-8c8c-9a44580070ba@37ac.org
 END:VEVENT
 BEGIN:VEVENT
 DESCRIPTION:Details at venue website.\n\nLink: https://www.downtownlongmont.com/do/loco-uke-jam-at-bootstrap-brewing-1
 LOCATION:Bootstrap Brewing
-DTSTART:20260420T010000Z
+DTSTART:20260427T010000Z
 SUMMARY:🎵 LOCO Uke Jam at Bootstrap Brewing!
-UID:31eabd7f-de1d-4a86-9c96-983964d8d19c@31ea.org
+UID:3ec409f0-8308-4a3e-acf2-eebf5d9fdde5@3ec4.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Details at venue website.\n\nLink: https://www.downtownlongmont.com/do/discovery-days-music-and-movement-with-ms-ragen-5
+LOCATION:Longmont Museum
+DTSTART:20260429T010000Z
+SUMMARY:🎵 Discovery Days: Music & Movement with Ms. Ragen
+UID:fc7767f2-8cb5-429e-8213-fda838e74b68@fc77.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Details at venue website.\n\nLink: https://www.downtownlongmont.com/do/your-stage-at-bootstrap-brewing-5
+LOCATION:Bootstrap Brewing
+DTSTART:20260428T010000Z
+SUMMARY:🎵 Your Stage at Bootstrap Brewing!
+UID:a744dc05-bdd6-4317-93c5-16bf4adbf26a@a744.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Details at venue website.\n\nLink: https://www.downtownlongmont.com/do/art-and-sip-rocky-mountain-national-park-embroidery
+LOCATION:Longmont Museum
+DTSTART:20260501T010000Z
+SUMMARY:🎵 Art & Sip: Rocky Mountain National Park Embroidery
+UID:ef726a49-a83b-4e7a-a331-7ff7936ac71b@ef72.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Details at venue website.\n\nLink: https://www.downtownlongmont.com/do/live-music-at-st-vrain-cidery-philly-in-the-high-ground
+LOCATION:St. Vrain Cidery
+DTSTART:20260412T010000Z
+SUMMARY:🎵 Live Music At St. Vrain Cidery - Philly In The High Ground
+UID:58af1a4e-e709-4bf4-b548-fd3db303599e@58af.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Details at venue website.\n\nLink: https://www.downtownlongmont.com/do/punk-up-your-prom-dress-for-the-punk-prom
+LOCATION:Downtown Longmont
+DTSTART:20260411T010000Z
+SUMMARY:🎵 [Rock] Punk-Up Your Prom Dress (for the Punk Prom)
+UID:5e14edf1-24fd-44fd-bb24-873cddfbd17b@5e14.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Details at venue website.\n\nLink: https://www.downtownlongmont.com/do/longmont-all-star-jazz-band-free-performance
+LOCATION:The Passenger
+DTSTART:20260503T010000Z
+SUMMARY:🎵 [Jazz] Longmont All Star Jazz Band Free Performance!
+UID:c493da7f-efb2-42b2-b8da-2230b9d24b62@c493.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Details at venue website.\n\nLink: https://www.downtownlongmont.com/do/free-live-music-by-joe-teichman
+LOCATION:The Passenger
+DTSTART:20260418T010000Z
+SUMMARY:🎵 Free Live Music by Joe Teichman
+UID:20047ce1-caf4-48cf-b976-1abb71b75f7c@2004.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Details at venue website.\n\nLink: https://www.johnsonsstation.com/calendar/jason-malmberg
+LOCATION:Johnson's Station
+DTSTART:20250810T010000Z
+SUMMARY:🎵 [Jazz] Nice Work Jazz
+UID:3b521c99-f646-490b-811d-8420972953e1@3b52.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Details at venue website.\n\nLink: https://www.downtownlongmont.com/do/your-stage-at-bootstrap-brewing-5
+LOCATION:Bootstrap Brewing
+DTSTART:20260421T010000Z
+SUMMARY:🎵 Your Stage at Bootstrap Brewing!
+UID:2b66bf22-20bf-4b76-a733-b537dbcef449@2b66.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Details at venue website.\n\nLink: https://www.downtownlongmont.com/do/denny-driscoll-live-music
+LOCATION:300 Suns Brewing
+DTSTART:20260426T010000Z
+SUMMARY:🎵 Denny Driscoll - Live Music
+UID:7ae4886c-c6ad-4e02-af39-d1a2f5b09860@7ae4.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Details at venue website.\n\nLink: https://www.downtownlongmont.com/do/recovery-cafe-benefit-concert
+LOCATION:Central Longmont Presbyterian Church
+DTSTART:20260426T010000Z
+SUMMARY:🎵 Recovery Cafe Benefit Concert
+UID:3f168622-af14-4474-87fe-b60b39699f67@3f16.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Details at venue website.\n\nLink: https://www.johnsonsstation.com/calendar/nice-work-jazz
+LOCATION:Johnson's Station
+DTSTART:20260829T010000Z
+SUMMARY:🎵 [Jazz] Nice Work Jazz
+UID:08e5f56e-d440-4630-8dd4-a1d670096d1c@08e5.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Details at venue website.\n\nLink: https://www.downtownlongmont.com/do/discovery-days-music-and-movement-with-ms-ragen-5
+LOCATION:Longmont Museum
+DTSTART:20260415T010000Z
+SUMMARY:🎵 Discovery Days: Music & Movement with Ms. Ragen
+UID:81d2ca88-7e51-485f-8ec3-9197c97676d5@81d2.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Details at venue website.\n\nLink: https://www.downtownlongmont.com/do/loco-uke-jam-at-bootstrap-brewing-1
+LOCATION:Bootstrap Brewing
+DTSTART:20260413T010000Z
+SUMMARY:🎵 LOCO Uke Jam at Bootstrap Brewing!
+UID:0f21279d-2db3-4c6d-bcd9-9d509b035936@0f21.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Details at venue website.\n\nLink: https://www.downtownlongmont.com/do/sunday-music-series-jazz-with-vic-dillahay-and-doug-carmichael
+LOCATION:Dry Land Distillers
+DTSTART:20260413T010000Z
+SUMMARY:🎵 [Jazz] Sunday Music Series: Jazz with Vic Dillahay and Doug Carmichael
+UID:1421745b-860b-4e4f-9ac7-02155f30e34f@1421.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Details at venue website.\n\nLink: https://www.downtownlongmont.com/do/music-at-bricks-on-main-random-pockets
+LOCATION:Bricks on Main
+DTSTART:20260412T010000Z
+SUMMARY:🎵 Music at Bricks on Main "Random Pockets"
+UID:fd8c52e1-88e9-4ed7-9a62-aaa77b3b8726@fd8c.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Details at venue website.\n\nLink: https://www.downtownlongmont.com/do/first-friday-with-mojazz
+LOCATION:Abbott & Wallace Distilling
+DTSTART:20260502T010000Z
+SUMMARY:🎵 First Friday with Mojazz
+UID:7aa9b403-ed0c-4f20-9a09-918beddabc85@7aa9.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Details at venue website.\n\nLink: https://www.downtownlongmont.com/do/music-at-bricks-on-main-the-rachel-alena-band
+LOCATION:Bricks on Main
+DTSTART:20260501T010000Z
+SUMMARY:🎵 Music at Bricks on Main "The Rachel Alena Band"
+UID:348f0687-38d0-4e1c-992a-8d1771efce0d@348f.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Details at venue website.\n\nLink: https://www.downtownlongmont.com/do/music-at-bricks-on-main-50-shades-of-blue
+LOCATION:Bricks on Main
+DTSTART:20260411T010000Z
+SUMMARY:🎵 Music at Bricks on Main "50 Shades of Blue"
+UID:358a196a-531f-4e62-b5d0-062182675713@358a.org
 END:VEVENT
 END:VCALENDAR
