@@ -136,7 +136,6 @@ def main():
     # Run all parsers
     raw_collection.extend(parse_downtown_longmont())
     raw_collection.extend(parse_johnsons_station())
-    -- raw_collection.extend(parse_wibby_brewing())
     raw_collection.extend(parse_the_barn())
     raw_collection.extend(parse_duets_bistro())
     
