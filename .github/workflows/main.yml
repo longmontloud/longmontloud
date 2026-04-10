@@ -2,16 +2,21 @@ name: Longmont Music Scraper
 
 on:
   schedule:
-    - cron: '0 11 * * *' # Runs at 5:00 AM Mountain Time (11:00 UTC)
-  workflow_dispatch: # Allows you to run it manually
+    - cron: '0 11 * * *'
+  workflow_dispatch:
 
 jobs:
   build:
     runs-on: ubuntu-latest
+    # This explicitly tells GitHub this job needs write access
+    permissions:
+      contents: write
 
     steps:
       - name: Checkout Code
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0 # Fetches all history so rebase works
 
       - name: Set up Python
         uses: actions/setup-python@v5
@@ -29,6 +34,7 @@ jobs:
           git config --global user.name "GitHub Actions"
           git config --global user.email "actions@github.com"
           git add longmont_music_final.ics
+          # This pulls latest changes before trying to push the new data
+          git pull origin main --rebase
           git commit -m "Update calendar [automated]" || exit 0
-          git pull --rebase origin main
-          git push
+          git push origin main
