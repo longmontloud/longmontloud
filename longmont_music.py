@@ -11,7 +11,7 @@ OUTPUT_FILE = "longmont_music_final.ics"
 HEADERS = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) Chrome/120.0.0.0"}
 LOCAL_TZ = pytz.timezone("America/Denver")
 
-# --- YOUR UPDATED STRICT LOGIC ---
+# --- STRICT LOGIC ---
 EXCLUDE = ['karaoke', 'open mic', 'trivia', 'bingo', 'workshop', 'class', 'meeting', 'comedy', 'yoga', 'poker', 'drawing']
 MUSIC_KEYWORDS = ['music', 'band', 'concert', 'live', 'symphony', 'acoustic', 'jazz', 'blues', 'rock', 'singer', 'songwriter', 'soundpost', 'sessions', 'orchestra', 'dj', 'performance']
 TRUSTED_VENUES = ['bootstrap brewing', '300 suns brewing', 'wibby brewing', 'bricks on main']
@@ -24,8 +24,6 @@ GENRE_MAP = {
     'Electronic': ['dj', 'electronic', 'synth', 'house music'],
     'Classical': ['orchestra', 'symphony', 'classical']
 }
-
-# --- UTILS ---
 
 def detect_genre(title, description):
     combined_text = f"{title} {description}".lower()
@@ -41,12 +39,12 @@ def get_deep_description(url):
         time.sleep(0.3)
         res = requests.get(url, headers=HEADERS, timeout=10)
         soup = BeautifulSoup(res.text, 'html.parser')
-        content_area = soup.select_one('.ev-details-content, .eventlist-description, #event-details, .entry-content, .event-item-description')
+        content_area = soup.select_one('.ev-details-content, .eventlist-description, #event-details, .entry-content')
         return content_area.get_text(separator="\n", strip=True) if content_area else "Details at venue website."
     except:
         return "Details available at link."
 
-# --- SITE PARSERS ---
+# --- SITE PARSERS WITH ERROR HANDLING ---
 
 def parse_downtown_longmont():
     events = []
@@ -54,116 +52,95 @@ def parse_downtown_longmont():
     try:
         res = requests.get(url, headers=HEADERS, timeout=15)
         soup = BeautifulSoup(res.text, 'html.parser')
-        # We look for 'evcard' but fallback to any link that looks like an event
-        cards = soup.select('a.evcard, .event-item a')
+        cards = soup.select('a.evcard')
         for card in cards:
             try:
-                # Find title: search for headline class or h3/h4
-                title_el = card.find(class_=re.compile(r'headline|title')) or card.find(['h3', 'h4'])
-                if not title_el: continue
-                title = title_el.get_text(strip=True)
+                title_el = card.find(class_=re.compile(r'headline|title'))
+                day_el = card.find(class_=re.compile(r'day'))
+                mon_el = card.find(class_=re.compile(r'month'))
                 
-                # Find venue
-                venue_el = card.find(class_=re.compile(r'venue|location'))
+                if not title_el or not day_el: continue
+                
+                title = title_el.get_text(strip=True)
+                venue_el = card.find(class_=re.compile(r'venue'))
                 venue = venue_el.get_text(strip=True) if venue_el else "Downtown Longmont"
                 
-                href = card['href']
-                full_url = "https://www.downtownlongmont.com" + href if href.startswith('/') else href
-                
-                # Date logic
-                day = card.find(class_=re.compile(r'day')).text.strip()
-                mon = card.find(class_=re.compile(r'month')).text.strip()
-                temp_dt = datetime.strptime(f"{mon} {day}", "%b %d")
+                temp_dt = datetime.strptime(f"{mon_el.text.strip()} {day_el.text.strip()}", "%b %d")
                 year = datetime.now().year if temp_dt.month >= datetime.now().month else datetime.now().year + 1
                 event_date = temp_dt.replace(year=year)
                 
-                events.append({"title": title, "venue": venue, "url": full_url, "date": event_date})
-            except: continue
+                events.append({
+                    "title": title, "venue": venue, 
+                    "url": "https://www.downtownlongmont.com" + card['href'], 
+                    "date": event_date
+                })
+            except Exception: continue # Skip individual messy events
     except Exception as e: print(f"Downtown Scrape Failed: {e}")
     return events
 
-def parse_johnsons_station():
+def parse_squarespace_site(url, venue_name):
+    """Generic parser for The Barn and Johnson Station."""
     events = []
-    url = "https://www.johnsonsstation.com/calendar"
     try:
-        res = requests.get(url, headers=HEADERS)
+        res = requests.get(url, headers=HEADERS, timeout=10)
         soup = BeautifulSoup(res.text, 'html.parser')
         for item in soup.select('article.eventlist-event--upcoming'):
-            link = item.select_one('a.eventlist-title-link')
-            date_str = item.select_one('time.event-date')['datetime']
-            events.append({
-                "title": link.get_text(strip=True),
-                "venue": "Johnson's Station",
-                "url": "https://www.johnsonsstation.com" + link['href'],
-                "date": datetime.strptime(date_str, "%Y-%m-%d")
-            })
-    except: pass
-    return events
-
-def parse_the_barn():
-    events = []
-    url = "https://www.barnevents.info/events"
-    try:
-        res = requests.get(url, headers=HEADERS)
-        soup = BeautifulSoup(res.text, 'html.parser')
-        for item in soup.select('article.eventlist-event--upcoming'):
-            link = item.select_one('a.eventlist-title-link')
-            date_str = item.select_one('time.event-date')['datetime']
-            events.append({
-                "title": link.get_text(strip=True),
-                "venue": "The Barn",
-                "url": "https://www.barnevents.info" + link['href'],
-                "date": datetime.strptime(date_str, "%Y-%m-%d")
-            })
+            try:
+                link = item.select_one('a.eventlist-title-link')
+                date_str = item.select_one('time.event-date')['datetime']
+                events.append({
+                    "title": link.get_text(strip=True),
+                    "venue": venue_name,
+                    "url": (url.split('/calendar')[0] if '/calendar' in url else url.split('/events')[0]) + link['href'],
+                    "date": datetime.strptime(date_str, "%Y-%m-%d")
+                })
+            except: continue
     except: pass
     return events
 
 # --- ENGINE ---
 
 def main():
-    print("🚀 Running Strict Master Scraper...")
+    print("🚀 Running Safe Master Scraper...")
     raw_collection = []
     raw_collection.extend(parse_downtown_longmont())
-    raw_collection.extend(parse_johnsons_station())
-    raw_collection.extend(parse_the_barn())
+    raw_collection.extend(parse_squarespace_site("https://www.johnsonsstation.com/calendar", "Johnson's Station"))
+    raw_collection.extend(parse_squarespace_site("https://www.barnevents.info/events", "The Barn"))
     
     cal = Calendar()
     seen_fingerprints = set()
     count = 0
 
     for data in raw_collection:
-        title_low = data['title'].lower()
-        venue_low = data['venue'].lower()
+        try:
+            title_low = data['title'].lower()
+            venue_low = data['venue'].lower()
 
-        # 1. Strict Exclusions
-        if any(x in title_low for x in EXCLUDE): continue
+            if any(x in title_low for x in EXCLUDE): continue
 
-        # 2. Fingerprint for deduplication
-        fingerprint = f"{data['date'].strftime('%Y%m%d')}_{venue_low[:5]}"
-        if fingerprint in seen_fingerprints: continue
+            fingerprint = f"{data['date'].strftime('%Y%m%d')}_{venue_low[:5]}"
+            if fingerprint in seen_fingerprints: continue
 
-        # 3. Content Analysis
-        description = get_deep_description(data['url'])
-        genre_tag = detect_genre(data['title'], description)
+            description = get_deep_description(data['url'])
+            genre_tag = detect_genre(data['title'], description)
 
-        # 4. Strict Music Check
-        is_music = any(m in title_low for m in MUSIC_KEYWORDS) or \
-                   any(v in venue_low for v in TRUSTED_VENUES) or \
-                   genre_tag != ""
+            is_music = any(m in title_low for m in MUSIC_KEYWORDS) or \
+                       any(v in venue_low for v in TRUSTED_VENUES) or \
+                       genre_tag != ""
 
-        if not is_music: continue
+            if not is_music: continue
 
-        # 5. Build Event
-        e = Event()
-        e.name = f"🎵 {genre_tag}{data['title']}"
-        e.begin = LOCAL_TZ.localize(data['date'].replace(hour=19, minute=0))
-        e.location = data['venue']
-        e.description = f"{description}\n\nLink: {data['url']}"
-        
-        cal.events.add(e)
-        seen_fingerprints.add(fingerprint)
-        count += 1
-        print(f"  [+] Added: {data['title']} @ {data['venue']}")
+            e = Event()
+            e.name = f"🎵 {genre_tag}{data['title']}"
+            e.begin = LOCAL_TZ.localize(data['date'].replace(hour=19, minute=0))
+            e.location = data['venue']
+            e.description = f"{description}\n\nLink: {data['url']}"
+            
+            cal.events.add(e)
+            seen_fingerprints.add(fingerprint)
+            count += 1
+            print(f"  [+] Added: {data['title']} @ {data['venue']}")
+        except: continue
 
     with open(OUTPUT_FILE, 'w', encoding='utf-8') as f:
         f.writelines(cal.serialize_iter())
