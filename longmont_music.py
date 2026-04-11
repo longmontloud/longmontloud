@@ -22,7 +22,7 @@ GENRE_MAP = {
     'Rock': ['rock', 'punk', 'metal', 'electric guitar', 'indie', 'grunge'],
     'Folk/Acoustic': ['folk', 'acoustic', 'bluegrass', 'singer-songwriter', 'banjo', 'folksy'],
     'Blues': ['blues', 'harmonica'],
-    'Electronic': ['dj', 'electronic', 'synth', 'house music', 'rave', 'edm'],
+    'Electronic': ['dj', 'electronic', 'synth', 'house music', 'rave', 'edm', 'dubstep', 'rave'],
     'Classical': ['orchestra', 'symphony', 'classical']
 }
 
