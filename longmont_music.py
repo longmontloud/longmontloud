@@ -11,7 +11,7 @@ OUTPUT_FILE = "longmont_music_final.ics"
 HEADERS = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) Chrome/120.0.0.0"}
 LOCAL_TZ = pytz.timezone("America/Denver")
 
-# --- FILTER & GENRE LOGIC ---
+# --- LOGIC ---
 EXCLUDE = [
     'karaoke', 'open mic', 'trivia', 'bingo', 'workshop', 'class', 'meeting', 'retail',
     'comedy', 'yoga', 'poker', 'drawing', 'craft', 'create club', 'teen', 
@@ -20,13 +20,11 @@ EXCLUDE = [
     'your stage', 'tangerine', 'composition', 'ballet', 'dance class', 
     'film', 'movie', 'bubbles', 'sewing', 'brunch', 'mimosas', 'bellinis'
 ]
-
 MUSIC_KEYWORDS = [
     'music', 'band', 'concert', 'symphony', 'acoustic', 'jazz', 'supper club',
     'blues', 'rock', 'singer', 'songwriter', 'orchestra', 'dj', 'solo', 'duo',
     'rave', 'grunge', 'folk', 'metal', 'punk', 'hip-hop', 'live music', 'brass'
 ]
-
 GENRE_MAP = {
     'Jazz': ['jazz', 'swing', 'big band', 'bebop'],
     'Rock': ['rock', 'punk', 'metal', 'electric guitar', 'indie', 'grunge', 'psychedelic'],
@@ -36,7 +34,6 @@ GENRE_MAP = {
     'Classical': ['orchestra', 'symphony', 'classical', 'quartet', 'chamber'],
     'Country': ['country', 'western', 'honky tonk', 'cowboy']
 }
-
 TRUSTED_VENUES = ['bricks on main', 'the barn', 'johnsons station', 'supper club']
 
 # --- UTILS ---
@@ -49,6 +46,7 @@ def detect_genre(title, description):
     return ""
 
 def find_times(text):
+    # Improved regex to handle time ranges better
     time_pattern = r'(\d{1,2})(?::(\d{2}))?\s*(am|pm|AM|PM)?'
     matches = re.findall(time_pattern, text)
     if not matches: return None, None, None
@@ -56,13 +54,21 @@ def find_times(text):
     def convert_to_24h(hour, minute, ampm):
         h, m = int(hour), int(minute) if minute else 0
         ampm = ampm.lower() if ampm else ""
-        if not ampm: ampm = 'pm' if 1 <= h <= 10 else 'am'
+        # Concert logic: if 1-10 and no AM/PM, it's PM.
+        if not ampm:
+            ampm = 'pm' if 1 <= h <= 10 else 'am'
         if ampm == 'pm' and h < 12: h += 12
         if ampm == 'am' and h == 12: h = 0
         return h, m
 
     start_h, start_m = convert_to_24h(matches[0][0], matches[0][1], matches[0][2])
-    end_h = convert_to_24h(matches[1][0], matches[1][1], matches[1][2])[0] if len(matches) > 1 else (start_h + 3) % 24
+    
+    # Check for end time
+    if len(matches) > 1:
+        end_h, _ = convert_to_24h(matches[1][0], matches[1][1], matches[1][2])
+    else:
+        end_h = (start_h + 3) % 24
+        
     return start_h, start_m, end_h
 
 # --- PARSERS ---
@@ -109,12 +115,15 @@ def parse_squarespace(url, venue_name):
                 link_tag = item.find('a', href=True)
                 date_tag = item.select_one('time[datetime], .event-date, [date]')
                 if not date_tag: continue
-                dt_val = date_tag.get('datetime') or date_tag.get('date') or date_tag.get_text(strip=True)
+                
+                # FIX: We only want the YYYY-MM-DD part to avoid UTC shifts
+                dt_raw = date_tag.get('datetime') or date_tag.get('date') or date_tag.get_text(strip=True)
+                clean_date = datetime.strptime(dt_raw[:10], "%Y-%m-%d")
                 
                 events.append({
                     "title": title, "venue": venue_name,
                     "time_text": item.get_text(),
-                    "date": datetime.strptime(dt_val[:10], "%Y-%m-%d"),
+                    "date": clean_date,
                     "url": base_domain + link_tag['href'] if link_tag['href'].startswith('/') else link_tag['href']
                 })
             except: continue
@@ -124,7 +133,7 @@ def parse_squarespace(url, venue_name):
 # --- MAIN ---
 
 def main():
-    print("🚀 Running Final Scraper with Genre Tags...")
+    print("🚀 Running Time-Fixed Scraper...")
     raw = []
     raw.extend(parse_downtown())
     raw.extend(parse_squarespace("https://www.johnsonsstation.com/calendar", "Johnson's Station"))
@@ -138,36 +147,37 @@ def main():
         try:
             t_low = data['title'].lower()
             v_low = data['venue'].lower()
-            
             if any(x in t_low for x in EXCLUDE): continue
             
             res_detail = requests.get(data['url'], headers=HEADERS, timeout=10)
             soup_detail = BeautifulSoup(res_detail.text, 'html.parser')
             detail_area = soup_detail.select_one('.eventlist-description, .event-item-description, .sqs-block-content, #page-content, main')
             detail_text = detail_area.get_text(separator=" ", strip=True).lower() if detail_area else ""
-
             if any(x in detail_text for x in EXCLUDE): continue
 
             is_trusted = any(v in v_low for v in TRUSTED_VENUES) or any(v in t_low for v in TRUSTED_VENUES)
             has_music_keywords = any(m in t_low for m in MUSIC_KEYWORDS) or any(m in detail_text for m in MUSIC_KEYWORDS)
+            if not (is_trusted or has_music_keywords): continue
 
-            if not (is_trusted or has_music_keywords):
-                continue
-
-            # --- GENRE DETECTION ---
             genre_tag = detect_genre(data['title'], detail_text)
-
             sh, sm, eh = find_times(f"{data['title']} {detail_text}")
+            
+            # --- THE TIMEZONE FIX ---
+            # We create the time as "naive" first, then force it into Mountain Time.
             time_warning = ""
             if sh is not None:
-                start_dt = LOCAL_TZ.localize(data['date'].replace(hour=sh, minute=sm))
-                end_dt = LOCAL_TZ.localize(data['date'].replace(hour=eh, minute=0))
+                # Constructing the time explicitly in local time
+                start_dt = LOCAL_TZ.localize(datetime(data['date'].year, data['date'].month, data['date'].day, sh, sm))
+                # Handle end time
+                end_dt = LOCAL_TZ.localize(datetime(data['date'].year, data['date'].month, data['date'].day, eh, 0))
+                if end_dt <= start_dt:
+                    end_dt = start_dt + timedelta(hours=3)
             else:
-                start_dt = LOCAL_TZ.localize(data['date'].replace(hour=19, minute=0))
+                start_dt = LOCAL_TZ.localize(datetime(data['date'].year, data['date'].month, data['date'].day, 19, 0))
                 end_dt = start_dt + timedelta(hours=2)
                 time_warning = "⚠️ Time not confirmed.\n\n"
 
-            fingerprint = f"{start_dt.strftime('%Y%m%d')}_{t_low[:10]}"
+            fingerprint = f"{start_dt.strftime('%Y%m%d')}_{t_low[:15]}"
             if fingerprint in seen: continue
 
             e = Event()
@@ -180,12 +190,12 @@ def main():
             cal.events.add(e)
             seen.add(fingerprint)
             count += 1
-            print(f"  [+] Added: {genre_tag}{data['title']} @ {data['venue']}")
+            print(f"  [+] Added: {genre_tag}{data['title']} @ {start_dt.strftime('%I:%M %p')}")
         except: continue
 
     with open(OUTPUT_FILE, 'w', encoding='utf-8') as f:
         f.writelines(cal.serialize_iter())
-    print(f"\n✅ SUCCESS: {count} events with Genre Tags saved.")
+    print(f"\n✅ SUCCESS: {count} events synchronized to Mountain Time.")
 
 if __name__ == "__main__":
     main()
