@@ -14,14 +14,13 @@ LOCAL_TZ = pytz.timezone("America/Denver")
 # --- REFINED FILTER LOGIC ---
 # Added even more non-music "clutter" keywords
 EXCLUDE = [
-    'karaoke', 'open mic', 'trivia', 'bingo', 'workshop', 'class', 'meeting', 
+    'karaoke', 'open mic', 'trivia', 'bingo', 'workshop', 'class', 'meeting', 'retail',
     'comedy', 'yoga', 'poker', 'drawing', 'craft', 'create club', 'teen', 
     'storytime', 'book club', 'knitting', 'market', 'board game', 'meditation', 'teacher', 'discussion', 'Ragen', 'networking', 'Discovery Days', 'Uke Jam', 'Your Stage', 'Tangerine', 'Composition'
 ]
 MUSIC_KEYWORDS = [
-    'music', 'band', 'concert', 'live', 'symphony', 'acoustic', 'jazz', 
-    'blues', 'rock', 'singer', 'songwriter', 'orchestra', 'dj', 'performance', 
-    'festival', 'rave', 'grunge', 'folk', 'metal', 'punk', 'quartet', 'duo', 'trio'
+    'music', 'band', 'concert', 'symphony', 'acoustic', 'jazz', 
+    'blues', 'rock', 'singer', 'songwriter', 'orchestra', 'dj', 'rave', 'grunge', 'folk', 'metal', 'punk','hip-hop'
 ]
 TRUSTED_VENUES = ['bricks on main', 'the barn', 'johnsons station']
 
