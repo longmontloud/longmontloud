@@ -12,88 +12,46 @@ HEADERS = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) Chrome/120.0
 LOCAL_TZ = pytz.timezone("America/Denver")
 
 # --- SCORING & FILTERS ---
-# Words that prove it's NOT a music event
-HARD_EXCLUDE = [
-    'workshop', 'class', 'yoga', 'sip', 'paint', 'watercolor', 'meeting', 'sale', 
-    'market', 'plant', 'meditation', 'knit', 'storytime', 'trivia', 'bingo', 
-    'poetry', 'film', 'movie', 'poker', 'discussion', 'fitness', 'wellness'
-]
+HARD_EXCLUDE = ['workshop', 'class', 'yoga', 'sip', 'paint', 'watercolor', 'meeting', 'sale', 'market', 'plant', 'meditation', 'trivia', 'bingo', 'poker', 'fitness']
+STRONG_MUSIC = ['concert', 'band', 'symphony', 'live music', 'orchestra', 'trio', 'quartet', 'quintet']
+SOFT_MUSIC = ['acoustic', 'jazz', 'blues', 'rock', 'singer', 'songwriter', 'dj', 'solo', 'duo', 'bluegrass', 'folk', 'americana']
+TRUSTED_VENUES = ['bricks on main', 'the barn', 'johnsons station', 'supper club', 'wibby', 'left hand', 'abbott & wallace']
 
-# Words that mean it is definitely music
-STRONG_MUSIC = ['concert', 'band', 'symphony', 'live music', 'orchestra', 'tribute band', 'gig']
+# RESTORED FULL GENRE MAP
+GENRE_MAP = {
+    'Jazz': ['jazz', 'swing', 'big band', 'bebop'],
+    'Rock': ['rock', 'punk', 'metal', 'electric guitar', 'indie', 'grunge', 'psychedelic'],
+    'Folk/Acoustic': ['folk', 'acoustic', 'bluegrass', 'singer-songwriter', 'banjo', 'americana'],
+    'Blues': ['blues', 'harmonica', 'soul'],
+    'Electronic': ['dj', 'electronic', 'synth', 'house music', 'rave', 'edm', 'techno'],
+    'Classical': ['orchestra', 'symphony', 'classical', 'quartet', 'chamber'],
+    'Country': ['country', 'western', 'honky tonk', 'cowboy']
+}
 
-# General music context
-SOFT_MUSIC = ['acoustic', 'jazz', 'blues', 'rock', 'singer', 'songwriter', 'dj', 'solo', 'duo', 'trio', 'bluegrass', 'folk']
-
-TRUSTED_VENUES = ['bricks on main', 'the barn', 'johnsons station', 'supper club', 'abbott & wallace', 'wibby', 'left hand']
-
-# --- UTILS ---
-
-def calculate_music_score(title, description, venue):
-    score = 0
-    t_low = title.lower()
-    d_low = description.lower()
-    v_low = venue.lower()
-
-    # 1. Check for deal-breakers (Hard Exclude)
-    if any(x in t_low for x in HARD_EXCLUDE): return -10
-    if any(x in d_low for x in HARD_EXCLUDE): score -= 5
-
-    # 2. Check Title (High weight)
-    if any(x in t_low for x in STRONG_MUSIC): score += 5
-    if any(x in t_low for x in SOFT_MUSIC): score += 3
-
-    # 3. Check Description (Lower weight to avoid footer noise)
-    if any(x in d_low for x in STRONG_MUSIC): score += 2
-    if any(x in d_low for x in SOFT_MUSIC): score += 1
-
-    # 4. Venue Check
-    if any(v in v_low for v in TRUSTED_VENUES): score += 1
-    
-    return score
-
-def find_times_strict(text):
-    pattern = r'(\d{1,2}(?::\d{2})?\s*(?:am|pm|AM|PM))|(\d{1,2}:\d{2})'
-    matches = re.findall(pattern, text)
-    if not matches: return None, None, None
-    times = []
-    for m in matches:
-        t_str = m[0] or m[1]
-        h_m = re.findall(r'(\d{1,2})(?::(\d{2}))?\s*(am|pm)?', t_str.lower())
-        if h_m:
-            h, m, ampm = h_m[0]
-            h, m = int(h), int(m) if m else 0
-            if not ampm: ampm = 'pm' if 1 <= h <= 10 else 'am'
-            if ampm == 'pm' and h < 12: h += 12
-            if ampm == 'am' and h == 12: h = 0
-            times.append((h, m))
-    if times:
-        start = times[0]
-        end_h = times[1][0] if len(times) > 1 else (start[0] + 3) % 24
-        return start[0], start[1], end_h
-    return None, None, None
-
-# --- PARSERS ---
+def detect_genre(text):
+    combined_text = text.lower()
+    for genre, keywords in GENRE_MAP.items():
+        if any(re.search(rf"\b{re.escape(k)}\b", combined_text) for k in keywords):
+            return f"[{genre}] "
+    return ""
 
 def get_links(url, domain):
     links = []
     try:
         res = requests.get(url, headers=HEADERS, timeout=15)
         soup = BeautifulSoup(res.text, 'html.parser')
-        # Target specific event links to avoid nav-bar links
-        for a in soup.select('a[href*="/do/"], a[href*="/events/"]'):
+        # Catching Downtown Longmont (/do/) and Squarespace (/events/ or /calendar-1)
+        for a in soup.find_all('a', href=True):
             href = a['href']
-            if len(href.split('/')) > 2:
-                full_url = domain + href if href.startswith('/') else href
-                links.append(full_url)
+            if any(path in href for path in ['/do/', '/events/', '/calendar-1']):
+                # Filter out the main directory pages
+                if len(href.split('/')) > 2:
+                    links.append(domain + href if href.startswith('/') else href)
     except: pass
     return list(set(links))
 
-# --- MAIN ---
-
 def main():
-    print("🚀 Running Scorer-Based Music Filter...")
-    
+    print("🚀 Running Scraper with Full Genre Mapping...")
     targets = [
         ("https://www.downtownlongmont.com/events/calendar", "https://www.downtownlongmont.com"),
         ("https://www.johnsonsstation.com/calendar", "https://www.johnsonsstation.com"),
@@ -113,27 +71,22 @@ def main():
             res = requests.get(link, headers=HEADERS, timeout=10)
             soup = BeautifulSoup(res.text, 'html.parser')
             
-            # Identify the actual CONTENT of the event, ignoring headers/footers
-            content_area = soup.select_one('.details, .event-item-description, .sqs-block-content, #page-content, main article')
-            description = content_area.get_text(separator=" ", strip=True) if content_area else ""
+            # 1. Content Extraction
+            content = soup.select_one('.details, .event-item-description, .sqs-block-content, article')
+            description = content.get_text(" ", strip=True) if content else soup.get_text(" ", strip=True)
+            title = (soup.find('h1') or soup.find('title')).get_text(strip=True)
             
-            title_tag = soup.find('h1') or soup.find('title')
-            title = title_tag.get_text(strip=True) if title_tag else ""
+            # 2. Filtering
+            t_low, d_low = title.lower(), description.lower()
+            if any(x in t_low for x in HARD_EXCLUDE): continue
             
-            # Venue Logic
-            venue_el = soup.select_one('.location, .venue, .sub-headline')
-            venue_name = venue_el.get_text(strip=True) if venue_el else "Longmont"
+            is_trusted = any(v in d_low or v in t_low or v in link for v in TRUSTED_VENUES)
+            has_music = any(m in t_low or m in d_low for m in STRONG_MUSIC + SOFT_MUSIC)
+            
+            if not (is_trusted or has_music): continue
 
-            # --- SCORING ENGINE ---
-            music_score = calculate_music_score(title, description, venue_name)
-            
-            if music_score < 2:
-                # print(f"  [-] Skipped (Score {music_score}): {title}")
-                continue
-
-            # --- DATE & TIME ---
+            # 3. Time & Date (JSON-LD priority for Squarespace stability)
             start_dt = None
-            # Try JSON-LD first for the date
             script = soup.find('script', type='application/ld+json')
             if script:
                 try:
@@ -141,45 +94,4 @@ def main():
                     if isinstance(data, list): data = data[0]
                     start_str = data.get('startDate')
                     if start_str:
-                        start_dt = LOCAL_TZ.localize(datetime.fromisoformat(start_str.split('+')[0].split('Z')[0]))
-                except: pass
-
-            if not start_dt:
-                date_match = re.search(r'(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)[a-z]*\.?\s+(\d{1,2}),?\s+(202\d)', description)
-                if date_match:
-                    dt_obj = datetime.strptime(f"{date_match.group(1)[:3]} {date_match.group(2)} {date_match.group(3)}", "%b %d %Y")
-                    start_dt = LOCAL_TZ.localize(datetime(dt_obj.year, dt_obj.month, dt_obj.day, 19, 0))
-                else: continue
-
-            # Refine time
-            sh, sm, eh = find_times_strict(description[:1000])
-            if sh is not None:
-                start_dt = LOCAL_TZ.localize(datetime(start_dt.year, start_dt.month, start_dt.day, sh, sm))
-                end_dt = LOCAL_TZ.localize(datetime(start_dt.year, start_dt.month, start_dt.day, eh, 0))
-            else:
-                end_dt = start_dt + timedelta(hours=2)
-
-            # --- FINALIZE ---
-            fingerprint = f"{start_dt.strftime('%Y%m%d%H')}_{title[:15].lower()}"
-            if fingerprint in seen: continue
-
-            e = Event()
-            e.name = f"🎵 {title}"
-            e.begin = start_dt
-            e.end = end_dt
-            e.location = venue_name
-            e.description = f"Venue: {venue_name}\nLink: {link}"
-            
-            cal.events.add(e)
-            seen.add(fingerprint)
-            count += 1
-            print(f"  [+] Added (Score {music_score}): {title}")
-
-        except: continue
-
-    with open(OUTPUT_FILE, 'w', encoding='utf-8') as f:
-        f.writelines(cal.serialize_iter())
-    print(f"\n✅ Finished! {count} Verified Music Events saved.")
-
-if __name__ == "__main__":
-    main()
+                        raw_dt = datetime.fromisoformat
