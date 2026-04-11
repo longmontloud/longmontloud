@@ -23,7 +23,7 @@ MUSIC_KEYWORDS = [
     'blues', 'rock', 'singer', 'songwriter', 'orchestra', 'dj', 'performance', 
     'festival', 'rave', 'grunge', 'folk', 'metal', 'punk', 'quartet', 'duo', 'trio'
 ]
-TRUSTED_VENUES = ['bootstrap brewing', '300 suns brewing', 'bricks on main', 'the barn', 'johnsons station']
+TRUSTED_VENUES = ['bricks on main', 'the barn', 'johnsons station']
 
 # --- TIME PARSING ---
 def find_times(text):
