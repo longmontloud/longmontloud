@@ -11,8 +11,7 @@ OUTPUT_FILE = "longmont_music_final.ics"
 HEADERS = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) Chrome/120.0.0.0"}
 LOCAL_TZ = pytz.timezone("America/Denver")
 
-# --- REFINED FILTER LOGIC ---
-# Added 'film', 'movie', 'bubbles', 'sewing' based on your examples
+# --- FILTER LOGIC ---
 EXCLUDE = [
     'karaoke', 'open mic', 'trivia', 'bingo', 'workshop', 'class', 'meeting', 'retail',
     'comedy', 'yoga', 'poker', 'drawing', 'craft', 'create club', 'teen', 
@@ -24,7 +23,7 @@ EXCLUDE = [
 MUSIC_KEYWORDS = [
     'music', 'band', 'concert', 'symphony', 'acoustic', 'jazz', 
     'blues', 'rock', 'singer', 'songwriter', 'orchestra', 'dj', 
-    'rave', 'grunge', 'folk', 'metal', 'punk', 'hip-hop', 'live music'
+    'rave', 'grunge', 'folk', 'metal', 'punk', 'hip-hop', 'live music', 'brass'
 ]
 TRUSTED_VENUES = ['bricks on main', 'the barn', 'johnsons station']
 
@@ -62,7 +61,6 @@ def parse_downtown():
                 mon = card.find(class_=re.compile(r'month')).get_text(strip=True)
                 temp_dt = datetime.strptime(f"{mon} {day}", "%b %d")
                 year = datetime.now().year if temp_dt.month >= datetime.now().month else datetime.now().year + 1
-                
                 events.append({
                     "title": title, "venue": venue_name, "time_text": card.get_text(),
                     "date": temp_dt.replace(year=year),
@@ -78,15 +76,24 @@ def parse_squarespace(url, venue_name):
         res = requests.get(url, headers=HEADERS, timeout=15)
         soup = BeautifulSoup(res.text, 'html.parser')
         base_domain = "https://" + url.split('//')[1].split('/')[0]
-        for item in soup.select('article.eventlist-event, .eventlist-item'):
+        for item in soup.select('article, .eventlist-item, .summary-item'):
             try:
-                link_tag = item.select_one('a[href*="/events/"]')
-                date_tag = item.select_one('time[datetime]')
-                if not link_tag or not date_tag: continue
+                # FIX 1: Robust Title Catching for The Barn
+                link_tag = item.find('a', class_=re.compile(r'title|link|event'))
+                if not link_tag: continue
+                
+                title = link_tag.get_text(strip=True)
+                if not title: continue # Skip if title is empty
+                
+                date_tag = item.select_one('time[datetime], .event-date')
+                if not date_tag: continue
+                
+                dt_val = date_tag.get('datetime') or date_tag.get('date') or date_tag.get_text(strip=True)
+                
                 events.append({
-                    "title": link_tag.get_text(strip=True), "venue": venue_name,
+                    "title": title, "venue": venue_name,
                     "time_text": item.get_text(),
-                    "date": datetime.strptime(date_tag['datetime'][:10], "%Y-%m-%d"),
+                    "date": datetime.strptime(dt_val[:10], "%Y-%m-%d"),
                     "url": base_domain + link_tag['href'] if link_tag['href'].startswith('/') else link_tag['href']
                 })
             except: continue
@@ -96,7 +103,7 @@ def parse_squarespace(url, venue_name):
 # --- MAIN ---
 
 def main():
-    print("🚀 Running Filtered Community Scraper...")
+    print("🚀 Running Optimized Scraper (Barn & Johnson fix)...")
     raw = []
     raw.extend(parse_downtown())
     raw.extend(parse_squarespace("https://www.johnsonsstation.com/calendar", "Johnson's Station"))
@@ -111,31 +118,25 @@ def main():
             t_low = data['title'].lower()
             v_low = data['venue'].lower()
             
-            # 1. IMMEDIATE TITLE EXCLUDE
             if any(x in t_low for x in EXCLUDE): continue
             
-            # 2. FETCH AND TARGET ONLY THE DESCRIPTION AREA
             res_detail = requests.get(data['url'], headers=HEADERS, timeout=10)
             soup_detail = BeautifulSoup(res_detail.text, 'html.parser')
             
-            # Targeted search in description/details only, NOT the whole page (avoids menu keywords)
-            detail_area = soup_detail.select_one('.details, .description, .event-item-description, #page-content')
+            # FIX 2: Expanded description area search for Johnson's Station
+            detail_area = soup_detail.select_one('.eventlist-description, .event-item-description, .sqs-block-content, .details, #page-content')
             detail_text = detail_area.get_text(separator=" ", strip=True).lower() if detail_area else ""
 
-            # 3. SECONDARY EXCLUDE IN DESCRIPTION
             if any(x in detail_text for x in EXCLUDE): continue
 
-            # 4. MUSIC VERIFICATION (Title or Description Area ONLY)
             has_music_keywords = any(m in t_low for m in MUSIC_KEYWORDS) or \
                                 any(m in detail_text for m in MUSIC_KEYWORDS)
             
             is_trusted_venue = any(v in v_low for v in TRUSTED_VENUES)
 
-            # To pass: Must NOT be excluded AND (Must be a trusted venue OR have music keywords)
             if not (is_trusted_venue or has_music_keywords):
                 continue
 
-            # Time Logic
             sh, sm, eh = find_times(f"{data['title']} {detail_text}")
             time_warning = ""
             if sh is not None:
@@ -146,7 +147,7 @@ def main():
                 end_dt = start_dt + timedelta(hours=1)
                 time_warning = "⚠️ Start time not confirmed. Check link.\n\n"
 
-            fingerprint = f"{start_dt.strftime('%Y%m%d')}_{t_low[:15]}"
+            fingerprint = f"{start_dt.strftime('%Y%m%d')}_{t_low[:20]}"
             if fingerprint in seen: continue
 
             e = Event()
