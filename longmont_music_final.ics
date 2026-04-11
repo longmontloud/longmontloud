@@ -2,820 +2,12 @@ BEGIN:VCALENDAR
 VERSION:2.0
 PRODID:ics.py - http://git.io/lLljaA
 BEGIN:VEVENT
-DESCRIPTION:Venue: Longmont Symphony Orchestra\nLink: https://www.downtownlongmont.com/do/lso-concert-pops-concert-best-of-broadway
-DTEND:20260503T020000Z
-LOCATION:Longmont Symphony Orchestra
-DTSTART:20260502T200000Z
-SUMMARY:🎵 LSO Concert Pops Concert: Best of Broadway
-UID:7248ee1e-ccaf-4b46-b22e-d1543968678a@7248.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Venue: Longmont Museum\nLink: https://www.downtownlongmont.com/do/discovery-days-art-with-ms-leigh-and-henry-12
-DTEND:20260412T020000Z
-LOCATION:Longmont Museum
-DTSTART:20260411T170000Z
-SUMMARY:🎵 Discovery Days: Art with Ms. Leigh & Henry
-UID:ed036da8-50bb-444c-861f-e1bb03ca7c8a@ed03.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Venue: Bootstrap Brewing\nLink: https://www.downtownlongmont.com/do/your-stage-at-bootstrap-brewing-5
-DTEND:20260428T020000Z
-LOCATION:Bootstrap Brewing
-DTSTART:20260427T190000Z
-SUMMARY:🎵 Your Stage at Bootstrap Brewing!
-UID:2418a5e8-4f97-42a9-9969-8316d4b1936a@2418.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Venue: Tangerine\nLink: https://www.downtownlongmont.com/do/main-street-bubbles
-DTEND:20260505T020000Z
-LOCATION:Tangerine
-DTSTART:20260504T190000Z
-SUMMARY:🎵 Main Street Bubbles!
-UID:c1dcac1b-74a3-4918-9636-6b7f63c6d2c7@c1dc.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Venue: The Barn\nLink: https://www.barnevents.info/events/2025/10/4/molly-obrien
-DTEND:20251005T020000Z
-LOCATION:The Barn
-DTSTART:20251004T220000Z
-SUMMARY:🎵 
-UID:4cc5e852-2905-4897-ab73-4575d8657701@4cc5.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Venue: Composition Shop\nLink: https://www.downtownlongmont.com/do/abby-hanlon-dory-fantasmagory-num7-paperback-tour
-DTEND:20260504T010000Z
-LOCATION:Composition Shop
-DTSTART:20260504T010000Z
-SUMMARY:🎵 Abby Hanlon: Dory Fantasmagory #7 Paperback Tour
-UID:4b7190df-ba00-468e-b74c-42985bab5282@4b71.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Venue: Kuper Wine Bar\nLink: https://www.downtownlongmont.com/do/pilates-at-the-kuper-1
-DTEND:20260412T020000Z
-LOCATION:Kuper Wine Bar
-DTSTART:20260411T170000Z
-SUMMARY:🎵 Pilates at The Kuper
-UID:9f27ba19-f65d-4284-bff3-480b041cd047@9f27.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Venue: Retail Therapy Vendor Market & Art Studios\nLink: https://www.downtownlongmont.com/do/this-and-that-pop-up-event
-DTEND:20260412T020000Z
-LOCATION:Retail Therapy Vendor Market & Art Studios
-DTSTART:20260411T170000Z
-SUMMARY:🎵 This & That Pop up event
-UID:dffd6c26-72f8-4613-8089-da499b59f42a@dffd.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Venue: Downtown Longmont\nLink: https://www.downtownlongmont.com/do/haunted-history-of-longmont
-DTEND:20260419T020000Z
-LOCATION:Downtown Longmont
-DTSTART:20260418T230000Z
-SUMMARY:🎵 Haunted History of Longmont
-UID:02d71ed3-1424-4cbc-874a-7a24711a6171@02d7.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Venue: Kuper Wine Bar\nLink: https://www.downtownlongmont.com/do/half-price-bottle-night-and-live-music-1
-DTEND:20260501T020000Z
-LOCATION:Kuper Wine Bar
-DTSTART:20260430T220000Z
-SUMMARY:🎵 Half Price Bottle Night & Live Music
-UID:7999437f-26a9-4487-a796-23b993197137@7999.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Venue: The Passenger\nLink: https://www.downtownlongmont.com/do/longmont-all-star-jazz-band-free-performance-1
-DTEND:20260419T020000Z
-LOCATION:The Passenger
-DTSTART:20260419T000000Z
-SUMMARY:🎵 Longmont All Star Jazz Band Free Performance!
-UID:bb999ba0-9480-4958-96f7-e9868dd7fdf6@bb99.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Venue: Bootstrap Brewing\nLink: https://www.downtownlongmont.com/do/loco-uke-jam-at-bootstrap-brewing-1
-DTEND:20260413T020000Z
-LOCATION:Bootstrap Brewing
-DTSTART:20260412T060000Z
-SUMMARY:🎵 LOCO Uke Jam at Bootstrap Brewing!
-UID:9413d108-94e6-41f3-80b5-9482f322b68e@9413.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Venue: The Golden Bee\nLink: https://www.downtownlongmont.com/do/tarot-card-reader-at-the-golden-bee
-DTEND:20260502T020000Z
-LOCATION:The Golden Bee
-DTSTART:20260501T230000Z
-SUMMARY:🎵 Tarot Card Reader at The Golden Bee
-UID:d4b9bcac-b6e1-4e37-9505-30e54afe0876@d4b9.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Venue: The Blackbird House\nLink: https://www.downtownlongmont.com/do/tarot-with-shifra-at-blackbird-house-18
-DTEND:20260419T020000Z
-LOCATION:The Blackbird House
-DTSTART:20260418T170000Z
-SUMMARY:🎵 Tarot with Shifra at Blackbird House
-UID:08360a3f-3b4a-4e27-94e9-8907d4d0adcd@0836.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Venue: Tangerine\nLink: https://www.downtownlongmont.com/do/midweek-brunch-break
-DTEND:20260430T020000Z
-LOCATION:Tangerine
-DTSTART:20260429T210000Z
-SUMMARY:🎵 Midweek Brunch Break!
-UID:b0d0c2ed-89bd-406b-a7dd-edf51eac6ead@b0d0.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Venue: The Barn\nLink: https://www.barnevents.info/events/2023/8/13/shanna-nd7z2
-DTEND:20231120T030000Z
-LOCATION:The Barn
-DTSTART:20231120T020000Z
-SUMMARY:🎵 
-UID:6fc3c1b3-7790-460f-b172-3bb99904842f@6fc3.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Venue: The Passenger\nLink: https://www.downtownlongmont.com/do/longmont-all-star-jazz-band-free-performance
-DTEND:20260503T020000Z
-LOCATION:The Passenger
-DTSTART:20260502T200000Z
-SUMMARY:🎵 Longmont All Star Jazz Band Free Performance!
-UID:9f00a509-fd06-4f7d-9d7e-2b824a0e7c6d@9f00.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Venue: Longmont Museum\nLink: https://www.downtownlongmont.com/do/discovery-days-art-with-ms-leigh-and-henry-14
-DTEND:20260501T020000Z
-LOCATION:Longmont Museum
-DTSTART:20260430T220000Z
-SUMMARY:🎵 Discovery Days: Art with Ms. Leigh & Henry
-UID:20da2c0d-ceb8-4cdd-aa95-546f0057af37@20da.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Venue: Rosalee's Pizzeria\nLink: https://www.downtownlongmont.com/do/wednesday-night-square-dance-al-herrera
-DTEND:20260416T020000Z
-LOCATION:Rosalee's Pizzeria
-DTSTART:20260415T210000Z
-SUMMARY:🎵 Wednesday Night Square Dance - Al Herrera
-UID:0d2eed9b-9987-4d08-8836-d17390e66b16@0d2e.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Venue: Firehouse Art Center\nLink: https://www.downtownlongmont.com/do/intermediate-crochet-at-the-firehouse
-DTEND:20260413T020000Z
-LOCATION:Firehouse Art Center
-DTSTART:20260412T060000Z
-SUMMARY:🎵 Intermediate Crochet at the Firehouse
-UID:70296565-c4a5-44eb-9a5a-135e2c3ff586@7029.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Venue: Bootstrap Brewing\nLink: https://www.downtownlongmont.com/do/your-stage-at-bootstrap-brewing-5
-DTEND:20260505T020000Z
-LOCATION:Bootstrap Brewing
-DTSTART:20260504T190000Z
-SUMMARY:🎵 Your Stage at Bootstrap Brewing!
-UID:44dc907a-c8f0-4cd6-8f0a-1509a9975aa7@44dc.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Venue: Tangerine\nLink: https://www.downtownlongmont.com/do/main-street-bubbles
-DTEND:20260414T020000Z
-LOCATION:Tangerine
-DTSTART:20260413T190000Z
-SUMMARY:🎵 Main Street Bubbles!
-UID:a73edf68-8eff-43c2-8275-e5d2f50717fa@a73e.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Venue: The Barn\nLink: https://www.barnevents.info/events/2026/1/14/dance-party-with-the-lovestruck-balladeers
-DTEND:20260418T020000Z
-LOCATION:The Barn
-DTSTART:20260417T230000Z
-SUMMARY:🎵 
-UID:6e59b805-4987-4a9e-b89f-b2be53bf4846@6e59.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Venue: The Barn\nLink: https://www.barnevents.info/events/2026/7/17/songs-stories-and-art-lessons-from-strangersa-visual-folk-concert-by-john-john-brown
-DTEND:20260718T020000Z
-LOCATION:The Barn
-DTSTART:20260717T230000Z
-SUMMARY:🎵 
-UID:6b952d42-baae-4ef0-a7d5-47d7a03a75a9@6b95.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Venue: Bricks on Main\nLink: https://www.downtownlongmont.com/do/music-at-bricks-on-main-bandana-a-tribute-to-the-music-of-santana
-DTEND:20260418T020000Z
-LOCATION:Bricks on Main
-DTSTART:20260417T230000Z
-SUMMARY:🎵 Music at Bricks on Main "Bandana" - A Tribute to the Music of Santana
-UID:ea4d8f48-c63f-44f7-83cd-378d17851848@ea4d.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Venue: Downtown Longmont\nLink: https://www.downtownlongmont.com/do/potting-bar-pop-up-at-cristos-coffee-in-erie
-DTEND:20260503T020000Z
-LOCATION:Downtown Longmont
-DTSTART:20260502T200000Z
-SUMMARY:🎵 Potting Bar Pop-Up at Cristos Coffee in Erie
-UID:2c0056a5-991c-4538-a609-9f5a11fb1a74@2c00.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Venue: Longmont Symphony Orchestra\nLink: https://www.downtownlongmont.com/do/lso-concert-pines-of-rome-and-a-world-premiere
-DTEND:20260412T020000Z
-LOCATION:Longmont Symphony Orchestra
-DTSTART:20260411T170000Z
-SUMMARY:🎵 LSO Concert Pines of Rome & a World Premiere
-UID:f8acbf81-6961-4366-88ac-ddbc5f1fb227@f8ac.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Venue: Happy Day Plants\nLink: https://www.downtownlongmont.com/do/may-happy-day-hangs
-DTEND:20260502T020000Z
-LOCATION:Happy Day Plants
-DTSTART:20260501T190000Z
-SUMMARY:🎵 May Happy Day Hangs
-UID:7e173ea4-796c-496e-bb64-202d8a3efe23@7e17.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Venue: Longmont Museum\nLink: https://www.downtownlongmont.com/do/discovery-days-art-with-ms-leigh-and-henry-12
-DTEND:20260503T020000Z
-LOCATION:Longmont Museum
-DTSTART:20260502T170000Z
-SUMMARY:🎵 Discovery Days: Art with Ms. Leigh & Henry
-UID:aa54888d-ed28-4e31-b94f-4e681928fefe@aa54.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Venue: Firehouse Art Center\nLink: https://www.downtownlongmont.com/do/pride-month-exhibition-art-sampler-make-a-personal-pride-flag
-DTEND:20260504T020000Z
-LOCATION:Firehouse Art Center
-DTSTART:20260503T210000Z
-SUMMARY:🎵 Pride Month Exhibition- Art Sampler- Make a Personal Pride Flag
-UID:a74b1bcf-af4b-4da2-b03d-725f06e388a9@a74b.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Venue: Kuper Wine Bar\nLink: https://www.downtownlongmont.com/do/half-price-bottle-night-and-live-music-1
-DTEND:20260417T020000Z
-LOCATION:Kuper Wine Bar
-DTSTART:20260416T220000Z
-SUMMARY:🎵 Half Price Bottle Night & Live Music
-UID:4e4ac51a-13fa-4830-aee9-857c82296840@4e4a.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Venue: Kuper Wine Bar\nLink: https://www.downtownlongmont.com/do/fondue-date-night-2
-DTEND:20260416T020000Z
-LOCATION:Kuper Wine Bar
-DTSTART:20260415T210000Z
-SUMMARY:🎵 Fondue Date Night
-UID:42fb7079-dd92-4741-8c07-a34d3d40ac6f@42fb.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Venue: Composition Shop\nLink: https://www.downtownlongmont.com/do/1-year-anniversary-party
-DTEND:20260425T190000Z
-LOCATION:Composition Shop
-DTSTART:20260425T190000Z
-SUMMARY:🎵 1 Year Anniversary Party!
-UID:b14a1357-58f3-48de-8fa3-94e7dba3f12d@b14a.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Venue: 300 Suns Brewing\nLink: https://www.downtownlongmont.com/do/parchment-doll-live-music
-DTEND:20260412T020000Z
-LOCATION:300 Suns Brewing
-DTSTART:20260411T170000Z
-SUMMARY:🎵 Parchment Doll - Live Music
-UID:7e58194e-017c-46b4-9401-9af596523801@7e58.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Venue: The Barn\nLink: https://www.barnevents.info/events/2025/12/13/joy-adams-and-gus-tritsch
-DTEND:20251214T030000Z
-LOCATION:The Barn
-DTSTART:20251213T200000Z
-SUMMARY:🎵 
-UID:51fd8df1-49fd-4f46-ad29-f82d602de31f@51fd.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Venue: The Times Collaborative / 338 Main St\nLink: https://www.downtownlongmont.com/do/soundpost-sessions-local-spotlight-sturtz-w-and-holly-lovell
-DTEND:20260417T020000Z
-LOCATION:The Times Collaborative / 338 Main St
-DTSTART:20260416T220000Z
-SUMMARY:🎵 Soundpost Sessions LOCAL SPOTLIGHT: Sturtz w/ Holly Lovell
-UID:e1620dba-60a4-41a4-8ad7-6e0f3ae4c356@e162.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Venue: The Barn\nLink: https://www.barnevents.info/events/2025/4/4/greg-schochet-and-little-america
-DTEND:20250405T020000Z
-LOCATION:The Barn
-DTSTART:20250404T220000Z
-SUMMARY:🎵 
-UID:f7170742-f26e-4fb7-811b-ebacb1554b6b@f717.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Venue: The Barn\nLink: https://www.barnevents.info/events/2025/1/16/moors-mccumber-gtn7y
-DTEND:20250317T020000Z
-LOCATION:The Barn
-DTSTART:20250316T220000Z
-SUMMARY:🎵 
-UID:25c3cb80-c370-4967-9681-982b4d1e3df0@25c3.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Venue: Longmont Museum\nLink: https://www.downtownlongmont.com/do/discovery-days-art-with-ms-leigh-and-henry-15
-DTEND:20260423T020000Z
-LOCATION:Longmont Museum
-DTSTART:20260422T210000Z
-SUMMARY:🎵 Discovery Days: Art with Ms. Leigh & Henry
-UID:078fc7e0-910f-4e36-8e30-8c503e072b7f@078f.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Venue: The Longmonter\nLink: https://www.downtownlongmont.com/do/game-night-1
-DTEND:20260424T020000Z
-LOCATION:The Longmonter
-DTSTART:20260423T220000Z
-SUMMARY:🎵 Game Night!
-UID:1848ccf2-9054-47a6-bc7f-25852162528e@1848.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Venue: Tangerine\nLink: https://www.downtownlongmont.com/do/bellinis-and-bites
-DTEND:20260424T020000Z
-LOCATION:Tangerine
-DTSTART:20260423T220000Z
-SUMMARY:🎵 Bellinis and Bites!
-UID:343cf628-0478-42ca-96a2-1d1f775da77e@343c.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Venue: 300 Suns Brewing\nLink: https://www.downtownlongmont.com/do/great-american-nowhere-duo-live-music
-DTEND:20260503T020000Z
-LOCATION:300 Suns Brewing
-DTSTART:20260502T200000Z
-SUMMARY:🎵 Great American Nowhere Duo - Live Music
-UID:198e1feb-cc3c-46ed-a13a-991b35ec1721@198e.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Venue: The Barn\nLink: https://www.barnevents.info/events/2024/2/10/greg-schochet-amp-little-america
-DTEND:20240211T030000Z
-LOCATION:The Barn
-DTSTART:20240210T170000Z
-SUMMARY:🎵 
-UID:e6b01995-8091-455e-a7f3-7ad9c53eba66@e6b0.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Venue: Retail Therapy Vendor Market & Art Studios\nLink: https://www.downtownlongmont.com/do/this-and-that-pop-up-sale-1
-DTEND:20260419T020000Z
-LOCATION:Retail Therapy Vendor Market & Art Studios
-DTSTART:20260419T000000Z
-SUMMARY:🎵 This & That POP-UP Sale
-UID:fb1374fa-ee54-4c5f-a52a-feef1615ba81@fb13.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Venue: Longmont Area Chamber Of Commerce\nLink: https://www.downtownlongmont.com/do/understanding-trusts
-DTEND:20260416T020000Z
-LOCATION:Longmont Area Chamber Of Commerce
-DTSTART:20260415T210000Z
-SUMMARY:🎵 Understanding Trusts
-UID:96fb2bcc-3706-4eb9-a1c0-bb2f088427f5@96fb.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Venue: Downtown Longmont\nLink: https://www.downtownlongmont.com/do/haunted-history-of-longmont
-DTEND:20260418T020000Z
-LOCATION:Downtown Longmont
-DTSTART:20260417T230000Z
-SUMMARY:🎵 Haunted History of Longmont
-UID:4b40cbef-688f-4bd1-a2ff-9f29d32e6836@4b40.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Venue: Tangerine\nLink: https://www.downtownlongmont.com/do/bloody-tuesday
-DTEND:20260422T020000Z
-LOCATION:Tangerine
-DTSTART:20260421T200000Z
-SUMMARY:🎵 Bloody Tuesday!
-UID:214dad43-63c4-4d74-bfe3-4a301cd9674b@214d.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Venue: Bricks on Main\nLink: https://www.downtownlongmont.com/do/music-at-bricks-on-main-los-cheesies
-DTEND:20260419T020000Z
-LOCATION:Bricks on Main
-DTSTART:20260419T000000Z
-SUMMARY:🎵 Music at Bricks on Main "Los Cheesies"
-UID:e7a22501-915e-4e2d-96a4-a301acfe8f6d@e7a2.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Venue: Firehouse Art Center\nLink: https://www.downtownlongmont.com/do/how-to-play-in-the-dark
-DTEND:20260417T020000Z
-LOCATION:Firehouse Art Center
-DTSTART:20260416T220000Z
-SUMMARY:🎵 How to Play in the Dark
-UID:86fe84ef-ee01-4e32-92eb-9519e6da3a4d@86fe.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Venue: Downtown Longmont\nLink: https://www.downtownlongmont.com/do/vintage-vibes-elevated-lives-first-annual-fundraiser-and-fashion-show
-DTEND:20260412T020000Z
-LOCATION:Downtown Longmont
-DTSTART:20260411T170000Z
-SUMMARY:🎵 Vintage Vibes - Elevated Lives First Annual Fundraiser and Fashion Show
-UID:bc6fe34b-be9a-41bf-96b7-790a053fffe1@bc6f.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Venue: Longmont Museum\nLink: https://www.downtownlongmont.com/do/discovery-days-art-with-ms-leigh-and-henry-14
-DTEND:20260424T020000Z
-LOCATION:Longmont Museum
-DTSTART:20260423T220000Z
-SUMMARY:🎵 Discovery Days: Art with Ms. Leigh & Henry
-UID:67045e91-f2c5-4c89-9fa2-c778add0abb3@6704.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Venue: Longmont Museum\nLink: https://www.downtownlongmont.com/do/discovery-days-art-with-ms-leigh-and-henry-15
-DTEND:20260416T020000Z
-LOCATION:Longmont Museum
-DTSTART:20260415T210000Z
-SUMMARY:🎵 Discovery Days: Art with Ms. Leigh & Henry
-UID:1b0c558f-2a45-440d-9afc-df13f5278235@1b0c.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Venue: Kuper Wine Bar\nLink: https://www.downtownlongmont.com/do/women-wine-featuring-happy-day-plants-1
-DTEND:20260421T020000Z
-LOCATION:Kuper Wine Bar
-DTSTART:20260421T020000Z
-SUMMARY:🎵 Women + Wine featuring Happy Day Plants
-UID:6a337c92-a89d-4e29-bb27-6451c291727e@6a33.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Venue: Tangerine\nLink: https://www.downtownlongmont.com/do/bubbly-flight-friday
-DTEND:20260425T020000Z
-LOCATION:Tangerine
-DTSTART:20260424T230000Z
-SUMMARY:🎵 Bubbly Flight Friday!
-UID:46186317-8117-4717-8aca-691318688afa@4618.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Venue: Happy Day Plants\nLink: https://www.downtownlongmont.com/do/april-happy-day-hangs
-DTEND:20260419T020000Z
-LOCATION:Happy Day Plants
-DTSTART:20260419T000000Z
-SUMMARY:🎵 April Happy Day Hangs
-UID:4a6d75d6-8609-4e24-945f-8e95e08a89a0@4a6d.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Venue: Tangerine\nLink: https://www.downtownlongmont.com/do/midweek-brunch-break
-DTEND:20260416T020000Z
-LOCATION:Tangerine
-DTSTART:20260415T210000Z
-SUMMARY:🎵 Midweek Brunch Break!
-UID:55b1b2a0-4f36-49e4-8436-dc1f284991e6@55b1.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Venue: Longmont Museum\nLink: https://www.downtownlongmont.com/do/art-and-sip-watercolor-strawberry-doodles
-DTEND:20260417T020000Z
-LOCATION:Longmont Museum
-DTSTART:20260416T220000Z
-SUMMARY:🎵 Art & Sip: Watercolor Strawberry Doodles
-UID:63967ba1-e6a7-45b0-9c5d-6ee7b2d4c786@6396.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Venue: The Blackbird House\nLink: https://www.downtownlongmont.com/do/tarot-with-shifra-at-blackbird-house-18
-DTEND:20260426T020000Z
-LOCATION:The Blackbird House
-DTSTART:20260425T170000Z
-SUMMARY:🎵 Tarot with Shifra at Blackbird House
-UID:ae0679d8-d9b4-48e9-8870-7b02d0556cc5@ae06.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Venue: Butterscotch Studios\nLink: https://www.downtownlongmont.com/do/monthly-irish-jam-session
-DTEND:20260421T020000Z
-LOCATION:Butterscotch Studios
-DTSTART:20260421T020000Z
-SUMMARY:🎵 Monthly Irish Jam Session
-UID:be536c48-a94c-4bf3-b27b-2d0a77bce464@be53.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Venue: Longmont Museum\nLink: https://www.downtownlongmont.com/do/discovery-days-art-with-ms-leigh-and-henry-15
-DTEND:20260430T020000Z
-LOCATION:Longmont Museum
-DTSTART:20260429T210000Z
-SUMMARY:🎵 Discovery Days: Art with Ms. Leigh & Henry
-UID:a332abcb-fb03-4629-bf76-7d81981e9d02@a332.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Venue: Bricks on Main\nLink: https://www.downtownlongmont.com/do/music-at-bricks-on-main-foxfeather-full-band
-DTEND:20260503T020000Z
-LOCATION:Bricks on Main
-DTSTART:20260502T200000Z
-SUMMARY:🎵 Music at Bricks on Main "Foxfeather Full Band"
-UID:c48c102c-6792-4b96-b939-068b31757038@c48c.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Venue: Tangerine\nLink: https://www.downtownlongmont.com/do/bloody-tuesday
-DTEND:20260415T020000Z
-LOCATION:Tangerine
-DTSTART:20260414T200000Z
-SUMMARY:🎵 Bloody Tuesday!
-UID:b40a2939-5fe3-4604-a9a7-4c0af318f392@b40a.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Venue: Vintology\nLink: https://www.downtownlongmont.com/do/an-evening-with-daisy-dog-press-hosted-by-authors-and-musicians-gregory-hill-and-zach-boddicker
-DTEND:20260419T020000Z
-LOCATION:Vintology
-DTSTART:20260419T000000Z
-SUMMARY:🎵 AN EVENING WITH DAISY DOG PRESS - hosted by authors/musicians Gregory Hill and Zach Boddicker
-UID:85223ea2-9a5e-40f4-b3a0-c91ba4ae07f7@8522.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Venue: The Barn\nLink: https://www.barnevents.info/events/2023/8/13/shanna-nd7z2-pgby7-ee5zy
-DTEND:20260309T020000Z
-LOCATION:The Barn
-DTSTART:20260309T020000Z
-SUMMARY:🎵 
-UID:95141508-830c-4247-9d0d-396c93aa2b47@9514.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Venue: Longmont Museum\nLink: https://www.downtownlongmont.com/do/discovery-days-art-with-ms-leigh-and-henry-14
-DTEND:20260417T020000Z
-LOCATION:Longmont Museum
-DTSTART:20260416T220000Z
-SUMMARY:🎵 Discovery Days: Art with Ms. Leigh & Henry
-UID:55c26190-ec3a-4d78-9f3d-b0d361703313@55c2.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Venue: The Barn\nLink: https://www.barnevents.info/events/2025/1/11/tish-hinojosa
-DTEND:20250112T030000Z
-LOCATION:The Barn
-DTSTART:20250111T180000Z
-SUMMARY:🎵 
-UID:02f36a08-b160-4121-8999-16a4ac2074fa@02f3.org
-END:VEVENT
-BEGIN:VEVENT
 DESCRIPTION:Venue: Bricks on Main\nLink: https://www.downtownlongmont.com/do/music-at-bricks-on-main-max-mackey-and-travis-bush
 DTEND:20260413T020000Z
 LOCATION:Bricks on Main
 DTSTART:20260412T060000Z
 SUMMARY:🎵 Music at Bricks on Main "Max Mackey & Travis Bush"
-UID:20030841-aeb6-4f48-bab7-2e8aadc3f9de@2003.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Venue: BRITE Collaborative\nLink: https://www.downtownlongmont.com/do/rrrrrj-101-open-house-2
-DTEND:20260423T190000Z
-LOCATION:BRITE Collaborative
-DTSTART:20260423T160000Z
-SUMMARY:🎵 RRRRRJ 101 Open House
-UID:da33849f-3e91-4305-a239-8cf5573e42b9@da33.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Venue: Bricks on Main\nLink: https://www.downtownlongmont.com/do/music-at-bricks-on-main-random-pockets
-DTEND:20260412T020000Z
-LOCATION:Bricks on Main
-DTSTART:20260411T170000Z
-SUMMARY:🎵 Music at Bricks on Main "Random Pockets"
-UID:87d86b3d-078c-416f-ab95-6cecbfa87d6e@87d8.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Venue: Bricks on Main\nLink: https://www.downtownlongmont.com/do/music-at-bricks-on-main-asteria-jazz-collective-6
-DTEND:20260420T020000Z
-LOCATION:Bricks on Main
-DTSTART:20260420T010000Z
-SUMMARY:🎵 Music at Bricks on Main "Asteria Jazz Collective"
-UID:87a1163c-5859-4f55-a6c0-e7e9e5ff1ede@87a1.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Venue: Tangerine\nLink: https://www.downtownlongmont.com/do/main-street-bubbles
-DTEND:20260428T020000Z
-LOCATION:Tangerine
-DTSTART:20260427T190000Z
-SUMMARY:🎵 Main Street Bubbles!
-UID:8796af73-6158-41b4-a2ec-d184b056a8e8@8796.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Venue: The Barn\nLink: https://www.barnevents.info/events/2024/1/17/moors-mccumber
-DTEND:20240318T020000Z
-LOCATION:The Barn
-DTSTART:20240317T230000Z
-SUMMARY:🎵 
-UID:44eed6f8-d6cb-4e71-bffc-187dab904b39@44ee.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Venue: Abbott & Wallace Distilling\nLink: https://www.downtownlongmont.com/do/first-friday-with-mojazz
-DTEND:20260502T020000Z
-LOCATION:Abbott & Wallace Distilling
-DTSTART:20260501T190000Z
-SUMMARY:🎵 First Friday with Mojazz
-UID:41658ea6-7a82-4c67-b165-883a56a97579@4165.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Venue: Bootstrap Brewing\nLink: https://www.downtownlongmont.com/do/your-stage-at-bootstrap-brewing-5
-DTEND:20260414T020000Z
-LOCATION:Bootstrap Brewing
-DTSTART:20260413T190000Z
-SUMMARY:🎵 Your Stage at Bootstrap Brewing!
-UID:1b67e174-b71d-4925-bb45-35f93dd7f3d2@1b67.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Venue: The Passenger\nLink: https://www.downtownlongmont.com/do/free-live-music-by-joe-teichman
-DTEND:20260418T020000Z
-LOCATION:The Passenger
-DTSTART:20260417T230000Z
-SUMMARY:🎵 Free Live Music by Joe Teichman
-UID:4ad3966f-ae5c-42ae-9bf3-d25a68fb087d@4ad3.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Venue: Firehouse Art Center\nLink: https://www.downtownlongmont.com/do/open-sew-studio-with-fashion-rebel-ution
-DTEND:20260420T020000Z
-LOCATION:Firehouse Art Center
-DTSTART:20260420T010000Z
-SUMMARY:🎵 Open Sew Studio with Fashion Rebel-ution
-UID:510e0df3-1115-4ab7-802a-f3574c58eb6b@510e.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Venue: The Barn\nLink: https://www.barnevents.info/events/2023/11/4/bonnie-and-taylor-sims
-DTEND:20231105T020000Z
-LOCATION:The Barn
-DTSTART:20231104T220000Z
-SUMMARY:🎵 
-UID:4c847632-8fbc-4f86-971b-df8720547259@4c84.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Venue: Tangerine\nLink: https://www.downtownlongmont.com/do/bubbly-flight-friday
-DTEND:20260418T020000Z
-LOCATION:Tangerine
-DTSTART:20260417T230000Z
-SUMMARY:🎵 Bubbly Flight Friday!
-UID:bf670546-10cd-49bd-b6b5-5d85cb86aacf@bf67.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Venue: Firehouse Art Center\nLink: https://www.downtownlongmont.com/do/learn-to-crochet
-DTEND:20260414T020000Z
-LOCATION:Firehouse Art Center
-DTSTART:20260413T190000Z
-SUMMARY:🎵 Learn to Crochet
-UID:1ab6c814-03c3-4860-9bf9-b7385a01961f@1ab6.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Venue: The Golden Bee\nLink: https://www.downtownlongmont.com/do/tarot-card-reader-at-the-golden-bee
-DTEND:20260425T020000Z
-LOCATION:The Golden Bee
-DTSTART:20260424T230000Z
-SUMMARY:🎵 Tarot Card Reader at The Golden Bee
-UID:0eee5ae0-8304-4d18-addd-94a031c8c582@0eee.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Venue: The Barn\nLink: https://www.barnevents.info/events/2023/8/13/shanna
-DTEND:20230812T020000Z
-LOCATION:The Barn
-DTSTART:20230811T170000Z
-SUMMARY:🎵 
-UID:6080ed27-b7db-4148-8e4d-2a02fd65ff28@6080.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Venue: The Barn\nLink: https://www.barnevents.info/events/2017/1/19/moors-mccumber
-DTEND:20230320T020000Z
-LOCATION:The Barn
-DTSTART:20230320T010000Z
-SUMMARY:🎵 
-UID:f048c082-8941-4adc-afa9-ad45c8d30396@f048.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Venue: The Barn\nLink: https://www.barnevents.info/events/2024/bigrichard
-DTEND:20241221T030000Z
-LOCATION:The Barn
-DTSTART:20241221T030000Z
-SUMMARY:🎵 
-UID:47e2d78c-4bd0-460e-a383-8a16f5aede7e@47e2.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Venue: Tangerine\nLink: https://www.downtownlongmont.com/do/bubbly-flight-friday
-DTEND:20260502T020000Z
-LOCATION:Tangerine
-DTSTART:20260501T230000Z
-SUMMARY:🎵 Bubbly Flight Friday!
-UID:13064036-4ab6-4880-8df5-3f60b99ee2b6@1306.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Venue: The Barn\nLink: https://www.barnevents.info/events/2025/1/11/tish-hinojosa-2xad8
-DTEND:20261004T020000Z
-LOCATION:The Barn
-DTSTART:20261003T210000Z
-SUMMARY:🎵 
-UID:4129f84a-5c8b-4c4f-8ba1-8f4005ccbe3c@4129.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Venue: The Barn\nLink: https://www.barnevents.info/events/2024/alexalennon
-DTEND:20240320T020000Z
-LOCATION:The Barn
-DTSTART:20240320T010000Z
-SUMMARY:🎵 
-UID:201de037-76d4-46b5-92de-d4cc8448972e@201d.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Venue: Tangerine\nLink: https://www.downtownlongmont.com/do/bellinis-and-bites
-DTEND:20260417T020000Z
-LOCATION:Tangerine
-DTSTART:20260416T220000Z
-SUMMARY:🎵 Bellinis and Bites!
-UID:24d89abe-c299-43a5-9d5f-868947de7ca6@24d8.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Venue: St. Vrain Cidery\nLink: https://www.downtownlongmont.com/do/live-music-at-st-vrain-cidery-philly-in-the-high-ground
-DTEND:20260412T020000Z
-LOCATION:St. Vrain Cidery
-DTSTART:20260411T170000Z
-SUMMARY:🎵 Live Music At St. Vrain Cidery - Philly In The High Ground
-UID:7544c157-c2d6-4531-b094-f4822a2edd8e@7544.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Venue: Longmont Museum\nLink: https://www.downtownlongmont.com/do/discovery-days-art-with-ms-leigh-and-henry-12
-DTEND:20260426T020000Z
-LOCATION:Longmont Museum
-DTSTART:20260425T170000Z
-SUMMARY:🎵 Discovery Days: Art with Ms. Leigh & Henry
-UID:7691bb9e-b6f0-473f-a25f-ca3cc2cbc24b@7691.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Venue: Longmont Museum\nLink: https://www.downtownlongmont.com/do/film-everything-everywhere-all-at-once-2022-r
-DTEND:20260417T040000Z
-LOCATION:Longmont Museum
-DTSTART:20260417T020000Z
-SUMMARY:🎵 Film: “Everything\, Everywhere\, All At Once” (2022\, R)
-UID:df60bd0a-832a-4fc8-a722-51bc32964ed3@df60.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Venue: Tangerine\nLink: https://www.downtownlongmont.com/do/bloody-tuesday
-DTEND:20260429T020000Z
-LOCATION:Tangerine
-DTSTART:20260428T200000Z
-SUMMARY:🎵 Bloody Tuesday!
-UID:fb69f5f5-e204-4e7e-aff0-4ec6ffd955de@fb69.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Venue: The Golden Bee\nLink: https://www.downtownlongmont.com/do/tarot-card-reader-at-the-golden-bee
-DTEND:20260418T020000Z
-LOCATION:The Golden Bee
-DTSTART:20260417T230000Z
-SUMMARY:🎵 Tarot Card Reader at The Golden Bee
-UID:1f22fcb1-4237-4cd4-bb68-4e61adcb342e@1f22.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Venue: The Longmonter\nLink: https://www.downtownlongmont.com/do/game-night-1
-DTEND:20260501T020000Z
-LOCATION:The Longmonter
-DTSTART:20260430T220000Z
-SUMMARY:🎵 Game Night!
-UID:87b21b27-a7a2-4137-b590-2b80255ed219@87b2.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Venue: Kuper Wine Bar\nLink: https://www.downtownlongmont.com/do/books-and-bottles-april-event
-DTEND:20260413T020000Z
-LOCATION:Kuper Wine Bar
-DTSTART:20260412T060000Z
-SUMMARY:🎵 Books & Bottles - April Event
-UID:a0ceaffc-520f-4b1b-91bf-7e8462aa4592@a0ce.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Venue: Kuper Wine Bar\nLink: https://www.downtownlongmont.com/do/half-price-bottle-night-and-live-music-1
-DTEND:20260424T020000Z
-LOCATION:Kuper Wine Bar
-DTSTART:20260423T220000Z
-SUMMARY:🎵 Half Price Bottle Night & Live Music
-UID:665c0d9c-98a7-4a74-a680-be1421d6c1ab@665c.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Venue: Tangerine\nLink: https://www.downtownlongmont.com/do/midweek-brunch-break
-DTEND:20260423T020000Z
-LOCATION:Tangerine
-DTSTART:20260422T210000Z
-SUMMARY:🎵 Midweek Brunch Break!
-UID:b2ae50f1-7a85-4b17-859d-a5f474d51942@b2ae.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Venue: Dry Land Distillers\nLink: https://www.downtownlongmont.com/do/sunday-music-series-jazz-with-vic-dillahay-and-doug-carmichael
-DTEND:20260413T020000Z
-LOCATION:Dry Land Distillers
-DTSTART:20260412T060000Z
-SUMMARY:🎵 Sunday Music Series: Jazz with Vic Dillahay and Doug Carmichael
-UID:1afe3f5f-62eb-43e5-a9b0-2aa11417b3ba@1afe.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Venue: The Blackbird House\nLink: https://www.downtownlongmont.com/do/tarot-with-shifra-at-blackbird-house-19
-DTEND:20260420T020000Z
-LOCATION:The Blackbird House
-DTSTART:20260420T010000Z
-SUMMARY:🎵 Tarot with Shifra at Blackbird House
-UID:59b27def-4915-47d8-9563-084561947097@59b2.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Venue: The Blackbird House\nLink: https://www.downtownlongmont.com/do/tarot-with-shifra-at-blackbird-house-18
-DTEND:20260412T020000Z
-LOCATION:The Blackbird House
-DTSTART:20260411T170000Z
-SUMMARY:🎵 Tarot with Shifra at Blackbird House
-UID:5b7ffed1-4065-4227-96b3-7d3e308c910e@5b7f.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Venue: Tangerine\nLink: https://www.downtownlongmont.com/do/bellinis-and-bites
-DTEND:20260501T020000Z
-LOCATION:Tangerine
-DTSTART:20260430T220000Z
-SUMMARY:🎵 Bellinis and Bites!
-UID:69c49dbd-488f-4a01-af6b-c612b86d7635@69c4.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Venue: The Barn\nLink: https://www.barnevents.info/events/2023/8/13/shanna-nd7z2-pgby7
-DTEND:20241116T030000Z
-LOCATION:The Barn
-DTSTART:20241115T220000Z
-SUMMARY:🎵 
-UID:5228c011-74f5-4f33-ba1d-e160a8668542@5228.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Venue: Longmont Public Media\nLink: https://www.downtownlongmont.com/do/living-the-principles-of-nonviolence-speaker-series
-DTEND:20260415T020000Z
-LOCATION:Longmont Public Media
-DTSTART:20260414T200000Z
-SUMMARY:🎵 Living the Principles of Nonviolence Speaker Series
-UID:3f7c0165-f9f9-418e-ae7f-ff3379203af8@3f7c.org
+UID:2c3fc135-c31d-4ecc-ae48-6a1be438efe6@2c3f.org
 END:VEVENT
 BEGIN:VEVENT
 DESCRIPTION:Venue: The Golden Bee\nLink: https://www.downtownlongmont.com/do/tarot-card-reader-at-the-golden-bee-1
@@ -823,31 +15,15 @@ DTEND:20260413T020000Z
 LOCATION:The Golden Bee
 DTSTART:20260412T060000Z
 SUMMARY:🎵 Tarot Card Reader at The Golden Bee
-UID:b98acf41-11ab-4425-8295-135df4359ca2@b98a.org
+UID:9082ff88-8f14-4bd7-9ca6-983017205987@9082.org
 END:VEVENT
 BEGIN:VEVENT
-DESCRIPTION:Venue: The Barn\nLink: https://www.barnevents.info/events/2019/9/20/the-common-thread-concert-gar92
-DTEND:20230506T020000Z
-LOCATION:The Barn
-DTSTART:20230505T230000Z
-SUMMARY:🎵 
-UID:bc4a00b1-f40a-4eee-b3f7-1c8565e8e859@bc4a.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Venue: Bricks on Main\nLink: https://www.downtownlongmont.com/do/music-at-bricks-on-main-sabotage
-DTEND:20260502T020000Z
-LOCATION:Bricks on Main
-DTSTART:20260501T190000Z
-SUMMARY:🎵 Music at Bricks on Main "Sabotage"
-UID:323e2170-572c-42fb-a287-eaf6741fd1e6@323e.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Venue: Bootstrap Brewing\nLink: https://www.downtownlongmont.com/do/loco-uke-jam-at-bootstrap-brewing-1
-DTEND:20260420T020000Z
-LOCATION:Bootstrap Brewing
-DTSTART:20260419T060000Z
-SUMMARY:🎵 LOCO Uke Jam at Bootstrap Brewing!
-UID:cb70584d-cbd6-4292-86c4-8d7c40a3e146@cb70.org
+DESCRIPTION:Venue: Tangerine\nLink: https://www.downtownlongmont.com/do/bubbly-flight-friday
+DTEND:20260418T020000Z
+LOCATION:Tangerine
+DTSTART:20260417T230000Z
+SUMMARY:🎵 Bubbly Flight Friday!
+UID:9a553ffe-c4ae-4a8b-b857-229aa381e605@9a55.org
 END:VEVENT
 BEGIN:VEVENT
 DESCRIPTION:Venue: The Barn\nLink: https://www.barnevents.info/events/2025/1/12/4bf9iy3psupoon4exy31wm271pm6z5
@@ -855,47 +31,39 @@ DTEND:20250509T020000Z
 LOCATION:The Barn
 DTSTART:20250509T020000Z
 SUMMARY:🎵 
-UID:c6c4182b-7fe1-4cf8-a87c-1436f2fc5c91@c6c4.org
+UID:8a846b69-51d0-495a-ae6a-3a6b033a4427@8a84.org
 END:VEVENT
 BEGIN:VEVENT
-DESCRIPTION:Venue: Longmont Museum\nLink: https://www.downtownlongmont.com/do/discovery-days-art-with-ms-leigh-and-henry-12
-DTEND:20260419T020000Z
-LOCATION:Longmont Museum
-DTSTART:20260418T170000Z
-SUMMARY:🎵 Discovery Days: Art with Ms. Leigh & Henry
-UID:f90bf894-e39e-4155-8c72-ba4d88f51a89@f90b.org
+DESCRIPTION:Venue: Retail Therapy Vendor Market & Art Studios\nLink: https://www.downtownlongmont.com/do/this-and-that-pop-up-event
+DTEND:20260412T020000Z
+LOCATION:Retail Therapy Vendor Market & Art Studios
+DTSTART:20260411T170000Z
+SUMMARY:🎵 This & That Pop up event
+UID:83f1d687-c1cc-435e-8e46-48924b7f50f2@83f1.org
 END:VEVENT
 BEGIN:VEVENT
-DESCRIPTION:Venue: Red Cedar Bistro\nLink: https://www.downtownlongmont.com/do/tour-the-mediterranean-wine-dinner
-DTEND:20260417T020000Z
-LOCATION:Red Cedar Bistro
-DTSTART:20260416T220000Z
-SUMMARY:🎵 'Tour The Mediterranean' Wine Dinner
-UID:5a032010-a343-43bb-8bb0-52f79867f81b@5a03.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Venue: Juniper Goods\nLink: https://www.downtownlongmont.com/do/crochet-and-chill-monthly-social
-DTEND:20260419T020000Z
-LOCATION:Juniper Goods
-DTSTART:20260419T000000Z
-SUMMARY:🎵 Crochet & Chill Monthly Social
-UID:67c11149-8938-4d67-ae6b-9c27d66db3ad@67c1.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Venue: Tangerine\nLink: https://www.downtownlongmont.com/do/main-street-bubbles
+DESCRIPTION:Venue: Butterscotch Studios\nLink: https://www.downtownlongmont.com/do/monthly-irish-jam-session
 DTEND:20260421T020000Z
+LOCATION:Butterscotch Studios
+DTSTART:20260421T020000Z
+SUMMARY:🎵 Monthly Irish Jam Session
+UID:a6c0da19-897b-4a38-a228-4782beefcb09@a6c0.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Venue: Kuper Wine Bar\nLink: https://www.downtownlongmont.com/do/women-wine-featuring-happy-day-plants-1
+DTEND:20260421T020000Z
+LOCATION:Kuper Wine Bar
+DTSTART:20260421T020000Z
+SUMMARY:🎵 Women + Wine featuring Happy Day Plants
+UID:5828c212-4cdf-430e-a5a7-046d72aa87e4@5828.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Venue: Tangerine\nLink: https://www.downtownlongmont.com/do/bloody-tuesday
+DTEND:20260429T020000Z
 LOCATION:Tangerine
-DTSTART:20260420T190000Z
-SUMMARY:🎵 Main Street Bubbles!
-UID:bec0bab2-5680-45c9-9c29-0ba57cdc48df@bec0.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Venue: Bootstrap Brewing\nLink: https://www.downtownlongmont.com/do/your-stage-at-bootstrap-brewing-5
-DTEND:20260421T020000Z
-LOCATION:Bootstrap Brewing
-DTSTART:20260420T190000Z
-SUMMARY:🎵 Your Stage at Bootstrap Brewing!
-UID:fc3b7d24-285d-4ad3-b991-b99c0aac6fa6@fc3b.org
+DTSTART:20260428T200000Z
+SUMMARY:🎵 Bloody Tuesday!
+UID:0d0f9588-ec1b-4808-86c3-b4f506b83109@0d0f.org
 END:VEVENT
 BEGIN:VEVENT
 DESCRIPTION:Venue: Bootstrap Brewing\nLink: https://www.downtownlongmont.com/do/loco-uke-jam-at-bootstrap-brewing-1
@@ -903,15 +71,319 @@ DTEND:20260427T020000Z
 LOCATION:Bootstrap Brewing
 DTSTART:20260426T060000Z
 SUMMARY:🎵 LOCO Uke Jam at Bootstrap Brewing!
-UID:c7ae2a18-5c93-4928-97c7-cf7467bdf5de@c7ae.org
+UID:f0104859-c05a-4a3b-85ec-fd9fdcf7cfc6@f010.org
 END:VEVENT
 BEGIN:VEVENT
-DESCRIPTION:Venue: The Longmonter\nLink: https://www.downtownlongmont.com/do/game-night-1
+DESCRIPTION:Venue: Longmont Public Media\nLink: https://www.downtownlongmont.com/do/living-the-principles-of-nonviolence-speaker-series
+DTEND:20260415T020000Z
+LOCATION:Longmont Public Media
+DTSTART:20260414T200000Z
+SUMMARY:🎵 Living the Principles of Nonviolence Speaker Series
+UID:036f433c-4116-4b1c-a887-bd8c7c30f835@036f.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Venue: The Golden Bee\nLink: https://www.downtownlongmont.com/do/tarot-card-reader-at-the-golden-bee
+DTEND:20260418T020000Z
+LOCATION:The Golden Bee
+DTSTART:20260417T230000Z
+SUMMARY:🎵 Tarot Card Reader at The Golden Bee
+UID:d77796b1-5630-4d42-896d-055be876f856@d777.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Venue: Tangerine\nLink: https://www.downtownlongmont.com/do/bloody-tuesday
+DTEND:20260415T020000Z
+LOCATION:Tangerine
+DTSTART:20260414T200000Z
+SUMMARY:🎵 Bloody Tuesday!
+UID:7151c1d5-1aad-4ac5-aaa8-d5d48410d033@7151.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Venue: Downtown Longmont\nLink: https://www.downtownlongmont.com/do/haunted-history-of-longmont
+DTEND:20260419T020000Z
+LOCATION:Downtown Longmont
+DTSTART:20260418T230000Z
+SUMMARY:🎵 Haunted History of Longmont
+UID:bd933aa2-f798-4ea5-baf1-f7632a940221@bd93.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Venue: The Barn\nLink: https://www.barnevents.info/events/2026/1/14/dance-party-with-the-lovestruck-balladeers
+DTEND:20260418T020000Z
+LOCATION:The Barn
+DTSTART:20260417T230000Z
+SUMMARY:🎵 
+UID:bf8fe2e4-8978-43c8-ba49-b1adba29dfb4@bf8f.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Venue: The Barn\nLink: https://www.barnevents.info/events/2024/2/10/greg-schochet-amp-little-america
+DTEND:20240211T030000Z
+LOCATION:The Barn
+DTSTART:20240210T170000Z
+SUMMARY:🎵 
+UID:e70cdee9-3eff-40f3-847c-04d2f7dcff02@e70c.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Venue: Tangerine\nLink: https://www.downtownlongmont.com/do/bloody-tuesday
+DTEND:20260422T020000Z
+LOCATION:Tangerine
+DTSTART:20260421T200000Z
+SUMMARY:🎵 Bloody Tuesday!
+UID:32748dd4-2ee7-40bb-b372-1d3a69ee2ea6@3274.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Venue: Longmont Museum\nLink: https://www.downtownlongmont.com/do/discovery-days-music-and-movement-with-ms-ragen-5
+DTEND:20260422T020000Z
+LOCATION:Longmont Museum
+DTSTART:20260421T200000Z
+SUMMARY:🎵 Discovery Days: Music & Movement with Ms. Ragen
+UID:fc8513f0-eed8-48b0-9241-5c6c012f5a6c@fc85.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Venue: Longmont Museum\nLink: https://www.downtownlongmont.com/do/discovery-days-art-with-ms-leigh-and-henry-12
+DTEND:20260503T020000Z
+LOCATION:Longmont Museum
+DTSTART:20260502T170000Z
+SUMMARY:🎵 Discovery Days: Art with Ms. Leigh & Henry
+UID:b660561a-6326-45ae-8014-7b9c7aaa8ddc@b660.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Venue: Bricks on Main\nLink: https://www.downtownlongmont.com/do/music-at-bricks-on-main-bandana-a-tribute-to-the-music-of-santana
+DTEND:20260418T020000Z
+LOCATION:Bricks on Main
+DTSTART:20260417T230000Z
+SUMMARY:🎵 Music at Bricks on Main "Bandana" - A Tribute to the Music of Santana
+UID:548af284-db0f-4fe1-b4f0-4a4fd6e0f030@548a.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Venue: Downtown Longmont\nLink: https://www.downtownlongmont.com/do/potting-bar-pop-up-at-cristos-coffee-in-erie
+DTEND:20260503T020000Z
+LOCATION:Downtown Longmont
+DTSTART:20260502T200000Z
+SUMMARY:🎵 Potting Bar Pop-Up at Cristos Coffee in Erie
+UID:ddc616c6-8657-4c5a-9c6a-fbf11ff2ef1b@ddc6.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Venue: Longmont Museum\nLink: https://www.downtownlongmont.com/do/discovery-days-art-with-ms-leigh-and-henry-12
+DTEND:20260426T020000Z
+LOCATION:Longmont Museum
+DTSTART:20260425T170000Z
+SUMMARY:🎵 Discovery Days: Art with Ms. Leigh & Henry
+UID:fc79425c-6110-4a1c-8888-30e48ff491b2@fc79.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Venue: The Blackbird House\nLink: https://www.downtownlongmont.com/do/tarot-with-shifra-at-blackbird-house-18
+DTEND:20260412T020000Z
+LOCATION:The Blackbird House
+DTSTART:20260411T170000Z
+SUMMARY:🎵 Tarot with Shifra at Blackbird House
+UID:edb4d6a7-6ead-4743-9a32-abf46b624f5a@edb4.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Venue: The Barn\nLink: https://www.barnevents.info/events/2017/1/19/moors-mccumber
+DTEND:20230320T020000Z
+LOCATION:The Barn
+DTSTART:20230320T010000Z
+SUMMARY:🎵 
+UID:fabd0889-4e0b-4ed2-9d4a-ad230a2c2bf0@fabd.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Venue: Kuper Wine Bar\nLink: https://www.downtownlongmont.com/do/half-price-bottle-night-and-live-music-1
+DTEND:20260424T020000Z
+LOCATION:Kuper Wine Bar
+DTSTART:20260423T220000Z
+SUMMARY:🎵 Half Price Bottle Night & Live Music
+UID:5e62e30c-6660-445f-a6c0-f1e0233b1f86@5e62.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Venue: Happy Day Plants\nLink: https://www.downtownlongmont.com/do/may-happy-day-hangs
+DTEND:20260502T020000Z
+LOCATION:Happy Day Plants
+DTSTART:20260501T190000Z
+SUMMARY:🎵 May Happy Day Hangs
+UID:03e52eea-fb2d-4c31-ae38-b230bca297df@03e5.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Venue: The Barn\nLink: https://www.barnevents.info/events/2025/10/4/molly-obrien
+DTEND:20251005T020000Z
+LOCATION:The Barn
+DTSTART:20251004T220000Z
+SUMMARY:🎵 
+UID:e028bea2-ab7a-438a-beb1-a6987c1b9213@e028.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Venue: Kuper Wine Bar\nLink: https://www.downtownlongmont.com/do/half-price-bottle-night-and-live-music-1
 DTEND:20260417T020000Z
-LOCATION:The Longmonter
+LOCATION:Kuper Wine Bar
 DTSTART:20260416T220000Z
-SUMMARY:🎵 Game Night!
-UID:ecbf8050-1313-4c7c-b47f-5583a5f1f475@ecbf.org
+SUMMARY:🎵 Half Price Bottle Night & Live Music
+UID:3ee21c99-2fc4-4276-8258-b96befdf110e@3ee2.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Venue: Bricks on Main\nLink: https://www.downtownlongmont.com/do/music-at-bricks-on-main-los-cheesies
+DTEND:20260419T020000Z
+LOCATION:Bricks on Main
+DTSTART:20260419T000000Z
+SUMMARY:🎵 Music at Bricks on Main "Los Cheesies"
+UID:354d394e-e99c-4902-983b-39437ac8a693@354d.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Venue: Longmont Museum\nLink: https://www.downtownlongmont.com/do/discovery-days-art-with-ms-leigh-and-henry-14
+DTEND:20260424T020000Z
+LOCATION:Longmont Museum
+DTSTART:20260423T220000Z
+SUMMARY:🎵 Discovery Days: Art with Ms. Leigh & Henry
+UID:4097e967-a823-462c-8ad8-5f1dcc179c97@4097.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Venue: 300 Suns Brewing\nLink: https://www.downtownlongmont.com/do/great-american-nowhere-duo-live-music
+DTEND:20260503T020000Z
+LOCATION:300 Suns Brewing
+DTSTART:20260502T200000Z
+SUMMARY:🎵 Great American Nowhere Duo - Live Music
+UID:439dc3f9-9013-438d-a495-91a41c413ba6@439d.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Venue: The Barn\nLink: https://www.barnevents.info/events/2023/8/13/shanna-nd7z2-pgby7
+DTEND:20241116T030000Z
+LOCATION:The Barn
+DTSTART:20241115T220000Z
+SUMMARY:🎵 
+UID:a3ff75b4-414c-4e3f-b8e1-39d4b7578c06@a3ff.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Venue: The Barn\nLink: https://www.barnevents.info/events/2025/4/4/greg-schochet-and-little-america
+DTEND:20250405T020000Z
+LOCATION:The Barn
+DTSTART:20250404T220000Z
+SUMMARY:🎵 
+UID:6e87ff11-61b9-4caa-8e11-e5654dd6295b@6e87.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Venue: Tangerine\nLink: https://www.downtownlongmont.com/do/midweek-brunch-break
+DTEND:20260423T020000Z
+LOCATION:Tangerine
+DTSTART:20260422T210000Z
+SUMMARY:🎵 Midweek Brunch Break!
+UID:2820cdbe-a929-4759-875a-0ac9c2212e94@2820.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Venue: Kuper Wine Bar\nLink: https://www.downtownlongmont.com/do/half-price-bottle-night-and-live-music-1
+DTEND:20260501T020000Z
+LOCATION:Kuper Wine Bar
+DTSTART:20260430T220000Z
+SUMMARY:🎵 Half Price Bottle Night & Live Music
+UID:3f9101fb-3e85-4852-a91e-deb010df6003@3f91.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Venue: Longmont Museum\nLink: https://www.downtownlongmont.com/do/discovery-days-art-with-ms-leigh-and-henry-12
+DTEND:20260419T020000Z
+LOCATION:Longmont Museum
+DTSTART:20260418T170000Z
+SUMMARY:🎵 Discovery Days: Art with Ms. Leigh & Henry
+UID:8532d64e-3ff6-4ec1-a90f-967cba7f5d6e@8532.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Venue: The Barn\nLink: https://www.barnevents.info/events/2023/8/13/shanna-nd7z2-pgby7-ee5zy
+DTEND:20260309T020000Z
+LOCATION:The Barn
+DTSTART:20260309T020000Z
+SUMMARY:🎵 
+UID:da761e15-38fd-4b4d-80f0-4c14a84650cb@da76.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Venue: Red Cedar Bistro\nLink: https://www.downtownlongmont.com/do/tour-the-mediterranean-wine-dinner
+DTEND:20260417T020000Z
+LOCATION:Red Cedar Bistro
+DTSTART:20260416T220000Z
+SUMMARY:🎵 'Tour The Mediterranean' Wine Dinner
+UID:ce5f8ce6-0075-4f3e-9eff-9432777203d0@ce5f.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Venue: Longmont Museum\nLink: https://www.downtownlongmont.com/do/discovery-days-art-with-ms-leigh-and-henry-12
+DTEND:20260412T020000Z
+LOCATION:Longmont Museum
+DTSTART:20260411T170000Z
+SUMMARY:🎵 Discovery Days: Art with Ms. Leigh & Henry
+UID:57aa418f-f768-4e00-a3f1-a3d59e705eca@57aa.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Venue: Longmont Museum\nLink: https://www.downtownlongmont.com/do/art-and-sip-watercolor-strawberry-doodles
+DTEND:20260417T020000Z
+LOCATION:Longmont Museum
+DTSTART:20260416T220000Z
+SUMMARY:🎵 Art & Sip: Watercolor Strawberry Doodles
+UID:7389e206-46e6-46fa-84da-a921501232af@7389.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Venue: Firehouse Art Center\nLink: https://www.downtownlongmont.com/do/open-sew-studio-with-fashion-rebel-ution
+DTEND:20260420T020000Z
+LOCATION:Firehouse Art Center
+DTSTART:20260420T010000Z
+SUMMARY:🎵 Open Sew Studio with Fashion Rebel-ution
+UID:f10f12c3-dca4-403b-a52e-d51705c460e1@f10f.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Venue: Happy Day Plants\nLink: https://www.downtownlongmont.com/do/april-happy-day-hangs
+DTEND:20260419T020000Z
+LOCATION:Happy Day Plants
+DTSTART:20260419T000000Z
+SUMMARY:🎵 April Happy Day Hangs
+UID:2ac715d9-46ed-4801-8c6a-9c83ea814a15@2ac7.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Venue: Vintology\nLink: https://www.downtownlongmont.com/do/an-evening-with-daisy-dog-press-hosted-by-authors-and-musicians-gregory-hill-and-zach-boddicker
+DTEND:20260419T020000Z
+LOCATION:Vintology
+DTSTART:20260419T000000Z
+SUMMARY:🎵 AN EVENING WITH DAISY DOG PRESS - hosted by authors/musicians Gregory Hill and Zach Boddicker
+UID:425efc55-008f-4f95-81eb-a0aa6fd50d93@425e.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Venue: The Barn\nLink: https://www.barnevents.info/events/2023/8/13/shanna
+DTEND:20230812T020000Z
+LOCATION:The Barn
+DTSTART:20230811T170000Z
+SUMMARY:🎵 
+UID:0447be7a-ef18-4acc-a3e5-0fc77a6416fc@0447.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Venue: Tangerine\nLink: https://www.downtownlongmont.com/do/bellinis-and-bites
+DTEND:20260424T020000Z
+LOCATION:Tangerine
+DTSTART:20260423T220000Z
+SUMMARY:🎵 Bellinis and Bites!
+UID:7a48f597-e94d-4681-b62b-76168c5dcb8b@7a48.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Venue: Kuper Wine Bar\nLink: https://www.downtownlongmont.com/do/pilates-at-the-kuper-1
+DTEND:20260412T020000Z
+LOCATION:Kuper Wine Bar
+DTSTART:20260411T170000Z
+SUMMARY:🎵 Pilates at The Kuper
+UID:16f9fe21-d5bb-4f5e-82de-183ed4de89fe@16f9.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Venue: Downtown Longmont\nLink: https://www.downtownlongmont.com/do/haunted-history-of-longmont
+DTEND:20260418T020000Z
+LOCATION:Downtown Longmont
+DTSTART:20260417T230000Z
+SUMMARY:🎵 Haunted History of Longmont
+UID:01a82b14-e1c2-4937-b1a9-88a6b4a0a4bb@01a8.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Venue: Longmont Museum\nLink: https://www.downtownlongmont.com/do/discovery-days-art-with-ms-leigh-and-henry-14
+DTEND:20260417T020000Z
+LOCATION:Longmont Museum
+DTSTART:20260416T220000Z
+SUMMARY:🎵 Discovery Days: Art with Ms. Leigh & Henry
+UID:1878f602-1fc1-49f0-bc4b-73b59046e32e@1878.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Venue: Tangerine\nLink: https://www.downtownlongmont.com/do/main-street-bubbles
+DTEND:20260428T020000Z
+LOCATION:Tangerine
+DTSTART:20260427T190000Z
+SUMMARY:🎵 Main Street Bubbles!
+UID:4510b3fb-bf99-4508-bbbb-e3b93266e124@4510.org
 END:VEVENT
 BEGIN:VEVENT
 DESCRIPTION:Venue: Bootstrap Brewing\nLink: https://www.downtownlongmont.com/do/loco-uke-jam-at-bootstrap-brewing-1
@@ -919,6 +391,558 @@ DTEND:20260504T020000Z
 LOCATION:Bootstrap Brewing
 DTSTART:20260503T060000Z
 SUMMARY:🎵 LOCO Uke Jam at Bootstrap Brewing!
-UID:8c036ba5-6a03-40af-aca0-cdacd360b9b3@8c03.org
+UID:e3c02437-d35f-45a5-9a84-bfb54d683415@e3c0.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Venue: Firehouse Art Center\nLink: https://www.downtownlongmont.com/do/pride-month-exhibition-art-sampler-make-a-personal-pride-flag
+DTEND:20260504T020000Z
+LOCATION:Firehouse Art Center
+DTSTART:20260503T210000Z
+SUMMARY:🎵 Pride Month Exhibition- Art Sampler- Make a Personal Pride Flag
+UID:11eab9a5-39be-479b-a8fa-42cff5e21322@11ea.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Venue: The Golden Bee\nLink: https://www.downtownlongmont.com/do/tarot-card-reader-at-the-golden-bee
+DTEND:20260425T020000Z
+LOCATION:The Golden Bee
+DTSTART:20260424T230000Z
+SUMMARY:🎵 Tarot Card Reader at The Golden Bee
+UID:0bffa84c-e955-47c2-8660-ef2c37cfd154@0bff.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Venue: The Blackbird House\nLink: https://www.downtownlongmont.com/do/tarot-with-shifra-at-blackbird-house-18
+DTEND:20260426T020000Z
+LOCATION:The Blackbird House
+DTSTART:20260425T170000Z
+SUMMARY:🎵 Tarot with Shifra at Blackbird House
+UID:4d5b7a14-f8da-4f43-a834-8453c7621787@4d5b.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Venue: Bricks on Main\nLink: https://www.downtownlongmont.com/do/music-at-bricks-on-main-sabotage
+DTEND:20260502T020000Z
+LOCATION:Bricks on Main
+DTSTART:20260501T190000Z
+SUMMARY:🎵 Music at Bricks on Main "Sabotage"
+UID:2f254dae-314e-4701-b5f7-618b1a2232ef@2f25.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Venue: BRITE Collaborative\nLink: https://www.downtownlongmont.com/do/rrrrrj-101-open-house-2
+DTEND:20260423T190000Z
+LOCATION:BRITE Collaborative
+DTSTART:20260423T160000Z
+SUMMARY:🎵 RRRRRJ 101 Open House
+UID:c7e3b497-6ba1-4cdc-aa9e-bee83930e671@c7e3.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Venue: Composition Shop\nLink: https://www.downtownlongmont.com/do/1-year-anniversary-party
+DTEND:20260425T190000Z
+LOCATION:Composition Shop
+DTSTART:20260425T190000Z
+SUMMARY:🎵 1 Year Anniversary Party!
+UID:1cab0ed3-f2a5-4a15-8b1c-4025a62571c7@1cab.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Venue: Bricks on Main\nLink: https://www.downtownlongmont.com/do/music-at-bricks-on-main-asteria-jazz-collective-6
+DTEND:20260420T020000Z
+LOCATION:Bricks on Main
+DTSTART:20260420T010000Z
+SUMMARY:🎵 Music at Bricks on Main "Asteria Jazz Collective"
+UID:4c0e9516-f844-4e3d-a440-6aef8d5c2e78@4c0e.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Venue: The Barn\nLink: https://www.barnevents.info/events/2024/1/17/moors-mccumber
+DTEND:20240318T020000Z
+LOCATION:The Barn
+DTSTART:20240317T230000Z
+SUMMARY:🎵 
+UID:d5dd1883-1b12-4ed9-9707-3071634c2297@d5dd.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Venue: Tangerine\nLink: https://www.downtownlongmont.com/do/main-street-bubbles
+DTEND:20260505T020000Z
+LOCATION:Tangerine
+DTSTART:20260504T190000Z
+SUMMARY:🎵 Main Street Bubbles!
+UID:fd1263d1-82d2-44c6-8a23-c66f272fefff@fd12.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Venue: Firehouse Art Center\nLink: https://www.downtownlongmont.com/do/how-to-play-in-the-dark
+DTEND:20260417T020000Z
+LOCATION:Firehouse Art Center
+DTSTART:20260416T220000Z
+SUMMARY:🎵 How to Play in the Dark
+UID:27b29230-b56d-40c5-90c2-e7feb0ceadd1@27b2.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Venue: Retail Therapy Vendor Market & Art Studios\nLink: https://www.downtownlongmont.com/do/this-and-that-pop-up-sale-1
+DTEND:20260419T020000Z
+LOCATION:Retail Therapy Vendor Market & Art Studios
+DTSTART:20260419T000000Z
+SUMMARY:🎵 This & That POP-UP Sale
+UID:1b2ad259-e60f-4a78-b63f-9b66c2e1cb4d@1b2a.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Venue: Tangerine\nLink: https://www.downtownlongmont.com/do/main-street-bubbles
+DTEND:20260421T020000Z
+LOCATION:Tangerine
+DTSTART:20260420T190000Z
+SUMMARY:🎵 Main Street Bubbles!
+UID:c10290b1-c20d-4dcb-8cd3-5cc7eb688e60@c102.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Venue: Bootstrap Brewing\nLink: https://www.downtownlongmont.com/do/your-stage-at-bootstrap-brewing-5
+DTEND:20260505T020000Z
+LOCATION:Bootstrap Brewing
+DTSTART:20260504T190000Z
+SUMMARY:🎵 Your Stage at Bootstrap Brewing!
+UID:60beb7c0-b8d3-4b91-b6b9-0b07974a206b@60be.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Venue: The Passenger\nLink: https://www.downtownlongmont.com/do/longmont-all-star-jazz-band-free-performance
+DTEND:20260503T020000Z
+LOCATION:The Passenger
+DTSTART:20260502T200000Z
+SUMMARY:🎵 Longmont All Star Jazz Band Free Performance!
+UID:c5bfa884-ace7-4d05-be6b-360641ac4483@c5bf.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Venue: Longmont Area Chamber Of Commerce\nLink: https://www.downtownlongmont.com/do/understanding-trusts
+DTEND:20260416T020000Z
+LOCATION:Longmont Area Chamber Of Commerce
+DTSTART:20260415T210000Z
+SUMMARY:🎵 Understanding Trusts
+UID:b04ea96b-d859-416f-936d-56c592ab4ac2@b04e.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Venue: Bricks on Main\nLink: https://www.downtownlongmont.com/do/music-at-bricks-on-main-random-pockets
+DTEND:20260412T020000Z
+LOCATION:Bricks on Main
+DTSTART:20260411T170000Z
+SUMMARY:🎵 Music at Bricks on Main "Random Pockets"
+UID:c9783ff7-c73d-4099-a5ad-65137312b695@c978.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Venue: The Golden Bee\nLink: https://www.downtownlongmont.com/do/tarot-card-reader-at-the-golden-bee
+DTEND:20260502T020000Z
+LOCATION:The Golden Bee
+DTSTART:20260501T230000Z
+SUMMARY:🎵 Tarot Card Reader at The Golden Bee
+UID:1c1b18a5-12d8-4fcc-9200-589efb6652e7@1c1b.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Venue: Longmont Museum\nLink: https://www.downtownlongmont.com/do/discovery-days-music-and-movement-with-ms-ragen-5
+DTEND:20260429T020000Z
+LOCATION:Longmont Museum
+DTSTART:20260428T200000Z
+SUMMARY:🎵 Discovery Days: Music & Movement with Ms. Ragen
+UID:1e5a8d21-fcf9-4195-8536-51118299bfb8@1e5a.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Venue: Kuper Wine Bar\nLink: https://www.downtownlongmont.com/do/fondue-date-night-2
+DTEND:20260416T020000Z
+LOCATION:Kuper Wine Bar
+DTSTART:20260415T210000Z
+SUMMARY:🎵 Fondue Date Night
+UID:d624dfd7-6c4c-4b08-903d-8b5f8507b438@d624.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Venue: Composition Shop\nLink: https://www.downtownlongmont.com/do/abby-hanlon-dory-fantasmagory-num7-paperback-tour
+DTEND:20260504T010000Z
+LOCATION:Composition Shop
+DTSTART:20260504T010000Z
+SUMMARY:🎵 Abby Hanlon: Dory Fantasmagory #7 Paperback Tour
+UID:db667337-de13-4548-a900-083cbe339b81@db66.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Venue: Longmont Museum\nLink: https://www.downtownlongmont.com/do/film-everything-everywhere-all-at-once-2022-r
+DTEND:20260417T040000Z
+LOCATION:Longmont Museum
+DTSTART:20260417T020000Z
+SUMMARY:🎵 Film: “Everything\, Everywhere\, All At Once” (2022\, R)
+UID:7bbff1f6-07cc-4e2d-ab79-f786e54e5f0d@7bbf.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Venue: The Barn\nLink: https://www.barnevents.info/events/2024/bigrichard
+DTEND:20241221T030000Z
+LOCATION:The Barn
+DTSTART:20241221T030000Z
+SUMMARY:🎵 
+UID:3d90d273-320b-47ae-baaf-317b0a9b5f2f@3d90.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Venue: Tangerine\nLink: https://www.downtownlongmont.com/do/bellinis-and-bites
+DTEND:20260417T020000Z
+LOCATION:Tangerine
+DTSTART:20260416T220000Z
+SUMMARY:🎵 Bellinis and Bites!
+UID:8b34659d-65a8-465c-9063-fd0f57b29d38@8b34.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Venue: Rosalee's Pizzeria\nLink: https://www.downtownlongmont.com/do/wednesday-night-square-dance-al-herrera
+DTEND:20260416T020000Z
+LOCATION:Rosalee's Pizzeria
+DTSTART:20260415T210000Z
+SUMMARY:🎵 Wednesday Night Square Dance - Al Herrera
+UID:fffc7b99-9adc-40f0-a5db-ad9314573b15@fffc.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Venue: The Barn\nLink: https://www.barnevents.info/events/2025/1/11/tish-hinojosa-2xad8
+DTEND:20261004T020000Z
+LOCATION:The Barn
+DTSTART:20261003T210000Z
+SUMMARY:🎵 
+UID:aee36e38-f47f-4f20-9c6f-55bfc86419c7@aee3.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Venue: Bootstrap Brewing\nLink: https://www.downtownlongmont.com/do/loco-uke-jam-at-bootstrap-brewing-1
+DTEND:20260413T020000Z
+LOCATION:Bootstrap Brewing
+DTSTART:20260412T060000Z
+SUMMARY:🎵 LOCO Uke Jam at Bootstrap Brewing!
+UID:fa969202-069d-44ea-aaf2-72a7999262b0@fa96.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Venue: 300 Suns Brewing\nLink: https://www.downtownlongmont.com/do/parchment-doll-live-music
+DTEND:20260412T020000Z
+LOCATION:300 Suns Brewing
+DTSTART:20260411T170000Z
+SUMMARY:🎵 Parchment Doll - Live Music
+UID:79ac566c-6199-4ef5-bdb5-8b5c3d0f5808@79ac.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Venue: Tangerine\nLink: https://www.downtownlongmont.com/do/midweek-brunch-break
+DTEND:20260430T020000Z
+LOCATION:Tangerine
+DTSTART:20260429T210000Z
+SUMMARY:🎵 Midweek Brunch Break!
+UID:d770dc56-731e-4dd4-bad8-5f051f8c46e9@d770.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Venue: Firehouse Art Center\nLink: https://www.downtownlongmont.com/do/learn-to-crochet
+DTEND:20260414T020000Z
+LOCATION:Firehouse Art Center
+DTSTART:20260413T190000Z
+SUMMARY:🎵 Learn to Crochet
+UID:1932efa3-5492-48f3-9c98-da50bb878805@1932.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Venue: The Barn\nLink: https://www.barnevents.info/events/2023/8/13/shanna-nd7z2
+DTEND:20231120T030000Z
+LOCATION:The Barn
+DTSTART:20231120T020000Z
+SUMMARY:🎵 
+UID:298cf72b-c001-49f3-a806-bf51d47b3266@298c.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Venue: Longmont Museum\nLink: https://www.downtownlongmont.com/do/discovery-days-art-with-ms-leigh-and-henry-15
+DTEND:20260430T020000Z
+LOCATION:Longmont Museum
+DTSTART:20260429T210000Z
+SUMMARY:🎵 Discovery Days: Art with Ms. Leigh & Henry
+UID:7cdbd14f-dc44-478f-a5a4-ab86073fe2fd@7cdb.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Venue: Bricks on Main\nLink: https://www.downtownlongmont.com/do/music-at-bricks-on-main-foxfeather-full-band
+DTEND:20260503T020000Z
+LOCATION:Bricks on Main
+DTSTART:20260502T200000Z
+SUMMARY:🎵 Music at Bricks on Main "Foxfeather Full Band"
+UID:d4c7fb1d-c269-4d10-9707-aa81ed5e5c15@d4c7.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Venue: The Barn\nLink: https://www.barnevents.info/events/2025/12/13/joy-adams-and-gus-tritsch
+DTEND:20251214T030000Z
+LOCATION:The Barn
+DTSTART:20251213T200000Z
+SUMMARY:🎵 
+UID:0bc8a3d9-96d2-401c-84b1-3ea6d9ea0bd5@0bc8.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Venue: Tangerine\nLink: https://www.downtownlongmont.com/do/midweek-brunch-break
+DTEND:20260416T020000Z
+LOCATION:Tangerine
+DTSTART:20260415T210000Z
+SUMMARY:🎵 Midweek Brunch Break!
+UID:9b3defb6-545a-4ff5-b4bf-b1d8d4ac65ee@9b3d.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Venue: Longmont Symphony Orchestra\nLink: https://www.downtownlongmont.com/do/lso-concert-pops-concert-best-of-broadway
+DTEND:20260503T020000Z
+LOCATION:Longmont Symphony Orchestra
+DTSTART:20260502T200000Z
+SUMMARY:🎵 LSO Concert Pops Concert: Best of Broadway
+UID:5faddc4f-8693-4c25-ace5-ba411fb02b58@5fad.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Venue: The Longmonter\nLink: https://www.downtownlongmont.com/do/game-night-1
+DTEND:20260501T020000Z
+LOCATION:The Longmonter
+DTSTART:20260430T220000Z
+SUMMARY:🎵 Game Night!
+UID:1a065e9c-0af4-4e4f-a112-6607bb420d63@1a06.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Venue: The Blackbird House\nLink: https://www.downtownlongmont.com/do/tarot-with-shifra-at-blackbird-house-18
+DTEND:20260419T020000Z
+LOCATION:The Blackbird House
+DTSTART:20260418T170000Z
+SUMMARY:🎵 Tarot with Shifra at Blackbird House
+UID:55cb4a0c-1010-4079-a65d-6efda1d591ec@55cb.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Venue: Kuper Wine Bar\nLink: https://www.downtownlongmont.com/do/books-and-bottles-april-event
+DTEND:20260413T020000Z
+LOCATION:Kuper Wine Bar
+DTSTART:20260412T060000Z
+SUMMARY:🎵 Books & Bottles - April Event
+UID:65aa43d2-5a82-45b7-b61e-4ab1d5247b7a@65aa.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Venue: Tangerine\nLink: https://www.downtownlongmont.com/do/main-street-bubbles
+DTEND:20260414T020000Z
+LOCATION:Tangerine
+DTSTART:20260413T190000Z
+SUMMARY:🎵 Main Street Bubbles!
+UID:9074e116-ac82-46a6-90b4-4aa6895d45c3@9074.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Venue: Tangerine\nLink: https://www.downtownlongmont.com/do/bubbly-flight-friday
+DTEND:20260425T020000Z
+LOCATION:Tangerine
+DTSTART:20260424T230000Z
+SUMMARY:🎵 Bubbly Flight Friday!
+UID:2987e542-13bf-46e3-b67a-7ae805c108ee@2987.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Venue: The Barn\nLink: https://www.barnevents.info/events/2024/alexalennon
+DTEND:20240320T020000Z
+LOCATION:The Barn
+DTSTART:20240320T010000Z
+SUMMARY:🎵 
+UID:ca161fa5-e4fd-4740-abfd-19d7044d74d4@ca16.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Venue: The Barn\nLink: https://www.barnevents.info/events/2023/11/4/bonnie-and-taylor-sims
+DTEND:20231105T020000Z
+LOCATION:The Barn
+DTSTART:20231104T220000Z
+SUMMARY:🎵 
+UID:caced890-baf7-4ffb-b507-27f752977eec@cace.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Venue: The Passenger\nLink: https://www.downtownlongmont.com/do/free-live-music-by-joe-teichman
+DTEND:20260418T020000Z
+LOCATION:The Passenger
+DTSTART:20260417T230000Z
+SUMMARY:🎵 Free Live Music by Joe Teichman
+UID:caa52465-68ae-44a7-9ea0-9a852a671e6b@caa5.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Venue: Tangerine\nLink: https://www.downtownlongmont.com/do/bellinis-and-bites
+DTEND:20260501T020000Z
+LOCATION:Tangerine
+DTSTART:20260430T220000Z
+SUMMARY:🎵 Bellinis and Bites!
+UID:adb94bc4-e622-41ac-bd8b-9461fadb8013@adb9.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Venue: Dry Land Distillers\nLink: https://www.downtownlongmont.com/do/sunday-music-series-jazz-with-vic-dillahay-and-doug-carmichael
+DTEND:20260413T020000Z
+LOCATION:Dry Land Distillers
+DTSTART:20260412T060000Z
+SUMMARY:🎵 Sunday Music Series: Jazz with Vic Dillahay and Doug Carmichael
+UID:7a5f96ea-62cb-45ac-b30a-1777172b3152@7a5f.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Venue: Bootstrap Brewing\nLink: https://www.downtownlongmont.com/do/loco-uke-jam-at-bootstrap-brewing-1
+DTEND:20260420T020000Z
+LOCATION:Bootstrap Brewing
+DTSTART:20260419T060000Z
+SUMMARY:🎵 LOCO Uke Jam at Bootstrap Brewing!
+UID:d9505e65-2e47-45d1-beed-985edb54dace@d950.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Venue: Bootstrap Brewing\nLink: https://www.downtownlongmont.com/do/your-stage-at-bootstrap-brewing-5
+DTEND:20260414T020000Z
+LOCATION:Bootstrap Brewing
+DTSTART:20260413T190000Z
+SUMMARY:🎵 Your Stage at Bootstrap Brewing!
+UID:cc023d72-32c0-4a11-9aae-077cfe4a4f18@cc02.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Venue: Longmont Museum\nLink: https://www.downtownlongmont.com/do/discovery-days-art-with-ms-leigh-and-henry-15
+DTEND:20260423T020000Z
+LOCATION:Longmont Museum
+DTSTART:20260422T210000Z
+SUMMARY:🎵 Discovery Days: Art with Ms. Leigh & Henry
+UID:9b6732bb-de64-474f-aefe-0127940b447a@9b67.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Venue: St. Vrain Cidery\nLink: https://www.downtownlongmont.com/do/live-music-at-st-vrain-cidery-philly-in-the-high-ground
+DTEND:20260412T020000Z
+LOCATION:St. Vrain Cidery
+DTSTART:20260411T170000Z
+SUMMARY:🎵 Live Music At St. Vrain Cidery - Philly In The High Ground
+UID:449d9c8d-062e-4a45-9627-0df71131fb62@449d.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Venue: Longmont Museum\nLink: https://www.downtownlongmont.com/do/discovery-days-art-with-ms-leigh-and-henry-15
+DTEND:20260416T020000Z
+LOCATION:Longmont Museum
+DTSTART:20260415T210000Z
+SUMMARY:🎵 Discovery Days: Art with Ms. Leigh & Henry
+UID:bca4ddb3-4b1b-46c8-b53d-74724b9ddc51@bca4.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Venue: Downtown Longmont\nLink: https://www.downtownlongmont.com/do/vintage-vibes-elevated-lives-first-annual-fundraiser-and-fashion-show
+DTEND:20260412T020000Z
+LOCATION:Downtown Longmont
+DTSTART:20260411T170000Z
+SUMMARY:🎵 Vintage Vibes - Elevated Lives First Annual Fundraiser and Fashion Show
+UID:6fede228-ee4b-4134-a5cd-1ddc96a2266d@6fed.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Venue: Longmont Museum\nLink: https://www.downtownlongmont.com/do/discovery-days-art-with-ms-leigh-and-henry-14
+DTEND:20260501T020000Z
+LOCATION:Longmont Museum
+DTSTART:20260430T220000Z
+SUMMARY:🎵 Discovery Days: Art with Ms. Leigh & Henry
+UID:ca376bec-4fc0-46e0-ac55-8f6477fb3792@ca37.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Venue: The Times Collaborative / 338 Main St\nLink: https://www.downtownlongmont.com/do/soundpost-sessions-local-spotlight-sturtz-w-and-holly-lovell
+DTEND:20260417T020000Z
+LOCATION:The Times Collaborative / 338 Main St
+DTSTART:20260416T220000Z
+SUMMARY:🎵 Soundpost Sessions LOCAL SPOTLIGHT: Sturtz w/ Holly Lovell
+UID:d9c6ab03-b06b-4a5d-a8b5-92519c30df4c@d9c6.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Venue: Firehouse Art Center\nLink: https://www.downtownlongmont.com/do/intermediate-crochet-at-the-firehouse
+DTEND:20260413T020000Z
+LOCATION:Firehouse Art Center
+DTSTART:20260412T060000Z
+SUMMARY:🎵 Intermediate Crochet at the Firehouse
+UID:2cc8dda5-9c7d-489b-88c3-f45a4d9ed0de@2cc8.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Venue: The Passenger\nLink: https://www.downtownlongmont.com/do/longmont-all-star-jazz-band-free-performance-1
+DTEND:20260419T020000Z
+LOCATION:The Passenger
+DTSTART:20260419T000000Z
+SUMMARY:🎵 Longmont All Star Jazz Band Free Performance!
+UID:b6fe39e5-0c88-433a-a2f1-12d2aa9b31e0@b6fe.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Venue: The Barn\nLink: https://www.barnevents.info/events/2019/9/20/the-common-thread-concert-gar92
+DTEND:20230506T020000Z
+LOCATION:The Barn
+DTSTART:20230505T230000Z
+SUMMARY:🎵 
+UID:9d2d4c4d-2e86-48be-b695-6c1ecbaa4157@9d2d.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Venue: Abbott & Wallace Distilling\nLink: https://www.downtownlongmont.com/do/first-friday-with-mojazz
+DTEND:20260502T020000Z
+LOCATION:Abbott & Wallace Distilling
+DTSTART:20260501T190000Z
+SUMMARY:🎵 First Friday with Mojazz
+UID:6e62b8f5-f107-4645-a5d9-a5601d288690@6e62.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Venue: The Barn\nLink: https://www.barnevents.info/events/2026/7/17/songs-stories-and-art-lessons-from-strangersa-visual-folk-concert-by-john-john-brown
+DTEND:20260718T020000Z
+LOCATION:The Barn
+DTSTART:20260717T230000Z
+SUMMARY:🎵 
+UID:60f7a3b6-281b-4caa-a9e0-bd41eddef9a1@60f7.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Venue: Bootstrap Brewing\nLink: https://www.downtownlongmont.com/do/your-stage-at-bootstrap-brewing-5
+DTEND:20260428T020000Z
+LOCATION:Bootstrap Brewing
+DTSTART:20260427T190000Z
+SUMMARY:🎵 Your Stage at Bootstrap Brewing!
+UID:baab0cb8-15d9-4472-9965-637e757174c1@baab.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Venue: Tangerine\nLink: https://www.downtownlongmont.com/do/bubbly-flight-friday
+DTEND:20260502T020000Z
+LOCATION:Tangerine
+DTSTART:20260501T230000Z
+SUMMARY:🎵 Bubbly Flight Friday!
+UID:b7488f15-09a2-4637-ba73-a95e3149c2d0@b748.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Venue: The Blackbird House\nLink: https://www.downtownlongmont.com/do/tarot-with-shifra-at-blackbird-house-19
+DTEND:20260420T020000Z
+LOCATION:The Blackbird House
+DTSTART:20260420T010000Z
+SUMMARY:🎵 Tarot with Shifra at Blackbird House
+UID:0551f2ec-2aa4-42b9-93c9-a100fc420ce6@0551.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Venue: Juniper Goods\nLink: https://www.downtownlongmont.com/do/crochet-and-chill-monthly-social
+DTEND:20260419T020000Z
+LOCATION:Juniper Goods
+DTSTART:20260419T000000Z
+SUMMARY:🎵 Crochet & Chill Monthly Social
+UID:35d99966-e716-4767-a3f9-a4972580a849@35d9.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Venue: Longmont Symphony Orchestra\nLink: https://www.downtownlongmont.com/do/lso-concert-pines-of-rome-and-a-world-premiere
+DTEND:20260412T020000Z
+LOCATION:Longmont Symphony Orchestra
+DTSTART:20260411T170000Z
+SUMMARY:🎵 LSO Concert Pines of Rome & a World Premiere
+UID:e5cafae5-c277-452c-8588-0088f1aea273@e5ca.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Venue: The Longmonter\nLink: https://www.downtownlongmont.com/do/game-night-1
+DTEND:20260424T020000Z
+LOCATION:The Longmonter
+DTSTART:20260423T220000Z
+SUMMARY:🎵 Game Night!
+UID:65448ebc-7898-4f43-8d1a-31a6cc715cd0@6544.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Venue: The Barn\nLink: https://www.barnevents.info/events/2025/1/16/moors-mccumber-gtn7y
+DTEND:20250317T020000Z
+LOCATION:The Barn
+DTSTART:20250316T220000Z
+SUMMARY:🎵 
+UID:984c5f52-b9b1-4e41-ac35-22881986196e@984c.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Venue: Bootstrap Brewing\nLink: https://www.downtownlongmont.com/do/your-stage-at-bootstrap-brewing-5
+DTEND:20260421T020000Z
+LOCATION:Bootstrap Brewing
+DTSTART:20260420T190000Z
+SUMMARY:🎵 Your Stage at Bootstrap Brewing!
+UID:0e8a9afb-570f-483f-9d2b-ae9e032a47a0@0e8a.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Venue: The Longmonter\nLink: https://www.downtownlongmont.com/do/game-night-1
+DTEND:20260417T020000Z
+LOCATION:The Longmonter
+DTSTART:20260416T220000Z
+SUMMARY:🎵 Game Night!
+UID:7bbd371d-41a1-4adb-b5ef-197c48753278@7bbd.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Venue: Longmont Museum\nLink: https://www.downtownlongmont.com/do/discovery-days-music-and-movement-with-ms-ragen-5
+DTEND:20260415T020000Z
+LOCATION:Longmont Museum
+DTSTART:20260414T200000Z
+SUMMARY:🎵 Discovery Days: Music & Movement with Ms. Ragen
+UID:a37d38b0-08ec-4613-8d09-faae18fcece8@a37d.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Venue: The Barn\nLink: https://www.barnevents.info/events/2025/1/11/tish-hinojosa
+DTEND:20250112T030000Z
+LOCATION:The Barn
+DTSTART:20250111T180000Z
+SUMMARY:🎵 
+UID:4463a50a-7a38-4eca-8b36-a916926e6c49@4463.org
 END:VEVENT
 END:VCALENDAR
