@@ -20,12 +20,13 @@ EXCLUDE = [
     'your stage', 'tangerine', 'composition', 'ballet', 'dance class', 
     'film', 'movie', 'bubbles', 'sewing', 'brunch', 'mimosas', 'bellinis'
 ]
+# Added 'supper club', 'solo', 'duo', 'trio' to catch artist-only listings
 MUSIC_KEYWORDS = [
-    'music', 'band', 'concert', 'symphony', 'acoustic', 'jazz', 
-    'blues', 'rock', 'singer', 'songwriter', 'orchestra', 'dj', 
+    'music', 'band', 'concert', 'symphony', 'acoustic', 'jazz', 'supper club',
+    'blues', 'rock', 'singer', 'songwriter', 'orchestra', 'dj', 'solo', 'duo',
     'rave', 'grunge', 'folk', 'metal', 'punk', 'hip-hop', 'live music', 'brass'
 ]
-TRUSTED_VENUES = ['bricks on main', 'the barn', 'johnsons station']
+TRUSTED_VENUES = ['bricks on main', 'the barn', 'johnsons station', 'supper club']
 
 # --- TIME PARSING ---
 def find_times(text):
@@ -36,7 +37,7 @@ def find_times(text):
     def convert_to_24h(hour, minute, ampm):
         h, m = int(hour), int(minute) if minute else 0
         ampm = ampm.lower() if ampm else ""
-        if not ampm: ampm = 'pm' if 1 <= h <= 8 else 'am'
+        if not ampm: ampm = 'pm' if 1 <= h <= 10 else 'am' # Shifted range to 10 for late shows
         if ampm == 'pm' and h < 12: h += 12
         if ampm == 'am' and h == 12: h = 0
         return h, m
@@ -76,16 +77,23 @@ def parse_squarespace(url, venue_name):
         res = requests.get(url, headers=HEADERS, timeout=15)
         soup = BeautifulSoup(res.text, 'html.parser')
         base_domain = "https://" + url.split('//')[1].split('/')[0]
-        for item in soup.select('article, .eventlist-item, .summary-item'):
+        # Search for any block that looks like an event
+        for item in soup.select('article, .eventlist-item, .summary-item, .sqs-events-collection-list'):
             try:
-                # FIX 1: Robust Title Catching for The Barn
-                link_tag = item.find('a', class_=re.compile(r'title|link|event'))
-                if not link_tag: continue
+                # RECOVERY: Try multiple title locations
+                title_el = item.find(class_=re.compile(r'title|headline|link'))
+                if not title_el: continue
+                title = title_el.get_text(strip=True)
                 
-                title = link_tag.get_text(strip=True)
-                if not title: continue # Skip if title is empty
+                # If title is still empty, check for an aria-label or nested span
+                if not title:
+                    link = item.find('a')
+                    title = link.get('aria-label') or link.get_text(strip=True)
                 
-                date_tag = item.select_one('time[datetime], .event-date')
+                if not title: continue
+                
+                link_tag = item.find('a', href=True)
+                date_tag = item.select_one('time[datetime], .event-date, [date]')
                 if not date_tag: continue
                 
                 dt_val = date_tag.get('datetime') or date_tag.get('date') or date_tag.get_text(strip=True)
@@ -103,7 +111,7 @@ def parse_squarespace(url, venue_name):
 # --- MAIN ---
 
 def main():
-    print("🚀 Running Optimized Scraper (Barn & Johnson fix)...")
+    print("🚀 Running Ultimate Longmont Scraper...")
     raw = []
     raw.extend(parse_downtown())
     raw.extend(parse_squarespace("https://www.johnsonsstation.com/calendar", "Johnson's Station"))
@@ -123,18 +131,17 @@ def main():
             res_detail = requests.get(data['url'], headers=HEADERS, timeout=10)
             soup_detail = BeautifulSoup(res_detail.text, 'html.parser')
             
-            # FIX 2: Expanded description area search for Johnson's Station
-            detail_area = soup_detail.select_one('.eventlist-description, .event-item-description, .sqs-block-content, .details, #page-content')
+            # Target description but fall back to body if needed
+            detail_area = soup_detail.select_one('.eventlist-description, .event-item-description, .sqs-block-content, #page-content, main')
             detail_text = detail_area.get_text(separator=" ", strip=True).lower() if detail_area else ""
 
             if any(x in detail_text for x in EXCLUDE): continue
 
-            has_music_keywords = any(m in t_low for m in MUSIC_KEYWORDS) or \
-                                any(m in detail_text for m in MUSIC_KEYWORDS)
-            
-            is_trusted_venue = any(v in v_low for v in TRUSTED_VENUES)
+            # The "Trusted" check: If it's a trusted venue, we are MUCH more lenient with keywords
+            is_trusted = any(v in v_low for v in TRUSTED_VENUES) or any(v in t_low for v in TRUSTED_VENUES)
+            has_music_keywords = any(m in t_low for m in MUSIC_KEYWORDS) or any(m in detail_text for m in MUSIC_KEYWORDS)
 
-            if not (is_trusted_venue or has_music_keywords):
+            if not (is_trusted or has_music_keywords):
                 continue
 
             sh, sm, eh = find_times(f"{data['title']} {detail_text}")
@@ -144,10 +151,10 @@ def main():
                 end_dt = LOCAL_TZ.localize(data['date'].replace(hour=eh, minute=0))
             else:
                 start_dt = LOCAL_TZ.localize(data['date'].replace(hour=19, minute=0))
-                end_dt = start_dt + timedelta(hours=1)
-                time_warning = "⚠️ Start time not confirmed. Check link.\n\n"
+                end_dt = start_dt + timedelta(hours=2)
+                time_warning = "⚠️ Time not confirmed. Check link for info.\n\n"
 
-            fingerprint = f"{start_dt.strftime('%Y%m%d')}_{t_low[:20]}"
+            fingerprint = f"{start_dt.strftime('%Y%m%d')}_{t_low[:10]}"
             if fingerprint in seen: continue
 
             e = Event()
@@ -155,7 +162,7 @@ def main():
             e.begin = start_dt
             e.end = end_dt
             e.location = data['venue']
-            e.description = f"{time_warning}Venue: {data['venue']}\nLink: {data['url']}"
+            e.description = f"{time_warning}Venue: {data['venue']}\nLink: {data['url']}\n\n{detail_text[:300]}..."
             
             cal.events.add(e)
             seen.add(fingerprint)
@@ -165,7 +172,7 @@ def main():
 
     with open(OUTPUT_FILE, 'w', encoding='utf-8') as f:
         f.writelines(cal.serialize_iter())
-    print(f"\n✅ Finished! {count} curated events saved.")
+    print(f"\n✅ SUCCESS: {count} events processed.")
 
 if __name__ == "__main__":
     main()
