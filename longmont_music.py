@@ -3,13 +3,17 @@ from bs4 import BeautifulSoup
 from ics import Calendar, Event
 from datetime import datetime
 import pytz
-import time
 import re
 import json
 
 # --- CONFIG ---
 OUTPUT_FILE = "longmont_music_final.ics"
-HEADERS = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0"}
+# Enhanced Headers to look more like a real browser
+HEADERS = {
+    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0",
+    "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8",
+    "Accept-Language": "en-US,en;q=0.5",
+}
 LOCAL_TZ = pytz.timezone("America/Denver")
 
 # --- LOGIC ---
@@ -19,54 +23,67 @@ TRUSTED_VENUES = ['bootstrap brewing', '300 suns brewing', 'bricks on main', 'th
 
 # --- PARSERS ---
 
-def parse_json_ld_events(url, host_name):
-    """Universal parser for sites that use JSON-LD (Humanitix and Squarespace)"""
+def parse_hybrid(url, host_name):
+    """Tries JSON-LD first, falls back to HTML scraping if empty"""
     events = []
     try:
         res = requests.get(url, headers=HEADERS, timeout=15)
         soup = BeautifulSoup(res.text, 'html.parser')
-        scripts = soup.find_all('script', type='application/ld+json')
         
+        # PATH 1: JSON-LD (The clean way)
+        scripts = soup.find_all('script', type='application/ld+json')
         for script in scripts:
             try:
                 data = json.loads(script.string)
-                # Some sites wrap events in a '@graph' list
-                items = data.get('@graph', [data]) if isinstance(data, dict) else data
+                items = data if isinstance(data, list) else data.get('@graph', [data])
                 for item in items:
                     if isinstance(item, dict) and item.get('@type') in ['Event', 'MusicEvent']:
                         start_str = item.get('startDate')
-                        if not start_str: continue
-                        
-                        # Handle varied date formats
-                        start_dt = datetime.fromisoformat(start_str.replace('Z', '+00:00'))
-                        events.append({
-                            "title": item.get('name', 'Untitled Event'),
-                            "venue": host_name,
-                            "date": start_dt.astimezone(LOCAL_TZ),
-                            "url": item.get('url', url)
-                        })
+                        if start_str:
+                            dt = datetime.fromisoformat(start_str.replace('Z', '+00:00'))
+                            events.append({
+                                "title": item.get('name'),
+                                "venue": host_name,
+                                "date": dt.astimezone(LOCAL_TZ),
+                                "url": item.get('url', url)
+                            })
             except: continue
-    except Exception as e: print(f"⚠️ Error on {host_name}: {e}")
+        
+        # PATH 2: HTML Fallback (If Path 1 found nothing)
+        if not events:
+            # Look for common Squarespace/Humanitix patterns
+            for item in soup.select('article, .eventlist-event, .summary-item, a[href*="/events/"]'):
+                title_el = item.find(['h1', 'h2', 'h3', 'strong']) or item
+                title = title_el.get_text(strip=True)
+                if len(title) < 3: continue
+                
+                link = item.get('href') or (item.find('a')['href'] if item.find('a') else url)
+                if link.startswith('/'):
+                    base = "https://" + url.split('//')[1].split('/')[0]
+                    link = base + link
+
+                # Since HTML fallback is harder to get dates from, we'll default to 'Today'
+                # and let the deep-scrape logic handle it or skip if it's too vague.
+                events.append({
+                    "title": title, "venue": host_name, "date": datetime.now(LOCAL_TZ), "url": link
+                })
+    except Exception as e:
+        print(f"⚠️ Error on {host_name}: {e}")
     return events
 
 def parse_downtown_longmont():
-    """Specific fix for the 2026 Downtown Longmont Calendar structure"""
     events = []
     url = "https://www.downtownlongmont.com/events/calendar"
     try:
         res = requests.get(url, headers=HEADERS, timeout=15)
         soup = BeautifulSoup(res.text, 'html.parser')
-        # Targeting the 'evcard' which contains all the info in its data attributes or text
-        for card in soup.find_all('a', class_=re.compile(r'evcard|event-card')):
+        for card in soup.select('a.evcard'):
             try:
                 title = card.find(class_=re.compile(r'headline|title')).get_text(strip=True)
-                # Extracting date from the text/tags
                 day = card.find(class_=re.compile(r'day')).get_text(strip=True)
                 mon = card.find(class_=re.compile(r'month')).get_text(strip=True)
-                
                 temp_dt = datetime.strptime(f"{mon} {day}", "%b %d")
                 year = datetime.now().year if temp_dt.month >= datetime.now().month else datetime.now().year + 1
-                
                 events.append({
                     "title": title,
                     "venue": card.find(class_=re.compile(r'venue')).get_text(strip=True) if card.find(class_=re.compile(r'venue')) else "Downtown Longmont",
@@ -80,24 +97,22 @@ def parse_downtown_longmont():
 # --- MAIN ---
 
 def main():
-    print("🚀 Running JSON-Enabled Master Scraper...")
+    print("🚀 Running Fail-Safe Scraper...")
     raw_collection = []
     
-    # 1. Downtown Longmont (Custom structure)
+    # 1. Downtown Longmont
     raw_collection.extend(parse_downtown_longmont())
     
-    # 2. Squarespace Sites (JSON-LD targets)
-    raw_collection.extend(parse_json_ld_events("https://www.johnsonsstation.com/calendar", "Johnson's Station"))
-    raw_collection.extend(parse_json_ld_events("https://www.barnevents.info/events", "The Barn"))
-    
-    # 3. Humanitix Hosts (JSON-LD targets)
-    htix_hosts = [
+    # 2. Hybrid Sites
+    hybrid_targets = [
+        ("https://www.johnsonsstation.com/calendar", "Johnson's Station"),
+        ("https://www.barnevents.info/events", "The Barn"),
         ("https://events.humanitix.com/host/hell-yes-music-promotions", "Hell Yes Music"),
         ("https://events.humanitix.com/host/moshmont-mafia-and-outlaw-production-collective", "Moshmont Mafia"),
         ("https://events.humanitix.com/host/lunar-lux-music-and-arts-festival", "Lunar Lux")
     ]
-    for url, name in htix_hosts:
-        raw_collection.extend(parse_json_ld_events(url, name))
+    for url, name in hybrid_targets:
+        raw_collection.extend(parse_hybrid(url, name))
     
     cal = Calendar()
     seen = set()
@@ -107,10 +122,11 @@ def main():
         title_low = data['title'].lower()
         if any(x in title_low for x in EXCLUDE): continue
 
-        fingerprint = f"{data['date'].strftime('%Y%m%d')}_{title_low[:15]}"
+        # Fingerprint to avoid duplicates
+        fingerprint = f"{data['date'].strftime('%Y%m%d')}_{title_low[:20]}"
         if fingerprint in seen: continue
 
-        # Trust Check
+        # Trust vs Keyword logic
         is_music = any(m in title_low for m in MUSIC_KEYWORDS) or \
                    any(v in data['venue'].lower() for v in TRUSTED_VENUES)
 
@@ -127,7 +143,7 @@ def main():
 
     with open(OUTPUT_FILE, 'w', encoding='utf-8') as f:
         f.writelines(cal.serialize_iter())
-    print(f"\n✅ Success! Found {count} unique music events.")
+    print(f"\n✅ Finished! Found {count} unique music events.")
 
 if __name__ == "__main__":
     main()
