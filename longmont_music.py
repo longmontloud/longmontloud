@@ -4,184 +4,168 @@ from ics import Calendar, Event
 from datetime import datetime, timedelta
 import pytz
 import re
-import time
 
 # --- CONFIG ---
 OUTPUT_FILE = "longmont_music_final.ics"
 HEADERS = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) Chrome/120.0.0.0"}
 LOCAL_TZ = pytz.timezone("America/Denver")
 
-# --- LOGIC ---
+# --- FILTERS ---
 EXCLUDE = [
-    'karaoke', 'open mic', 'trivia', 'bingo', 'workshop', 'class', 'meeting', 'retail',
-    'comedy', 'yoga', 'poker', 'drawing', 'craft', 'create club', 'teen', 
-    'storytime', 'book club', 'knitting', 'market', 'board game', 'meditation', 
-    'teacher', 'discussion', 'ragen', 'networking', 'discovery days', 'uke jam', 
-    'your stage', 'tangerine', 'composition', 'ballet', 'dance class', 
-    'film', 'movie', 'bubbles', 'sewing', 'brunch', 'mimosas', 'bellinis'
+    'karaoke', 'open mic', 'trivia', 'bingo', 'workshop', 'class', 'meeting', 
+    'comedy', 'yoga', 'poker', 'drawing', 'craft', 'storytime', 'book club', 
+    'knitting', 'market', 'meditation', 'ballet', 'dance class', 'film', 'movie'
 ]
 MUSIC_KEYWORDS = [
     'music', 'band', 'concert', 'symphony', 'acoustic', 'jazz', 'supper club',
-    'blues', 'rock', 'singer', 'songwriter', 'orchestra', 'dj', 'solo', 'duo',
-    'rave', 'grunge', 'folk', 'metal', 'punk', 'hip-hop', 'live music', 'brass'
+    'blues', 'rock', 'singer', 'songwriter', 'orchestra', 'dj', 'solo', 'duo'
 ]
 GENRE_MAP = {
     'Jazz': ['jazz', 'swing', 'big band', 'bebop'],
-    'Rock': ['rock', 'punk', 'metal', 'electric guitar', 'indie', 'grunge', 'psychedelic'],
-    'Folk/Acoustic': ['folk', 'acoustic', 'bluegrass', 'singer-songwriter', 'banjo', 'americana'],
+    'Rock': ['rock', 'punk', 'metal', 'electric guitar', 'indie', 'grunge'],
+    'Folk/Acoustic': ['folk', 'acoustic', 'bluegrass', 'singer-songwriter', 'americana'],
     'Blues': ['blues', 'harmonica', 'soul'],
-    'Electronic': ['dj', 'electronic', 'synth', 'house music', 'rave', 'edm', 'techno'],
-    'Classical': ['orchestra', 'symphony', 'classical', 'quartet', 'chamber'],
-    'Country': ['country', 'western', 'honky tonk', 'cowboy']
+    'Electronic': ['dj', 'electronic', 'synth', 'house', 'rave', 'edm'],
+    'Classical': ['orchestra', 'symphony', 'classical', 'quartet']
 }
 TRUSTED_VENUES = ['bricks on main', 'the barn', 'johnsons station', 'supper club']
 
 # --- UTILS ---
 
 def detect_genre(title, description):
-    combined_text = f"{title} {description}".lower()
+    combined = f"{title} {description}".lower()
     for genre, keywords in GENRE_MAP.items():
-        if any(re.search(rf"\b{re.escape(k)}\b", combined_text) for k in keywords):
+        if any(re.search(rf"\b{re.escape(k)}\b", combined) for k in keywords):
             return f"[{genre}] "
     return ""
 
 def find_times_strict(text):
-    """
-    Only extracts times that have am/pm or a colon. 
-    Prevents 'May 1' from becoming '1:00 PM'.
-    """
-    # Pattern: Digit(s) + optional :minutes + mandatory AM/PM OR Digit(s) + mandatory :minutes
+    """Prevents 'May 1' from being 1pm. Requires am/pm or a colon."""
     pattern = r'(\d{1,2}(?::\d{2})?\s*(?:am|pm|AM|PM))|(\d{1,2}:\d{2})'
     matches = re.findall(pattern, text)
+    if not matches: return None, None, None
     
-    found_times = []
+    times = []
     for m in matches:
-        time_str = m[0] if m[0] else m[1]
-        
-        # Convert to 24h
-        h_m = re.findall(r'(\d{1,2})(?::(\d{2}))?\s*(am|pm|AM|PM)?', time_str, re.I)
+        t_str = m[0] or m[1]
+        h_m = re.findall(r'(\d{1,2})(?::(\d{2}))?\s*(am|pm)?', t_str.lower())
         if h_m:
             h, m, ampm = h_m[0]
-            h = int(h)
-            m = int(m) if m else 0
-            ampm = ampm.lower() if ampm else ""
-            
+            h, m = int(h), int(m) if m else 0
             if not ampm: ampm = 'pm' if 1 <= h <= 10 else 'am'
             if ampm == 'pm' and h < 12: h += 12
             if ampm == 'am' and h == 12: h = 0
-            found_times.append((h, m))
+            times.append((h, m))
             
-    if len(found_times) >= 1:
-        start = found_times[0]
-        end_h = found_times[1][0] if len(found_times) > 1 else (start[0] + 3) % 24
+    if times:
+        start = times[0]
+        end_h = times[1][0] if len(times) > 1 else (start[0] + 3) % 24
         return start[0], start[1], end_h
     return None, None, None
 
 # --- PARSERS ---
 
 def parse_downtown():
-    events = []
+    links = []
     try:
         res = requests.get("https://www.downtownlongmont.com/events/calendar", headers=HEADERS)
         soup = BeautifulSoup(res.text, 'html.parser')
-        for card in soup.select('a.evcard'):
-            try:
-                title = card.find(class_=re.compile(r'headline|title')).get_text(strip=True)
-                url = "https://www.downtownlongmont.com" + card['href']
-                events.append({"title": title, "url": url})
-            except: continue
+        for a in soup.select('a.evcard'):
+            links.append({"title": a.find(class_=re.compile(r'title|headline')).get_text(strip=True), 
+                          "url": "https://www.downtownlongmont.com" + a['href']})
     except: pass
-    return events
+    return links
+
+def parse_squarespace(url, venue_name):
+    links = []
+    try:
+        res = requests.get(url, headers=HEADERS)
+        soup = BeautifulSoup(res.text, 'html.parser')
+        for item in soup.select('article, .eventlist-item, .summary-item'):
+            a = item.find('a', href=True)
+            title = a.get_text(strip=True) or a.get('aria-label')
+            if a and title:
+                full_url = url.split('.com')[0] + ".com" + a['href'] if a['href'].startswith('/') else a['href']
+                links.append({"title": title, "url": full_url})
+    except: pass
+    return links
 
 # --- MAIN ---
 
 def main():
-    print("🚀 Running Multi-Date & Time-Fixed Scraper...")
-    raw_links = []
-    raw_links.extend(parse_downtown())
-    # Note: parse_squarespace logic remains similar but link-focused for the loop below
+    print("🚀 Running Scraper (Fixing Year & Multi-Date logic)...")
+    all_targets = []
+    all_targets.extend(parse_downtown())
+    all_targets.extend(parse_squarespace("https://www.johnsonsstation.com/calendar", "Johnson's Station"))
+    all_targets.extend(parse_squarespace("https://www.barnevents.info/events", "The Barn"))
     
     cal = Calendar()
     seen = set()
     count = 0
 
-    for data in raw_links:
+    for target in all_targets:
         try:
-            res_detail = requests.get(data['url'], headers=HEADERS, timeout=10)
-            soup_detail = BeautifulSoup(res_detail.text, 'html.parser')
+            res = requests.get(target['url'], headers=HEADERS, timeout=10)
+            soup = BeautifulSoup(res.text, 'html.parser')
             
-            # 1. Get Venue
-            venue_el = soup_detail.select_one('.location, .venue, .sub-headline')
-            venue_name = venue_el.get_text(strip=True) if venue_el else "Downtown Longmont"
+            # Identify venue and description
+            venue = soup.select_one('.location, .venue, .sub-headline')
+            venue_name = venue.get_text(strip=True) if venue else "Longmont"
+            body = soup.get_text(separator=" ", strip=True).lower()
             
-            # 2. Get Description Area
-            detail_area = soup_detail.select_one('.details, .description, .sqs-block-content, #page-content')
-            detail_text = detail_area.get_text(separator=" ", strip=True).lower() if detail_area else ""
-            
-            # 3. Filters
-            title_low = data['title'].lower()
-            if any(x in title_low for x in EXCLUDE) or any(x in detail_text for x in EXCLUDE):
-                continue
-            
-            is_trusted = any(v in venue_name.lower() for v in TRUSTED_VENUES)
-            has_music = any(m in title_low for m in MUSIC_KEYWORDS) or any(m in detail_text for m in MUSIC_KEYWORDS)
+            # Keywords & Filters
+            if any(x in target['title'].lower() for x in EXCLUDE) or any(x in body for x in EXCLUDE): continue
+            is_trusted = any(v in venue_name.lower() or v in target['title'].lower() for v in TRUSTED_VENUES)
+            has_music = any(m in target['title'].lower() or m in body for m in MUSIC_KEYWORDS)
             if not (is_trusted or has_music): continue
 
-            # 4. MULTI-DATE EXTRACTION
-            # Downtown Longmont uses a specific list for multi-dates
-            date_items = soup_detail.select('.dates-times li, .date-time-list li')
-            # Fallback to single date if list not found
-            if not date_items:
-                date_items = [soup_detail.select_one('.date-time, .dates-times')]
+            # MULTI-DATE LOGIC: Look for any line that looks like "Month Day, Year"
+            # Fixed regex: 202\d instead of \202\d
+            date_lines = re.findall(r'(?:Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)[a-z]*\.?\s+\d{1,2},?\s+202\d[^\n]*', soup.get_text())
+            
+            # If no specific date lines found, try to find a single date
+            if not date_lines:
+                date_lines = [target['title'] + " " + body] # Fallback to search whole text
 
-            for item in date_items:
-                if not item: continue
-                item_text = item.get_text(strip=True)
-                
-                # Parse date from text (e.g., "Friday, May 1, 2026")
-                # Look for Month Day Year
-                date_match = re.search(r'(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)\s+(\d{1,2}),?\s+(\202\d)', item_text)
+            for line in date_lines:
+                date_match = re.search(r'(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)[a-z]*\.?\s+(\d{1,2}),?\s+(202\d)', line)
                 if not date_match: continue
                 
-                event_date = datetime.strptime(f"{date_match.group(1)} {date_match.group(2)} {date_match.group(3)}", "%b %d %Y")
+                # Create standard date
+                dt_obj = datetime.strptime(f"{date_match.group(1)[:3]} {date_match.group(2)} {date_match.group(3)}", "%b %d %Y")
                 
-                # Parse time from THIS SPECIFIC line
-                sh, sm, eh = find_times_strict(item_text)
-                if sh is None: 
-                    # If time isn't in the line, check the general description
-                    sh, sm, eh = find_times_strict(detail_text)
+                # Time detection on that specific line or fallback to body
+                sh, sm, eh = find_times_strict(line)
+                if sh is None: sh, sm, eh = find_times_strict(body)
                 
-                # Build DateTimes
-                if sh is not None:
-                    start_dt = LOCAL_TZ.localize(datetime(event_date.year, event_date.month, event_date.day, sh, sm))
-                    end_dt = LOCAL_TZ.localize(datetime(event_date.year, event_date.month, event_date.day, eh, 0))
-                    if end_dt <= start_dt: end_dt = start_dt + timedelta(hours=3)
-                else:
-                    start_dt = LOCAL_TZ.localize(datetime(event_date.year, event_date.month, event_date.day, 19, 0))
-                    end_dt = start_dt + timedelta(hours=2)
+                # Default to 7pm if none found
+                sh, sm, eh = (sh, sm, eh) if sh is not None else (19, 0, 21)
+                
+                start_dt = LOCAL_TZ.localize(datetime(dt_obj.year, dt_obj.month, dt_obj.day, sh, sm))
+                end_dt = LOCAL_TZ.localize(datetime(dt_obj.year, dt_obj.month, dt_obj.day, eh, 0))
+                if end_dt <= start_dt: end_dt = start_dt + timedelta(hours=3)
 
-                fingerprint = f"{start_dt.strftime('%Y%m%d%H')}_{title_low[:10]}"
+                fingerprint = f"{start_dt.strftime('%Y%m%d%H')}_{target['title'][:10]}"
                 if fingerprint in seen: continue
 
-                genre_tag = detect_genre(data['title'], detail_text)
+                genre = detect_genre(target['title'], body)
                 e = Event()
-                e.name = f"🎵 {genre_tag}{data['title']}"
+                e.name = f"🎵 {genre}{target['title']}"
                 e.begin = start_dt
                 e.end = end_dt
                 e.location = venue_name
-                e.description = f"Venue: {venue_name}\nLink: {data['url']}"
+                e.description = f"Link: {target['url']}"
                 
                 cal.events.add(e)
                 seen.add(fingerprint)
                 count += 1
-                print(f"  [+] Added: {data['title']} on {start_dt.strftime('%b %d @ %I:%M %p')}")
+                print(f"  [+] Added: {target['title']} ({start_dt.strftime('%b %d @ %I:%M%p')})")
 
-        except Exception as e:
-            continue
+        except: continue
 
     with open(OUTPUT_FILE, 'w', encoding='utf-8') as f:
         f.writelines(cal.serialize_iter())
-    print(f"\n✅ SUCCESS: {count} event instances processed.")
+    print(f"\n✅ Done! {count} events saved to {OUTPUT_FILE}")
 
 if __name__ == "__main__":
     main()
