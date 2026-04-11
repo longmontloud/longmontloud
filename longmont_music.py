@@ -12,15 +12,18 @@ HEADERS = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) Chrome/120.0
 LOCAL_TZ = pytz.timezone("America/Denver")
 
 # --- REFINED FILTER LOGIC ---
-# Added even more non-music "clutter" keywords
+# Ensure all these are lowercase for matching
 EXCLUDE = [
     'karaoke', 'open mic', 'trivia', 'bingo', 'workshop', 'class', 'meeting', 'retail',
     'comedy', 'yoga', 'poker', 'drawing', 'craft', 'create club', 'teen', 
-    'storytime', 'book club', 'knitting', 'market', 'board game', 'meditation', 'teacher', 'discussion', 'Ragen', 'networking', 'Discovery Days', 'Uke Jam', 'Your Stage', 'Tangerine', 'Composition'
+    'storytime', 'book club', 'knitting', 'market', 'board game', 'meditation', 
+    'teacher', 'discussion', 'ragen', 'networking', 'discovery days', 'uke jam', 
+    'your stage', 'tangerine', 'composition', 'ballet', 'dance class'
 ]
 MUSIC_KEYWORDS = [
     'music', 'band', 'concert', 'symphony', 'acoustic', 'jazz', 
-    'blues', 'rock', 'singer', 'songwriter', 'orchestra', 'dj', 'rave', 'grunge', 'folk', 'metal', 'punk','hip-hop'
+    'blues', 'rock', 'singer', 'songwriter', 'orchestra', 'dj', 
+    'rave', 'grunge', 'folk', 'metal', 'punk', 'hip-hop', 'live music'
 ]
 TRUSTED_VENUES = ['bricks on main', 'the barn', 'johnsons station']
 
@@ -52,12 +55,8 @@ def parse_downtown():
         for card in soup.select('a.evcard'):
             try:
                 title = card.find(class_=re.compile(r'headline|title')).get_text(strip=True)
-                
-                # FIX: Targeted Venue Extraction
-                # Look for the specific 'venue' class or the 'location' span
                 venue_el = card.find(class_=re.compile(r'venue|location|sub-headline'))
                 venue_name = venue_el.get_text(strip=True) if venue_el else "Downtown Longmont"
-                
                 day = card.find(class_=re.compile(r'day')).get_text(strip=True)
                 mon = card.find(class_=re.compile(r'month')).get_text(strip=True)
                 temp_dt = datetime.strptime(f"{mon} {day}", "%b %d")
@@ -109,22 +108,33 @@ def main():
     for data in raw:
         try:
             t_low = data['title'].lower()
+            v_low = data['venue'].lower()
             
-            # FIX 1: Aggressive Filter
-            if any(x in t_low for x in EXCLUDE): continue
+            # --- THE GAUNTLET: STEP 1 (Hard Exclude) ---
+            # If ANY excluded word is in the title, kill it immediately.
+            if any(x in t_low for x in EXCLUDE):
+                continue
             
-            # Fetch details to check for more music keywords
+            # Fetch details
             res_detail = requests.get(data['url'], headers=HEADERS, timeout=10)
             soup_detail = BeautifulSoup(res_detail.text, 'html.parser')
             detail_text = soup_detail.get_text(separator=" ", strip=True).lower()
 
-            # The "Two-Factor" Check: 
-            # Must be a trusted venue OR have music keywords in title/description
-            is_music = any(v in data['venue'].lower() for v in TRUSTED_VENUES) or \
-                       any(m in t_low for m in MUSIC_KEYWORDS) or \
-                       any(m in detail_text for m in MUSIC_KEYWORDS)
+            # Check excludes in details too
+            if any(x in detail_text for x in EXCLUDE):
+                continue
 
-            if not is_music: continue
+            # --- THE GAUNTLET: STEP 2 (Music Verification) ---
+            # Is it a trusted venue?
+            is_trusted = any(v in v_low for v in TRUSTED_VENUES)
+            # Does it have music keywords?
+            has_music_keywords = any(m in t_low for m in MUSIC_KEYWORDS) or \
+                                any(m in detail_text for m in MUSIC_KEYWORDS)
+
+            # Logic Change: To pass, it MUST have music keywords 
+            # OR be at a trusted venue (but even trusted venues must pass the hard exclude above)
+            if not (is_trusted or has_music_keywords):
+                continue
 
             # Time Logic
             sh, sm, eh = find_times(f"{data['title']} {detail_text}")
@@ -151,7 +161,9 @@ def main():
             seen.add(fingerprint)
             count += 1
             print(f"  [+] Added: {data['title']} @ {data['venue']}")
-        except: continue
+        except Exception as e:
+            # print(f"Error processing event: {e}") # Optional for debugging
+            continue
 
     with open(OUTPUT_FILE, 'w', encoding='utf-8') as f:
         f.writelines(cal.serialize_iter())
