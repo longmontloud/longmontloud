@@ -16,7 +16,7 @@ LOCAL_TZ = pytz.timezone("America/Denver")
 EXCLUDE = [
     'karaoke', 'open mic', 'trivia', 'bingo', 'workshop', 'class', 'meeting', 
     'comedy', 'yoga', 'poker', 'drawing', 'craft', 'create club', 'teen', 
-    'storytime', 'book club', 'knitting', 'market', 'board game', 'meditation', 'teacher', 'discussion', 'ragen', 'networking', 'Discovery Days', 'Uke Jam'
+    'storytime', 'book club', 'knitting', 'market', 'board game', 'meditation', 'teacher', 'discussion', 'Ragen', 'networking', 'Discovery Days', 'Uke Jam', 'Your Stage'
 ]
 MUSIC_KEYWORDS = [
     'music', 'band', 'concert', 'live', 'symphony', 'acoustic', 'jazz', 
