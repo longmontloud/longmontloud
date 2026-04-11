@@ -2,60 +2,20 @@ BEGIN:VCALENDAR
 VERSION:2.0
 PRODID:ics.py - http://git.io/lLljaA
 BEGIN:VEVENT
-DESCRIPTION:Venue: Johnson's Station\nLink: https://www.johnsonsstation.com/calendar/tim-jenny-ostdiek
-DTEND:20260606T020000Z
-LOCATION:Johnson's Station
-DTSTART:20260605T230000Z
-SUMMARY:🎵 Tim & Jenny Ostdiek
-UID:589eac51-05e1-432a-a8b8-1c8154990d2c@589e.org
+DESCRIPTION:Venue: The Barn\nLink: https://www.barnevents.info/events/2024/5/24/dance-party-with-the-rifters
+DTEND:20240525T020000Z
+LOCATION:The Barn
+DTSTART:20240525T010000Z
+SUMMARY:🎵 [Folk/Acoustic] Dance Party with The Rifters
+UID:38211eac-b007-4198-8136-08c2438be3f3@3821.org
 END:VEVENT
 BEGIN:VEVENT
-DESCRIPTION:Venue: Johnson's Station\nLink: https://www.johnsonsstation.com/calendar/delta-sonics
-DTEND:20250721T020000Z
-LOCATION:Johnson's Station
-DTSTART:20250721T020000Z
-SUMMARY:🎵 [Jazz] Delta Sonics
-UID:1816b63b-e6be-4850-b81e-22a45f112162@1816.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Venue: St. Vrain Cidery\nLink: https://www.downtownlongmont.com/do/live-music-at-st-vrain-cidery-philly-in-the-high-ground
-DTEND:20260412T020000Z
-LOCATION:St. Vrain Cidery
-DTSTART:20260411T170000Z
-SUMMARY:🎵 [Folk/Acoustic] Live Music At St. Vrain Cidery - Philly In The High Ground
-UID:99a10b1e-4560-4dc3-b8c9-21f3a70cc9c7@99a1.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Venue: Kuper Wine Bar\nLink: https://www.downtownlongmont.com/do/half-price-bottle-night-and-live-music-1
-DTEND:20260424T020000Z
-LOCATION:Kuper Wine Bar
-DTSTART:20260423T220000Z
-SUMMARY:🎵 Half Price Bottle Night & Live Music
-UID:4d4f4712-d950-42dd-9b73-538dec1bb78e@4d4f.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Venue: Johnson's Station\nLink: https://www.johnsonsstation.com/calendar/david-coile
-DTEND:20260503T020000Z
-LOCATION:Johnson's Station
-DTSTART:20260502T200000Z
-SUMMARY:🎵 David Coile
-UID:f10e9e87-52a2-4501-aa5e-27457ffa1a92@f10e.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Venue: Bricks on Main\nLink: https://www.downtownlongmont.com/do/music-at-bricks-on-main-bandana-a-tribute-to-the-music-of-santana
-DTEND:20260418T020000Z
+DESCRIPTION:Venue: Bricks on Main\nLink: https://www.downtownlongmont.com/do/music-at-bricks-on-main-aimee-lynne
+DTEND:20260424T080000Z
 LOCATION:Bricks on Main
-DTSTART:20260417T230000Z
-SUMMARY:🎵 [Rock] Music at Bricks on Main "Bandana" - A Tribute to the Music of Santana
-UID:48118492-c2ca-48cb-aed4-f6e4fba2b203@4811.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Venue: Johnson's Station\nLink: https://www.johnsonsstation.com/calendar/zizania-2
-DTEND:20260621T020000Z
-LOCATION:Johnson's Station
-DTSTART:20260621T020000Z
-SUMMARY:🎵 Zizania
-UID:f6883f91-d5b9-4183-a1f8-5411d28aa096@f688.org
+DTSTART:20260424T050000Z
+SUMMARY:🎵 [Jazz] Music at Bricks on Main "Aimee Lynne"
+UID:73a8ce1e-c707-476f-9ac3-7e54b9ef0012@73a8.org
 END:VEVENT
 BEGIN:VEVENT
 DESCRIPTION:Venue: Kuper Wine Bar\nLink: https://www.downtownlongmont.com/do/half-price-bottle-night-and-live-music-1
@@ -63,7 +23,7 @@ DTEND:20260417T020000Z
 LOCATION:Kuper Wine Bar
 DTSTART:20260416T220000Z
 SUMMARY:🎵 Half Price Bottle Night & Live Music
-UID:71f400b8-ab8d-4087-a6d7-abddf349fafd@71f4.org
+UID:0b12a215-88b3-41e1-96c9-d44b0c93a3c3@0b12.org
 END:VEVENT
 BEGIN:VEVENT
 DESCRIPTION:Venue: Johnson's Station\nLink: https://www.johnsonsstation.com/calendar/paloma-rose-1
@@ -71,303 +31,23 @@ DTEND:20260815T020000Z
 LOCATION:Johnson's Station
 DTSTART:20260814T200000Z
 SUMMARY:🎵 Paloma Rose
-UID:bd58c7d9-ef1e-4a33-8dd1-4fc3e94fc06d@bd58.org
+UID:e5b3ae20-f193-4cd3-95d7-35afcbb37716@e5b3.org
 END:VEVENT
 BEGIN:VEVENT
-DESCRIPTION:Venue: Butterscotch Studios\nLink: https://www.downtownlongmont.com/do/monthly-irish-jam-session
-DTEND:20260421T020000Z
-LOCATION:Butterscotch Studios
-DTSTART:20260421T020000Z
-SUMMARY:🎵 Monthly Irish Jam Session
-UID:ce0ef1ea-8e6a-447d-9816-bee44a2dec1a@ce0e.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Venue: 300 Suns Brewing\nLink: https://www.downtownlongmont.com/do/parchment-doll-live-music
-DTEND:20260412T020000Z
-LOCATION:300 Suns Brewing
-DTSTART:20260411T170000Z
-SUMMARY:🎵 [Folk/Acoustic] Parchment Doll - Live Music
-UID:8c769aca-b2c2-4002-a9f3-2c9a52da6727@8c76.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Venue: Johnson's Station\nLink: https://www.johnsonsstation.com/calendar/many-mountains
-DTEND:20251019T020000Z
+DESCRIPTION:Venue: Johnson's Station\nLink: https://www.johnsonsstation.com/calendar/jack-hadley-indoor-29pbs-ah986
+DTEND:20260823T070000Z
 LOCATION:Johnson's Station
-DTSTART:20251019T000000Z
-SUMMARY:🎵 [Rock] Many Mountains
-UID:5f0c1911-f98b-463c-981e-4786da19668f@5f0c.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:⚠️ Time not confirmed.\n\nVenue: The Barn\nLink: https://www.barnevents.info/events/2017/1/19/moors-mccumber
-DTEND:20230320T030000Z
-LOCATION:The Barn
-DTSTART:20230320T010000Z
-SUMMARY:🎵 [Rock] Moors & McCumber: Saint Patrick's Day Concerts\, Two Shows!
-UID:7dc05d3f-5ba9-47b0-abbb-1d507c1a3159@7dc0.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Venue: Johnson's Station\nLink: https://www.johnsonsstation.com/calendar/mad-dog
-DTEND:20260705T020000Z
-LOCATION:Johnson's Station
-DTSTART:20260704T220000Z
-SUMMARY:🎵 Mad Dog
-UID:cd1858b1-ac90-42bc-b382-3a14f68bbe0c@cd18.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Venue: Johnson's Station\nLink: https://www.johnsonsstation.com/calendar/gypsywould
-DTEND:20260613T020000Z
-LOCATION:Johnson's Station
-DTSTART:20260612T060000Z
-SUMMARY:🎵 GypsyWould
-UID:cb3ce447-5c1b-4ac6-8cdf-a5e381fc545b@cb3c.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Venue: The Passenger\nLink: https://www.downtownlongmont.com/do/longmont-all-star-jazz-band-free-performance-1
-DTEND:20260419T020000Z
-LOCATION:The Passenger
-DTSTART:20260419T000000Z
-SUMMARY:🎵 [Jazz] Longmont All Star Jazz Band Free Performance!
-UID:10d65424-131d-44f8-bbb0-a0533e0dc61e@10d6.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:⚠️ Time not confirmed.\n\nVenue: The Barn\nLink: https://www.barnevents.info/events/2023/8/13/shanna-nd7z2-pgby7
-DTEND:20241116T040000Z
-LOCATION:The Barn
-DTSTART:20241116T020000Z
-SUMMARY:🎵 Shanna in a Dress
-UID:275ebe59-7170-4bd7-bbd0-fc2b69d986f4@275e.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Venue: Johnson's Station\nLink: https://www.johnsonsstation.com/calendar/jack-hadley-indoor-29pbs
-DTEND:20260607T020000Z
-LOCATION:Johnson's Station
-DTSTART:20260607T000000Z
-SUMMARY:🎵 Jack Hadley
-UID:af3fb33b-b693-48ec-8671-80df902032e4@af3f.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Venue: Bricks on Main\nLink: https://www.downtownlongmont.com/do/music-at-bricks-on-main-random-pockets
-DTEND:20260412T020000Z
-LOCATION:Bricks on Main
-DTSTART:20260411T170000Z
-SUMMARY:🎵 [Jazz] Music at Bricks on Main "Random Pockets"
-UID:adf04ada-48a2-4e18-8068-0bf1d0195db8@adf0.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Venue: Bricks on Main\nLink: https://www.downtownlongmont.com/do/music-at-bricks-on-main-asteria-jazz-collective-6
-DTEND:20260420T020000Z
-LOCATION:Bricks on Main
-DTSTART:20260420T010000Z
-SUMMARY:🎵 [Jazz] Music at Bricks on Main "Asteria Jazz Collective"
-UID:dbad8b9e-b17e-45f2-8bf2-f5c9b73edd8a@dbad.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Venue: The Times Collaborative / 338 Main St\nLink: https://www.downtownlongmont.com/do/soundpost-sessions-local-spotlight-sturtz-w-and-holly-lovell
-DTEND:20260417T020000Z
-LOCATION:The Times Collaborative / 338 Main St
-DTSTART:20260416T220000Z
-SUMMARY:🎵 [Rock] Soundpost Sessions LOCAL SPOTLIGHT: Sturtz w/ Holly Lovell
-UID:f6688df6-f1ec-4553-a88b-8ed8140a4b63@f668.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Venue: The Barn\nLink: https://www.barnevents.info/events/2023/8/13/shanna-nd7z2
-DTEND:20231120T060000Z
-LOCATION:The Barn
-DTSTART:20231120T030000Z
-SUMMARY:🎵 [Folk/Acoustic] Shanna in a Dress (Copy)
-UID:0a22087a-cb67-4645-beea-0c3ee5e316ae@0a22.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Venue: The Barn\nLink: https://www.barnevents.info/events/2023/8/13/shanna
-DTEND:20230812T050000Z
-LOCATION:The Barn
-DTSTART:20230812T020000Z
-SUMMARY:🎵 [Folk/Acoustic] Shanna in a Dress
-UID:07f2810a-289a-4f57-b69c-eaaa0c8d9b4d@07f2.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Venue: Johnson's Station\nLink: https://www.johnsonsstation.com/calendar/jack-hadley-indoor
-DTEND:20260419T020000Z
-LOCATION:Johnson's Station
-DTSTART:20260419T000000Z
-SUMMARY:🎵 Jack Hadley
-UID:0533c914-2273-4c04-87dd-9c9d532ee1ff@0533.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Venue: Johnson's Station\nLink: https://www.johnsonsstation.com/calendar/recline
-DTEND:20260614T020000Z
-LOCATION:Johnson's Station
-DTSTART:20260613T190000Z
-SUMMARY:🎵 ReCline
-UID:98618bb0-4f8d-4d08-8338-7155ae22bfc7@9861.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Venue: Johnson's Station\nLink: https://www.johnsonsstation.com/calendar/jack-hadley-indoor-29pbs-ah986-rh72h
-DTEND:20260906T020000Z
-LOCATION:Johnson's Station
-DTSTART:20260905T230000Z
+DTSTART:20260823T040000Z
 SUMMARY:🎵 [Jazz] Jack Hadley
-UID:d721b6a2-ea58-4cf4-a6d9-78e39156388d@d721.org
+UID:c85600a9-c84f-40c3-9701-ecf26fff8cfe@c856.org
 END:VEVENT
 BEGIN:VEVENT
-DESCRIPTION:Venue: Bricks on Main\nLink: https://www.downtownlongmont.com/do/music-at-bricks-on-main-foxfeather-full-band
-DTEND:20260503T020000Z
-LOCATION:Bricks on Main
-DTSTART:20260502T200000Z
-SUMMARY:🎵 [Rock] Music at Bricks on Main "Foxfeather Full Band"
-UID:818a69f9-0d6f-465d-8c0b-d0720fb8552e@818a.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:⚠️ Time not confirmed.\n\nVenue: The Barn\nLink: https://www.barnevents.info/events/2023/8/13/shanna-nd7z2-pgby7-ee5zy
-DTEND:20260309T030000Z
-LOCATION:The Barn
-DTSTART:20260309T010000Z
-SUMMARY:🎵 Shanna in a Dress
-UID:60888848-4b45-4372-a150-8d756ec54a1b@6088.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Venue: The Barn\nLink: https://www.barnevents.info/events/2024/5/24/dance-party-with-the-rifters
-DTEND:20240525T020000Z
-LOCATION:The Barn
-DTSTART:20240525T010000Z
-SUMMARY:🎵 [Folk/Acoustic] Dance Party with The Rifters
-UID:11b22311-60d5-4c6c-b38d-bfa7a22e0b91@11b2.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Venue: Johnson's Station\nLink: https://www.johnsonsstation.com/calendar/james-barela
-DTEND:20260801T010000Z
-LOCATION:Johnson's Station
-DTSTART:20260801T010000Z
-SUMMARY:🎵 James Barela & Blu7
-UID:1717ca06-eeea-4a12-b4f6-b2143d6cf2cd@1717.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Venue: Kuper Wine Bar\nLink: https://www.downtownlongmont.com/do/half-price-bottle-night-and-live-music-1
-DTEND:20260501T020000Z
-LOCATION:Kuper Wine Bar
-DTSTART:20260430T220000Z
-SUMMARY:🎵 Half Price Bottle Night & Live Music
-UID:d13aff94-4d1b-4277-9262-95a2acd2f540@d13a.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Venue: Johnson's Station\nLink: https://www.johnsonsstation.com/calendar/the-thistle-tones
-DTEND:20251005T020000Z
-LOCATION:Johnson's Station
-DTSTART:20251004T220000Z
-SUMMARY:🎵 [Jazz] The Thistle Tones
-UID:b6ec048e-e393-4d1a-8021-4078a68184fb@b6ec.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Venue: Johnson's Station\nLink: https://www.johnsonsstation.com/calendar/grable-howie
-DTEND:20250921T020000Z
-LOCATION:Johnson's Station
-DTSTART:20250921T020000Z
-SUMMARY:🎵 [Folk/Acoustic] Grable Howie
-UID:f8e0cf61-c107-4418-8d17-39e1696a5a31@f8e0.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Venue: Johnson's Station\nLink: https://www.johnsonsstation.com/calendar/dr-jim-seeley
-DTEND:20260620T020000Z
-LOCATION:Johnson's Station
-DTSTART:20260620T010000Z
-SUMMARY:🎵 Dr Jim Seeley & Michelle
-UID:4789db2b-8253-445f-ac52-c2c102a74f45@4789.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Venue: The Barn\nLink: https://www.barnevents.info/events/2026/7/17/songs-stories-and-art-lessons-from-strangersa-visual-folk-concert-by-john-john-brown
-DTEND:20260717T230000Z
-LOCATION:The Barn
-DTSTART:20260717T200000Z
-SUMMARY:🎵 [Folk/Acoustic] Songs\, Stories\, and Art: Lessons from Strangers—A Visual Folk Concert by John John Brown
-UID:4c945667-2d4c-498d-834b-1c621babc97c@4c94.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Venue: Downtown Longmont\nLink: https://www.downtownlongmont.com/do/vintage-vibes-elevated-lives-first-annual-fundraiser-and-fashion-show
+DESCRIPTION:Venue: St. Vrain Cidery\nLink: https://www.downtownlongmont.com/do/live-music-at-st-vrain-cidery-philly-in-the-high-ground
 DTEND:20260412T020000Z
-LOCATION:Downtown Longmont
+LOCATION:St. Vrain Cidery
 DTSTART:20260411T170000Z
-SUMMARY:🎵 Vintage Vibes - Elevated Lives First Annual Fundraiser and Fashion Show
-UID:a4cf650d-f132-4bc2-aa49-82e1364ec22b@a4cf.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Venue: Johnson's Station\nLink: https://www.johnsonsstation.com/calendar/alex-nikiforoff
-DTEND:20260404T020000Z
-LOCATION:Johnson's Station
-DTSTART:20260403T210000Z
-SUMMARY:🎵 Alex Nikiforoff
-UID:5333373a-5138-4191-a8b1-d5b66a06dad5@5333.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Venue: Bricks on Main\nLink: https://www.downtownlongmont.com/do/music-at-bricks-on-main-los-cheesies
-DTEND:20260419T020000Z
-LOCATION:Bricks on Main
-DTSTART:20260419T000000Z
-SUMMARY:🎵 Music at Bricks on Main "Los Cheesies"
-UID:456a1348-dd09-448f-9386-d04bdb070ea6@456a.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Venue: Longmont Symphony Orchestra\nLink: https://www.downtownlongmont.com/do/lso-concert-pops-concert-best-of-broadway
-DTEND:20260503T020000Z
-LOCATION:Longmont Symphony Orchestra
-DTSTART:20260502T200000Z
-SUMMARY:🎵 LSO Concert Pops Concert: Best of Broadway
-UID:af63bfbd-42a6-4d46-9812-e005e3246470@af63.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Venue: Johnson's Station\nLink: https://www.johnsonsstation.com/calendar/delta-sonics-4ktn8
-DTEND:20250915T020000Z
-LOCATION:Johnson's Station
-DTSTART:20250914T200000Z
-SUMMARY:🎵 [Jazz] Delta Sonics
-UID:a079609f-8946-475a-aad2-b4162d347353@a079.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Venue: Johnson's Station\nLink: https://www.johnsonsstation.com/calendar/scott-von
-DTEND:20250908T020000Z
-LOCATION:Johnson's Station
-DTSTART:20250908T010000Z
-SUMMARY:🎵 [Folk/Acoustic] Scott Von
-UID:86ab84d8-93da-4801-b787-1f360366a7f5@86ab.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Venue: Johnson's Station\nLink: https://www.johnsonsstation.com/calendar/domi-edson-trio
-DTEND:20250818T020000Z
-LOCATION:Johnson's Station
-DTSTART:20250817T230000Z
-SUMMARY:🎵 [Jazz] Domi Edson Trio
-UID:f1e6b1d7-127c-452c-a1c2-5e73efc07b2d@f1e6.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Venue: The Passenger\nLink: https://www.downtownlongmont.com/do/longmont-all-star-jazz-band-free-performance
-DTEND:20260503T020000Z
-LOCATION:The Passenger
-DTSTART:20260502T200000Z
-SUMMARY:🎵 [Jazz] Longmont All Star Jazz Band Free Performance!
-UID:8671a3b5-05a0-42cd-8fef-b2a62221a8b1@8671.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Venue: Johnson's Station\nLink: https://www.johnsonsstation.com/calendar/lookin-for-louie
-DTEND:20260718T020000Z
-LOCATION:Johnson's Station
-DTSTART:20260717T230000Z
-SUMMARY:🎵 Lookin' for Louie
-UID:beb7a675-ad4b-4c93-9a90-5e5104024e30@beb7.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Venue: Johnson's Station\nLink: https://www.johnsonsstation.com/calendar/dave-honig
-DTEND:20250714T020000Z
-LOCATION:Johnson's Station
-DTSTART:20250713T190000Z
-SUMMARY:🎵 [Jazz] Dave Honig
-UID:18350a0d-c2e9-46cd-8d20-5deaaa0da7e9@1835.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Venue: Johnson's Station\nLink: https://www.johnsonsstation.com/calendar/zizania-1
-DTEND:20260412T020000Z
-LOCATION:Johnson's Station
-DTSTART:20260411T170000Z
-SUMMARY:🎵 Zizania
-UID:93967b08-ca76-4f2a-bcf4-33f309415912@9396.org
+SUMMARY:🎵 [Folk/Acoustic] Live Music At St. Vrain Cidery - Philly In The High Ground
+UID:e642d048-0af0-4fb9-b6f6-98fd3921946c@e642.org
 END:VEVENT
 BEGIN:VEVENT
 DESCRIPTION:Venue: Vintology\nLink: https://www.downtownlongmont.com/do/an-evening-with-daisy-dog-press-hosted-by-authors-and-musicians-gregory-hill-and-zach-boddicker
@@ -375,71 +55,47 @@ DTEND:20260419T020000Z
 LOCATION:Vintology
 DTSTART:20260419T000000Z
 SUMMARY:🎵 [Blues] AN EVENING WITH DAISY DOG PRESS - hosted by authors/musicians Gregory Hill and Zach Boddicker
-UID:121eb8e0-46b5-42f4-b064-12806ece6dae@121e.org
+UID:717d91b3-4596-4200-b0c5-85f3bb085601@717d.org
 END:VEVENT
 BEGIN:VEVENT
-DESCRIPTION:Venue: Bricks on Main\nLink: https://www.downtownlongmont.com/do/music-at-bricks-on-main-sabotage
-DTEND:20260502T020000Z
-LOCATION:Bricks on Main
-DTSTART:20260501T190000Z
-SUMMARY:🎵 [Rock] Music at Bricks on Main "Sabotage"
-UID:d05d8fd6-760c-45d0-8d00-617a136e6c38@d05d.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Venue: Johnson's Station\nLink: https://www.johnsonsstation.com/calendar/jules-fern
-DTEND:20250720T020000Z
-LOCATION:Johnson's Station
-DTSTART:20250720T010000Z
-SUMMARY:🎵 Jules Fern
-UID:49ca94de-6ba4-4e4d-aa02-90a5e430a783@49ca.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Venue: Johnson's Station\nLink: https://www.johnsonsstation.com/calendar/dr-jim-seely
-DTEND:20250914T020000Z
-LOCATION:Johnson's Station
-DTSTART:20250913T190000Z
-SUMMARY:🎵 [Rock] Dr Jim Seely
-UID:65c19f19-4c63-43ab-a803-805d0a95abd3@65c1.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Venue: Johnson's Station\nLink: https://www.johnsonsstation.com/calendar/dougs-garage
-DTEND:20260712T020000Z
-LOCATION:Johnson's Station
-DTSTART:20260711T170000Z
-SUMMARY:🎵 Doug's Garage
-UID:f94ed1f6-e502-4dfa-95d4-01fb602172e1@f94e.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Venue: 300 Suns Brewing\nLink: https://www.downtownlongmont.com/do/great-american-nowhere-duo-live-music
+DESCRIPTION:Venue: Bricks on Main\nLink: https://www.downtownlongmont.com/do/music-at-bricks-on-main-foxfeather-full-band
 DTEND:20260503T020000Z
-LOCATION:300 Suns Brewing
+LOCATION:Bricks on Main
 DTSTART:20260502T200000Z
-SUMMARY:🎵 [Country] Great American Nowhere Duo - Live Music
-UID:2919a655-836a-4113-9b9a-798c509d4366@2919.org
+SUMMARY:🎵 [Rock] Music at Bricks on Main "Foxfeather Full Band"
+UID:07474719-6674-4e4a-8a19-eebfc1d30d0c@0747.org
 END:VEVENT
 BEGIN:VEVENT
-DESCRIPTION:Venue: Johnson's Station\nLink: https://www.johnsonsstation.com/calendar/jules-fern-1
-DTEND:20260809T020000Z
+DESCRIPTION:Venue: Johnson's Station\nLink: https://www.johnsonsstation.com/calendar/alex-nikiforoff
+DTEND:20260404T020000Z
 LOCATION:Johnson's Station
-DTSTART:20260809T020000Z
-SUMMARY:🎵 Jules Fern
-UID:19161a9f-e221-4520-be09-001738eceb9a@1916.org
+DTSTART:20260403T210000Z
+SUMMARY:🎵 Alex Nikiforoff
+UID:9acc85a1-a588-4b28-9e88-d40caab18009@9acc.org
 END:VEVENT
 BEGIN:VEVENT
-DESCRIPTION:Venue: Johnson's Station\nLink: https://www.johnsonsstation.com/calendar/barn-ghost
-DTEND:20260816T020000Z
+DESCRIPTION:Venue: Kuper Wine Bar\nLink: https://www.downtownlongmont.com/do/half-price-bottle-night-and-live-music-1
+DTEND:20260501T020000Z
+LOCATION:Kuper Wine Bar
+DTSTART:20260430T220000Z
+SUMMARY:🎵 Half Price Bottle Night & Live Music
+UID:ba4c66d5-b25c-439e-b554-32ec45a88628@ba4c.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Venue: Johnson's Station\nLink: https://www.johnsonsstation.com/calendar/gypsywould
+DTEND:20260613T020000Z
 LOCATION:Johnson's Station
-DTSTART:20260815T210000Z
-SUMMARY:🎵 Barn Ghost
-UID:263e4142-ffad-4024-a4f7-4cea832da6f4@263e.org
+DTSTART:20260612T060000Z
+SUMMARY:🎵 GypsyWould
+UID:cb044a50-b11c-4fbb-a91e-9dd2fd63e3e2@cb04.org
 END:VEVENT
 BEGIN:VEVENT
-DESCRIPTION:Venue: Abbott & Wallace Distilling\nLink: https://www.downtownlongmont.com/do/first-friday-with-mojazz
-DTEND:20260502T020000Z
-LOCATION:Abbott & Wallace Distilling
-DTSTART:20260501T190000Z
-SUMMARY:🎵 [Jazz] First Friday with Mojazz
-UID:6a42f85a-95c9-40f4-8466-a54d432a3f5d@6a42.org
+DESCRIPTION:Venue: Johnson's Station\nLink: https://www.johnsonsstation.com/calendar/scott-von
+DTEND:20250908T020000Z
+LOCATION:Johnson's Station
+DTSTART:20250908T010000Z
+SUMMARY:🎵 [Folk/Acoustic] Scott Von
+UID:05739ca7-f1c0-440d-b645-4189ab5949c4@0573.org
 END:VEVENT
 BEGIN:VEVENT
 DESCRIPTION:Venue: Johnson's Station\nLink: https://www.johnsonsstation.com/calendar/laurie-lorrie
@@ -447,6 +103,470 @@ DTEND:20260704T020000Z
 LOCATION:Johnson's Station
 DTSTART:20260703T210000Z
 SUMMARY:🎵 Laurie & Lorrie
-UID:61383b9f-7d0f-4817-bb9d-19acac67b9b4@6138.org
+UID:3a422156-2fd7-44f2-bc43-f3809d26b41a@3a42.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Venue: Johnson's Station\nLink: https://www.johnsonsstation.com/calendar/delta-sonics
+DTEND:20250721T050000Z
+LOCATION:Johnson's Station
+DTSTART:20250721T020000Z
+SUMMARY:🎵 [Jazz] Delta Sonics
+UID:a8d46b09-0c50-456d-a29f-0b76af396fdf@a8d4.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Venue: Johnson's Station\nLink: https://www.johnsonsstation.com/calendar/dave-honig
+DTEND:20250714T020000Z
+LOCATION:Johnson's Station
+DTSTART:20250713T190000Z
+SUMMARY:🎵 [Jazz] Dave Honig
+UID:183d7233-f4d7-4120-ad8c-f174e5ed7360@183d.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Venue: Johnson's Station\nLink: https://www.johnsonsstation.com/calendar/dr-jim-seely
+DTEND:20250914T020000Z
+LOCATION:Johnson's Station
+DTSTART:20250913T190000Z
+SUMMARY:🎵 [Rock] Dr Jim Seely
+UID:70ea1441-9450-4025-9035-7bac846c395b@70ea.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Venue: The Barn\nLink: https://www.barnevents.info/events/2026/7/17/songs-stories-and-art-lessons-from-strangersa-visual-folk-concert-by-john-john-brown
+DTEND:20260717T230000Z
+LOCATION:The Barn
+DTSTART:20260717T200000Z
+SUMMARY:🎵 [Folk/Acoustic] Songs\, Stories\, and Art: Lessons from Strangers—A Visual Folk Concert by John John Brown
+UID:adc786fd-c05b-4261-addf-bd0e72f229a6@adc7.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Venue: Bricks on Main\nLink: https://www.downtownlongmont.com/do/music-at-bricks-on-main-los-cheesies
+DTEND:20260419T020000Z
+LOCATION:Bricks on Main
+DTSTART:20260419T000000Z
+SUMMARY:🎵 Music at Bricks on Main "Los Cheesies"
+UID:3b87c8f5-3ea8-468f-96f2-8226e0227e3f@3b87.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Venue: The Barn\nLink: https://www.barnevents.info/events/2025/6/27/sugar-britches
+DTEND:20260530T050000Z
+LOCATION:The Barn
+DTSTART:20260530T020000Z
+SUMMARY:🎵 [Rock] Sugar Britches
+UID:5d35a5ee-0c44-4269-ad19-263e57f6d626@5d35.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Venue: Johnson's Station\nLink: https://www.johnsonsstation.com/calendar/the-krueger-brothers
+DTEND:20260322T060000Z
+LOCATION:Johnson's Station
+DTSTART:20260322T030000Z
+SUMMARY:🎵 The Krueger Brothers
+UID:57c8a034-2ec2-4510-af36-52ceded596e8@57c8.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Venue: Johnson's Station\nLink: https://www.johnsonsstation.com/calendar/the-thistle-tones-1
+DTEND:20260524T080000Z
+LOCATION:Johnson's Station
+DTSTART:20260524T050000Z
+SUMMARY:🎵 The Thistle Tones
+UID:05cc442b-1702-40c4-95e2-2852a42470f5@05cc.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Venue: Johnson's Station\nLink: https://www.johnsonsstation.com/calendar/grable-howie
+DTEND:20250921T050000Z
+LOCATION:Johnson's Station
+DTSTART:20250921T020000Z
+SUMMARY:🎵 [Folk/Acoustic] Grable Howie
+UID:a0a76ac7-383d-4c38-afc7-1761c851cc94@a0a7.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Venue: Johnson's Station\nLink: https://www.johnsonsstation.com/calendar/delta-sonics-4ktn8
+DTEND:20250915T020000Z
+LOCATION:Johnson's Station
+DTSTART:20250914T200000Z
+SUMMARY:🎵 [Jazz] Delta Sonics
+UID:a16d7a8f-2752-4716-87c7-a51b73272fe1@a16d.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Venue: 300 Suns Brewing\nLink: https://www.downtownlongmont.com/do/parchment-doll-live-music
+DTEND:20260412T020000Z
+LOCATION:300 Suns Brewing
+DTSTART:20260411T170000Z
+SUMMARY:🎵 [Folk/Acoustic] Parchment Doll - Live Music
+UID:7738a534-f4ec-4147-9dc0-f9b71a7dc1e2@7738.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Venue: Johnson's Station\nLink: https://www.johnsonsstation.com/calendar/davy-allard-the-silverwave-band
+DTEND:20250811T070000Z
+LOCATION:Johnson's Station
+DTSTART:20250811T040000Z
+SUMMARY:🎵 [Jazz] Davy Allard & the SilverWave Band
+UID:f4232eee-92de-4ee9-9615-6a316e74671d@f423.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Venue: 300 Suns Brewing\nLink: https://www.downtownlongmont.com/do/great-american-nowhere-duo-live-music
+DTEND:20260503T020000Z
+LOCATION:300 Suns Brewing
+DTSTART:20260502T200000Z
+SUMMARY:🎵 [Country] Great American Nowhere Duo - Live Music
+UID:27e7fdec-9619-4e43-9701-e0fcfa181299@27e7.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Venue: Johnson's Station\nLink: https://www.johnsonsstation.com/calendar/dougs-garage
+DTEND:20260712T020000Z
+LOCATION:Johnson's Station
+DTSTART:20260711T170000Z
+SUMMARY:🎵 Doug's Garage
+UID:ff623be0-099a-4116-bf05-55ceae214bd0@ff62.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Venue: Johnson's Station\nLink: https://www.johnsonsstation.com/calendar/jack-hadley-indoor-29pbs-ah986-rh72h
+DTEND:20260906T020000Z
+LOCATION:Johnson's Station
+DTSTART:20260905T230000Z
+SUMMARY:🎵 [Jazz] Jack Hadley
+UID:21bdc411-da4d-49bc-8e38-aaafb911f7b8@21bd.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Venue: Johnson's Station\nLink: https://www.johnsonsstation.com/calendar/barn-ghost
+DTEND:20260816T020000Z
+LOCATION:Johnson's Station
+DTSTART:20260815T210000Z
+SUMMARY:🎵 Barn Ghost
+UID:dc0bba7f-7a18-41a2-9b5c-aa3b4af6b841@dc0b.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Venue: Bricks on Main\nLink: https://www.downtownlongmont.com/do/music-at-bricks-on-main-bandana-a-tribute-to-the-music-of-santana
+DTEND:20260418T020000Z
+LOCATION:Bricks on Main
+DTSTART:20260417T230000Z
+SUMMARY:🎵 [Rock] Music at Bricks on Main "Bandana" - A Tribute to the Music of Santana
+UID:b54c0aae-99af-400a-aceb-75d9207e261d@b54c.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:⚠️ Time not confirmed.\n\nVenue: The Barn\nLink: https://www.barnevents.info/events/2023/8/13/shanna-nd7z2-pgby7-ee5zy
+DTEND:20260309T030000Z
+LOCATION:The Barn
+DTSTART:20260309T010000Z
+SUMMARY:🎵 Shanna in a Dress
+UID:afed2e08-dd55-4c7e-a232-a7bd52036f9f@afed.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Venue: Johnson's Station\nLink: https://www.johnsonsstation.com/calendar/zizania-2
+DTEND:20260621T050000Z
+LOCATION:Johnson's Station
+DTSTART:20260621T020000Z
+SUMMARY:🎵 Zizania
+UID:67a5b5b6-ce1b-4e7b-9bb9-64b39d5f4731@67a5.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Venue: Abbott & Wallace Distilling\nLink: https://www.downtownlongmont.com/do/first-friday-with-mojazz
+DTEND:20260502T020000Z
+LOCATION:Abbott & Wallace Distilling
+DTSTART:20260501T190000Z
+SUMMARY:🎵 [Jazz] First Friday with Mojazz
+UID:9214dc32-ea6f-40d6-bdc8-5d6a1561ad6b@9214.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Venue: Johnson's Station\nLink: https://www.johnsonsstation.com/calendar/james-barela
+DTEND:20260801T040000Z
+LOCATION:Johnson's Station
+DTSTART:20260801T010000Z
+SUMMARY:🎵 James Barela & Blu7
+UID:34965216-0244-4bb6-8574-e7720fd1c289@3496.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Venue: Johnson's Station\nLink: https://www.johnsonsstation.com/calendar/zizania-1
+DTEND:20260412T020000Z
+LOCATION:Johnson's Station
+DTSTART:20260411T170000Z
+SUMMARY:🎵 Zizania
+UID:a6a13c3e-b00d-423b-b03d-5bdbc0223ce1@a6a1.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Venue: Bricks on Main\nLink: https://www.downtownlongmont.com/do/music-at-bricks-on-main-asteria-jazz-collective-6
+DTEND:20260420T020000Z
+LOCATION:Bricks on Main
+DTSTART:20260420T010000Z
+SUMMARY:🎵 [Jazz] Music at Bricks on Main "Asteria Jazz Collective"
+UID:abb8f21f-0a5f-4230-b295-4e5c293e946f@abb8.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Venue: Johnson's Station\nLink: https://www.johnsonsstation.com/calendar/lookin-for-louie
+DTEND:20260718T020000Z
+LOCATION:Johnson's Station
+DTSTART:20260717T230000Z
+SUMMARY:🎵 Lookin' for Louie
+UID:bf8974f3-e078-4e23-a4e4-edec32dd3867@bf89.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Venue: Johnson's Station\nLink: https://www.johnsonsstation.com/calendar/david-honig
+DTEND:20260510T060000Z
+LOCATION:Johnson's Station
+DTSTART:20260510T030000Z
+SUMMARY:🎵 David Honig
+UID:cf971c81-870e-4e4b-824d-c9c340702506@cf97.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Venue: Johnson's Station\nLink: https://www.johnsonsstation.com/calendar/mango-moondog
+DTEND:20250922T060000Z
+LOCATION:Johnson's Station
+DTSTART:20250922T030000Z
+SUMMARY:🎵 [Rock] Mango Moondog
+UID:31993c8f-3914-427c-93d1-bdea72caa66f@3199.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Venue: Butterscotch Studios\nLink: https://www.downtownlongmont.com/do/group-open-sing-for-women-and-non-binary-folks-of-all-ages-3
+DTEND:20260422T060000Z
+LOCATION:Butterscotch Studios
+DTSTART:20260422T030000Z
+SUMMARY:🎵 Group Open Sing for Women and Non-Binary Folks of All Ages
+UID:6eeb1a17-7476-4005-8bda-7cf7f15ec2ab@6eeb.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Venue: Johnson's Station\nLink: https://www.johnsonsstation.com/calendar/tim-jenny-ostdiek
+DTEND:20260606T020000Z
+LOCATION:Johnson's Station
+DTSTART:20260605T230000Z
+SUMMARY:🎵 Tim & Jenny Ostdiek
+UID:14cd3ff4-9025-464c-834c-78ef2f09dbbb@14cd.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Venue: Johnson's Station\nLink: https://www.johnsonsstation.com/calendar/recline
+DTEND:20260614T020000Z
+LOCATION:Johnson's Station
+DTSTART:20260613T190000Z
+SUMMARY:🎵 ReCline
+UID:6d75a079-093d-4a45-a6db-2e61704d650d@6d75.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Venue: Johnson's Station\nLink: https://www.johnsonsstation.com/calendar/jules-fern-1
+DTEND:20260809T050000Z
+LOCATION:Johnson's Station
+DTSTART:20260809T020000Z
+SUMMARY:🎵 Jules Fern
+UID:8770a899-925f-4321-bee9-581d32cdbc37@8770.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Venue: Johnson's Station\nLink: https://www.johnsonsstation.com/calendar/jules-fern
+DTEND:20250720T020000Z
+LOCATION:Johnson's Station
+DTSTART:20250720T010000Z
+SUMMARY:🎵 Jules Fern
+UID:a122f162-0db6-45fe-80b1-f026a21f816f@a122.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Venue: Longmont Symphony Orchestra\nLink: https://www.downtownlongmont.com/do/lso-concert-pops-concert-best-of-broadway
+DTEND:20260503T020000Z
+LOCATION:Longmont Symphony Orchestra
+DTSTART:20260502T200000Z
+SUMMARY:🎵 LSO Concert Pops Concert: Best of Broadway
+UID:616a9aa0-e154-4ac0-aeeb-64fb3a171543@616a.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Venue: Kuper Wine Bar\nLink: https://www.downtownlongmont.com/do/half-price-bottle-night-and-live-music-1
+DTEND:20260424T020000Z
+LOCATION:Kuper Wine Bar
+DTSTART:20260423T220000Z
+SUMMARY:🎵 Half Price Bottle Night & Live Music
+UID:cc3ef5ce-b21a-4615-8556-9ed3bbd91aa4@cc3e.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Venue: The Barn\nLink: https://www.barnevents.info/events/2023/8/13/shanna-nd7z2
+DTEND:20231120T060000Z
+LOCATION:The Barn
+DTSTART:20231120T030000Z
+SUMMARY:🎵 [Folk/Acoustic] Shanna in a Dress (Copy)
+UID:d94329ba-e0b4-460f-97b8-edc76dc4926a@d943.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Venue: Bricks on Main\nLink: https://www.downtownlongmont.com/do/music-at-bricks-on-main-random-pockets
+DTEND:20260412T020000Z
+LOCATION:Bricks on Main
+DTSTART:20260411T170000Z
+SUMMARY:🎵 [Jazz] Music at Bricks on Main "Random Pockets"
+UID:f6c5f74d-72bd-486f-8056-7c9120a19c68@f6c5.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Venue: Johnson's Station\nLink: https://www.johnsonsstation.com/calendar/jack-hadley-indoor-29pbs
+DTEND:20260607T020000Z
+LOCATION:Johnson's Station
+DTSTART:20260607T000000Z
+SUMMARY:🎵 Jack Hadley
+UID:56b94bf7-34c5-4a8a-ba4b-541f6ac49ac1@56b9.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Venue: The Barn\nLink: https://www.barnevents.info/events/2024/8/25/salome-songbird-and-sarah-dspaw
+DTEND:20260829T050000Z
+LOCATION:The Barn
+DTSTART:20260829T020000Z
+SUMMARY:🎵 [Jazz] Salomé Songbird
+UID:60a7934f-fc47-4fda-8012-648d719b28d1@60a7.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Venue: The Barn\nLink: https://www.barnevents.info/events/2023/8/13/shanna
+DTEND:20230812T050000Z
+LOCATION:The Barn
+DTSTART:20230812T020000Z
+SUMMARY:🎵 [Folk/Acoustic] Shanna in a Dress
+UID:90499bfe-ff74-40c1-8204-3662c7ecc183@9049.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Venue: Johnson's Station\nLink: https://www.johnsonsstation.com/calendar/many-mountains
+DTEND:20251019T020000Z
+LOCATION:Johnson's Station
+DTSTART:20251019T000000Z
+SUMMARY:🎵 [Rock] Many Mountains
+UID:4eb4522f-9696-4613-953e-4384caeb5929@4eb4.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Venue: Johnson's Station\nLink: https://www.johnsonsstation.com/calendar/domi-edson-trio
+DTEND:20250818T020000Z
+LOCATION:Johnson's Station
+DTSTART:20250817T230000Z
+SUMMARY:🎵 [Jazz] Domi Edson Trio
+UID:2e8a4213-a0cd-47cd-9547-f13fd8a6177d@2e8a.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Venue: Johnson's Station\nLink: https://www.johnsonsstation.com/calendar/event-two-gh4xp-t27zs-bxsfr
+DTEND:20250824T080000Z
+LOCATION:Johnson's Station
+DTSTART:20250824T050000Z
+SUMMARY:🎵 [Jazz] Dan Buller
+UID:39e0fca3-96d0-4edb-bd91-a5a3949726fb@39e0.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Venue: Johnson's Station\nLink: https://www.johnsonsstation.com/calendar/mad-dog
+DTEND:20260705T020000Z
+LOCATION:Johnson's Station
+DTSTART:20260704T220000Z
+SUMMARY:🎵 Mad Dog
+UID:d50b3ca5-4cf5-4844-bbe0-0a7459b1de0d@d50b.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Venue: The Barn\nLink: https://www.barnevents.info/events/2023/11/4/bonnie-and-taylor-sims
+DTEND:20231105T050000Z
+LOCATION:The Barn
+DTSTART:20231105T020000Z
+SUMMARY:🎵 [Blues] Bonnie and Taylor Sims
+UID:a03b033b-729b-476d-bfb9-722748eab453@a03b.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Venue: The Barn\nLink: https://www.barnevents.info/events/2019/9/20/the-common-thread-concert-gar92
+DTEND:20230506T070000Z
+LOCATION:The Barn
+DTSTART:20230506T040000Z
+SUMMARY:🎵 [Rock] Tim Ostdiek Band - The Lost Days Album Release Party
+UID:990b30b1-e4a7-4d2d-a907-6f232f8f0163@990b.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Venue: The Passenger\nLink: https://www.downtownlongmont.com/do/longmont-all-star-jazz-band-free-performance
+DTEND:20260503T020000Z
+LOCATION:The Passenger
+DTSTART:20260502T200000Z
+SUMMARY:🎵 [Jazz] Longmont All Star Jazz Band Free Performance!
+UID:cca93a13-6ade-473a-9cac-396829fec333@cca9.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:⚠️ Time not confirmed.\n\nVenue: The Barn\nLink: https://www.barnevents.info/events/2023/8/13/shanna-nd7z2-pgby7
+DTEND:20241116T040000Z
+LOCATION:The Barn
+DTSTART:20241116T020000Z
+SUMMARY:🎵 Shanna in a Dress
+UID:1c01ede0-e238-4539-8306-6e035c90cf03@1c01.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Venue: Downtown Longmont\nLink: https://www.downtownlongmont.com/do/vintage-vibes-elevated-lives-first-annual-fundraiser-and-fashion-show
+DTEND:20260412T020000Z
+LOCATION:Downtown Longmont
+DTSTART:20260411T170000Z
+SUMMARY:🎵 Vintage Vibes - Elevated Lives First Annual Fundraiser and Fashion Show
+UID:aca83813-9c44-470f-b2c2-77fdd0e795e0@aca8.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Venue: The Times Collaborative / 338 Main St\nLink: https://www.downtownlongmont.com/do/soundpost-sessions-local-spotlight-sturtz-w-and-holly-lovell
+DTEND:20260417T020000Z
+LOCATION:The Times Collaborative / 338 Main St
+DTSTART:20260416T220000Z
+SUMMARY:🎵 [Rock] Soundpost Sessions LOCAL SPOTLIGHT: Sturtz w/ Holly Lovell
+UID:77b9d51e-1d68-4bd2-bc64-ccd39e03a60e@77b9.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Venue: The Passenger\nLink: https://www.downtownlongmont.com/do/longmont-all-star-jazz-band-free-performance-1
+DTEND:20260419T020000Z
+LOCATION:The Passenger
+DTSTART:20260419T000000Z
+SUMMARY:🎵 [Jazz] Longmont All Star Jazz Band Free Performance!
+UID:a4d30aeb-3adc-41f1-90e3-c490e277fc7e@a4d3.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Venue: Bricks on Main\nLink: https://www.downtownlongmont.com/do/music-at-bricks-on-main-sabotage
+DTEND:20260502T020000Z
+LOCATION:Bricks on Main
+DTSTART:20260501T190000Z
+SUMMARY:🎵 [Rock] Music at Bricks on Main "Sabotage"
+UID:ddfd5f91-6649-479f-8393-21e55fe0af71@ddfd.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Venue: Johnson's Station\nLink: https://www.johnsonsstation.com/calendar/david-coile-fgk3n
+DTEND:20260822T060000Z
+LOCATION:Johnson's Station
+DTSTART:20260822T030000Z
+SUMMARY:🎵 David Coile
+UID:f44301b5-2ba8-40a0-ac75-69141bca13b2@f443.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Venue: Johnson's Station\nLink: https://www.johnsonsstation.com/calendar/david-coile
+DTEND:20260503T020000Z
+LOCATION:Johnson's Station
+DTSTART:20260502T200000Z
+SUMMARY:🎵 David Coile
+UID:196cd71d-a866-4d1c-b722-1c1596c05ee1@196c.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Venue: Butterscotch Studios\nLink: https://www.downtownlongmont.com/do/monthly-irish-jam-session
+DTEND:20260421T050000Z
+LOCATION:Butterscotch Studios
+DTSTART:20260421T020000Z
+SUMMARY:🎵 Monthly Irish Jam Session
+UID:24ae2e6a-613e-4e51-b23a-d23abe31299b@24ae.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Venue: Johnson's Station\nLink: https://www.johnsonsstation.com/calendar/the-thistle-tones
+DTEND:20251005T020000Z
+LOCATION:Johnson's Station
+DTSTART:20251004T220000Z
+SUMMARY:🎵 [Jazz] The Thistle Tones
+UID:a0e95a7f-41eb-4e08-a558-9997e483db9b@a0e9.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:⚠️ Time not confirmed.\n\nVenue: The Barn\nLink: https://www.barnevents.info/events/2017/1/19/moors-mccumber
+DTEND:20230320T030000Z
+LOCATION:The Barn
+DTSTART:20230320T010000Z
+SUMMARY:🎵 [Rock] Moors & McCumber: Saint Patrick's Day Concerts\, Two Shows!
+UID:51386080-5b52-4b9e-a82c-d0f995a35262@5138.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Venue: Johnson's Station\nLink: https://www.johnsonsstation.com/calendar/dan-buller-duo
+DTEND:20260711T070000Z
+LOCATION:Johnson's Station
+DTSTART:20260711T040000Z
+SUMMARY:🎵 Dan Buller Duo
+UID:3a68886b-cc3f-4fcd-b7dc-11ac13085a69@3a68.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Venue: Johnson's Station\nLink: https://www.johnsonsstation.com/calendar/jack-hadley-indoor
+DTEND:20260419T020000Z
+LOCATION:Johnson's Station
+DTSTART:20260419T000000Z
+SUMMARY:🎵 Jack Hadley
+UID:0b5f2815-9219-4334-a266-0477c2823419@0b5f.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Venue: Johnson's Station\nLink: https://www.johnsonsstation.com/calendar/dr-jim-seeley
+DTEND:20260620T020000Z
+LOCATION:Johnson's Station
+DTSTART:20260620T010000Z
+SUMMARY:🎵 Dr Jim Seeley & Michelle
+UID:3dfa62bd-281b-46ad-8a99-84ad25c349b5@3dfa.org
 END:VEVENT
 END:VCALENDAR
