@@ -11,7 +11,7 @@ OUTPUT_FILE = "longmont_music_final.ics"
 HEADERS = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) Chrome/120.0.0.0"}
 LOCAL_TZ = pytz.timezone("America/Denver")
 
-# --- FILTER LOGIC ---
+# --- FILTER & GENRE LOGIC ---
 EXCLUDE = [
     'karaoke', 'open mic', 'trivia', 'bingo', 'workshop', 'class', 'meeting', 'retail',
     'comedy', 'yoga', 'poker', 'drawing', 'craft', 'create club', 'teen', 
@@ -20,15 +20,34 @@ EXCLUDE = [
     'your stage', 'tangerine', 'composition', 'ballet', 'dance class', 
     'film', 'movie', 'bubbles', 'sewing', 'brunch', 'mimosas', 'bellinis'
 ]
-# Added 'supper club', 'solo', 'duo', 'trio' to catch artist-only listings
+
 MUSIC_KEYWORDS = [
     'music', 'band', 'concert', 'symphony', 'acoustic', 'jazz', 'supper club',
     'blues', 'rock', 'singer', 'songwriter', 'orchestra', 'dj', 'solo', 'duo',
     'rave', 'grunge', 'folk', 'metal', 'punk', 'hip-hop', 'live music', 'brass'
 ]
+
+GENRE_MAP = {
+    'Jazz': ['jazz', 'swing', 'big band', 'bebop'],
+    'Rock': ['rock', 'punk', 'metal', 'electric guitar', 'indie', 'grunge', 'psychedelic'],
+    'Folk/Acoustic': ['folk', 'acoustic', 'bluegrass', 'singer-songwriter', 'banjo', 'americana'],
+    'Blues': ['blues', 'harmonica', 'soul'],
+    'Electronic': ['dj', 'electronic', 'synth', 'house music', 'rave', 'edm', 'techno'],
+    'Classical': ['orchestra', 'symphony', 'classical', 'quartet', 'chamber'],
+    'Country': ['country', 'western', 'honky tonk', 'cowboy']
+}
+
 TRUSTED_VENUES = ['bricks on main', 'the barn', 'johnsons station', 'supper club']
 
-# --- TIME PARSING ---
+# --- UTILS ---
+
+def detect_genre(title, description):
+    combined_text = f"{title} {description}".lower()
+    for genre, keywords in GENRE_MAP.items():
+        if any(re.search(rf"\b{re.escape(k)}\b", combined_text) for k in keywords):
+            return f"[{genre}] "
+    return ""
+
 def find_times(text):
     time_pattern = r'(\d{1,2})(?::(\d{2}))?\s*(am|pm|AM|PM)?'
     matches = re.findall(time_pattern, text)
@@ -37,7 +56,7 @@ def find_times(text):
     def convert_to_24h(hour, minute, ampm):
         h, m = int(hour), int(minute) if minute else 0
         ampm = ampm.lower() if ampm else ""
-        if not ampm: ampm = 'pm' if 1 <= h <= 10 else 'am' # Shifted range to 10 for late shows
+        if not ampm: ampm = 'pm' if 1 <= h <= 10 else 'am'
         if ampm == 'pm' and h < 12: h += 12
         if ampm == 'am' and h == 12: h = 0
         return h, m
@@ -77,25 +96,19 @@ def parse_squarespace(url, venue_name):
         res = requests.get(url, headers=HEADERS, timeout=15)
         soup = BeautifulSoup(res.text, 'html.parser')
         base_domain = "https://" + url.split('//')[1].split('/')[0]
-        # Search for any block that looks like an event
-        for item in soup.select('article, .eventlist-item, .summary-item, .sqs-events-collection-list'):
+        for item in soup.select('article, .eventlist-item, .summary-item'):
             try:
-                # RECOVERY: Try multiple title locations
                 title_el = item.find(class_=re.compile(r'title|headline|link'))
                 if not title_el: continue
                 title = title_el.get_text(strip=True)
-                
-                # If title is still empty, check for an aria-label or nested span
                 if not title:
                     link = item.find('a')
                     title = link.get('aria-label') or link.get_text(strip=True)
-                
                 if not title: continue
                 
                 link_tag = item.find('a', href=True)
                 date_tag = item.select_one('time[datetime], .event-date, [date]')
                 if not date_tag: continue
-                
                 dt_val = date_tag.get('datetime') or date_tag.get('date') or date_tag.get_text(strip=True)
                 
                 events.append({
@@ -111,7 +124,7 @@ def parse_squarespace(url, venue_name):
 # --- MAIN ---
 
 def main():
-    print("🚀 Running Ultimate Longmont Scraper...")
+    print("🚀 Running Final Scraper with Genre Tags...")
     raw = []
     raw.extend(parse_downtown())
     raw.extend(parse_squarespace("https://www.johnsonsstation.com/calendar", "Johnson's Station"))
@@ -130,19 +143,19 @@ def main():
             
             res_detail = requests.get(data['url'], headers=HEADERS, timeout=10)
             soup_detail = BeautifulSoup(res_detail.text, 'html.parser')
-            
-            # Target description but fall back to body if needed
             detail_area = soup_detail.select_one('.eventlist-description, .event-item-description, .sqs-block-content, #page-content, main')
             detail_text = detail_area.get_text(separator=" ", strip=True).lower() if detail_area else ""
 
             if any(x in detail_text for x in EXCLUDE): continue
 
-            # The "Trusted" check: If it's a trusted venue, we are MUCH more lenient with keywords
             is_trusted = any(v in v_low for v in TRUSTED_VENUES) or any(v in t_low for v in TRUSTED_VENUES)
             has_music_keywords = any(m in t_low for m in MUSIC_KEYWORDS) or any(m in detail_text for m in MUSIC_KEYWORDS)
 
             if not (is_trusted or has_music_keywords):
                 continue
+
+            # --- GENRE DETECTION ---
+            genre_tag = detect_genre(data['title'], detail_text)
 
             sh, sm, eh = find_times(f"{data['title']} {detail_text}")
             time_warning = ""
@@ -152,27 +165,27 @@ def main():
             else:
                 start_dt = LOCAL_TZ.localize(data['date'].replace(hour=19, minute=0))
                 end_dt = start_dt + timedelta(hours=2)
-                time_warning = "⚠️ Time not confirmed. Check link for info.\n\n"
+                time_warning = "⚠️ Time not confirmed.\n\n"
 
             fingerprint = f"{start_dt.strftime('%Y%m%d')}_{t_low[:10]}"
             if fingerprint in seen: continue
 
             e = Event()
-            e.name = f"🎵 {data['title']}"
+            e.name = f"🎵 {genre_tag}{data['title']}"
             e.begin = start_dt
             e.end = end_dt
             e.location = data['venue']
-            e.description = f"{time_warning}Venue: {data['venue']}\nLink: {data['url']}\n\n{detail_text[:300]}..."
+            e.description = f"{time_warning}Venue: {data['venue']}\nLink: {data['url']}"
             
             cal.events.add(e)
             seen.add(fingerprint)
             count += 1
-            print(f"  [+] Added: {data['title']} @ {data['venue']}")
+            print(f"  [+] Added: {genre_tag}{data['title']} @ {data['venue']}")
         except: continue
 
     with open(OUTPUT_FILE, 'w', encoding='utf-8') as f:
         f.writelines(cal.serialize_iter())
-    print(f"\n✅ SUCCESS: {count} events processed.")
+    print(f"\n✅ SUCCESS: {count} events with Genre Tags saved.")
 
 if __name__ == "__main__":
     main()
