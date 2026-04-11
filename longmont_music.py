@@ -12,13 +12,14 @@ HEADERS = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) Chrome/120.0
 LOCAL_TZ = pytz.timezone("America/Denver")
 
 # --- REFINED FILTER LOGIC ---
-# Ensure all these are lowercase for matching
+# Added 'film', 'movie', 'bubbles', 'sewing' based on your examples
 EXCLUDE = [
     'karaoke', 'open mic', 'trivia', 'bingo', 'workshop', 'class', 'meeting', 'retail',
     'comedy', 'yoga', 'poker', 'drawing', 'craft', 'create club', 'teen', 
     'storytime', 'book club', 'knitting', 'market', 'board game', 'meditation', 
     'teacher', 'discussion', 'ragen', 'networking', 'discovery days', 'uke jam', 
-    'your stage', 'tangerine', 'composition', 'ballet', 'dance class'
+    'your stage', 'tangerine', 'composition', 'ballet', 'dance class', 
+    'film', 'movie', 'bubbles', 'sewing', 'brunch', 'mimosas', 'bellinis'
 ]
 MUSIC_KEYWORDS = [
     'music', 'band', 'concert', 'symphony', 'acoustic', 'jazz', 
@@ -110,30 +111,28 @@ def main():
             t_low = data['title'].lower()
             v_low = data['venue'].lower()
             
-            # --- THE GAUNTLET: STEP 1 (Hard Exclude) ---
-            # If ANY excluded word is in the title, kill it immediately.
-            if any(x in t_low for x in EXCLUDE):
-                continue
+            # 1. IMMEDIATE TITLE EXCLUDE
+            if any(x in t_low for x in EXCLUDE): continue
             
-            # Fetch details
+            # 2. FETCH AND TARGET ONLY THE DESCRIPTION AREA
             res_detail = requests.get(data['url'], headers=HEADERS, timeout=10)
             soup_detail = BeautifulSoup(res_detail.text, 'html.parser')
-            detail_text = soup_detail.get_text(separator=" ", strip=True).lower()
+            
+            # Targeted search in description/details only, NOT the whole page (avoids menu keywords)
+            detail_area = soup_detail.select_one('.details, .description, .event-item-description, #page-content')
+            detail_text = detail_area.get_text(separator=" ", strip=True).lower() if detail_area else ""
 
-            # Check excludes in details too
-            if any(x in detail_text for x in EXCLUDE):
-                continue
+            # 3. SECONDARY EXCLUDE IN DESCRIPTION
+            if any(x in detail_text for x in EXCLUDE): continue
 
-            # --- THE GAUNTLET: STEP 2 (Music Verification) ---
-            # Is it a trusted venue?
-            is_trusted = any(v in v_low for v in TRUSTED_VENUES)
-            # Does it have music keywords?
+            # 4. MUSIC VERIFICATION (Title or Description Area ONLY)
             has_music_keywords = any(m in t_low for m in MUSIC_KEYWORDS) or \
                                 any(m in detail_text for m in MUSIC_KEYWORDS)
+            
+            is_trusted_venue = any(v in v_low for v in TRUSTED_VENUES)
 
-            # Logic Change: To pass, it MUST have music keywords 
-            # OR be at a trusted venue (but even trusted venues must pass the hard exclude above)
-            if not (is_trusted or has_music_keywords):
+            # To pass: Must NOT be excluded AND (Must be a trusted venue OR have music keywords)
+            if not (is_trusted_venue or has_music_keywords):
                 continue
 
             # Time Logic
@@ -161,9 +160,7 @@ def main():
             seen.add(fingerprint)
             count += 1
             print(f"  [+] Added: {data['title']} @ {data['venue']}")
-        except Exception as e:
-            # print(f"Error processing event: {e}") # Optional for debugging
-            continue
+        except: continue
 
     with open(OUTPUT_FILE, 'w', encoding='utf-8') as f:
         f.writelines(cal.serialize_iter())
