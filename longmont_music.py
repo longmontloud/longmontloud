@@ -10,7 +10,7 @@ OUTPUT_FILE = "longmont_music_final.ics"
 HEADERS = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) Chrome/120.0.0.0"}
 LOCAL_TZ = pytz.timezone("America/Denver")
 
-# --- FILTERS (Consolidated) ---
+# --- FILTERS ---
 EXCLUDE = [
     'karaoke', 'open mic', 'trivia', 'bingo', 'workshop', 'class', 'meeting', 'retail',
     'comedy', 'yoga', 'poker', 'drawing', 'craft', 'create club', 'teen', 
@@ -46,7 +46,7 @@ def detect_genre(text):
     return ""
 
 def main():
-    print("🚀 Running Smart & Simple Scraper...")
+    print("🚀 Running Tunnel-Vision Scraper...")
     
     targets = [
         ("https://www.downtownlongmont.com/events/calendar", "https://www.downtownlongmont.com"),
@@ -61,11 +61,9 @@ def main():
 
     for base_url, domain in targets:
         try:
-            print(f"🔍 Scanning: {base_url}")
             res = requests.get(base_url, headers=HEADERS, timeout=15)
             soup = BeautifulSoup(res.text, 'html.parser')
             
-            # 1. Collect all event-like links
             links = []
             for a in soup.find_all('a', href=True):
                 href = a['href']
@@ -73,7 +71,6 @@ def main():
                     if len(href.split('/')) > 2:
                         links.append(domain + href if href.startswith('/') else href)
             
-            # 2. Process each unique link
             for full_url in set(links):
                 if full_url in seen_links: continue
                 seen_links.add(full_url)
@@ -82,37 +79,50 @@ def main():
                     ev_res = requests.get(full_url, headers=HEADERS, timeout=10)
                     ev_soup = BeautifulSoup(ev_res.text, 'html.parser')
                     
+                    # --- TUNNEL VISION: TARGET ONLY THE EVENT AREA ---
+                    # This avoids footers and sidebars
+                    main_content = ev_soup.select_one('.details, .event-item-description, .sqs-block-content, article, main')
+                    
                     title = (ev_soup.find('h1') or ev_soup.find('title')).get_text(strip=True)
-                    body_text = ev_soup.get_text(" ", strip=True)
+                    # If we found a main content area, use it. Otherwise, use title + first bit of page.
+                    if main_content:
+                        body_text = main_content.get_text(" ", strip=True)
+                    else:
+                        body_text = ev_soup.get_text(" ", strip=True)[:1000] 
+                    
                     combined_text = (title + " " + body_text).lower()
                     
-                    # --- THE FILTER BRAIN ---
-                    # Exclusion check
-                    if any(x in combined_text for x in EXCLUDE): continue
+                    # --- FILTER BRAIN ---
+                    # 1. Immediate Exclude (Check Title first for higher accuracy)
+                    if any(x in title.lower() for x in EXCLUDE): continue
                     
-                    # Inclusion check (Must be trusted venue OR have music keywords)
+                    # 2. Trusted Venue Bypass
                     is_trusted = any(v in combined_text or v in full_url for v in TRUSTED_VENUES)
+                    
+                    # 3. Music keyword check
                     has_music = any(m in combined_text for m in MUSIC_KEYWORDS)
                     
+                    # If it's a board game at a trusted venue, we still want to filter it out
+                    # So we check EXCLUDE again on the combined text
+                    if any(x in combined_text for x in EXCLUDE):
+                        # Special exception: if the title is clearly music, ignore the exclude-word in body
+                        if not any(m in title.lower() for m in MUSIC_KEYWORDS):
+                            continue
+
                     if not (is_trusted or has_music): continue
 
                     # --- DATE DETECTION ---
-                    # Look for "Month Day" (e.g., May 15)
                     date_match = re.search(r'(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)[a-z]*\.?\s+(\d{1,2})', body_text)
                     if not date_match: continue
                     
                     month_str = date_match.group(1)[:3]
                     day_val = int(date_match.group(2))
-                    
-                    # Force 2026 and Default to 7 PM
                     start_dt = LOCAL_TZ.localize(datetime(2026, datetime.strptime(month_str, "%b").month, day_val, 19, 0))
 
-                    # Duplicate check by title/date
                     fingerprint = f"{start_dt.strftime('%Y%m%d')}_{title[:15].lower()}"
                     if fingerprint in seen_events: continue
                     seen_events.add(fingerprint)
 
-                    # --- CREATE EVENT ---
                     genre_tag = detect_genre(combined_text)
                     e = Event()
                     e.name = f"🎵 {genre_tag}{title}"
@@ -123,14 +133,13 @@ def main():
                     
                     cal.events.add(e)
                     count += 1
-                    print(f"  [+] Added: {title} ({month_str} {day_val})")
+                    print(f"  [+] Added: {title}")
 
                 except: continue
         except: continue
 
     with open(OUTPUT_FILE, 'w', encoding='utf-8') as f:
         f.writelines(cal.serialize_iter())
-    
     print(f"\n✅ Finished! Found {count} Music Events.")
 
 if __name__ == "__main__":
