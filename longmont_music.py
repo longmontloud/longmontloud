@@ -17,11 +17,11 @@ EXCLUDE = [
     'comedy', 'yoga', 'poker', 'drawing', 'craft', 'create club', 'teen', 
     'storytime', 'book club', 'knitting', 'market', 'board game', 'meditation', 
     'teacher', 'discussion', 'ragen', 'networking', 'discovery days', 'uke jam', 
-    'your stage', 'tangerine', 'composition', 'ballet', 'dance class','movie', 'bubbles', 'sewing', 'brunch', 'mimosas', 'bellinis', 'denim day'
+    'your stage', 'tangerine', 'composition', 'ballet', 'dance class', 'movie', 'bubbles', 'sewing', 'brunch', 'mimosas', 'bellinis', 'denim day'
 ]
 
 MUSIC_KEYWORDS = [
-    'music', 'band', 'concert', 'symphony', 'acoustic', 'jazz', 'supper club',
+    'live music', 'band', 'concert', 'symphony', 'acoustic', 'jazz', 'supper club',
     'blues', 'rock', 'singer', 'songwriter', 'orchestra', 'dj', 'solo', 'duo',
     'rave', 'grunge', 'folk', 'metal', 'punk', 'hip-hop', 'live music', 'brass'
 ]
