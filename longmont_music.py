@@ -20,7 +20,6 @@ EXCLUDE = [
     'your stage', 'tangerine', 'composition', 'ballet', 'dance class', 'movie', 'bubbles', 'sewing', 'brunch', 'mimosas', 'bellinis', 'denim day', 'poetry night', 'poetry slam', 'sewing', 'sew', 'guest speakers', 'bloody mary',
 ]
 
-# Tightened 'music' to 'live music' to avoid nav-bar leaks
 MUSIC_KEYWORDS = [
     'live music', 'live band', 'concert', 'symphony', 'acoustic', 'jazz', 'supper club',
     'blues', 'rock', 'singer', 'songwriter', 'orchestra', 'dj',
@@ -113,14 +112,12 @@ def main():
                     if not event_title: continue
                     event_title = event_title.split('|')[0].split('-')[0].strip()
 
-                    # --- TUNNEL VISION: TARGET CONTENT BOXES ONLY ---
-                    # We added '.description' specifically for Downtown Longmont
+                    # --- TUNNEL VISION ---
                     main_content = ev_soup.select_one('.description, .details, .eventitem-description, .sqs-block-content, article')
                     
                     if main_content:
                         body_text = main_content.get_text(" ", strip=True)
                     else:
-                        # Fallback for pages with weird structures - still limit reach
                         body_text = ev_soup.get_text(" ", strip=True)[:800]
                     
                     combined_text = (event_title + " " + body_text).lower()
@@ -133,7 +130,6 @@ def main():
                     
                     if not (is_trusted_site or has_music): continue
                     
-                    # The "Bouncer" check: if exclude is in body, title MUST have music
                     if any(x in combined_text for x in EXCLUDE):
                         if not any(m in event_title.lower() for m in MUSIC_KEYWORDS):
                             continue
@@ -150,17 +146,26 @@ def main():
                     if fingerprint in seen_events: continue
                     seen_events.add(fingerprint)
 
+                    # --- LOCATION ASSIGNMENT ---
+                    venue_loc = "Longmont, CO"
+                    if "barnevents.info" in full_url:
+                        venue_loc = "The Barn, 519 Main St, Longmont, CO 80501"
+                    elif "johnsonsstation.com" in full_url:
+                        venue_loc = "Johnson's Station, 480 2nd Ave, Longmont, CO 80501"
+                    elif "supperclub" in full_url:
+                        venue_loc = "Longmont Supper Club, Longmont, CO"
+
                     genre_tag = detect_genre(combined_text)
                     e = Event()
                     e.name = f"🎵 {genre_tag}{event_title}"
                     e.begin = start_dt
                     e.end = start_dt + timedelta(hours=2)
-                    e.location = "Longmont, CO"
+                    e.location = venue_loc
                     e.description = f"Source: {full_url}"
                     
                     cal.events.add(e)
                     count += 1
-                    print(f"  [+] Added: {event_title}")
+                    print(f"  [+] Added: {event_title} at {venue_loc.split(',')[0]}")
 
                 except: continue
         except: continue
