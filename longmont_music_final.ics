@@ -2,444 +2,92 @@ BEGIN:VCALENDAR
 VERSION:2.0
 PRODID:ics.py - http://git.io/lLljaA
 BEGIN:VEVENT
-DESCRIPTION:Source: https://www.johnsonsstation.com/calendar/event-two-gh4xp-t27zs-bxsfr
-DTEND:20260824T030000Z
-LOCATION:Longmont\, CO
-DTSTART:20260824T010000Z
-SUMMARY:🎵 [Jazz] Johnson's Station
-UID:9e60e6f6-5532-4dc1-b008-15fea135ebff@9e60.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Source: https://www.downtownlongmont.com/do/orchard-creek-band-free-performance
-DTEND:20260426T030000Z
-LOCATION:Longmont\, CO
-DTSTART:20260426T010000Z
-SUMMARY:🎵 [Folk/Acoustic] Orchard Creek Band FREE Performance
-UID:b149e411-fe3a-42a6-ad77-745e60bdf029@b149.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Source: https://www.johnsonsstation.com/calendar/davy-allard-the-silverwave-band
-DTEND:20260811T030000Z
-LOCATION:Longmont\, CO
-DTSTART:20260811T010000Z
-SUMMARY:🎵 [Folk/Acoustic] Johnson's Station
-UID:a3ec6b4e-c22b-4b7f-ab56-8a0aa6a6ff0e@a3ec.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Source: https://www.downtownlongmont.com/do/music-at-bricks-on-main-cat-jerky
-DTEND:20260426T030000Z
-LOCATION:Longmont\, CO
-DTSTART:20260426T010000Z
-SUMMARY:🎵 Music at Bricks on Main "Cat Jerky"
-UID:93747999-63b1-44c1-8a4b-dc77e7de61bc@9374.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Source: https://www.johnsonsstation.com/calendar/jack-hadley-indoor-29pbs-ah986-rh72h
-DTEND:20260906T030000Z
-LOCATION:Longmont\, CO
-DTSTART:20260906T010000Z
-SUMMARY:🎵 Johnson's Station
-UID:5339c21e-4b91-4e05-9362-7ccacd3c9d3c@5339.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Source: https://www.johnsonsstation.com/calendar/chris-vargo-trio
-DTEND:20260901T030000Z
-LOCATION:Longmont\, CO
-DTSTART:20260901T010000Z
-SUMMARY:🎵 Johnson's Station
-UID:eb8d4ab4-a818-4961-b115-ecf6b567ae30@eb8d.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Source: https://www.johnsonsstation.com/calendar/flatwoods-rambler
-DTEND:20260628T030000Z
-LOCATION:Longmont\, CO
-DTSTART:20260628T010000Z
-SUMMARY:🎵 Johnson's Station
-UID:f2e8e791-030d-428d-bc59-19ee68ea4eb8@f2e8.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Source: https://www.johnsonsstation.com/calendar/david-honig
-DTEND:20260510T030000Z
-LOCATION:Longmont\, CO
-DTSTART:20260510T010000Z
-SUMMARY:🎵 Johnson's Station
-UID:753eb52a-dcdf-448e-a1d6-3a09a1357d21@753e.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Source: https://www.johnsonsstation.com/calendar/david-coile-fgk3n
-DTEND:20260822T030000Z
-LOCATION:Longmont\, CO
-DTSTART:20260822T010000Z
-SUMMARY:🎵 Johnson's Station
-UID:1236dde8-c2f6-4369-b829-12b83bf9b2d5@1236.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Source: https://www.downtownlongmont.com/do/music-at-bricks-on-main-asteria-jazz-collective-6
-DTEND:20260420T030000Z
-LOCATION:Longmont\, CO
-DTSTART:20260420T010000Z
-SUMMARY:🎵 [Jazz] Music at Bricks on Main "Asteria Jazz Collective"
-UID:9c15fda9-b8ac-46ce-93ce-8ff8c32b99e1@9c15.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Source: https://www.downtownlongmont.com/do/great-american-nowhere-duo-live-music
-DTEND:20260503T030000Z
-LOCATION:Longmont\, CO
-DTSTART:20260503T010000Z
-SUMMARY:🎵 [Country] Great American Nowhere Duo
-UID:477b4e93-5f9b-49ba-9a0b-51a74d3d0f53@477b.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Source: https://www.downtownlongmont.com/do/music-at-bricks-on-main-sabotage
-DTEND:20260502T030000Z
-LOCATION:Longmont\, CO
-DTSTART:20260502T010000Z
-SUMMARY:🎵 [Rock] Music at Bricks on Main "Sabotage"
-UID:321863f8-a494-4380-8a68-6c722b757801@3218.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Source: https://www.downtownlongmont.com/do/music-at-bricks-on-main-max-mackey-and-travis-bush
-DTEND:20260413T030000Z
-LOCATION:Longmont\, CO
-DTSTART:20260413T010000Z
-SUMMARY:🎵 [Rock] Music at Bricks on Main "Max Mackey & Travis Bush"
-UID:5ce7bb71-4271-4a2d-b1ed-6b36f885217b@5ce7.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Source: https://www.johnsonsstation.com/calendar/lookin-for-louie
-DTEND:20260718T030000Z
-LOCATION:Longmont\, CO
-DTSTART:20260718T010000Z
-SUMMARY:🎵 Johnson's Station
-UID:3669c440-45dc-4b79-82fc-a2e57a91a8c9@3669.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Source: https://www.johnsonsstation.com/calendar/tim-jenny-ostdiek
-DTEND:20260606T030000Z
-LOCATION:Longmont\, CO
-DTSTART:20260606T010000Z
-SUMMARY:🎵 Johnson's Station
-UID:03fe31c7-7455-45c2-a4db-b969514aa43d@03fe.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Source: https://www.johnsonsstation.com/calendar/zizania-2
-DTEND:20260621T030000Z
-LOCATION:Longmont\, CO
-DTSTART:20260621T010000Z
-SUMMARY:🎵 Johnson's Station
-UID:388215b8-be5c-4427-b645-2319555f6fca@3882.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Source: https://www.johnsonsstation.com/calendar/zizania-1
-DTEND:20260412T030000Z
-LOCATION:Longmont\, CO
-DTSTART:20260412T010000Z
-SUMMARY:🎵 Johnson's Station
-UID:162c72cd-a39a-4c96-9448-6d5306a6727d@162c.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Source: https://www.johnsonsstation.com/calendar/jack-hadley-indoor
-DTEND:20260419T030000Z
-LOCATION:Longmont\, CO
-DTSTART:20260419T010000Z
-SUMMARY:🎵 Johnson's Station
-UID:37330729-014b-49b3-a721-00d6269a1e17@3733.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Source: https://www.downtownlongmont.com/do/longmont-all-star-jazz-band-free-performance-1
-DTEND:20260419T030000Z
-LOCATION:Longmont\, CO
-DTSTART:20260419T010000Z
-SUMMARY:🎵 [Jazz] Longmont All Star Jazz Band Free Performance!
-UID:717e77f9-d92c-48ae-97ab-dc2d0880278a@717e.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Source: https://www.johnsonsstation.com/calendar/jules-fern
-DTEND:20260720T030000Z
-LOCATION:Longmont\, CO
-DTSTART:20260720T010000Z
-SUMMARY:🎵 Johnson's Station
-UID:bce0e946-bffc-4472-9b1e-1452b969d83a@bce0.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Source: https://www.johnsonsstation.com/calendar/nice-work-jazz
-DTEND:20260829T030000Z
-LOCATION:Longmont\, CO
-DTSTART:20260829T010000Z
-SUMMARY:🎵 [Jazz] Johnson's Station
-UID:8e6d4b8d-73bc-40e4-803c-88a9c4f8b76e@8e6d.org
-END:VEVENT
-BEGIN:VEVENT
 DESCRIPTION:Source: https://www.johnsonsstation.com/calendar/the-thistle-tones
 DTEND:20261005T030000Z
 LOCATION:Longmont\, CO
 DTSTART:20261005T010000Z
-SUMMARY:🎵 [Jazz] Johnson's Station
-UID:42bb6ceb-c4b8-47fd-8fc0-4d8b649afd3a@42bb.org
+SUMMARY:🎵 [Jazz] The Thistle Tones
+UID:cd9dc94b-f004-474e-bcec-b177d3fd1633@cd9d.org
 END:VEVENT
 BEGIN:VEVENT
-DESCRIPTION:Source: https://www.downtownlongmont.com/do/music-at-bricks-on-main-foxfeather-full-band
-DTEND:20260503T030000Z
+DESCRIPTION:Source: https://www.downtownlongmont.com/do/free-talk-utopian-colorado
+DTEND:20260501T030000Z
 LOCATION:Longmont\, CO
-DTSTART:20260503T010000Z
-SUMMARY:🎵 [Rock] Music at Bricks on Main "Foxfeather Full Band"
-UID:13d81322-fc66-419b-a84f-57a9c5be3c79@13d8.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Source: https://www.johnsonsstation.com/calendar/gypsywould
-DTEND:20260613T030000Z
-LOCATION:Longmont\, CO
-DTSTART:20260613T010000Z
-SUMMARY:🎵 Johnson's Station
-UID:2fbef8c8-6d04-47d9-a69e-aa1c4646d2b3@2fbe.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Source: https://www.johnsonsstation.com/calendar/dougs-garage
-DTEND:20260712T030000Z
-LOCATION:Longmont\, CO
-DTSTART:20260712T010000Z
-SUMMARY:🎵 Johnson's Station
-UID:ffcfcf6e-a450-46cb-a1aa-6d550ff81b81@ffcf.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Source: https://www.johnsonsstation.com/calendar/50-shades-of-blue
-DTEND:20260426T030000Z
-LOCATION:Longmont\, CO
-DTSTART:20260426T010000Z
-SUMMARY:🎵 Johnson's Station
-UID:97f7693d-a720-4600-8650-e3e5056c1adf@97f7.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Source: https://www.downtownlongmont.com/do/sunday-music-series-jazz-with-vic-dillahay-and-doug-carmichael
-DTEND:20260413T030000Z
-LOCATION:Longmont\, CO
-DTSTART:20260413T010000Z
-SUMMARY:🎵 [Jazz] Sunday Music Series: Jazz with Vic Dillahay and Doug Carmichael
-UID:b0529839-7c32-4142-ab5b-2cc5730da2fc@b052.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Source: https://www.downtownlongmont.com/events/downtown-summer-concerts
-DTEND:20260530T030000Z
-LOCATION:Longmont\, CO
-DTSTART:20260530T010000Z
-SUMMARY:🎵 [Rock] Longmont Downtown Summer Kickoff Concert!
-UID:599ab6a5-51b1-47e2-bf82-3d4c3924a378@599a.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Source: https://www.johnsonsstation.com/calendar/the-thistle-tones-1
-DTEND:20260524T030000Z
-LOCATION:Longmont\, CO
-DTSTART:20260524T010000Z
-SUMMARY:🎵 Johnson's Station
-UID:f46e084c-3f66-45c4-ba18-f0d213a9da2d@f46e.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Source: https://www.johnsonsstation.com/calendar/matthew-popkin
-DTEND:20260726T030000Z
-LOCATION:Longmont\, CO
-DTSTART:20260726T010000Z
-SUMMARY:🎵 Johnson's Station
-UID:b9a6309a-a3b0-40ee-9801-addee0b83244@b9a6.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Source: https://www.johnsonsstation.com/calendar/dr-jim-seeley
-DTEND:20260620T030000Z
-LOCATION:Longmont\, CO
-DTSTART:20260620T010000Z
-SUMMARY:🎵 Johnson's Station
-UID:ccdbe81f-fffe-4cb2-be6d-a776e0f5bea8@ccdb.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Source: https://www.downtownlongmont.com/do/first-friday-with-mojazz
-DTEND:20260502T030000Z
-LOCATION:Longmont\, CO
-DTSTART:20260502T010000Z
-SUMMARY:🎵 [Jazz] First Friday with Mojazz
-UID:682ad951-d572-488f-9c5b-ff466e99a8ab@682a.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Source: https://www.johnsonsstation.com/calendar/scott-von
-DTEND:20260908T030000Z
-LOCATION:Longmont\, CO
-DTSTART:20260908T010000Z
-SUMMARY:🎵 [Folk/Acoustic] Johnson's Station
-UID:17dd11a7-6264-4336-96d4-702a48550eba@17dd.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Source: https://www.johnsonsstation.com/calendar/laurie-lorrie
-DTEND:20260704T030000Z
-LOCATION:Longmont\, CO
-DTSTART:20260704T010000Z
-SUMMARY:🎵 Johnson's Station
-UID:bc2a85fe-dacd-4884-a07b-b6c4a64776d1@bc2a.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Source: https://www.johnsonsstation.com/calendar/atom-collective
-DTEND:20260831T030000Z
-LOCATION:Longmont\, CO
-DTSTART:20260831T010000Z
-SUMMARY:🎵 Johnson's Station
-UID:1882be11-1972-43a3-ad85-6dfd35015683@1882.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Source: https://www.johnsonsstation.com/calendar/paloma-rose-1
-DTEND:20260815T030000Z
-LOCATION:Longmont\, CO
-DTSTART:20260815T010000Z
-SUMMARY:🎵 Johnson's Station
-UID:e8da1239-d479-41d7-a68b-204826f13247@e8da.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Source: https://www.johnsonsstation.com/calendar/jack-hadley-indoor-29pbs
-DTEND:20260607T030000Z
-LOCATION:Longmont\, CO
-DTSTART:20260607T010000Z
-SUMMARY:🎵 Johnson's Station
-UID:f6a70868-4d83-40df-b3ad-27703c286f08@f6a7.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Source: https://www.downtownlongmont.com/do/music-at-bricks-on-main-aimee-lynne
-DTEND:20260424T030000Z
-LOCATION:Longmont\, CO
-DTSTART:20260424T010000Z
-SUMMARY:🎵 [Jazz] Music at Bricks on Main "Aimee Lynne"
-UID:2fe2556b-a246-45eb-ba1d-3669e90345ba@2fe2.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Source: https://www.johnsonsstation.com/calendar/groove-holiday-95bw7
-DTEND:20260727T030000Z
-LOCATION:Longmont\, CO
-DTSTART:20260727T010000Z
-SUMMARY:🎵 [Jazz] Johnson's Station
-UID:66121854-f383-4a45-9d91-230fef087407@6612.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Source: https://www.downtownlongmont.com/do/free-live-music-by-joe-teichman
-DTEND:20260418T030000Z
-LOCATION:Longmont\, CO
-DTSTART:20260418T010000Z
-SUMMARY:🎵 [Folk/Acoustic] Free Live Music by Joe Teichman
-UID:f8ef18ad-8cdb-494f-873c-b1886a3e4567@f8ef.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Source: https://www.downtownlongmont.com/do/half-price-bottle-night-and-live-music-1
-DTEND:20260417T030000Z
-LOCATION:Longmont\, CO
-DTSTART:20260417T010000Z
-SUMMARY:🎵 Half Price Bottle Night & Live Music
-UID:9c270a21-2184-4376-8b6b-d716a9acb0af@9c27.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Source: https://www.johnsonsstation.com/calendar/barn-ghost
-DTEND:20260816T030000Z
-LOCATION:Longmont\, CO
-DTSTART:20260816T010000Z
-SUMMARY:🎵 Johnson's Station
-UID:dd43e428-d73d-4c02-abfd-8118434096e1@dd43.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Source: https://www.johnsonsstation.com/calendar/mad-dog
-DTEND:20260705T030000Z
-LOCATION:Longmont\, CO
-DTSTART:20260705T010000Z
-SUMMARY:🎵 Johnson's Station
-UID:bf9efead-e0b1-4510-92e2-64c5c527dab8@bf9e.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Source: https://www.johnsonsstation.com/calendar/alex-nikiforoff
-DTEND:20260404T030000Z
-LOCATION:Longmont\, CO
-DTSTART:20260404T010000Z
-SUMMARY:🎵 Johnson's Station
-UID:4969b32c-1f42-459a-a787-ffa5d06190fa@4969.org
+DTSTART:20260501T010000Z
+SUMMARY:🎵 Free Talk: Utopian Colorado
+UID:1151c7d1-d03a-45ba-98f3-4c163d89b12f@1151.org
 END:VEVENT
 BEGIN:VEVENT
 DESCRIPTION:Source: https://www.barnevents.info/events/2019/3/17/moors-amp-mccumber-saint-patricks-day-concert-matinee
 DTEND:20260320T030000Z
 LOCATION:Longmont\, CO
 DTSTART:20260320T010000Z
-SUMMARY:🎵 Barn Events
-UID:648c957b-2f73-46a7-a72a-d874aa2be496@648c.org
+SUMMARY:🎵 Moors & McCumber: Saint Patrick's Day Concert\, Matinee
+UID:752af3fe-b2ee-4b34-9b76-fb2150b3a70e@752a.org
 END:VEVENT
 BEGIN:VEVENT
-DESCRIPTION:Source: https://www.johnsonsstation.com/calendar/domi-edson-trio
-DTEND:20260818T030000Z
-LOCATION:Longmont\, CO
-DTSTART:20260818T010000Z
-SUMMARY:🎵 [Jazz] Johnson's Station
-UID:a5d24270-9ca4-4cc7-b1a8-69fcd6b93d61@a5d2.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Source: https://www.johnsonsstation.com/calendar/jaik-hakkarinen
-DTEND:20260725T030000Z
-LOCATION:Longmont\, CO
-DTSTART:20260725T010000Z
-SUMMARY:🎵 Johnson's Station
-UID:ff88dcf2-08cb-4f1f-9e64-b8b419b67b12@ff88.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Source: https://www.downtownlongmont.com/do/lso-concert-pops-concert-best-of-broadway
-DTEND:20260503T030000Z
-LOCATION:Longmont\, CO
-DTSTART:20260503T010000Z
-SUMMARY:🎵 LSO Concert Pops Concert: Best of Broadway
-UID:3d84aaef-cef9-48b3-a206-6ac06f7873e5@3d84.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Source: https://www.downtownlongmont.com/do/recovery-cafe-benefit-concert
+DESCRIPTION:Source: https://www.downtownlongmont.com/do/independent-bookstore-day
 DTEND:20260426T030000Z
 LOCATION:Longmont\, CO
 DTSTART:20260426T010000Z
-SUMMARY:🎵 Recovery Cafe Benefit Concert
-UID:ecc4f41a-3e0a-4556-9417-ddeeb111d156@ecc4.org
+SUMMARY:🎵 [Country] Independent Bookstore Day
+UID:80b32fef-1c62-45e0-827c-36b24722ef6b@80b3.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Source: https://www.barnevents.info/events/2026/2/28/dance-party-with-dlovelies
+DTEND:20260301T040000Z
+LOCATION:Longmont\, CO
+DTSTART:20260301T020000Z
+SUMMARY:🎵 [Jazz] Dance Party with d'Lovelies
+UID:0afa1691-80dd-405d-ad2c-bf121412d7a4@0afa.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Source: https://www.downtownlongmont.com/do/flirt-and-friend-singles-mixer-for-ages-30-45
+DTEND:20260417T030000Z
+LOCATION:Longmont\, CO
+DTSTART:20260417T010000Z
+SUMMARY:🎵 Flirt & Friend
+UID:68187196-bd2d-4365-8d3d-d08c5f60113e@6818.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Source: https://www.johnsonsstation.com/calendar/many-mountains
+DTEND:20261019T030000Z
+LOCATION:Longmont\, CO
+DTSTART:20261019T010000Z
+SUMMARY:🎵 [Rock] Many Mountains
+UID:6528bf3f-33a2-455b-ac24-2a5207c42ec5@6528.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Source: https://www.downtownlongmont.com/do/tarot-with-shifra-at-blackbird-house-18
+DTEND:20260419T030000Z
+LOCATION:Longmont\, CO
+DTSTART:20260419T010000Z
+SUMMARY:🎵 Tarot with Shifra at Blackbird House
+UID:b04a90df-5188-49ff-a608-3d0d27ec24b5@b04a.org
 END:VEVENT
 BEGIN:VEVENT
 DESCRIPTION:Source: https://www.johnsonsstation.com/calendar/brian-mcguirk
 DTEND:20260329T030000Z
 LOCATION:Longmont\, CO
 DTSTART:20260329T010000Z
-SUMMARY:🎵 Johnson's Station
-UID:25b38efb-ec15-4ffd-9225-b869662d2304@25b3.org
+SUMMARY:🎵 Brian McGuirk
+UID:a90a2340-5e83-46df-938f-5c24e58b0a30@a90a.org
 END:VEVENT
 BEGIN:VEVENT
-DESCRIPTION:Source: https://www.downtownlongmont.com/do/music-at-bricks-on-main-the-rachel-alena-band
-DTEND:20260501T030000Z
+DESCRIPTION:Source: https://www.johnsonsstation.com/calendar/james-barela
+DTEND:20260801T030000Z
 LOCATION:Longmont\, CO
-DTSTART:20260501T010000Z
-SUMMARY:🎵 [Rock] Music at Bricks on Main "The Rachel Alena Band"
-UID:656ab772-4b7e-404c-a51a-008c6da59677@656a.org
+DTSTART:20260801T010000Z
+SUMMARY:🎵 James Barela & Blu7
+UID:78409f3b-32b8-45b6-bf8a-31e5611ae9a6@7840.org
 END:VEVENT
 BEGIN:VEVENT
-DESCRIPTION:Source: https://www.johnsonsstation.com/calendar/brian-mcguirk-ne7l9
-DTEND:20260531T030000Z
+DESCRIPTION:Source: https://www.downtownlongmont.com/do/pride-month-exhibition-art-sampler-make-a-personal-pride-flag
+DTEND:20260504T030000Z
 LOCATION:Longmont\, CO
-DTSTART:20260531T010000Z
-SUMMARY:🎵 Johnson's Station
-UID:7ca5ff9c-c6df-4a7d-9dfd-7b1feb216212@7ca5.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Source: https://www.johnsonsstation.com/calendar/the-krueger-brothers
-DTEND:20260322T030000Z
-LOCATION:Longmont\, CO
-DTSTART:20260322T010000Z
-SUMMARY:🎵 Johnson's Station
-UID:0c82f299-acfa-4375-a08f-0d37fc6fd3fa@0c82.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Source: https://www.johnsonsstation.com/calendar/delta-sonics-4ktn8
-DTEND:20260915T030000Z
-LOCATION:Longmont\, CO
-DTSTART:20260915T010000Z
-SUMMARY:🎵 [Jazz] Johnson's Station
-UID:7bb6c40b-5153-46ba-9055-8e9295af6351@7bb6.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Source: https://www.johnsonsstation.com/calendar/jules-fern-1
-DTEND:20260809T030000Z
-LOCATION:Longmont\, CO
-DTSTART:20260809T010000Z
-SUMMARY:🎵 Johnson's Station
-UID:07e5e09e-770e-4979-bf77-dd601658daaf@07e5.org
+DTSTART:20260504T010000Z
+SUMMARY:🎵 Pride Month Exhibition
+UID:2a09cd78-61bb-429e-956d-670542880d43@2a09.org
 END:VEVENT
 BEGIN:VEVENT
 DESCRIPTION:Source: https://www.downtownlongmont.com/do/longmont-all-star-jazz-band-free-performance
@@ -447,71 +95,407 @@ DTEND:20260503T030000Z
 LOCATION:Longmont\, CO
 DTSTART:20260503T010000Z
 SUMMARY:🎵 [Jazz] Longmont All Star Jazz Band Free Performance!
-UID:80f23c78-8373-4b78-99ef-c754577511b5@80f2.org
+UID:ed52616b-4317-414d-8c54-dabbda8b8b3d@ed52.org
 END:VEVENT
 BEGIN:VEVENT
-DESCRIPTION:Source: https://www.downtownlongmont.com/do/music-at-bricks-on-main-bandana-a-tribute-to-the-music-of-santana
+DESCRIPTION:Source: https://www.downtownlongmont.com/do/tarot-card-reader-at-the-golden-bee-1
+DTEND:20260413T030000Z
+LOCATION:Longmont\, CO
+DTSTART:20260413T010000Z
+SUMMARY:🎵 Tarot Card Reader at The Golden Bee
+UID:9bca02e0-52e3-445a-b4e2-1fcc24b6387a@9bca.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Source: https://www.johnsonsstation.com/calendar/jack-hadley-indoor-29pbs
+DTEND:20260607T030000Z
+LOCATION:Longmont\, CO
+DTSTART:20260607T010000Z
+SUMMARY:🎵 Jack Hadley
+UID:bed2f1f3-4016-4080-9ce1-65a8477d9615@bed2.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Source: https://www.barnevents.info/events/2024/5/24/dance-party-with-the-rifters
+DTEND:20260525T030000Z
+LOCATION:Longmont\, CO
+DTSTART:20260525T010000Z
+SUMMARY:🎵 [Folk/Acoustic] Dance Party with The Rifters
+UID:c5b932ca-8707-46c9-8153-d6f8e4a1c151@c5b9.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Source: https://www.downtownlongmont.com/do/spring-cleaning-stationery-swap
+DTEND:20260427T030000Z
+LOCATION:Longmont\, CO
+DTSTART:20260427T010000Z
+SUMMARY:🎵 Spring Cleaning Stationery Swap!
+UID:84c9ec99-c16a-4c59-ba26-3888abf18737@84c9.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Source: https://www.johnsonsstation.com/calendar/domi-edson-trio
+DTEND:20260818T030000Z
+LOCATION:Longmont\, CO
+DTSTART:20260818T010000Z
+SUMMARY:🎵 [Jazz] Domi Edson Trio
+UID:8d75ce9d-07d6-4a01-8d85-74835f567182@8d75.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Source: https://www.johnsonsstation.com/calendar/david-honig
+DTEND:20260510T030000Z
+LOCATION:Longmont\, CO
+DTSTART:20260510T010000Z
+SUMMARY:🎵 David Honig
+UID:34adb2a5-4eb1-4148-85ab-2e07bff236cd@34ad.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Source: https://www.johnsonsstation.com/calendar/groove-holiday-95bw7
+DTEND:20260727T030000Z
+LOCATION:Longmont\, CO
+DTSTART:20260727T010000Z
+SUMMARY:🎵 [Jazz] Matthew Popkin
+UID:5bf23120-60c8-4bae-8fb8-64aa9acf3d13@5bf2.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Source: https://www.barnevents.info/events/2023/8/13/shanna
+DTEND:20260812T030000Z
+LOCATION:Longmont\, CO
+DTSTART:20260812T010000Z
+SUMMARY:🎵 [Folk/Acoustic] Shanna in a Dress
+UID:05998dc2-ec28-4b6c-aa46-201e59ee02e3@0599.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Source: https://www.johnsonsstation.com/calendar/tim-jenny-ostdiek
+DTEND:20260606T030000Z
+LOCATION:Longmont\, CO
+DTSTART:20260606T010000Z
+SUMMARY:🎵 Tim & Jenny Ostdiek
+UID:2968f57b-34bf-48cd-8266-4101782ce25e@2968.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Source: https://www.downtownlongmont.com/do/group-open-sing-for-women-and-non-binary-folks-of-all-ages-3
+DTEND:20260422T030000Z
+LOCATION:Longmont\, CO
+DTSTART:20260422T010000Z
+SUMMARY:🎵 Group Open Sing for Women and Non
+UID:039c8d29-b9b4-4714-b411-1078faa18e60@039c.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Source: https://www.downtownlongmont.com/do/talk-with-the-curator-grandmas-recipe-box-potluck
+DTEND:20260425T030000Z
+LOCATION:Longmont\, CO
+DTSTART:20260425T010000Z
+SUMMARY:🎵 Talk with the Curator: Grandma’s Recipe Box Potluck
+UID:798c97a0-24ba-4014-a149-25aac602b24d@798c.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Source: https://www.downtownlongmont.com/do/sunday-music-series-jazz-with-vic-dillahay-and-doug-carmichael
+DTEND:20260413T030000Z
+LOCATION:Longmont\, CO
+DTSTART:20260413T010000Z
+SUMMARY:🎵 [Jazz] Sunday Music Series: Jazz with Vic Dillahay and Doug Carmichael
+UID:27bb7cb3-f7b0-49bb-a013-604adfbac157@27bb.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Source: https://www.johnsonsstation.com/calendar/jules-fern
+DTEND:20260720T030000Z
+LOCATION:Longmont\, CO
+DTSTART:20260720T010000Z
+SUMMARY:🎵 Jules Fern
+UID:33e19f74-23ff-441a-a31f-53cd684c30dc@33e1.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Source: https://www.downtownlongmont.com/do/light-the-way
+DTEND:20260424T030000Z
+LOCATION:Longmont\, CO
+DTSTART:20260424T010000Z
+SUMMARY:🎵 Light The Way
+UID:16ce3789-bfeb-4e0e-9d6b-ab8678a997f3@16ce.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Source: https://www.downtownlongmont.com/do/lso-concert-pops-concert-best-of-broadway
+DTEND:20260503T030000Z
+LOCATION:Longmont\, CO
+DTSTART:20260503T010000Z
+SUMMARY:🎵 LSO Concert Pops Concert: Best of Broadway
+UID:5ac383f4-dd79-4f09-8837-8540cf5e2abd@5ac3.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Source: https://www.downtownlongmont.com/do/free-live-music-by-joe-teichman
 DTEND:20260418T030000Z
 LOCATION:Longmont\, CO
 DTSTART:20260418T010000Z
-SUMMARY:🎵 [Rock] Music at Bricks on Main "Bandana"
-UID:53c002f5-1735-47a2-a04a-367b7210d025@53c0.org
+SUMMARY:🎵 Free Live Music by Joe Teichman
+UID:2d834d00-2151-4730-a5b1-3d9fdb544038@2d83.org
 END:VEVENT
 BEGIN:VEVENT
-DESCRIPTION:Source: https://www.johnsonsstation.com/calendar/jack-hadley-indoor-29pbs-ah986
-DTEND:20260823T030000Z
+DESCRIPTION:Source: https://www.downtownlongmont.com/do/longmont-all-star-jazz-band-free-performance-1
+DTEND:20260419T030000Z
 LOCATION:Longmont\, CO
-DTSTART:20260823T010000Z
-SUMMARY:🎵 Johnson's Station
-UID:4c0aa71b-2830-46f8-be23-2b1066ac871c@4c0a.org
+DTSTART:20260419T010000Z
+SUMMARY:🎵 [Jazz] Longmont All Star Jazz Band Free Performance!
+UID:58089c11-053b-4880-a16a-10baea76fde8@5808.org
 END:VEVENT
 BEGIN:VEVENT
-DESCRIPTION:Source: https://www.johnsonsstation.com/calendar/james-barela
-DTEND:20260801T030000Z
+DESCRIPTION:Source: https://www.downtownlongmont.com/do/great-american-nowhere-duo-live-music
+DTEND:20260503T030000Z
 LOCATION:Longmont\, CO
-DTSTART:20260801T010000Z
-SUMMARY:🎵 Johnson's Station
-UID:e9943fcf-a1db-49a9-88ed-5f98325044c9@e994.org
+DTSTART:20260503T010000Z
+SUMMARY:🎵 [Country] Great American Nowhere Duo
+UID:2ddffa82-7539-44fd-af47-a18ba5709c8f@2ddf.org
 END:VEVENT
 BEGIN:VEVENT
-DESCRIPTION:Source: https://www.johnsonsstation.com/calendar/recline
-DTEND:20260614T030000Z
+DESCRIPTION:Source: https://www.downtownlongmont.com/do/an-evening-with-daisy-dog-press-hosted-by-authors-and-musicians-gregory-hill-and-zach-boddicker
+DTEND:20260419T030000Z
 LOCATION:Longmont\, CO
-DTSTART:20260614T010000Z
-SUMMARY:🎵 Johnson's Station
-UID:cb986fcd-d6d6-4e73-aff5-f498f1ca6075@cb98.org
+DTSTART:20260419T010000Z
+SUMMARY:🎵 AN EVENING WITH DAISY DOG PRESS
+UID:c8019dce-1a49-4b5f-98e1-6687040b10c0@c801.org
 END:VEVENT
 BEGIN:VEVENT
-DESCRIPTION:Source: https://www.johnsonsstation.com/calendar/many-mountains
-DTEND:20261019T030000Z
+DESCRIPTION:Source: https://www.downtownlongmont.com/events/wine-walk
+DTEND:20260926T030000Z
 LOCATION:Longmont\, CO
-DTSTART:20261019T010000Z
-SUMMARY:🎵 [Rock] Johnson's Station
-UID:d7c2be96-4299-4cc3-b916-bd62fb3e93ff@d7c2.org
+DTSTART:20260926T010000Z
+SUMMARY:🎵 Downtown Longmont Wine Walk
+UID:17b43145-8172-427b-9161-6683c3dca797@17b4.org
 END:VEVENT
 BEGIN:VEVENT
-DESCRIPTION:Source: https://www.johnsonsstation.com/calendar/delta-sonics
-DTEND:20260721T030000Z
+DESCRIPTION:Source: https://www.johnsonsstation.com/calendar/jaik-hakkarinen
+DTEND:20260725T030000Z
 LOCATION:Longmont\, CO
-DTSTART:20260721T010000Z
-SUMMARY:🎵 [Jazz] Johnson's Station
-UID:e6e6aac7-c902-4428-815c-fc2a1f2b97b0@e6e6.org
+DTSTART:20260725T010000Z
+SUMMARY:🎵 Jaik Hakkarinen
+UID:b8275b06-75dc-494a-8dfe-7b35b6c2caa1@b827.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Source: https://www.johnsonsstation.com/calendar/laurie-lorrie
+DTEND:20260704T030000Z
+LOCATION:Longmont\, CO
+DTSTART:20260704T010000Z
+SUMMARY:🎵 Laurie & Lorrie
+UID:104f0407-3ab0-431e-9eb3-c6872f54e181@104f.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Source: https://www.johnsonsstation.com/calendar/the-krueger-brothers
+DTEND:20260322T030000Z
+LOCATION:Longmont\, CO
+DTSTART:20260322T010000Z
+SUMMARY:🎵 The Krueger Brothers
+UID:a85195a4-881a-4385-991e-f5a396cffd71@a851.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Source: https://www.downtownlongmont.com/do/if-and-and-but-understanding-shakespeare-with-three-words-with-michael-witmore
+DTEND:20260424T030000Z
+LOCATION:Longmont\, CO
+DTSTART:20260424T010000Z
+SUMMARY:🎵 If\, and\, and but: understanding Shakespeare with three words with Michael Witmore
+UID:e2d9956e-3318-4966-9df9-608f1167f61b@e2d9.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Source: https://www.johnsonsstation.com/calendar/atom-collective
+DTEND:20260831T030000Z
+LOCATION:Longmont\, CO
+DTSTART:20260831T010000Z
+SUMMARY:🎵 Atom Collective
+UID:2295cafe-6ec2-4374-ad05-e54259e2a8ae@2295.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Source: https://www.downtownlongmont.com/do/tour-the-mediterranean-wine-dinner
+DTEND:20260417T030000Z
+LOCATION:Longmont\, CO
+DTSTART:20260417T010000Z
+SUMMARY:🎵 'Tour The Mediterranean' Wine Dinner
+UID:6b05245f-6e4e-4ec2-9125-c1ad6e26e30f@6b05.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Source: https://www.johnsonsstation.com/calendar/gypsywould
+DTEND:20260613T030000Z
+LOCATION:Longmont\, CO
+DTSTART:20260613T010000Z
+SUMMARY:🎵 GypsyWould
+UID:44265ef2-bd38-4f40-8b08-5db23dfd94b6@4426.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Source: https://www.barnevents.info/events/2024/1/17/moors-mccumber
+DTEND:20260318T030000Z
+LOCATION:Longmont\, CO
+DTSTART:20260318T010000Z
+SUMMARY:🎵 [Rock] Moors & McCumber: Saint Patrick's Day Concert
+UID:1bc93f47-8e83-416a-856d-ea049f74e836@1bc9.org
 END:VEVENT
 BEGIN:VEVENT
 DESCRIPTION:Source: https://www.johnsonsstation.com/calendar/dino-romanelli
 DTEND:20260627T030000Z
 LOCATION:Longmont\, CO
 DTSTART:20260627T010000Z
-SUMMARY:🎵 Johnson's Station
-UID:7f8a1f55-5ef7-42e8-b1d6-2e65d9d975e4@7f8a.org
+SUMMARY:🎵 Dino Romanelli
+UID:034157b2-7cb5-44aa-a9ba-fc27c14b815e@0341.org
 END:VEVENT
 BEGIN:VEVENT
-DESCRIPTION:Source: https://www.johnsonsstation.com/calendar/dan-buller-duo
-DTEND:20260711T030000Z
+DESCRIPTION:Source: https://www.johnsonsstation.com/calendar/delta-sonics-4ktn8
+DTEND:20260915T030000Z
 LOCATION:Longmont\, CO
-DTSTART:20260711T010000Z
-SUMMARY:🎵 Johnson's Station
-UID:b06f1fa6-6174-4dce-b6e4-d2ff7b973554@b06f.org
+DTSTART:20260915T010000Z
+SUMMARY:🎵 [Jazz] Delta Sonics
+UID:7fcee020-2403-4972-a5ea-64f97e2735f7@7fce.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Source: https://www.downtownlongmont.com/do/recovery-cafe-benefit-concert
+DTEND:20260426T030000Z
+LOCATION:Longmont\, CO
+DTSTART:20260426T010000Z
+SUMMARY:🎵 Recovery Cafe Benefit Concert
+UID:04b68072-dd4c-42ba-81e7-7554767e9ac2@04b6.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Source: https://www.johnsonsstation.com/calendar/davy-allard-the-silverwave-band
+DTEND:20260811T030000Z
+LOCATION:Longmont\, CO
+DTSTART:20260811T010000Z
+SUMMARY:🎵 [Folk/Acoustic] Davy Allard & the SilverWave Band
+UID:7bc114d6-1ee2-4280-aee7-39b4cc059f2d@7bc1.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Source: https://www.johnsonsstation.com/calendar/the-thistle-tones-1
+DTEND:20260524T030000Z
+LOCATION:Longmont\, CO
+DTSTART:20260524T010000Z
+SUMMARY:🎵 The Thistle Tones
+UID:23abfea8-c420-4dcf-ad40-a904c32cb89e@23ab.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Source: https://www.johnsonsstation.com/calendar/jason-malmberg
+DTEND:20260810T030000Z
+LOCATION:Longmont\, CO
+DTSTART:20260810T010000Z
+SUMMARY:🎵 [Jazz] Nice Work Jazz
+UID:a4b6965a-6f08-4024-b9d9-261c4288944b@a4b6.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Source: https://www.johnsonsstation.com/calendar/flatwoods-rambler
+DTEND:20260628T030000Z
+LOCATION:Longmont\, CO
+DTSTART:20260628T010000Z
+SUMMARY:🎵 Flatwoods Rambler
+UID:3981c49d-daeb-4805-b2e2-a39a93508074@3981.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Source: https://www.johnsonsstation.com/calendar/matthew-popkin
+DTEND:20260726T030000Z
+LOCATION:Longmont\, CO
+DTSTART:20260726T010000Z
+SUMMARY:🎵 Matthew Popkin
+UID:fb142544-f568-4d50-9cdd-223bbcf8a800@fb14.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Source: https://www.johnsonsstation.com/calendar/delta-sonics
+DTEND:20260721T030000Z
+LOCATION:Longmont\, CO
+DTSTART:20260721T010000Z
+SUMMARY:🎵 [Jazz] Delta Sonics
+UID:878bdabb-6662-4fe9-a896-ea3cd283f146@878b.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Source: https://www.downtownlongmont.com/do/rrrrrj-101-open-house-2
+DTEND:20260424T030000Z
+LOCATION:Longmont\, CO
+DTSTART:20260424T010000Z
+SUMMARY:🎵 RRRRRJ 101 Open House
+UID:4a475d5c-1370-422e-9801-de4e080aa85e@4a47.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Source: https://www.downtownlongmont.com/do/music-at-bricks-on-main-foxfeather-full-band
+DTEND:20260503T030000Z
+LOCATION:Longmont\, CO
+DTSTART:20260503T010000Z
+SUMMARY:🎵 [Rock] Music at Bricks on Main "Foxfeather Full Band"
+UID:dcdf36bf-995d-4450-8078-41885d916d76@dcdf.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Source: https://www.johnsonsstation.com/calendar/david-coile-fgk3n
+DTEND:20260822T030000Z
+LOCATION:Longmont\, CO
+DTSTART:20260822T010000Z
+SUMMARY:🎵 David Coile
+UID:ee99c8a9-9b1b-43e9-b2a8-92d4e7797e91@ee99.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Source: https://www.barnevents.info/events/2025/4/4/greg-schochet-and-little-america
+DTEND:20260405T030000Z
+LOCATION:Longmont\, CO
+DTSTART:20260405T010000Z
+SUMMARY:🎵 [Jazz] GREG SCHOCHET & LITTLE AMERICA
+UID:c4cd789e-b720-45ae-9887-2ff46fdca822@c4cd.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Source: https://www.johnsonsstation.com/calendar/scott-von
+DTEND:20260908T030000Z
+LOCATION:Longmont\, CO
+DTSTART:20260908T010000Z
+SUMMARY:🎵 [Folk/Acoustic] Scott Von
+UID:cd55f573-0271-4f60-a42f-83930424b006@cd55.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Source: https://www.downtownlongmont.com/do/poetry-night-3
+DTEND:20260425T030000Z
+LOCATION:Longmont\, CO
+DTSTART:20260425T010000Z
+SUMMARY:🎵 Poetry Night
+UID:8d2e359f-196c-4a70-a71e-ab189f696634@8d2e.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Source: https://www.downtownlongmont.com/do/rescue-plant-sunday-sale
+DTEND:20260406T030000Z
+LOCATION:Longmont\, CO
+DTSTART:20260406T010000Z
+SUMMARY:🎵 Rescue Plant Sunday Sale
+UID:b0d35f0a-f11b-4ffe-a2db-7fb1f99c9a9c@b0d3.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Source: https://www.downtownlongmont.com/do/art-and-sip-rocky-mountain-national-park-embroidery-1
+DTEND:20260501T030000Z
+LOCATION:Longmont\, CO
+DTSTART:20260501T010000Z
+SUMMARY:🎵 Art & Sip: Rocky Mountain National Park Embroidery
+UID:dcdbc322-0d49-4233-8aac-a00b23024e50@dcdb.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Source: https://www.johnsonsstation.com/calendar/recline
+DTEND:20260614T030000Z
+LOCATION:Longmont\, CO
+DTSTART:20260614T010000Z
+SUMMARY:🎵 ReCline
+UID:6e78a4d3-cefd-438e-8c5f-24b9500961f2@6e78.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Source: https://www.barnevents.info/events/2023/8/13/shanna-nd7z2
+DTEND:20261120T040000Z
+LOCATION:Longmont\, CO
+DTSTART:20261120T020000Z
+SUMMARY:🎵 [Folk/Acoustic] Shanna in a Dress (Copy)
+UID:00d89e69-b661-4a03-8c4f-833edabb1364@00d8.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Source: https://www.downtownlongmont.com/do/tarot-with-shifra-at-blackbird-house-19
+DTEND:20260420T030000Z
+LOCATION:Longmont\, CO
+DTSTART:20260420T010000Z
+SUMMARY:🎵 Tarot with Shifra at Blackbird House
+UID:8d5c38ef-d773-4f91-b397-b73697e620da@8d5c.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Source: https://www.johnsonsstation.com/calendar/lookin-for-louie
+DTEND:20260718T030000Z
+LOCATION:Longmont\, CO
+DTSTART:20260718T010000Z
+SUMMARY:🎵 Lookin' for Louie
+UID:996eea75-2bab-43d1-9ec8-f5337f2120a9@996e.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Source: https://www.downtownlongmont.com/do/first-annual-met-gala-red-carpet-watch-party
+DTEND:20260505T030000Z
+LOCATION:Longmont\, CO
+DTSTART:20260505T010000Z
+SUMMARY:🎵 First Annual Met Gala Red Carpet Watch Party!
+UID:5fae9f91-5e75-49fb-b020-0c059101588c@5fae.org
 END:VEVENT
 BEGIN:VEVENT
 DESCRIPTION:Source: https://www.downtownlongmont.com/do/music-at-bricks-on-main-los-cheesies
@@ -519,22 +503,622 @@ DTEND:20260419T030000Z
 LOCATION:Longmont\, CO
 DTSTART:20260419T010000Z
 SUMMARY:🎵 Music at Bricks on Main "Los Cheesies"
-UID:197ad5d8-3ba5-4e91-b456-0a0c38831bee@197a.org
+UID:77deb3a9-6074-4f7e-8575-c08bf636db58@77de.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Source: https://www.downtownlongmont.com/do/music-at-bricks-on-main-livewire-and-kickstart-my-heart
+DTEND:20260425T030000Z
+LOCATION:Longmont\, CO
+DTSTART:20260425T010000Z
+SUMMARY:🎵 Music at Bricks on Main "Livewire & Kickstart My Heart"
+UID:cca03b66-805c-46da-a5da-580354a921cd@cca0.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Source: https://www.downtownlongmont.com/do/lunch-hour-headshots
+DTEND:20260507T030000Z
+LOCATION:Longmont\, CO
+DTSTART:20260507T010000Z
+SUMMARY:🎵 Lunch Hour Headshots
+UID:c32c97a7-d840-4289-bc8e-ccd8541a2b9e@c32c.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Source: https://www.downtownlongmont.com/do/music-at-bricks-on-main-the-rachel-alena-band
+DTEND:20260501T030000Z
+LOCATION:Longmont\, CO
+DTSTART:20260501T010000Z
+SUMMARY:🎵 [Folk/Acoustic] Music at Bricks on Main "The Rachel Alena Band"
+UID:ef6563a3-3d08-465b-8833-9364996255ce@ef65.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Source: https://www.downtownlongmont.com/do/denny-driscoll-live-music
+DTEND:20260426T030000Z
+LOCATION:Longmont\, CO
+DTSTART:20260426T010000Z
+SUMMARY:🎵 [Folk/Acoustic] Denny Driscoll
+UID:cfd963a1-2c34-4a4d-8f8b-5502adf114d6@cfd9.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Source: https://www.downtownlongmont.com/do/wednesday-night-square-dance-al-herrera
+DTEND:20260416T030000Z
+LOCATION:Longmont\, CO
+DTSTART:20260416T010000Z
+SUMMARY:🎵 Wednesday Night Square Dance
+UID:8f787389-b413-44f3-9327-77b5a86afb64@8f78.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Source: https://www.downtownlongmont.com/do/music-at-bricks-on-main-bandana-a-tribute-to-the-music-of-santana
+DTEND:20260418T030000Z
+LOCATION:Longmont\, CO
+DTSTART:20260418T010000Z
+SUMMARY:🎵 Music at Bricks on Main "Bandana"
+UID:8b61adae-de5f-455a-8211-1cc53f5ecc15@8b61.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Source: https://www.johnsonsstation.com/calendar/mad-dog
+DTEND:20260705T030000Z
+LOCATION:Longmont\, CO
+DTSTART:20260705T010000Z
+SUMMARY:🎵 Mad Dog
+UID:addff5fa-9477-4ed8-af97-a9df049515d9@addf.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Source: https://www.barnevents.info/events/2023/7/22/triple-band-concert
+DTEND:20260723T030000Z
+LOCATION:Longmont\, CO
+DTSTART:20260723T010000Z
+SUMMARY:🎵 [Rock] Triple Band Concert
+UID:06cfd873-8ad6-48b8-96ae-3eff46029768@06cf.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Source: https://www.johnsonsstation.com/calendar/barn-ghost
+DTEND:20260816T030000Z
+LOCATION:Longmont\, CO
+DTSTART:20260816T010000Z
+SUMMARY:🎵 Barn Ghost
+UID:b8fe7cfd-9f41-48bc-9403-54c8538bedcd@b8fe.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Source: https://www.barnevents.info/events/2024/8/25/salome-songbird-and-sarah
+DTEND:20260826T030000Z
+LOCATION:Longmont\, CO
+DTSTART:20260826T010000Z
+SUMMARY:🎵 [Jazz] Double Concert: Salomé Songbird and Sarah Clanton
+UID:18029bdb-668a-4657-970d-db854e41b551@1802.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Source: https://www.johnsonsstation.com/calendar/jules-fern-1
+DTEND:20260809T030000Z
+LOCATION:Longmont\, CO
+DTSTART:20260809T010000Z
+SUMMARY:🎵 Jules Fern
+UID:afa14522-6660-4a0f-b734-f232760a4c6a@afa1.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Source: https://www.downtownlongmont.com/do/first-friday-with-mojazz
+DTEND:20260502T030000Z
+LOCATION:Longmont\, CO
+DTSTART:20260502T010000Z
+SUMMARY:🎵 First Friday with Mojazz
+UID:031a2b95-09d7-4e88-a45c-ca74210401de@031a.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Source: https://www.johnsonsstation.com/calendar/dougs-garage
+DTEND:20260712T030000Z
+LOCATION:Longmont\, CO
+DTSTART:20260712T010000Z
+SUMMARY:🎵 Doug's Garage
+UID:a8fbca32-f743-48a4-ab29-9f58c1283b15@a8fb.org
 END:VEVENT
 BEGIN:VEVENT
 DESCRIPTION:Source: https://www.johnsonsstation.com/calendar/david-coile
 DTEND:20260503T030000Z
 LOCATION:Longmont\, CO
 DTSTART:20260503T010000Z
-SUMMARY:🎵 Johnson's Station
-UID:4ba1dba4-44af-4bc4-8fd8-0de7500c6722@4ba1.org
+SUMMARY:🎵 David Coile
+UID:ea1a7d84-4e99-4e3a-86aa-9665ce380b24@ea1a.org
 END:VEVENT
 BEGIN:VEVENT
-DESCRIPTION:Source: https://www.downtownlongmont.com/events/wwms
-DTEND:20260208T040000Z
+DESCRIPTION:Source: https://www.downtownlongmont.com/do/if-and-and-but-understanding-shakespeare-with-three-words-with-michael-witmore-1
+DTEND:20260424T030000Z
 LOCATION:Longmont\, CO
-DTSTART:20260208T020000Z
-SUMMARY:🎵 [Folk/Acoustic] Winter Walkabout Music Showcase
-UID:e7ea4973-6ea9-4776-8345-15b25afaf9a4@e7ea.org
+DTSTART:20260424T010000Z
+SUMMARY:🎵 “If”\, “and” and “but”: Understanding Shakespeare with Three Words with Michael Witmore
+UID:a22e89c0-da6c-47f1-af14-8c29ebfd2e69@a22e.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Source: https://www.downtownlongmont.com/do/wednesday-night-square-dance-john-mckay
+DTEND:20260423T030000Z
+LOCATION:Longmont\, CO
+DTSTART:20260423T010000Z
+SUMMARY:🎵 Wednesday Night Square Dance
+UID:fce8272c-792f-4f5f-97ee-ab25c347d8d0@fce8.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Source: https://www.johnsonsstation.com/calendar/chris-vargo-trio
+DTEND:20260901T030000Z
+LOCATION:Longmont\, CO
+DTSTART:20260901T010000Z
+SUMMARY:🎵 Chris Vargo Trio
+UID:041dc631-ec1f-4a3a-99d4-e59e85e9c986@041d.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Source: https://www.downtownlongmont.com/do/wednesday-night-square-dance-taylor-sims
+DTEND:20260430T030000Z
+LOCATION:Longmont\, CO
+DTSTART:20260430T010000Z
+SUMMARY:🎵 Wednesday Night Square Dance
+UID:6e333791-3827-4144-bce6-f4fec8c50b2f@6e33.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Source: https://www.downtownlongmont.com/do/music-at-bricks-on-main-asteria-jazz-collective-6
+DTEND:20260420T030000Z
+LOCATION:Longmont\, CO
+DTSTART:20260420T010000Z
+SUMMARY:🎵 [Jazz] Music at Bricks on Main "Asteria Jazz Collective"
+UID:1fb0c480-39e7-41c1-a020-5dcd80defa3b@1fb0.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Source: https://www.johnsonsstation.com/calendar/zizania-1
+DTEND:20260412T030000Z
+LOCATION:Longmont\, CO
+DTSTART:20260412T010000Z
+SUMMARY:🎵 Zizania
+UID:4de89f64-263c-4c7e-aca9-a7d60dffbb09@4de8.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Source: https://www.johnsonsstation.com/calendar/alex-nikiforoff
+DTEND:20260404T030000Z
+LOCATION:Longmont\, CO
+DTSTART:20260404T010000Z
+SUMMARY:🎵 Alex Nikiforoff
+UID:fba5fe30-540d-4fb5-943d-99a6eeeefe4a@fba5.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Source: https://www.johnsonsstation.com/calendar/jack-hadley-indoor-29pbs-ah986
+DTEND:20260823T030000Z
+LOCATION:Longmont\, CO
+DTSTART:20260823T010000Z
+SUMMARY:🎵 Jack Hadley
+UID:10d78237-8e17-4858-a19a-3fd25c40c7a5@10d7.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Source: https://www.downtownlongmont.com/do/mocktails-and-momos-aka-dumplings-a-crackpots-foodie-event-for-adults
+DTEND:20260501T030000Z
+LOCATION:Longmont\, CO
+DTSTART:20260501T010000Z
+SUMMARY:🎵 Mocktails and Momos (aka Dumplings)... A Crackpots Foodie Event for Adults
+UID:ecb7431d-1ade-44e0-9b98-0c7ba65612ff@ecb7.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Source: https://www.downtownlongmont.com/do/music-at-bricks-on-main-sabotage
+DTEND:20260502T030000Z
+LOCATION:Longmont\, CO
+DTSTART:20260502T010000Z
+SUMMARY:🎵 Music at Bricks on Main "Sabotage"
+UID:e8d1fff2-67c6-4596-8cb0-c37fa269c093@e8d1.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Source: https://www.downtownlongmont.com/do/art-and-sip-abstract-watercolor-landscapes
+DTEND:20260424T030000Z
+LOCATION:Longmont\, CO
+DTSTART:20260424T010000Z
+SUMMARY:🎵 Art & Sip: Abstract Watercolor Landscapes
+UID:4c5d165f-a556-486c-b8b0-a500479fe208@4c5d.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Source: https://www.johnsonsstation.com/calendar/jack-hadley-indoor-29pbs-ah986-rh72h
+DTEND:20260906T030000Z
+LOCATION:Longmont\, CO
+DTSTART:20260906T010000Z
+SUMMARY:🎵 Jack Hadley
+UID:05f40930-4529-4775-ba25-0f4e0be4c15b@05f4.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Source: https://www.downtownlongmont.com/do/living-the-principles-of-nonviolence-speaker-series
+DTEND:20260415T030000Z
+LOCATION:Longmont\, CO
+DTSTART:20260415T010000Z
+SUMMARY:🎵 Living the Principles of Nonviolence Speaker Series
+UID:0b7bf9a9-dbfc-4ff2-987b-b71c54df78bc@0b7b.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Source: https://www.johnsonsstation.com/calendar/jack-hadley-indoor
+DTEND:20260419T030000Z
+LOCATION:Longmont\, CO
+DTSTART:20260419T010000Z
+SUMMARY:🎵 Jack Hadley
+UID:7c596caa-5eea-4eee-a045-9c5c3d8b4f14@7c59.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Source: https://www.downtownlongmont.com/do/bubbly-flight-friday
+DTEND:20260418T030000Z
+LOCATION:Longmont\, CO
+DTSTART:20260418T010000Z
+SUMMARY:🎵 Bubbly Flight Friday!
+UID:feb8f7f3-f49e-44f6-aab5-a5ea3c1d4cd0@feb8.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Source: https://www.downtownlongmont.com/do/monthly-irish-jam-session
+DTEND:20260421T030000Z
+LOCATION:Longmont\, CO
+DTSTART:20260421T010000Z
+SUMMARY:🎵 Monthly Irish Jam Session
+UID:4c9aafd5-7365-4fc9-bbdb-056e167a6f66@4c9a.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Source: https://www.barnevents.info/events/2023/8/13/shanna-nd7z2-pgby7-ee5zy
+DTEND:20260309T030000Z
+LOCATION:Longmont\, CO
+DTSTART:20260309T010000Z
+SUMMARY:🎵 Shanna in a Dress
+UID:c8d97e7d-a2dc-4a00-b877-49ba6c88d528@c8d9.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Source: https://www.downtownlongmont.com/do/music-at-bricks-on-main-cat-jerky
+DTEND:20260426T030000Z
+LOCATION:Longmont\, CO
+DTSTART:20260426T010000Z
+SUMMARY:🎵 Music at Bricks on Main "Cat Jerky"
+UID:fea9bb13-2edc-41a5-90b8-6b9c6f033a21@fea9.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Source: https://www.downtownlongmont.com/do/open-sew-studio-with-fashion-rebel-ution
+DTEND:20260420T030000Z
+LOCATION:Longmont\, CO
+DTSTART:20260420T010000Z
+SUMMARY:🎵 Open Sew Studio with Fashion Rebel
+UID:d7cc79fe-0473-4576-84bb-94a4a0e8751a@d7cc.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Source: https://www.barnevents.info/events/2019/9/20/the-common-thread-concert-gar92
+DTEND:20260506T030000Z
+LOCATION:Longmont\, CO
+DTSTART:20260506T010000Z
+SUMMARY:🎵 [Rock] Tim Ostdiek Band
+UID:717fb837-764d-4634-8c37-047d2e864780@717f.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Source: https://www.downtownlongmont.com/do/bloody-tuesday
+DTEND:20260415T030000Z
+LOCATION:Longmont\, CO
+DTSTART:20260415T010000Z
+SUMMARY:🎵 Bloody Tuesday!
+UID:37c882d8-f51f-4dd0-a537-18a222ba85b3@37c8.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Source: https://www.barnevents.info/events/2025/1/16/moors-mccumber-gtn7y
+DTEND:20260317T030000Z
+LOCATION:Longmont\, CO
+DTSTART:20260317T010000Z
+SUMMARY:🎵 [Rock] Moors & McCumber: Saint Patrick's Day Concert
+UID:46f9d0b4-03bf-4a07-8c6e-3aa0da267c95@46f9.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Source: https://www.downtownlongmont.com/do/haunted-history-of-longmont
+DTEND:20260418T030000Z
+LOCATION:Longmont\, CO
+DTSTART:20260418T010000Z
+SUMMARY:🎵 Haunted History of Longmont
+UID:a7961838-7ef4-4c06-bc3e-801dd7a3ebd3@a796.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Source: https://www.barnevents.info/events/2025/8/22/sturtz
+DTEND:20260823T030000Z
+LOCATION:Longmont\, CO
+DTSTART:20260823T010000Z
+SUMMARY:🎵 [Rock] Sturtz
+UID:ca7afc7e-243f-4160-887b-7158424249a8@ca7a.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Source: https://www.barnevents.info/events/2025/6/27/sugar-britches
+DTEND:20260530T030000Z
+LOCATION:Longmont\, CO
+DTSTART:20260530T010000Z
+SUMMARY:🎵 [Rock] Sugar Britches
+UID:29757634-c37c-4768-9a89-60d19e7b9f0b@2975.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Source: https://www.johnsonsstation.com/calendar/zizania-2
+DTEND:20260621T030000Z
+LOCATION:Longmont\, CO
+DTSTART:20260621T010000Z
+SUMMARY:🎵 Zizania
+UID:dc9cab92-0dd9-405a-b55a-7e0656bcc532@dc9c.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Source: https://www.johnsonsstation.com/calendar/nice-work-jazz
+DTEND:20260829T030000Z
+LOCATION:Longmont\, CO
+DTSTART:20260829T010000Z
+SUMMARY:🎵 [Jazz] Nice Work Jazz
+UID:60a9a281-4dda-43ac-952f-577879bf5cc8@60a9.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Source: https://www.barnevents.info/events/2023/11/4/bonnie-and-taylor-sims
+DTEND:20261105T040000Z
+LOCATION:Longmont\, CO
+DTSTART:20261105T020000Z
+SUMMARY:🎵 [Blues] Bonnie and Taylor Sims
+UID:9fb3dc71-db89-4f2e-998b-3a66f5865082@9fb3.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Source: https://www.johnsonsstation.com/calendar/mango-moondog
+DTEND:20260922T030000Z
+LOCATION:Longmont\, CO
+DTSTART:20260922T010000Z
+SUMMARY:🎵 [Rock] Mango Moondog
+UID:5cd4102e-76ae-4b2c-9ccd-418f54f9efd2@5cd4.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Source: https://www.johnsonsstation.com/calendar/dr-jim-seely
+DTEND:20260914T030000Z
+LOCATION:Longmont\, CO
+DTSTART:20260914T010000Z
+SUMMARY:🎵 [Rock] Dr Jim Seely
+UID:6daf6c34-afa2-4eac-a466-6dcf69cacb94@6daf.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Source: https://www.johnsonsstation.com/calendar/50-shades-of-blue
+DTEND:20260426T030000Z
+LOCATION:Longmont\, CO
+DTSTART:20260426T010000Z
+SUMMARY:🎵 50 Shades of Blue
+UID:7a89d975-9c55-436d-a8c6-3844705d229e@7a89.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Source: https://www.downtownlongmont.com/do/half-price-bottle-night-and-live-music-1
+DTEND:20260417T030000Z
+LOCATION:Longmont\, CO
+DTSTART:20260417T010000Z
+SUMMARY:🎵 Half Price Bottle Night & Live Music
+UID:11f12e06-2c26-45ca-8ab4-2345157224af@11f1.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Source: https://www.johnsonsstation.com/calendar/event-two-gh4xp-8tmtm
+DTEND:20260728T030000Z
+LOCATION:Longmont\, CO
+DTSTART:20260728T010000Z
+SUMMARY:🎵 [Blues] Jack Hadley
+UID:9993465d-cc59-48a2-8e1b-fe4d53702c7f@9993.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Source: https://www.downtownlongmont.com/do/try-it-series-saxophone-with-kiernan-huff
+DTEND:20260426T030000Z
+LOCATION:Longmont\, CO
+DTSTART:20260426T010000Z
+SUMMARY:🎵 Try It Series: Saxophone with Kiernan Huff
+UID:e7547e81-c401-4089-928a-93382292cb5a@e754.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Source: https://www.johnsonsstation.com/calendar/grable-howie
+DTEND:20260921T030000Z
+LOCATION:Longmont\, CO
+DTSTART:20260921T010000Z
+SUMMARY:🎵 [Folk/Acoustic] Grable Howie
+UID:74c0c4cf-0ecb-4e66-b8cd-b7762d98caef@74c0.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Source: https://www.downtownlongmont.com/do/soundpost-sessions-local-spotlight-sturtz-w-and-holly-lovell
+DTEND:20260417T030000Z
+LOCATION:Longmont\, CO
+DTSTART:20260417T010000Z
+SUMMARY:🎵 Soundpost Sessions LOCAL SPOTLIGHT: Sturtz w/ Holly Lovell
+UID:285a6832-a2bd-4ab6-9ca2-5650fcf7e4bb@285a.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Source: https://www.downtownlongmont.com/do/mystery-menu-chef-curated-dinner
+DTEND:20260423T030000Z
+LOCATION:Longmont\, CO
+DTSTART:20260423T010000Z
+SUMMARY:🎵 Mystery Menu Chef Curated Dinner
+UID:8ee9013e-c0c8-4160-bfa4-78303b85d2aa@8ee9.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Source: https://www.johnsonsstation.com/calendar/paloma-rose-1
+DTEND:20260815T030000Z
+LOCATION:Longmont\, CO
+DTSTART:20260815T010000Z
+SUMMARY:🎵 Paloma Rose
+UID:8cd9531d-4aac-42fe-9913-76db7217fd7f@8cd9.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Source: https://www.downtownlongmont.com/do/how-to-play-in-the-dark
+DTEND:20260417T030000Z
+LOCATION:Longmont\, CO
+DTSTART:20260417T010000Z
+SUMMARY:🎵 How to Play in the Dark
+UID:7cf1be03-e0f0-4823-8d5a-de5296dc16e5@7cf1.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Source: https://www.barnevents.info/events/2024/8/25/salome-songbird-and-sarah-dspaw
+DTEND:20260829T030000Z
+LOCATION:Longmont\, CO
+DTSTART:20260829T010000Z
+SUMMARY:🎵 [Jazz] Salomé Songbird
+UID:2ef25fca-7480-4cd9-98ee-1e7eec8f89f5@2ef2.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Source: https://www.downtownlongmont.com/do/moksha-chocolate-and-dryland-distiller-present-chocolate-and-whiskey-tasting
+DTEND:20260427T030000Z
+LOCATION:Longmont\, CO
+DTSTART:20260427T010000Z
+SUMMARY:🎵 MOKSHA CHOCOLATE & DRYLAND DISTILLER PRESENT CHOCOLATE & WHISKEY TASTING
+UID:2e03409a-e846-4535-a65a-e036b1682561@2e03.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Source: https://www.barnevents.info/events/2026/7/17/songs-stories-and-art-lessons-from-strangersa-visual-folk-concert-by-john-john-brown
+DTEND:20260718T030000Z
+LOCATION:Longmont\, CO
+DTSTART:20260718T010000Z
+SUMMARY:🎵 [Folk/Acoustic] Songs\, Stories\, and Art: Lessons from Strangers—A Visual Folk Concert by John John Brown
+UID:14e360b7-bb0d-476b-96ca-639c279b6c7b@14e3.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Source: https://www.downtownlongmont.com/do/soundpost-sessions-spotlight-sage-and-aera-w-and-antonio-lopez
+DTEND:20260501T030000Z
+LOCATION:Longmont\, CO
+DTSTART:20260501T010000Z
+SUMMARY:🎵 [Folk/Acoustic] Soundpost Sessions SPOTLIGHT: Sage & Aera w/ Antonio Lopez
+UID:501f4bc7-e5d9-4b52-856d-cce84fa75dc9@501f.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Source: https://www.barnevents.info/events/2024/alexalennon
+DTEND:20260320T030000Z
+LOCATION:Longmont\, CO
+DTSTART:20260320T010000Z
+SUMMARY:🎵 Alexa Wildish and Lennon VanderDoes
+UID:009b71f4-20f2-4441-b20f-7879e829df16@009b.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Source: https://www.downtownlongmont.com/do/understanding-trusts
+DTEND:20260416T030000Z
+LOCATION:Longmont\, CO
+DTSTART:20260416T010000Z
+SUMMARY:🎵 [Classical] Understanding Trusts
+UID:4f8326df-5fac-4ab8-b6dd-3e103204cc81@4f83.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Source: https://www.downtownlongmont.com/do/potting-bar-pop-up-at-cristos-coffee-in-erie
+DTEND:20260503T030000Z
+LOCATION:Longmont\, CO
+DTSTART:20260503T010000Z
+SUMMARY:🎵 Potting Bar Pop
+UID:d1c16922-c8a2-4c42-8336-921d0392ac56@d1c1.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Source: https://www.downtownlongmont.com/do/intermediate-crochet-at-the-firehouse
+DTEND:20260413T030000Z
+LOCATION:Longmont\, CO
+DTSTART:20260413T010000Z
+SUMMARY:🎵 Intermediate Crochet at the Firehouse
+UID:d4c1c3e3-6a39-47b3-9f9d-b40e488ea705@d4c1.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Source: https://www.downtownlongmont.com/do/fondue-date-night-2
+DTEND:20260416T030000Z
+LOCATION:Longmont\, CO
+DTSTART:20260416T010000Z
+SUMMARY:🎵 Fondue Date Night
+UID:876f4f1e-9e56-4df0-b5c8-8cd1966cef2a@876f.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Source: https://www.downtownlongmont.com/do/tarot-card-reader-at-the-golden-bee
+DTEND:20260418T030000Z
+LOCATION:Longmont\, CO
+DTSTART:20260418T010000Z
+SUMMARY:🎵 Tarot Card Reader at The Golden Bee
+UID:6a03f9c3-9c01-40c6-9609-eee8887e18cb@6a03.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Source: https://www.downtownlongmont.com/do/crochet-and-chill-monthly-social
+DTEND:20260419T030000Z
+LOCATION:Longmont\, CO
+DTSTART:20260419T010000Z
+SUMMARY:🎵 Crochet & Chill Monthly Social
+UID:9529ed6a-731a-4372-852f-9b63e3a20d82@9529.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Source: https://www.johnsonsstation.com/calendar/dan-buller-duo
+DTEND:20260711T030000Z
+LOCATION:Longmont\, CO
+DTSTART:20260711T010000Z
+SUMMARY:🎵 Dan Buller Duo
+UID:043c5867-bc73-48b3-a92e-fe6c27380a62@043c.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Source: https://www.downtownlongmont.com/do/music-at-bricks-on-main-aimee-lynne
+DTEND:20260424T030000Z
+LOCATION:Longmont\, CO
+DTSTART:20260424T010000Z
+SUMMARY:🎵 [Jazz] Music at Bricks on Main "Aimee Lynne"
+UID:45993baa-37ef-477c-a8e0-471c5db2ecef@4599.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Source: https://www.downtownlongmont.com/do/orchard-creek-band-free-performance
+DTEND:20260426T030000Z
+LOCATION:Longmont\, CO
+DTSTART:20260426T010000Z
+SUMMARY:🎵 [Folk/Acoustic] Orchard Creek Band FREE Performance
+UID:7d73760b-213a-45dc-ac6f-b8c8c955a7d5@7d73.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Source: https://www.downtownlongmont.com/do/east-boulder-country-artists-studio-tour
+DTEND:20260426T030000Z
+LOCATION:Longmont\, CO
+DTSTART:20260426T010000Z
+SUMMARY:🎵 [Country] East Boulder Country Artists Studio Tour
+UID:b51a5c82-ceb4-4fa7-b284-ca1b2f2a2afd@b51a.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Source: https://www.downtownlongmont.com/do/may-happy-day-hangs
+DTEND:20260502T030000Z
+LOCATION:Longmont\, CO
+DTSTART:20260502T010000Z
+SUMMARY:🎵 May Happy Day Hangs
+UID:d017e72c-757a-4a7d-84d8-8da04207615d@d017.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Source: https://www.downtownlongmont.com/do/learn-to-crochet
+DTEND:20260414T030000Z
+LOCATION:Longmont\, CO
+DTSTART:20260414T010000Z
+SUMMARY:🎵 Learn to Crochet
+UID:70d76631-4da0-4d88-9fe8-75df6f29aa75@70d7.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Source: https://www.downtownlongmont.com/do/women-wine-featuring-happy-day-plants-1
+DTEND:20260421T030000Z
+LOCATION:Longmont\, CO
+DTSTART:20260421T010000Z
+SUMMARY:🎵 Women + Wine featuring Happy Day Plants
+UID:5e9d472c-e57b-49df-8b1a-e95e765f411a@5e9d.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Source: https://www.johnsonsstation.com/calendar/event-two-gh4xp-t27zs-bxsfr
+DTEND:20260824T030000Z
+LOCATION:Longmont\, CO
+DTSTART:20260824T010000Z
+SUMMARY:🎵 [Jazz] Dan Buller
+UID:a0f01ad7-b80e-4488-837c-7ae9793af733@a0f0.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Source: https://www.johnsonsstation.com/calendar/dr-jim-seeley
+DTEND:20260620T030000Z
+LOCATION:Longmont\, CO
+DTSTART:20260620T010000Z
+SUMMARY:🎵 Dr Jim Seeley & Michelle
+UID:35df4a63-e98e-4ca1-8d74-8667cd327beb@35df.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Source: https://www.johnsonsstation.com/calendar/brian-mcguirk-ne7l9
+DTEND:20260531T030000Z
+LOCATION:Longmont\, CO
+DTSTART:20260531T010000Z
+SUMMARY:🎵 Brian McGuirk
+UID:62abad98-3e32-4716-b4fc-99a188a18668@62ab.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Source: https://www.barnevents.info/events/2023/8/13/shanna-nd7z2-pgby7
+DTEND:20261116T040000Z
+LOCATION:Longmont\, CO
+DTSTART:20261116T020000Z
+SUMMARY:🎵 Shanna in a Dress
+UID:5e50a18c-9ef4-4a1a-81c9-56f320044725@5e50.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Source: https://www.downtownlongmont.com/do/music-at-bricks-on-main-max-mackey-and-travis-bush
+DTEND:20260413T030000Z
+LOCATION:Longmont\, CO
+DTSTART:20260413T010000Z
+SUMMARY:🎵 [Rock] Music at Bricks on Main "Max Mackey & Travis Bush"
+UID:95bbcb6f-7da3-4578-a249-ae723c99a236@95bb.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Source: https://www.barnevents.info/events/2024/2/10/greg-schochet-amp-little-america
+DTEND:20260211T040000Z
+LOCATION:Longmont\, CO
+DTSTART:20260211T020000Z
+SUMMARY:🎵 [Jazz] Greg Schochet & Little America
+UID:f2bce081-3f93-428f-b59c-936662a8dca4@f2bc.org
 END:VEVENT
 END:VCALENDAR
