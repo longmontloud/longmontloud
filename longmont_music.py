@@ -13,16 +13,16 @@ LOCAL_TZ = pytz.timezone("America/Denver")
 
 # --- FILTERS ---
 EXCLUDE = [
-    'karaoke', 'open mic', 'trivia', 'bingo', 'workshop', 'meeting', 'retail', 'watercolor', 'exhibition', 'the golden bee', 'sing-along'
-    'comedy', 'yoga', 'poker', 'drawing class', 'craft class', 'create club', 'teen', 'crochet', 'wine dinner', 'tasting', 'pairing', 'prix fixe', 
-    'storytime', 'book club', 'knitting', 'market', 'board game', 'meditation', 
-    'teacher', 'discussion', 'ragen', 'networking', 'discovery days', 'uke jam', 
-    'your stage', 'tangerine', 'composition', 'ballet', 'dance class', 'movie', 'bubbles', 'sewing', 'brunch', 'mimosas', 'bellinis', 'denim day'
+    'karaoke', 'open mic', 'trivia', 'bingo', 'workshop', 'meeting', 'retail', 'watercolor', 'exhibition', 'the golden bee', 'sing-along', 'easel', 'studio tour', 'art materials', 'seminar', 'documentary',
+    'comedy', 'yoga', 'poker', 'drawing class', 'craft class', 'create club', 'teen', 'crochet', 'wine dinner', 'tasting', 'pairing', 'prix fixe', 'shakespeare', 'happy day plants', 'headshot', 'stitch', 'embroidery',
+    'storytime', 'book club', 'knitting', 'market', 'board game', 'meditation', 'speaker series', 'stationery', 'wolf & wren', 'talk', 'tarot', 'blackbird house', 'barbed wire books', 'dining', 'crafts & cocktails', 
+    'teacher', 'discussion', 'ragen', 'networking', 'discovery days', 'uke jam', 'painting', 'sip', 'wines', '720-453-4733', 'date night', '303-651-8374', 'open-house', 'open house', 'crackpots', 'bubbly', 'joke', 'potting',
+    'your stage', 'tangerine', 'composition', 'ballet', 'dance class', 'movie', 'bubbles', 'sewing', 'brunch', 'mimosas', 'bellinis', 'denim day', 'poetry night', 'poetry slam', 'sewing', 'sew', 'guest speakers', 'bloody mary',
 ]
 
 MUSIC_KEYWORDS = [
     'live music', 'band', 'concert', 'symphony', 'acoustic', 'jazz', 'supper club',
-    'blues', 'rock', 'singer', 'songwriter', 'orchestra', 'dj', 'solo', 'duo',
+    'blues', 'rock', 'singer', 'songwriter', 'orchestra', 'dj',
     'rave', 'grunge', 'folk', 'metal', 'punk', 'hip-hop', 'live music', 'brass'
 ]
 
