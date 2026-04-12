@@ -46,7 +46,7 @@ def detect_genre(text):
     return ""
 
 def main():
-    print("🚀 Running Tunnel-Vision Precision Scraper...")
+    print("🚀 Running Precision Scraper with Location Updates...")
     
     targets = [
         ("https://www.downtownlongmont.com/events/calendar", "https://www.downtownlongmont.com"),
@@ -112,19 +112,13 @@ def main():
                     if not event_title: continue
                     event_title = event_title.split('|')[0].split('-')[0].strip()
 
-                    # --- TUNNEL VISION ---
+                    # --- CONTENT EXTRACTION ---
                     main_content = ev_soup.select_one('.description, .details, .eventitem-description, .sqs-block-content, article')
-                    
-                    if main_content:
-                        body_text = main_content.get_text(" ", strip=True)
-                    else:
-                        body_text = ev_soup.get_text(" ", strip=True)[:800]
-                    
+                    body_text = main_content.get_text(" ", strip=True) if main_content else ev_soup.get_text(" ", strip=True)[:800]
                     combined_text = (event_title + " " + body_text).lower()
                     
                     # --- FILTERS ---
                     if any(x in event_title.lower() for x in EXCLUDE): continue
-                    
                     is_trusted_site = any(d in full_url for d in TRUSTED_DOMAINS)
                     has_music = any(m in combined_text for m in MUSIC_KEYWORDS)
                     
@@ -149,11 +143,9 @@ def main():
                     # --- LOCATION ASSIGNMENT ---
                     venue_loc = "Longmont, CO"
                     if "barnevents.info" in full_url:
-                        venue_loc = "The Barn, 519 Main St, Longmont, CO 80501"
+                        venue_loc = "The Barn"
                     elif "johnsonsstation.com" in full_url:
-                        venue_loc = "Johnson's Station, 480 2nd Ave, Longmont, CO 80501"
-                    elif "supperclub" in full_url:
-                        venue_loc = "Longmont Supper Club, Longmont, CO"
+                        venue_loc = "Johnson's Station, 1111 Neon Forest Circle, Longmont, CO 80501"
 
                     genre_tag = detect_genre(combined_text)
                     e = Event()
@@ -165,14 +157,14 @@ def main():
                     
                     cal.events.add(e)
                     count += 1
-                    print(f"  [+] Added: {event_title} at {venue_loc.split(',')[0]}")
+                    print(f"  [+] Added: {event_title} @ {venue_loc}")
 
                 except: continue
         except: continue
 
     with open(OUTPUT_FILE, 'w', encoding='utf-8') as f:
         f.writelines(cal.serialize_iter())
-    print(f"\n✅ Finished! {count} Music Events found.")
+    print(f"\n✅ Finished! {count} Music Events saved to {OUTPUT_FILE}.")
 
 if __name__ == "__main__":
     main()
