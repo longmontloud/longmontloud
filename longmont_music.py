@@ -18,7 +18,7 @@ EXCLUDE = [
     'storytime', 'book club', 'knitting', 'market', 'board game', 'meditation', 
     'teacher', 'discussion', 'ragen', 'networking', 'discovery days', 'uke jam', 
     'your stage', 'tangerine', 'composition', 'ballet', 'dance class', 
-    'film', 'movie', 'bubbles', 'sewing', 'brunch', 'mimosas', 'bellinis', 'denim day'
+    'film', 'movie', 'bubbles', 'sewing', 'brunch', 'mimosas', 'bellinis', 'denim day', 'art'
 ]
 
 MUSIC_KEYWORDS = [
@@ -37,7 +37,7 @@ GENRE_MAP = {
     'Country': ['country', 'western', 'honky tonk', 'cowboy']
 }
 
-TRUSTED_DOMAINS = ['barnevents.info', 'johnsonsstation.com', 'supperclub']
+TRUSTED_DOMAINS = ['barnevents.info', 'johnsonsstation.com', 'supper club']
 
 def detect_genre(text):
     t = text.lower()
