@@ -13,8 +13,8 @@ LOCAL_TZ = pytz.timezone("America/Denver")
 
 # --- FILTERS ---
 EXCLUDE = [
-    'karaoke', 'open mic', 'trivia', 'bingo', 'workshop', 'meeting', 'retail',
-    'comedy', 'yoga', 'poker', 'drawing', 'craft', 'create club', 'teen', 
+    'karaoke', 'open mic', 'trivia', 'bingo', 'workshop', 'meeting', 'retail', 'watercolor', 'exhibition', 'the golden bee'
+    'comedy', 'yoga', 'poker', 'drawing class', 'craft class', 'create club', 'teen', 
     'storytime', 'book club', 'knitting', 'market', 'board game', 'meditation', 
     'teacher', 'discussion', 'ragen', 'networking', 'discovery days', 'uke jam', 
     'your stage', 'tangerine', 'composition', 'ballet', 'dance class', 'movie', 'bubbles', 'sewing', 'brunch', 'mimosas', 'bellinis', 'denim day'
