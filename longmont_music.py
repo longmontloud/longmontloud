@@ -21,7 +21,7 @@ EXCLUDE = [
 ]
 
 MUSIC_KEYWORDS = [
-    'live music', 'live band', 'concert', 'symphony', 'acoustic', 'jazz', 'supper club',
+    'live music', 'live band', 'symphony', 'acoustic', 'jazz', 'supper club',
     'blues', 'rock', 'singer', 'songwriter', 'orchestra', 'dj',
     'rave', 'grunge', 'folk', 'metal', 'punk', 'hip-hop', 'brass'
 ]
