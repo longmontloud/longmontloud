@@ -4,17 +4,27 @@ from ics import Calendar, Event
 from datetime import datetime, timedelta
 import pytz
 import re
-import json
 
 # --- CONFIG ---
 OUTPUT_FILE = "longmont_music_final.ics"
 HEADERS = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) Chrome/120.0.0.0"}
 LOCAL_TZ = pytz.timezone("America/Denver")
 
-# --- FILTERS ---
-HARD_EXCLUDE = ['workshop', 'class', 'yoga', 'sip', 'paint', 'watercolor', 'meeting', 'sale', 'market', 'plant', 'meditation', 'trivia', 'bingo', 'poker', 'fitness']
-MUSIC_KEYS = ['music', 'band', 'concert', 'live music', 'singer', 'songwriter', 'jazz', 'rock', 'blues', 'dj', 'trio', 'duo', 'acoustic']
-TRUSTED_DOMAINS = ['barnevents.info', 'johnsonsstation.com', 'supperclub']
+# --- FILTERS (Consolidated) ---
+EXCLUDE = [
+    'karaoke', 'open mic', 'trivia', 'bingo', 'workshop', 'class', 'meeting', 'retail',
+    'comedy', 'yoga', 'poker', 'drawing', 'craft', 'create club', 'teen', 
+    'storytime', 'book club', 'knitting', 'market', 'board game', 'meditation', 
+    'teacher', 'discussion', 'ragen', 'networking', 'discovery days', 'uke jam', 
+    'your stage', 'tangerine', 'composition', 'ballet', 'dance class', 
+    'film', 'movie', 'bubbles', 'sewing', 'brunch', 'mimosas', 'bellinis'
+]
+
+MUSIC_KEYWORDS = [
+    'music', 'band', 'concert', 'symphony', 'acoustic', 'jazz', 'supper club',
+    'blues', 'rock', 'singer', 'songwriter', 'orchestra', 'dj', 'solo', 'duo',
+    'rave', 'grunge', 'folk', 'metal', 'punk', 'hip-hop', 'live music', 'brass'
+]
 
 GENRE_MAP = {
     'Jazz': ['jazz', 'swing', 'big band', 'bebop'],
@@ -26,121 +36,102 @@ GENRE_MAP = {
     'Country': ['country', 'western', 'honky tonk', 'cowboy']
 }
 
+TRUSTED_VENUES = ['bricks on main', 'the barn', 'johnsons station', 'supper club']
+
 def detect_genre(text):
+    t = text.lower()
     for genre, keywords in GENRE_MAP.items():
-        if any(re.search(rf"\b{re.escape(k)}\b", text.lower()) for k in keywords):
+        if any(re.search(rf"\b{re.escape(k)}\b", t) for k in keywords):
             return f"[{genre}] "
     return ""
 
-def get_links(url, domain):
-    links = []
-    try:
-        res = requests.get(url, headers=HEADERS, timeout=15)
-        soup = BeautifulSoup(res.text, 'html.parser')
-        for a in soup.find_all('a', href=True):
-            href = a['href']
-            if any(path in href for path in ['/do/', '/events/', '/calendar']):
-                if len(href.split('/')) > 2:
-                    links.append(domain + href if href.startswith('/') else href)
-    except Exception as e:
-        print(f"Error fetching links from {url}: {e}")
-    return list(set(links))
-
 def main():
-    print("🚀 Starting Diagnostic Scraper...")
+    print("🚀 Running Smart & Simple Scraper...")
+    
     targets = [
         ("https://www.downtownlongmont.com/events/calendar", "https://www.downtownlongmont.com"),
         ("https://www.johnsonsstation.com/calendar", "https://www.johnsonsstation.com"),
         ("https://www.barnevents.info/events", "https://www.barnevents.info")
     ]
     
-    all_links = []
-    for url, dom in targets:
-        all_links.extend(get_links(url, dom))
-    
-    print(f"Found {len(all_links)} potential links. Analyzing...")
-
     cal = Calendar()
-    seen = set()
+    seen_links = set()
+    seen_events = set()
     count = 0
 
-    for link in all_links:
+    for base_url, domain in targets:
         try:
-            res = requests.get(link, headers=HEADERS, timeout=10)
+            print(f"🔍 Scanning: {base_url}")
+            res = requests.get(base_url, headers=HEADERS, timeout=15)
             soup = BeautifulSoup(res.text, 'html.parser')
             
-            # Content Extraction
-            title_tag = soup.find('h1') or soup.find('title')
-            title = title_tag.get_text(strip=True) if title_tag else "Unknown"
-            description = soup.get_text(" ", strip=True).lower()
+            # 1. Collect all event-like links
+            links = []
+            for a in soup.find_all('a', href=True):
+                href = a['href']
+                if any(path in href for path in ['/do/', '/events/', '/calendar-1']):
+                    if len(href.split('/')) > 2:
+                        links.append(domain + href if href.startswith('/') else href)
             
-            # Diagnostic Log
-            # print(f"Checking: {title[:30]}...")
+            # 2. Process each unique link
+            for full_url in set(links):
+                if full_url in seen_links: continue
+                seen_links.add(full_url)
 
-            # 1. Exclusion Check
-            if any(x in title.lower() for x in HARD_EXCLUDE):
-                continue
-            
-            # 2. Inclusion Check
-            is_trusted = any(d in link for d in TRUSTED_DOMAINS)
-            is_music = any(m in title.lower() or m in description for m in MUSIC_KEYS)
-            
-            if not (is_trusted or is_music):
-                continue
-
-            # 3. Date Discovery
-            start_dt = None
-            
-            # Method A: JSON-LD (The gold standard)
-            script = soup.find('script', type='application/ld+json')
-            if script:
                 try:
-                    data = json.loads(script.string)
-                    if isinstance(data, list): data = data[0]
-                    s_str = data.get('startDate') or data.get('datePublished')
-                    if s_str:
-                        raw = datetime.fromisoformat(s_str.split('+')[0].split('Z')[0])
-                        start_dt = LOCAL_TZ.localize(raw)
-                except: pass
+                    ev_res = requests.get(full_url, headers=HEADERS, timeout=10)
+                    ev_soup = BeautifulSoup(ev_res.text, 'html.parser')
+                    
+                    title = (ev_soup.find('h1') or ev_soup.find('title')).get_text(strip=True)
+                    body_text = ev_soup.get_text(" ", strip=True)
+                    combined_text = (title + " " + body_text).lower()
+                    
+                    # --- THE FILTER BRAIN ---
+                    # Exclusion check
+                    if any(x in combined_text for x in EXCLUDE): continue
+                    
+                    # Inclusion check (Must be trusted venue OR have music keywords)
+                    is_trusted = any(v in combined_text or v in full_url for v in TRUSTED_VENUES)
+                    has_music = any(m in combined_text for m in MUSIC_KEYWORDS)
+                    
+                    if not (is_trusted or has_music): continue
 
-            # Method B: Regex (The fallback)
-            if not start_dt:
-                # Look for Month + Day
-                date_match = re.search(r'(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)[a-z]*\.?\s+(\d{1,2})', description)
-                if date_match:
-                    month_str = date_match.group(1)[:3].title()
+                    # --- DATE DETECTION ---
+                    # Look for "Month Day" (e.g., May 15)
+                    date_match = re.search(r'(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)[a-z]*\.?\s+(\d{1,2})', body_text)
+                    if not date_match: continue
+                    
+                    month_str = date_match.group(1)[:3]
                     day_val = int(date_match.group(2))
-                    # Use current year (2026)
+                    
+                    # Force 2026 and Default to 7 PM
                     start_dt = LOCAL_TZ.localize(datetime(2026, datetime.strptime(month_str, "%b").month, day_val, 19, 0))
 
-            if not start_dt:
-                # print(f"  Skipped: Could not find date for {title}")
-                continue
+                    # Duplicate check by title/date
+                    fingerprint = f"{start_dt.strftime('%Y%m%d')}_{title[:15].lower()}"
+                    if fingerprint in seen_events: continue
+                    seen_events.add(fingerprint)
 
-            # 4. Finalize
-            genre = detect_genre(title + " " + description)
-            fingerprint = f"{start_dt.strftime('%Y%m%d')}_{title[:15].lower()}"
-            
-            if fingerprint in seen: continue
+                    # --- CREATE EVENT ---
+                    genre_tag = detect_genre(combined_text)
+                    e = Event()
+                    e.name = f"🎵 {genre_tag}{title}"
+                    e.begin = start_dt
+                    e.end = start_dt + timedelta(hours=2)
+                    e.location = "Longmont, CO"
+                    e.description = f"Source: {full_url}"
+                    
+                    cal.events.add(e)
+                    count += 1
+                    print(f"  [+] Added: {title} ({month_str} {day_val})")
 
-            e = Event()
-            e.name = f"🎵 {genre}{title}"
-            e.begin = start_dt
-            e.end = start_dt + timedelta(hours=2)
-            e.location = "Longmont, CO"
-            e.description = f"Source: {link}"
-            
-            cal.events.add(e)
-            seen.add(fingerprint)
-            count += 1
-            print(f"  [+] Added: {title} on {start_dt.strftime('%b %d')}")
-
-        except Exception as e:
-            continue
+                except: continue
+        except: continue
 
     with open(OUTPUT_FILE, 'w', encoding='utf-8') as f:
         f.writelines(cal.serialize_iter())
-    print(f"\n✅ Total Events Found: {count}")
+    
+    print(f"\n✅ Finished! Found {count} Music Events.")
 
 if __name__ == "__main__":
     main()
