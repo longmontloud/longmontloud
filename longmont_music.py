@@ -37,7 +37,7 @@ GENRE_MAP = {
     'Country': ['country', 'western', 'honky tonk', 'cowboy']
 }
 
-TRUSTED_DOMAINS = ['barnevents.info', 'johnsonsstation.com', 'supper club']
+TRUSTED_DOMAINS = ['barnevents.info', 'johnsonsstation.com']
 
 def detect_genre(text):
     t = text.lower()
