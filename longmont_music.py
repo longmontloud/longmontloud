@@ -20,10 +20,11 @@ EXCLUDE = [
     'your stage', 'tangerine', 'composition', 'ballet', 'dance class', 'movie', 'bubbles', 'sewing', 'brunch', 'mimosas', 'bellinis', 'denim day', 'poetry night', 'poetry slam', 'sewing', 'sew', 'guest speakers', 'bloody mary',
 ]
 
+# Tightened 'music' to 'live music' to avoid nav-bar leaks
 MUSIC_KEYWORDS = [
-    'live music', 'band', 'concert', 'symphony', 'acoustic', 'jazz', 'supper club',
+    'live music', 'live band', 'concert', 'symphony', 'acoustic', 'jazz', 'supper club',
     'blues', 'rock', 'singer', 'songwriter', 'orchestra', 'dj',
-    'rave', 'grunge', 'folk', 'metal', 'punk', 'hip-hop', 'live music', 'brass'
+    'rave', 'grunge', 'folk', 'metal', 'punk', 'hip-hop', 'brass'
 ]
 
 GENRE_MAP = {
@@ -46,7 +47,7 @@ def detect_genre(text):
     return ""
 
 def main():
-    print("🚀 Running Targeted Title Scraper...")
+    print("🚀 Running Tunnel-Vision Precision Scraper...")
     
     targets = [
         ("https://www.downtownlongmont.com/events/calendar", "https://www.downtownlongmont.com"),
@@ -85,15 +86,12 @@ def main():
                     ev_res = requests.get(full_url, headers=current_headers, timeout=10)
                     ev_soup = BeautifulSoup(ev_res.text, 'html.parser')
                     
-                    # --- NEW TARGETED TITLE EXTRACTION ---
+                    # --- TITLE EXTRACTION ---
                     event_title = ""
-                    
-                    # Priority 1: Specific Squarespace Event Title Class
                     sqs_title = ev_soup.find(class_="eventitem-title")
                     if sqs_title:
                         event_title = sqs_title.get_text(strip=True)
                     
-                    # Priority 2: JSON-LD Metadata
                     if not event_title:
                         script = ev_soup.find('script', type='application/ld+json')
                         if script:
@@ -103,35 +101,42 @@ def main():
                                 event_title = data.get('name', '')
                             except: pass
                     
-                    # Priority 3: Standard H1 inside the body (avoiding headers)
                     if not event_title:
                         main_area = ev_soup.find('main') or ev_soup.find('article')
                         if main_area:
                             h1 = main_area.find('h1')
                             if h1: event_title = h1.get_text(strip=True)
 
-                    # Final Cleanup: Remove generic placeholders
                     if event_title.lower() in ["barn events", "johnson's station", "calendar", "events"]:
                         event_title = ""
 
                     if not event_title: continue
-
-                    # Clean title formatting
                     event_title = event_title.split('|')[0].split('-')[0].strip()
 
-                    # --- DESCRIPTION & FILTERS ---
-                    main_content = ev_soup.select_one('.details, .eventitem-description, .sqs-block-content, article')
-                    body_text = main_content.get_text(" ", strip=True) if main_content else ev_soup.get_text(" ", strip=True)[:1000]
+                    # --- TUNNEL VISION: TARGET CONTENT BOXES ONLY ---
+                    # We added '.description' specifically for Downtown Longmont
+                    main_content = ev_soup.select_one('.description, .details, .eventitem-description, .sqs-block-content, article')
+                    
+                    if main_content:
+                        body_text = main_content.get_text(" ", strip=True)
+                    else:
+                        # Fallback for pages with weird structures - still limit reach
+                        body_text = ev_soup.get_text(" ", strip=True)[:800]
+                    
                     combined_text = (event_title + " " + body_text).lower()
                     
+                    # --- FILTERS ---
                     if any(x in event_title.lower() for x in EXCLUDE): continue
                     
                     is_trusted_site = any(d in full_url for d in TRUSTED_DOMAINS)
                     has_music = any(m in combined_text for m in MUSIC_KEYWORDS)
                     
                     if not (is_trusted_site or has_music): continue
-                    if any(x in combined_text for x in EXCLUDE) and not any(m in event_title.lower() for m in MUSIC_KEYWORDS):
-                        continue
+                    
+                    # The "Bouncer" check: if exclude is in body, title MUST have music
+                    if any(x in combined_text for x in EXCLUDE):
+                        if not any(m in event_title.lower() for m in MUSIC_KEYWORDS):
+                            continue
 
                     # --- DATE ---
                     date_match = re.search(r'(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)[a-z]*\.?\s+(\d{1,2})', body_text)
@@ -162,7 +167,7 @@ def main():
 
     with open(OUTPUT_FILE, 'w', encoding='utf-8') as f:
         f.writelines(cal.serialize_iter())
-    print(f"\n✅ Finished! {count} Music Events with corrected titles.")
+    print(f"\n✅ Finished! {count} Music Events found.")
 
 if __name__ == "__main__":
     main()
