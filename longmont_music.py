@@ -18,7 +18,7 @@ EXCLUDE = [
     'storytime', 'book club', 'knitting', 'market', 'board game', 'meditation', 
     'teacher', 'discussion', 'ragen', 'networking', 'discovery days', 'uke jam', 
     'your stage', 'tangerine', 'composition', 'ballet', 'dance class', 
-    'film', 'movie', 'bubbles', 'sewing', 'brunch', 'mimosas', 'bellinis', 'denim day', 'art'
+    'film', 'movie', 'bubbles', 'sewing', 'brunch', 'mimosas', 'bellinis', 'denim day'
 ]
 
 MUSIC_KEYWORDS = [
@@ -37,7 +37,7 @@ GENRE_MAP = {
     'Country': ['country', 'western', 'honky tonk', 'cowboy']
 }
 
-TRUSTED_DOMAINS = ['barnevents.info', 'johnsonsstation.com']
+TRUSTED_DOMAINS = ['barnevents.info', 'johnsonsstation.com', 'supperclub']
 
 def detect_genre(text):
     t = text.lower()
@@ -47,7 +47,7 @@ def detect_genre(text):
     return ""
 
 def main():
-    print("🚀 Running All-In Scraper (Targeting Johnson's Station)...")
+    print("🚀 Running Targeted Title Scraper...")
     
     targets = [
         ("https://www.downtownlongmont.com/events/calendar", "https://www.downtownlongmont.com"),
@@ -69,14 +69,11 @@ def main():
             links = []
             for a in soup.find_all('a', href=True):
                 href = a['href']
-                # Added '/calendar/' to the paths to catch individual Johnson's Station events
                 if any(path in href for path in ['/do/', '/events/', '/calendar/', '/calendar-1']):
-                    # Ensure we aren't just linking back to the main calendar
                     if len(href.strip('/').split('/')) >= 2:
                         links.append(domain + href if href.startswith('/') else href)
             
             unique_links = list(set(links))
-            print(f"   Found {len(unique_links)} potential event links...")
 
             for full_url in unique_links:
                 if full_url in seen_links or full_url.strip('/') == base_url.strip('/'): 
@@ -84,61 +81,65 @@ def main():
                 seen_links.add(full_url)
 
                 try:
-                    # Set referer to bypass some Squarespace bot-blocks
                     current_headers = HEADERS.copy()
                     current_headers['Referer'] = base_url
-                    
                     ev_res = requests.get(full_url, headers=current_headers, timeout=10)
                     ev_soup = BeautifulSoup(ev_res.text, 'html.parser')
                     
-                    # --- TITLE EXTRACTION ---
+                    # --- NEW TARGETED TITLE EXTRACTION ---
                     event_title = ""
-                    script = ev_soup.find('script', type='application/ld+json')
-                    if script:
-                        try:
-                            data = json.loads(script.string)
-                            if isinstance(data, list): data = data[0]
-                            event_title = data.get('name', '')
-                        except: pass
                     
-                    if not event_title or event_title.lower() in ["barn events", "calendar"]:
-                        h1 = ev_soup.find('h1')
-                        event_title = h1.get_text(strip=True) if h1 else ""
-
+                    # Priority 1: Specific Squarespace Event Title Class
+                    sqs_title = ev_soup.find(class_="eventitem-title")
+                    if sqs_title:
+                        event_title = sqs_title.get_text(strip=True)
+                    
+                    # Priority 2: JSON-LD Metadata
                     if not event_title:
-                        title_tag = ev_soup.find('title')
-                        event_title = title_tag.get_text(strip=True) if title_tag else ""
+                        script = ev_soup.find('script', type='application/ld+json')
+                        if script:
+                            try:
+                                data = json.loads(script.string)
+                                if isinstance(data, list): data = data[0]
+                                event_title = data.get('name', '')
+                            except: pass
+                    
+                    # Priority 3: Standard H1 inside the body (avoiding headers)
+                    if not event_title:
+                        main_area = ev_soup.find('main') or ev_soup.find('article')
+                        if main_area:
+                            h1 = main_area.find('h1')
+                            if h1: event_title = h1.get_text(strip=True)
 
-                    # Clean title
+                    # Final Cleanup: Remove generic placeholders
+                    if event_title.lower() in ["barn events", "johnson's station", "calendar", "events"]:
+                        event_title = ""
+
+                    if not event_title: continue
+
+                    # Clean title formatting
                     event_title = event_title.split('|')[0].split('-')[0].strip()
-                    if not event_title or len(event_title) < 3: continue
 
                     # --- DESCRIPTION & FILTERS ---
-                    main_content = ev_soup.select_one('.details, .event-item-description, .sqs-block-content, article, section')
-                    body_text = main_content.get_text(" ", strip=True) if main_content else ev_soup.get_text(" ", strip=True)[:2000]
+                    main_content = ev_soup.select_one('.details, .eventitem-description, .sqs-block-content, article')
+                    body_text = main_content.get_text(" ", strip=True) if main_content else ev_soup.get_text(" ", strip=True)[:1000]
                     combined_text = (event_title + " " + body_text).lower()
-                    
-                    # Trust logic for JS and The Barn
-                    is_trusted_site = any(d in full_url for d in TRUSTED_DOMAINS)
                     
                     if any(x in event_title.lower() for x in EXCLUDE): continue
                     
+                    is_trusted_site = any(d in full_url for d in TRUSTED_DOMAINS)
                     has_music = any(m in combined_text for m in MUSIC_KEYWORDS)
                     
                     if not (is_trusted_site or has_music): continue
-                    
-                    # Secondary safety: if it's a known non-music event at a trusted site
                     if any(x in combined_text for x in EXCLUDE) and not any(m in event_title.lower() for m in MUSIC_KEYWORDS):
                         continue
 
                     # --- DATE ---
-                    # Look for Month + Day
                     date_match = re.search(r'(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)[a-z]*\.?\s+(\d{1,2})', body_text)
                     if not date_match: continue
                     
                     month_str = date_match.group(1)[:3]
                     day_val = int(date_match.group(2))
-                    # Use 2026 as default
                     start_dt = LOCAL_TZ.localize(datetime(2026, datetime.strptime(month_str, "%b").month, day_val, 19, 0))
 
                     fingerprint = f"{start_dt.strftime('%Y%m%d')}_{event_title[:15].lower()}"
@@ -162,7 +163,7 @@ def main():
 
     with open(OUTPUT_FILE, 'w', encoding='utf-8') as f:
         f.writelines(cal.serialize_iter())
-    print(f"\n✅ Finished! Found {count} Music Events.")
+    print(f"\n✅ Finished! {count} Music Events with corrected titles.")
 
 if __name__ == "__main__":
     main()
