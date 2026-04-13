@@ -21,14 +21,14 @@ EXCLUDE = [
 ]
 
 MUSIC_KEYWORDS = [
-    'live music', 'live band', 'concert', 'symphony', 'acoustic', 'jazz', 'supper club',
+    'live music', 'live band', 'symphony', 'acoustic', 'jazz', 'supper club',
     'blues', 'rock', 'singer', 'songwriter', 'orchestra', 'dj',
     'rave', 'grunge', 'folk', 'metal', 'punk', 'hip-hop', 'brass'
 ]
 
 GENRE_MAP = {
     'Jazz': ['jazz', 'swing', 'big band', 'bebop'],
-    'Rock': ['rock', 'punk', 'metal', 'electric guitar', 'indie', 'grunge', 'psychedelic'],
+    'Rock': ['rock', 'punk', 'metal', 'electric guitar', 'indie', 'grunge', 'psychedelic', 'noise', 'experimental'],
     'Folk/Acoustic': ['folk', 'acoustic', 'bluegrass', 'singer-songwriter', 'banjo', 'americana'],
     'Blues': ['blues', 'harmonica', 'soul'],
     'Electronic': ['dj', 'electronic', 'synth', 'house music', 'rave', 'edm', 'techno'],
