@@ -23,7 +23,7 @@ EXCLUDE = [
 MUSIC_KEYWORDS = [
     'live music', 'live band', 'symphony', 'acoustic', 'jazz', 'supper club',
     'blues', 'rock', 'singer', 'songwriter', 'orchestra', 'dj',
-    'rave', 'grunge', 'folk', 'metal', 'punk', 'hip-hop', 'brass'
+    'rave', 'grunge', 'folk', 'metal', 'punk', 'hip-hop', 'brass', 'soundpost sessions'
 ]
 
 GENRE_MAP = {
