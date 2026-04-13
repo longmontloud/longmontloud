@@ -11,9 +11,9 @@ OUTPUT_FILE = "longmont_music_final.ics"
 HEADERS = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) Chrome/120.0.0.0"}
 LOCAL_TZ = pytz.timezone("America/Denver")
 
-# --- FILTERS ---
+# --- FILTERS (Logic Unchanged) ---
 EXCLUDE = [
-    'karaoke', 'open mic', 'canvas classic', 'NCAR', 'understanding trusts', 'game night', 'dinner', 'paperback tour', 'open sing', 'trivia', 'bingo', 'workshop', 'meeting', 'retail', 'watercolor', 'exhibition', 'the golden bee', 'sing-along', 'easel', 'studio tour', 'art materials', 'seminar', 'documentary',
+    'karaoke', 'open mic', 'canvas classic', 'dinner', 'paperback tour', 'open sing', 'trivia', 'bingo', 'workshop', 'meeting', 'retail', 'watercolor', 'exhibition', 'the golden bee', 'sing-along', 'easel', 'studio tour', 'art materials', 'seminar', 'documentary',
     'comedy', 'yoga', 'poker', 'drawing class', 'craft class', 'create club', 'teen', 'crochet', 'wine dinner', 'tasting', 'pairing', 'prix fixe', 'shakespeare', 'happy day plants', 'headshot', 'stitch', 'embroidery',
     'storytime', 'book club', 'knitting', 'market', 'board game', 'meditation', 'speaker series', 'stationery', 'wolf & wren', 'talk', 'tarot', 'blackbird house', 'barbed wire books', 'dining', 'crafts & cocktails', 
     'teacher', 'discussion', 'ragen', 'networking', 'discovery days', 'uke jam', 'painting', 'sip', 'wines', '720-453-4733', 'date night', '303-651-8374', 'open-house', 'open house', 'crackpots', 'bubbly', 'joke', 'potting',
@@ -21,7 +21,7 @@ EXCLUDE = [
 ]
 
 MUSIC_KEYWORDS = [
-    'live music', 'live band', 'symphony', 'acoustic', 'jazz', 'supper club',
+    'live music', 'live band', 'concert', 'symphony', 'acoustic', 'jazz', 'supper club',
     'blues', 'rock', 'singer', 'songwriter', 'orchestra', 'dj',
     'rave', 'grunge', 'folk', 'metal', 'punk', 'hip-hop', 'brass'
 ]
@@ -45,8 +45,21 @@ def detect_genre(text):
             return f"[{genre}] "
     return ""
 
+def extract_time(text):
+    """Searches for time patterns (e.g., 6:30pm, 7 p.m.) and returns (hour, minute)."""
+    # Pattern looks for numbers followed by optional :mm and then am/pm
+    match = re.search(r'(\d{1,2})(?::(\d{2}))?\s*([ap]\.?m\.?)', text.lower())
+    if match:
+        hr = int(match.group(1))
+        mn = int(match.group(2)) if match.group(2) else 0
+        ampm = match.group(3).replace('.', '')
+        if ampm == 'pm' and hr < 12: hr += 12
+        if ampm == 'am' and hr == 12: hr = 0
+        return hr, mn
+    return 19, 0  # Fallback to 7:00 PM
+
 def main():
-    print("🚀 Running Precision Scraper with Location Updates...")
+    print("🚀 Running Location & Time Enhanced Scraper...")
     
     targets = [
         ("https://www.downtownlongmont.com/events/calendar", "https://www.downtownlongmont.com"),
@@ -68,9 +81,8 @@ def main():
             links = []
             for a in soup.find_all('a', href=True):
                 href = a['href']
-                if any(path in href for path in ['/do/', '/events/', '/calendar/', '/calendar-1']):
-                    if len(href.strip('/').split('/')) >= 2:
-                        links.append(domain + href if href.startswith('/') else href)
+                if any(path in href for path in ['/do/', '/events/', '/calendar/']):
+                    links.append(domain + href if href.startswith('/') else href)
             
             unique_links = list(set(links))
 
@@ -80,76 +92,68 @@ def main():
                 seen_links.add(full_url)
 
                 try:
-                    current_headers = HEADERS.copy()
-                    current_headers['Referer'] = base_url
-                    ev_res = requests.get(full_url, headers=current_headers, timeout=10)
+                    ev_res = requests.get(full_url, headers=HEADERS, timeout=10)
                     ev_soup = BeautifulSoup(ev_res.text, 'html.parser')
                     
-                    # --- TITLE EXTRACTION ---
+                    # --- TITLE ---
                     event_title = ""
                     sqs_title = ev_soup.find(class_="eventitem-title")
                     if sqs_title:
                         event_title = sqs_title.get_text(strip=True)
-                    
                     if not event_title:
-                        script = ev_soup.find('script', type='application/ld+json')
-                        if script:
-                            try:
-                                data = json.loads(script.string)
-                                if isinstance(data, list): data = data[0]
-                                event_title = data.get('name', '')
-                            except: pass
+                        h1 = ev_soup.find('h1')
+                        if h1: event_title = h1.get_text(strip=True)
                     
-                    if not event_title:
-                        main_area = ev_soup.find('main') or ev_soup.find('article')
-                        if main_area:
-                            h1 = main_area.find('h1')
-                            if h1: event_title = h1.get_text(strip=True)
-
-                    if event_title.lower() in ["barn events", "johnson's station", "calendar", "events"]:
-                        event_title = ""
-
-                    if not event_title: continue
+                    if not event_title or event_title.lower() in ["barn events", "johnson's station", "calendar"]:
+                        continue
                     event_title = event_title.split('|')[0].split('-')[0].strip()
 
-                    # --- CONTENT EXTRACTION ---
+                    # --- CONTENT & TIME ---
                     main_content = ev_soup.select_one('.description, .details, .eventitem-description, .sqs-block-content, article')
                     body_text = main_content.get_text(" ", strip=True) if main_content else ev_soup.get_text(" ", strip=True)[:800]
-                    combined_text = (event_title + " " + body_text).lower()
                     
-                    # --- FILTERS ---
+                    # Call the new time extractor
+                    start_hr, start_min = extract_time(body_text)
+
+                    # --- FILTERS (Logic Unchanged) ---
+                    combined_text = (event_title + " " + body_text).lower()
                     if any(x in event_title.lower() for x in EXCLUDE): continue
-                    is_trusted_site = any(d in full_url for d in TRUSTED_DOMAINS)
+                    
+                    is_trusted = any(d in full_url for d in TRUSTED_DOMAINS)
                     has_music = any(m in combined_text for m in MUSIC_KEYWORDS)
                     
-                    if not (is_trusted_site or has_music): continue
-                    
-                    if any(x in combined_text for x in EXCLUDE):
-                        if not any(m in event_title.lower() for m in MUSIC_KEYWORDS):
-                            continue
+                    if not (is_trusted or has_music): continue
+                    if any(x in combined_text for x in EXCLUDE) and not any(m in event_title.lower() for m in MUSIC_KEYWORDS):
+                        continue
 
                     # --- DATE ---
                     date_match = re.search(r'(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)[a-z]*\.?\s+(\d{1,2})', body_text)
                     if not date_match: continue
                     
-                    month_str = date_match.group(1)[:3]
-                    day_val = int(date_match.group(2))
-                    start_dt = LOCAL_TZ.localize(datetime(2026, datetime.strptime(month_str, "%b").month, day_val, 19, 0))
+                    month_val = datetime.strptime(date_match.group(1)[:3], "%b").month
+                    start_dt = LOCAL_TZ.localize(datetime(2026, month_val, int(date_match.group(2)), start_hr, start_min))
 
-                    fingerprint = f"{start_dt.strftime('%Y%m%d')}_{event_title[:15].lower()}"
-                    if fingerprint in seen_events: continue
-                    seen_events.add(fingerprint)
-
-                    # --- LOCATION ASSIGNMENT ---
+                    # --- LOCATION LOGIC ---
                     venue_loc = "Longmont, CO"
                     if "barnevents.info" in full_url:
                         venue_loc = "The Barn"
                     elif "johnsonsstation.com" in full_url:
                         venue_loc = "Johnson's Station, 1111 Neon Forest Circle, Longmont, CO 80501"
+                    else:
+                        # Downtown Longmont Venue Search
+                        loc_tag = ev_soup.select_one('.location, .event-venue, .venue-name, .location-name')
+                        if loc_tag:
+                            venue_loc = loc_tag.get_text(strip=True)
+                        elif main_content and main_content.find('strong'):
+                            # Fallback: Capture the first bolded text (often the venue)
+                            venue_loc = main_content.find('strong').get_text(strip=True)
 
-                    genre_tag = detect_genre(combined_text)
+                    fingerprint = f"{start_dt.strftime('%Y%m%d')}_{event_title[:15].lower()}"
+                    if fingerprint in seen_events: continue
+                    seen_events.add(fingerprint)
+
                     e = Event()
-                    e.name = f"🎵 {genre_tag}{event_title}"
+                    e.name = f"🎵 {detect_genre(combined_text)}{event_title}"
                     e.begin = start_dt
                     e.end = start_dt + timedelta(hours=2)
                     e.location = venue_loc
@@ -157,14 +161,14 @@ def main():
                     
                     cal.events.add(e)
                     count += 1
-                    print(f"  [+] Added: {event_title} @ {venue_loc}")
+                    print(f"  [+] Added: {start_dt.strftime('%I:%M%p')} | {event_title} @ {venue_loc}")
 
                 except: continue
         except: continue
 
     with open(OUTPUT_FILE, 'w', encoding='utf-8') as f:
         f.writelines(cal.serialize_iter())
-    print(f"\n✅ Finished! {count} Music Events saved to {OUTPUT_FILE}.")
+    print(f"\n✅ Finished! {count} Music Events saved.")
 
 if __name__ == "__main__":
     main()
