@@ -127,7 +127,7 @@ def main():
                             # The venue name is typically the next sibling (or parent's next sibling)
                             venue_candidate = loc_header.find_next()
                             if venue_candidate:
-                                venue_loc = venue_candidate.get_text(strip=True)
+                                venue_loc = venue_candidate.get_text(" ,",strip=True)
 
                     fingerprint = f"{start_dt.strftime('%Y%m%d')}_{event_title[:15].lower()}"
                     if fingerprint in seen_events: continue
