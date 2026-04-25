@@ -94,7 +94,8 @@ def main():
                         h1 = ev_soup.find('h1')
                         if h1: event_title = h1.get_text(strip=True)
                     if not event_title or event_title.lower() in ["barn events", "johnson's station", "calendar"]: continue
-                    event_title = event_title.split('|')[0].split('-')[0].strip()
+                    # Remove the .split('-')[0] part so names like Cross-Eyed aren't cut
+                    event_title = event_title.split('|')[0].strip()
 
                     # --- CONTENT & TIME ---
                     main_content = ev_soup.select_one('.description, .details, .eventitem-description, .sqs-block-content, article')
