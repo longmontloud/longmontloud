@@ -95,20 +95,26 @@ def main():
                     if not event_title or event_title.lower() in ["barn events", "johnson's station", "calendar"]: continue
                     event_title = event_title.split('|')[0].strip()
 
-                    # --- TARGETED DATE & TIME BLOCK EXTRACTION ---
-                    # Instead of the entire page body, prioritize looking inside structural event date listings
+                   # --- TARGETED DATE & TIME FIX ---
                     date_time_block = ""
-                    date_elements = ev_soup.select('.dates-times, .date-time-list, .event-details, .eventitem-meta-date')
-                    if date_elements:
-                        date_time_block = " ".join([el.get_text(" ", strip=True) for el in date_elements])
-                    
-                    # Fallback to description elements if structural elements aren't present
-                    if not date_time_block:
+                    start_hr, start_min = 19, 0  # Defaults
+                    month_val, day_val = None, None
+
+                    # If it's Downtown Longmont, use the exact precision spans you found!
+                    dl_date_span = ev_soup.find('span', class_='dldate')
+                    dl_time_span = ev_soup.find('span', class_='dltime')
+
+                    if dl_date_span and dl_time_span:
+                        date_time_block = dl_date_span.get_text(" ", strip=True)
+                        time_text = dl_time_span.get_text(" ", strip=True)
+                        start_hr, start_min = extract_time(time_text)
+                    else:
+                        # Fallback for other domains (The Barn / Johnson's Station)
                         main_content = ev_soup.select_one('.description, .details, .eventitem-description, .sqs-block-content, article')
                         date_time_block = main_content.get_text(" ", strip=True) if main_content else ev_soup.get_text(" ", strip=True)[:1000]
+                        start_hr, start_min = extract_time(date_time_block)
 
-                    # Extract time safely from the pinpointed context block
-                    start_hr, start_min = extract_time(date_time_block)
+                    # --- FILTERS ---
 
                     # --- FILTERS ---
                     body_text = ev_soup.get_text(" ", strip=True)[:2000]
