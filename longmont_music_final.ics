@@ -2,52 +2,68 @@ BEGIN:VCALENDAR
 VERSION:2.0
 PRODID:ics.py - http://git.io/lLljaA
 BEGIN:VEVENT
-DESCRIPTION:Source: https://www.johnsonsstation.com/calendar/dan-buller-duo
-DTEND:20260711T020000Z
+DESCRIPTION:Source: https://www.johnsonsstation.com/calendar/nice-work-jazz
+DTEND:20260829T030000Z
 LOCATION:Johnson's Station\, 1111 Neon Forest Circle\, Longmont\, CO 80501
-DTSTART:20260711T000000Z
-SUMMARY:🎵 Dan Buller Trio
-UID:381d08c5-3270-4591-b38d-14d7bbefda66@381d.org
+DTSTART:20260829T010000Z
+SUMMARY:🎵 [Jazz] Nice Work Jazz
+UID:c512b480-ed8e-4397-8f20-7bb332a2f056@c512.org
 END:VEVENT
 BEGIN:VEVENT
-DESCRIPTION:Source: https://www.barnevents.info/events/2024/alexalennon
+DESCRIPTION:Source: https://www.barnevents.info/events/2024/8/25/salome-songbird-and-sarah
+DTEND:20260826T030000Z
+LOCATION:The Barn
+DTSTART:20260826T010000Z
+SUMMARY:🎵 [Jazz] Double Concert: Salomé Songbird and Sarah Clanton
+UID:55f825f5-c914-4235-bc18-9c9f9cd2c6cd@55f8.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Source: https://www.downtownlongmont.com/do/lunch-line-dancing
+DTEND:20260526T030000Z
+LOCATION:Bricks on Main\, 471 Main St
+DTSTART:20260526T010000Z
+SUMMARY:🎵 Lunch Line Dancing
+UID:3e6037ff-4ac4-4a39-a1b7-f86268726b0b@3e60.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Source: https://www.barnevents.info/events/2024/11/24/david-lawrence-amp-the-spoonful
+DTEND:20261125T040000Z
+LOCATION:The Barn
+DTSTART:20261125T020000Z
+SUMMARY:🎵 [Jazz] David Lawrence & the Spoonful: Video Release Celebration
+UID:2f296559-5be4-4020-b1cc-76633b0f2239@2f29.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Source: https://www.barnevents.info/events/2024/2/10/greg-schochet-amp-little-america
+DTEND:20260211T040000Z
+LOCATION:The Barn
+DTSTART:20260211T020000Z
+SUMMARY:🎵 [Jazz] Greg Schochet & Little America
+UID:6db50c0f-c370-4452-8cf3-3ab008a9d99c@6db5.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Source: https://www.downtownlongmont.com/events/volunteer
+DTEND:20260526T030000Z
+LOCATION:Longmont\, CO
+DTSTART:20260526T010000Z
+SUMMARY:🎵 Volunteer With Us!
+UID:6967971a-f108-4547-a72f-b7c2a9141816@6967.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Source: https://www.downtownlongmont.com/do/casual-community-sings-1
+DTEND:20260526T023000Z
+LOCATION:Trailhead Church Longmont\, 470 Main St
+DTSTART:20260526T003000Z
+SUMMARY:🎵 Casual Community Sings
+UID:7b1d4ee9-7a14-4fbf-a3c6-d0f48fab6532@7b1d.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Source: https://www.barnevents.info/events/2017/1/19/moors-mccumber
 DTEND:20260320T030000Z
 LOCATION:The Barn
 DTSTART:20260320T010000Z
-SUMMARY:🎵 Alexa Wildish and Lennon VanderDoes
-UID:5b4c3338-688a-473b-9bb8-a7d2e8f4e8fc@5b4c.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Source: https://www.johnsonsstation.com/calendar/barn-ghost
-DTEND:20260816T020000Z
-LOCATION:Johnson's Station\, 1111 Neon Forest Circle\, Longmont\, CO 80501
-DTSTART:20260816T000000Z
-SUMMARY:🎵 Barn Ghost
-UID:52def13a-fc4d-4921-b7e0-3b6b18b672ba@52de.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Source: https://www.johnsonsstation.com/calendar/zizania-2
-DTEND:20260621T020000Z
-LOCATION:Johnson's Station\, 1111 Neon Forest Circle\, Longmont\, CO 80501
-DTSTART:20260621T000000Z
-SUMMARY:🎵 Zizania
-UID:7f6027c2-b12f-48e7-9846-9d633bccac16@7f60.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Source: https://www.johnsonsstation.com/calendar/david-honig
-DTEND:20260510T003000Z
-LOCATION:Johnson's Station\, 1111 Neon Forest Circle\, Longmont\, CO 80501
-DTSTART:20260509T223000Z
-SUMMARY:🎵 David Honig
-UID:193610f6-609f-41d8-8fc0-6667f91e54c6@1936.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Source: https://www.barnevents.info/events/2023/11/4/bonnie-and-taylor-sims
-DTEND:20261105T040000Z
-LOCATION:The Barn
-DTSTART:20261105T020000Z
-SUMMARY:🎵 [Blues] Bonnie and Taylor Sims
-UID:23b2ecf6-c83e-4f7d-ab4a-ef8f72ce2bdf@23b2.org
+SUMMARY:🎵 [Rock] Moors & McCumber: Saint Patrick's Day Concerts\, Two Shows!
+UID:8ff8f3da-8f1e-4172-9b00-4a6eb6125c69@8ff8.org
 END:VEVENT
 BEGIN:VEVENT
 DESCRIPTION:Source: https://www.barnevents.info/events/2024/5/24/dance-party-with-the-rifters
@@ -55,335 +71,47 @@ DTEND:20260525T030000Z
 LOCATION:The Barn
 DTSTART:20260525T010000Z
 SUMMARY:🎵 [Folk/Acoustic] Dance Party with The Rifters
-UID:f6d18351-2234-44a3-8501-9d5155efd791@f6d1.org
+UID:d215aa15-4964-49c1-960f-e534a4a87f63@d215.org
 END:VEVENT
 BEGIN:VEVENT
-DESCRIPTION:Source: https://www.downtownlongmont.com/do/mixtape-songwriter-showcase-featuring-bill-huston-and-monica-labonte
-DTEND:20260526T033000Z
-LOCATION:The Times Collaborative / 338 Main St\, 338 Main St
-DTSTART:20260526T013000Z
-SUMMARY:🎵 MIXTAPE: Songwriter Showcase featuring Bill Huston and Monica LaBonte
-UID:8b18c022-f19b-4b97-9017-6984996da861@8b18.org
+DESCRIPTION:Source: https://www.downtownlongmont.com/do/lso-guild-annual-garden-tour-2026
+DTEND:20260525T170000Z
+LOCATION:Longmont local garden locations
+DTSTART:20260525T150000Z
+SUMMARY:🎵 [Classical] LSO Guild: Annual Garden Tour 2026
+UID:959f84b4-6d7e-4342-8129-c72c2b56cfef@959f.org
 END:VEVENT
 BEGIN:VEVENT
-DESCRIPTION:Source: https://www.downtownlongmont.com/do/half-price-bottle-night-and-live-music-1
-DTEND:20260525T230000Z
-LOCATION:Kuper Wine Bar\, 600 Longs Peak Ave
-DTSTART:20260525T210000Z
-SUMMARY:🎵 Half Price Bottle Night & Live Music
-UID:a332dd1c-7b9c-418c-bc3b-60527884a1b6@a332.org
+DESCRIPTION:Source: https://www.downtownlongmont.com/events/calendar/submit
+DTEND:20260526T030000Z
+LOCATION:Longmont\, CO
+DTSTART:20260526T010000Z
+SUMMARY:🎵 Submit An Event
+UID:7510b518-1ab0-4a6a-b629-4d5e2b398661@7510.org
 END:VEVENT
 BEGIN:VEVENT
-DESCRIPTION:Source: https://www.johnsonsstation.com/calendar/groove-holiday-1
-DTEND:20260517T020000Z
-LOCATION:Johnson's Station\, 1111 Neon Forest Circle\, Longmont\, CO 80501
-DTSTART:20260517T000000Z
-SUMMARY:🎵 Groove Holiday
-UID:3ed9f25e-0f69-4aa6-9bf6-ea21a7dcd18f@3ed9.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Source: https://www.barnevents.info/events/2024/8/25/salome-songbird-and-sarah-dspaw
-DTEND:20260829T033000Z
-LOCATION:The Barn
-DTSTART:20260829T013000Z
-SUMMARY:🎵 [Jazz] Salomé Songbird
-UID:b8ce8c96-42ab-4023-b4b2-ce82abb3ef01@b8ce.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Source: https://www.barnevents.info/events/2025/4/4/greg-schochet-and-little-america
-DTEND:20260405T033000Z
-LOCATION:The Barn
-DTSTART:20260405T013000Z
-SUMMARY:🎵 [Jazz] GREG SCHOCHET & LITTLE AMERICA
-UID:c345c1c2-ddec-4284-8d21-273f5be427e5@c345.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Source: https://www.johnsonsstation.com/calendar/event-two-gh4xp-t27zs-bxsfr
-DTEND:20260824T013000Z
-LOCATION:Johnson's Station\, 1111 Neon Forest Circle\, Longmont\, CO 80501
-DTSTART:20260823T233000Z
-SUMMARY:🎵 [Jazz] Dan Buller
-UID:783f77c4-1a53-48ef-af9d-91c4ec1b1cd4@783f.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Source: https://www.johnsonsstation.com/calendar/the-thistle-tones
-DTEND:20261005T013000Z
-LOCATION:Johnson's Station\, 1111 Neon Forest Circle\, Longmont\, CO 80501
-DTSTART:20261004T233000Z
-SUMMARY:🎵 [Jazz] The Thistle Tones
-UID:3a9c9a14-f347-45de-9088-5df8a4eecb1e@3a9c.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Source: https://www.johnsonsstation.com/calendar/dakota-grey-band
-DTEND:20260913T020000Z
-LOCATION:Johnson's Station\, 1111 Neon Forest Circle\, Longmont\, CO 80501
-DTSTART:20260913T000000Z
-SUMMARY:🎵 Dakota Gray Band
-UID:83329414-9db8-46f2-ac4a-102b910213fe@8332.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Source: https://www.johnsonsstation.com/calendar/zizania-1
-DTEND:20260412T003000Z
-LOCATION:Johnson's Station\, 1111 Neon Forest Circle\, Longmont\, CO 80501
-DTSTART:20260411T223000Z
-SUMMARY:🎵 Zizania
-UID:cfce78e1-8a93-4726-94c1-043402b45ea2@cfce.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Source: https://www.barnevents.info/events/2026/2/28/dance-party-with-dlovelies
-DTEND:20260301T040000Z
-LOCATION:The Barn
-DTSTART:20260301T020000Z
-SUMMARY:🎵 [Jazz] Dance Party with d'Lovelies
-UID:374b8cd6-c1c7-48cf-827d-6c3cf2e66e65@374b.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Source: https://www.johnsonsstation.com/calendar/dino-romanelli
-DTEND:20260627T020000Z
-LOCATION:Johnson's Station\, 1111 Neon Forest Circle\, Longmont\, CO 80501
-DTSTART:20260627T000000Z
-SUMMARY:🎵 Dino Romanelli
-UID:8f9fd6db-ea11-4463-b603-49ab9a056f75@8f9f.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Source: https://www.johnsonsstation.com/calendar/50-shades-of-blue
-DTEND:20260426T003000Z
-LOCATION:Johnson's Station\, 1111 Neon Forest Circle\, Longmont\, CO 80501
-DTSTART:20260425T223000Z
-SUMMARY:🎵 50 Shades of Blue
-UID:66ec9e5c-2be9-4ef1-bf13-ac305bbba44c@66ec.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Source: https://www.barnevents.info/events/2025/8/22/sturtz
-DTEND:20260823T033000Z
-LOCATION:The Barn
-DTSTART:20260823T013000Z
-SUMMARY:🎵 [Rock] Sturtz
-UID:1b09981a-7d13-4628-bd26-e8a2d7205904@1b09.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Source: https://www.johnsonsstation.com/calendar/atom-collective
-DTEND:20260831T013000Z
-LOCATION:Johnson's Station\, 1111 Neon Forest Circle\, Longmont\, CO 80501
-DTSTART:20260830T233000Z
-SUMMARY:🎵 Atom Collective
-UID:a549e43d-85a2-4d34-9eca-a09f226fe751@a549.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Source: https://www.downtownlongmont.com/do/midnight-hour-at-bootstrap-brewing-6
+DESCRIPTION:Source: https://www.downtownlongmont.com/do/tumbledown-shack-at-bootstrap-brewing-1
 DTEND:20260526T020000Z
 LOCATION:Bootstrap Brewing\, 142 Pratt St
 DTSTART:20260526T000000Z
-SUMMARY:🎵 [Blues] Midnight Hour at Bootstrap Brewing!
-UID:c2856297-5441-4c56-8e54-69c01eb0f977@c285.org
+SUMMARY:🎵 Tumbledown Shack at Bootstrap Brewing!
+UID:ef0bae9e-4dd7-45a5-9bf2-d445b3564ee6@ef0b.org
 END:VEVENT
 BEGIN:VEVENT
-DESCRIPTION:Source: https://www.downtownlongmont.com/do/izzy-and-the-icebreakers-at-bootstrap-brewing-2
-DTEND:20260526T020000Z
-LOCATION:Bootstrap Brewing\, 142 Pratt St
-DTSTART:20260526T000000Z
-SUMMARY:🎵 [Rock] Izzy & the Icebreakers at Bootstrap Brewing!
-UID:c4855a7e-01a9-4240-a1f1-fe00681e0a5a@c485.org
+DESCRIPTION:Source: https://www.downtownlongmont.com/do/pride-art-exhiibtion-art-sampler-5-class-session
+DTEND:20260525T200000Z
+LOCATION:Firehouse Art Center\, 667 4th Ave
+DTSTART:20260525T180000Z
+SUMMARY:🎵 Pride Art Exhiibtion- Art Sampler- 5 class session
+UID:60eec999-abbe-457e-97bf-eeb4987403ca@60ee.org
 END:VEVENT
 BEGIN:VEVENT
-DESCRIPTION:Source: https://www.barnevents.info/events/2024/11/24/david-lawrence-amp-the-spoonful
-DTEND:20261125T010000Z
-LOCATION:The Barn
-DTSTART:20261124T230000Z
-SUMMARY:🎵 [Jazz] David Lawrence & the Spoonful: Video Release Celebration
-UID:727aaaad-0397-4c03-94d9-3c20d55996d1@727a.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Source: https://www.johnsonsstation.com/calendar/mango-moondog
-DTEND:20260922T013000Z
-LOCATION:Johnson's Station\, 1111 Neon Forest Circle\, Longmont\, CO 80501
-DTSTART:20260921T233000Z
-SUMMARY:🎵 [Rock] Mango Moondog
-UID:0deb631b-f6cb-41a2-8c94-8bac9c141cc7@0deb.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Source: https://www.johnsonsstation.com/calendar/jack-hadley-indoor-29pbs-ah986-zkew3
-DTEND:20260719T020000Z
-LOCATION:Johnson's Station\, 1111 Neon Forest Circle\, Longmont\, CO 80501
-DTSTART:20260719T000000Z
-SUMMARY:🎵 Jack Hadley
-UID:98b4d26a-158a-4932-924f-ad7fcbe2cac2@98b4.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Source: https://www.downtownlongmont.com/do/lookin-for-louie-band-performing--the-passenger-2
-DTEND:20260526T020000Z
-LOCATION:The Passenger\, 300 Main St
-DTSTART:20260526T000000Z
-SUMMARY:🎵 [Rock] Lookin' For Louie Band Performing @ the passenger
-UID:6eda5322-7f44-401c-83d3-063785bd3f4e@6eda.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Source: https://www.downtownlongmont.com/do/thomas-dow-live-music-1
-DTEND:20260526T023000Z
-LOCATION:300 Suns Brewing\, 335 1st Ave
-DTSTART:20260526T003000Z
-SUMMARY:🎵 [Folk/Acoustic] Thomas Dow - Live Music
-UID:35b57f90-d008-47d9-ad8f-b2fd9ab5c029@35b5.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Source: https://www.johnsonsstation.com/calendar/grable-howie
-DTEND:20260921T013000Z
-LOCATION:Johnson's Station\, 1111 Neon Forest Circle\, Longmont\, CO 80501
-DTSTART:20260920T233000Z
-SUMMARY:🎵 [Folk/Acoustic] Grable Howie
-UID:5ef1c318-1cbf-4949-aea8-a0336b615ccd@5ef1.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Source: https://www.barnevents.info/events/2025/6/27/sugar-britches
-DTEND:20260530T030000Z
-LOCATION:The Barn
-DTSTART:20260530T010000Z
-SUMMARY:🎵 [Rock] Sugar Britches
-UID:53e4b22d-a68d-40bc-8ded-cedda5f924c3@53e4.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Source: https://www.downtownlongmont.com/do/live-music-with-the-silo-sisters
-DTEND:20260526T023000Z
-LOCATION:Butterscotch Studios\, 620 Kimbark St
-DTSTART:20260526T003000Z
-SUMMARY:🎵 Live music with The Silo Sisters
-UID:725fbcd8-7e5a-4caf-b1dd-2a6a19b26091@725f.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Source: https://www.johnsonsstation.com/calendar/bonnie-lowdermilk-1
-DTEND:20260912T020000Z
-LOCATION:Johnson's Station\, 1111 Neon Forest Circle\, Longmont\, CO 80501
-DTSTART:20260912T000000Z
-SUMMARY:🎵 Bonnie Lowdermilk
-UID:16647185-d483-4076-b002-79eb10a3c267@1664.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Source: https://www.johnsonsstation.com/calendar/dan-buller-duo-75h7s
-DTEND:20260926T020000Z
-LOCATION:Johnson's Station\, 1111 Neon Forest Circle\, Longmont\, CO 80501
-DTSTART:20260926T000000Z
-SUMMARY:🎵 Dan Buller Trio
-UID:10634f9e-7aca-467d-965b-c0a4a6d0b491@1063.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Source: https://www.johnsonsstation.com/calendar/davy-allard-the-silverwave-band
-DTEND:20260811T013000Z
-LOCATION:Johnson's Station\, 1111 Neon Forest Circle\, Longmont\, CO 80501
-DTSTART:20260810T233000Z
-SUMMARY:🎵 [Folk/Acoustic] Davy Allard & the SilverWave Band
-UID:052cab99-0f13-4fd9-8887-172dc942671e@052c.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Source: https://www.barnevents.info/events/2023/7/27/carl-sonny-leyland-trio-68ejz-5j3dg-ahmrh-986wg
-DTEND:20260725T030000Z
-LOCATION:The Barn
-DTSTART:20260725T010000Z
-SUMMARY:🎵 [Jazz] Dance Party with the Carl Sonny Leyland Trio
-UID:cc236fc3-4d0d-4061-8e4b-ac66a1451992@cc23.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Source: https://www.barnevents.info/events/2025/1/12/4bf9iy3psupoon4exy31wm271pm6z5
-DTEND:20260509T030000Z
-LOCATION:The Barn
-DTSTART:20260509T010000Z
-SUMMARY:🎵 [Rock] Bob Barrick\, Brendan Mayer\, & Peter Mayer
-UID:35e2188a-e404-4012-9bca-b28ec829ed73@35e2.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Source: https://www.johnsonsstation.com/calendar/jaik-hakkarinen
-DTEND:20260725T020000Z
-LOCATION:Johnson's Station\, 1111 Neon Forest Circle\, Longmont\, CO 80501
-DTSTART:20260725T000000Z
-SUMMARY:🎵 Jaik Hakkarinen Trio
-UID:4ab36ead-2a1e-4989-961b-6bb7b6c62730@4ab3.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Source: https://www.barnevents.info/events/2024/2/10/greg-schochet-amp-little-america
-DTEND:20260211T043000Z
-LOCATION:The Barn
-DTSTART:20260211T023000Z
-SUMMARY:🎵 [Jazz] Greg Schochet & Little America
-UID:7a610c21-9c27-49f8-8769-71d7368965cc@7a61.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Source: https://www.johnsonsstation.com/calendar/dr-jim-seely
-DTEND:20260914T013000Z
-LOCATION:Johnson's Station\, 1111 Neon Forest Circle\, Longmont\, CO 80501
-DTSTART:20260913T233000Z
-SUMMARY:🎵 [Rock] Dr Jim Seely
-UID:8c78f9fb-faa8-4146-b413-00b4fafd7ea3@8c78.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Source: https://www.downtownlongmont.com/do/dudt-gala-night-at-bricks-on-main-with-live-music
-DTEND:20260526T010000Z
-LOCATION:Bricks on Main\, 471 Main St
-DTSTART:20260525T230000Z
-SUMMARY:🎵 DUDT Gala Night at Bricks on Main with Live Music!
-UID:c325eb06-f96a-446f-abf7-52eab4f7795b@c325.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Source: https://www.barnevents.info/events/2023/7/27/carl-sonny-leyland-trio-68ejz-5j3dg-ahmrh
-DTEND:20260724T030000Z
-LOCATION:The Barn
-DTSTART:20260724T010000Z
-SUMMARY:🎵 [Jazz] Dance Party with the Carl Sonny Leyland Trio
-UID:97204fee-35a3-4959-989e-483e562cb99e@9720.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Source: https://www.downtownlongmont.com/do/downtown-summer-kickoff-concert
-DTEND:20260526T013000Z
-LOCATION:4th Ave. & Kimbark St.
-DTSTART:20260525T233000Z
-SUMMARY:🎵 [Rock] Downtown Summer Kickoff Concert
-UID:55b3bd1b-80af-47fa-b56d-ca308a1880f9@55b3.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Source: https://www.johnsonsstation.com/calendar/indigo
-DTEND:20260808T020000Z
-LOCATION:Johnson's Station\, 1111 Neon Forest Circle\, Longmont\, CO 80501
-DTSTART:20260808T000000Z
-SUMMARY:🎵 Indigo
-UID:49428b93-7ae6-448e-80f5-ac1806e974bd@4942.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Source: https://www.johnsonsstation.com/calendar/jack-hadley-indoor-29pbs-ah986
-DTEND:20260823T020000Z
-LOCATION:Johnson's Station\, 1111 Neon Forest Circle\, Longmont\, CO 80501
-DTSTART:20260823T000000Z
-SUMMARY:🎵 Jack Hadley
-UID:74316136-6e18-4705-a754-e2103953fcb0@7431.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Source: https://www.johnsonsstation.com/calendar/laurie-lorrie
-DTEND:20260704T020000Z
-LOCATION:Johnson's Station\, 1111 Neon Forest Circle\, Longmont\, CO 80501
-DTSTART:20260704T000000Z
-SUMMARY:🎵 Laurie & Lorrie
-UID:05be7008-8e94-489a-9ad3-36e39a9fed7c@05be.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Source: https://www.johnsonsstation.com/calendar/david-coile-fgk3n
-DTEND:20260822T020000Z
-LOCATION:Johnson's Station\, 1111 Neon Forest Circle\, Longmont\, CO 80501
-DTSTART:20260822T000000Z
-SUMMARY:🎵 The David Coile Array
-UID:73ab67b8-0b64-4d65-8003-b399aa54edeb@73ab.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Source: https://www.johnsonsstation.com/calendar/paloma-rose-1
-DTEND:20260815T020000Z
-LOCATION:Johnson's Station\, 1111 Neon Forest Circle\, Longmont\, CO 80501
-DTSTART:20260815T000000Z
-SUMMARY:🎵 Paloma Rose
-UID:6969f9b2-bc75-43fc-8c75-9ca9f7803128@6969.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Source: https://www.johnsonsstation.com/calendar/paloma-rose
-DTEND:20261013T013000Z
-LOCATION:Johnson's Station\, 1111 Neon Forest Circle\, Longmont\, CO 80501
-DTSTART:20261012T233000Z
-SUMMARY:🎵 [Jazz] Paloma Rose
-UID:e86751e3-57ae-4ccc-b77a-7f9f571caa85@e867.org
+DESCRIPTION:Source: https://www.downtownlongmont.com/do/longmont-pride
+DTEND:20260525T190000Z
+LOCATION:Roosevelt Park\, 700 Longs Peak Ave
+DTSTART:20260525T170000Z
+SUMMARY:🎵 Longmont Pride
+UID:65da2cee-ce41-45cd-84d9-15d8b310ae2e@65da.org
 END:VEVENT
 BEGIN:VEVENT
 DESCRIPTION:Source: https://www.downtownlongmont.com/do/punketry-at-the-firehouse
@@ -391,335 +119,23 @@ DTEND:20260526T030000Z
 LOCATION:Firehouse Art Center\, 667 4th Ave
 DTSTART:20260526T010000Z
 SUMMARY:🎵 [Rock] Punketry at the Firehouse
-UID:4df14641-5c47-4e16-afa7-06d6c4aebe5f@4df1.org
+UID:e521242f-05d4-4d8b-8710-3d6464ce906b@e521.org
 END:VEVENT
 BEGIN:VEVENT
-DESCRIPTION:Source: https://www.johnsonsstation.com/calendar/mad-dog
-DTEND:20260705T020000Z
-LOCATION:Johnson's Station\, 1111 Neon Forest Circle\, Longmont\, CO 80501
-DTSTART:20260705T000000Z
-SUMMARY:🎵 Mad Dog
-UID:5c04ac2f-2e36-4a2e-a7fd-b171156ced70@5c04.org
+DESCRIPTION:Source: https://www.downtownlongmont.com/do/mixtape-songwriter-showcase-featuring-bill-huston-and-monica-labonte
+DTEND:20260526T033000Z
+LOCATION:The Times Collaborative / 338 Main St\, 338 Main St
+DTSTART:20260526T013000Z
+SUMMARY:🎵 MIXTAPE: Songwriter Showcase featuring Bill Huston and Monica LaBonte
+UID:fe229f53-ded2-49bd-8f6e-3a08235f0909@fe22.org
 END:VEVENT
 BEGIN:VEVENT
-DESCRIPTION:Source: https://www.downtownlongmont.com/do/funk-it-up-at-bootstrap-brewing-2
-DTEND:20260526T020000Z
-LOCATION:Bootstrap Brewing\, 142 Pratt St
-DTSTART:20260526T000000Z
-SUMMARY:🎵 [Rock] Funk it Up at Bootstrap Brewing!
-UID:7745940d-bc68-4532-a597-5853c99469ff@7745.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Source: https://www.johnsonsstation.com/calendar/lookin-for-louie
-DTEND:20260718T020000Z
-LOCATION:Johnson's Station\, 1111 Neon Forest Circle\, Longmont\, CO 80501
-DTSTART:20260718T000000Z
-SUMMARY:🎵 Lookin' for Louie
-UID:499485b6-98b8-47b7-babe-bc12fb83eb77@4994.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Source: https://www.johnsonsstation.com/calendar/delta-sonics-4ktn8
-DTEND:20260915T013000Z
-LOCATION:Johnson's Station\, 1111 Neon Forest Circle\, Longmont\, CO 80501
-DTSTART:20260914T233000Z
-SUMMARY:🎵 [Jazz] Delta Sonics
-UID:d04cbcc3-2c88-4ae0-8657-a8038dc2bdd5@d04c.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Source: https://www.barnevents.info/events/2023/8/13/shanna-nd7z2
-DTEND:20261120T000000Z
-LOCATION:The Barn
-DTSTART:20261119T220000Z
-SUMMARY:🎵 [Folk/Acoustic] Shanna in a Dress (Copy)
-UID:727d949b-6026-4c45-8aef-ebb30989b1cb@727d.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Source: https://www.johnsonsstation.com/calendar/soul-station
-DTEND:20261012T013000Z
-LOCATION:Johnson's Station\, 1111 Neon Forest Circle\, Longmont\, CO 80501
-DTSTART:20261011T233000Z
-SUMMARY:🎵 [Jazz] Philly in the Highground
-UID:266a2a8d-2152-409c-a79f-8deaf4d3b945@266a.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Source: https://www.johnsonsstation.com/calendar/chris-vargo-trio
-DTEND:20260901T013000Z
-LOCATION:Johnson's Station\, 1111 Neon Forest Circle\, Longmont\, CO 80501
-DTSTART:20260831T233000Z
-SUMMARY:🎵 Chris Vargo Trio
-UID:a3c47258-22ec-47e9-8326-de0ab4f6035a@a3c4.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Source: https://www.barnevents.info/events/2024/8/25/salome-songbird-and-sarah
-DTEND:20260826T000000Z
-LOCATION:The Barn
-DTSTART:20260825T220000Z
-SUMMARY:🎵 [Jazz] Double Concert: Salomé Songbird and Sarah Clanton
-UID:2ed4c873-99f5-4004-a672-83e305b79ebd@2ed4.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Source: https://www.johnsonsstation.com/calendar/gypsywould
-DTEND:20260613T020000Z
-LOCATION:Johnson's Station\, 1111 Neon Forest Circle\, Longmont\, CO 80501
-DTSTART:20260613T000000Z
-SUMMARY:🎵 GypsyWould
-UID:8c4c7759-3221-4ecf-9eeb-7e3463cb7029@8c4c.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Source: https://www.johnsonsstation.com/calendar/dougs-garage
-DTEND:20260712T020000Z
-LOCATION:Johnson's Station\, 1111 Neon Forest Circle\, Longmont\, CO 80501
-DTSTART:20260712T000000Z
-SUMMARY:🎵 Doug's Garage
-UID:1dbabdb9-f12b-4712-90f9-053954554c40@1dba.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Source: https://www.barnevents.info/events/2023/3/13/strangebyrds
-DTEND:20260625T030000Z
-LOCATION:The Barn
-DTSTART:20260625T010000Z
-SUMMARY:🎵 [Folk/Acoustic] Strangebyrds
-UID:25d7402b-ca94-44c9-8a49-1313364d3cc8@25d7.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Source: https://www.johnsonsstation.com/calendar/plywood-clyde
-DTEND:20260907T013000Z
-LOCATION:Johnson's Station\, 1111 Neon Forest Circle\, Longmont\, CO 80501
-DTSTART:20260906T233000Z
-SUMMARY:🎵 [Rock] Barn Ghost
-UID:5cd47dad-08ae-4721-a4f8-5f858646d037@5cd4.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Source: https://www.barnevents.info/events/2017/1/19/moors-mccumber
-DTEND:20260320T020000Z
-LOCATION:The Barn
-DTSTART:20260320T000000Z
-SUMMARY:🎵 [Rock] Moors & McCumber: Saint Patrick's Day Concerts\, Two Shows!
-UID:0ebee2e7-afe6-466f-aa60-4d84f396829a@0ebe.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Source: https://www.johnsonsstation.com/calendar/dr-jim-seeley
-DTEND:20260620T020000Z
-LOCATION:Johnson's Station\, 1111 Neon Forest Circle\, Longmont\, CO 80501
-DTSTART:20260620T000000Z
-SUMMARY:🎵 Dr Jim Seeley & Michelle
-UID:315eb12e-9fb8-4be2-903f-45645b33444e@315e.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Source: https://www.downtownlongmont.com/do/blues-jam--bricks-on-main
-DTEND:20260526T020000Z
-LOCATION:Bricks on Main\, 471 Main St
-DTSTART:20260526T000000Z
-SUMMARY:🎵 [Blues] Blues Jam @ Bricks on Main
-UID:eacfbc6b-1c8c-47ac-9f8b-b54e92eb3889@eacf.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Source: https://www.downtownlongmont.com/do/music-at-bricks-on-main-jo-fuller
-DTEND:20260526T020000Z
-LOCATION:Bricks on Main\, 471 Main St
-DTSTART:20260526T000000Z
-SUMMARY:🎵 [Rock] Music at Bricks on Main "Jo Fuller"
-UID:73c4ef45-c5c8-42eb-874d-66a7d1d8d4d0@73c4.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Source: https://www.johnsonsstation.com/calendar/jack-hadley-indoor-29pbs-ah986-rh72h
-DTEND:20260906T020000Z
-LOCATION:Johnson's Station\, 1111 Neon Forest Circle\, Longmont\, CO 80501
-DTSTART:20260906T000000Z
-SUMMARY:🎵 Jack Hadley
-UID:80d01bee-2462-4a07-99a6-07b3ba5294c5@80d0.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Source: https://www.johnsonsstation.com/calendar/recline
-DTEND:20260614T020000Z
-LOCATION:Johnson's Station\, 1111 Neon Forest Circle\, Longmont\, CO 80501
-DTSTART:20260614T000000Z
-SUMMARY:🎵 ReCline
-UID:f0881070-2ccd-4cb0-a3a2-e2c7e3577af3@f088.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Source: https://www.downtownlongmont.com/do/first-friday-with-mojazz
-DTEND:20260526T020000Z
-LOCATION:350 Terry St Ste 120
-DTSTART:20260526T000000Z
-SUMMARY:🎵 First Friday with Mojazz
-UID:ef16e274-b7a6-4e57-b966-aa9d00547366@ef16.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Source: https://www.barnevents.info/events/2026/7/17/songs-stories-and-art-lessons-from-strangersa-visual-folk-concert-by-john-john-brown
-DTEND:20260718T030000Z
-LOCATION:The Barn
-DTSTART:20260718T010000Z
-SUMMARY:🎵 [Folk/Acoustic] Songs\, Stories\, and Art: Lessons from Strangers—A Visual Folk Concert by John John Brown
-UID:a2ab389f-537e-4c92-afc5-4877abeb3083@a2ab.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Source: https://www.johnsonsstation.com/calendar/jules-fern-1
-DTEND:20260809T020000Z
-LOCATION:Johnson's Station\, 1111 Neon Forest Circle\, Longmont\, CO 80501
-DTSTART:20260809T000000Z
-SUMMARY:🎵 Jules Fern
-UID:115c328f-7107-43a8-9d61-0765726f30f1@115c.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Source: https://www.johnsonsstation.com/calendar/jack-hadley-indoor-29pbs
-DTEND:20260607T020000Z
-LOCATION:Johnson's Station\, 1111 Neon Forest Circle\, Longmont\, CO 80501
-DTSTART:20260607T000000Z
-SUMMARY:🎵 Jack Hadley
-UID:3cb3773e-9f2f-4246-ab7b-f9151876a570@3cb3.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Source: https://www.johnsonsstation.com/calendar/tim-jenny-ostdiek
-DTEND:20260606T020000Z
-LOCATION:Johnson's Station\, 1111 Neon Forest Circle\, Longmont\, CO 80501
-DTSTART:20260606T000000Z
-SUMMARY:🎵 Tim & Jenny Ostdiek
-UID:9725467f-f908-4ac4-bf79-acca078a15f4@9725.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Source: https://www.barnevents.info/events/2025/12/13/joy-adams-and-gus-tritsch
-DTEND:20261214T040000Z
-LOCATION:The Barn
-DTSTART:20261214T020000Z
-SUMMARY:🎵 [Folk/Acoustic] Joy Adams and Gus Tritsch
-UID:b4351ca4-4f34-491e-b8e0-c9c536d52335@b435.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Source: https://www.johnsonsstation.com/calendar/james-barela
-DTEND:20260801T020000Z
-LOCATION:Johnson's Station\, 1111 Neon Forest Circle\, Longmont\, CO 80501
-DTSTART:20260801T000000Z
-SUMMARY:🎵 James Barela & Blu7
-UID:f149f1b2-304a-46ae-973d-5c52d841c0ec@f149.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Source: https://www.johnsonsstation.com/calendar/scott-von
-DTEND:20260908T013000Z
-LOCATION:Johnson's Station\, 1111 Neon Forest Circle\, Longmont\, CO 80501
-DTSTART:20260907T233000Z
-SUMMARY:🎵 [Folk/Acoustic] Scott Von
-UID:c47720e4-eef7-40c7-8075-ecd1970c8810@c477.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Source: https://www.barnevents.info/events/2023/8/13/shanna-nd7z2-pgby7
-DTEND:20261116T040000Z
-LOCATION:The Barn
-DTSTART:20261116T020000Z
-SUMMARY:🎵 Shanna in a Dress
-UID:65247b06-a73b-4730-b6da-23a505143220@6524.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Source: https://www.johnsonsstation.com/calendar/jelly-roll-bakers
-DTEND:20260830T020000Z
-LOCATION:Johnson's Station\, 1111 Neon Forest Circle\, Longmont\, CO 80501
-DTSTART:20260830T000000Z
-SUMMARY:🎵 Jelly Roll Bakers
-UID:6dd88884-3a0a-4b68-af8c-62394c82c4aa@6dd8.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Source: https://www.johnsonsstation.com/calendar/domi-edson-trio
-DTEND:20260818T013000Z
-LOCATION:Johnson's Station\, 1111 Neon Forest Circle\, Longmont\, CO 80501
-DTSTART:20260817T233000Z
-SUMMARY:🎵 [Jazz] Domi Edson Trio
-UID:6067a41f-6dc7-4dd1-b91b-a1b9d0d11042@6067.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Source: https://www.johnsonsstation.com/calendar/the-thistle-tones-1
-DTEND:20260524T020000Z
-LOCATION:Johnson's Station\, 1111 Neon Forest Circle\, Longmont\, CO 80501
-DTSTART:20260524T000000Z
-SUMMARY:🎵 The Thistle Tones
-UID:5e33a9c3-64fa-401f-906d-6e1a7de75401@5e33.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Source: https://www.johnsonsstation.com/calendar/brian-mcguirk-ne7l9
-DTEND:20260531T020000Z
-LOCATION:Johnson's Station\, 1111 Neon Forest Circle\, Longmont\, CO 80501
-DTSTART:20260531T000000Z
-SUMMARY:🎵 Brian McGuirk
-UID:59e9ab90-65c7-4edb-b6e9-e264af93cf41@59e9.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Source: https://www.barnevents.info/events/2023/8/13/shanna
-DTEND:20260812T033000Z
-LOCATION:The Barn
-DTSTART:20260812T013000Z
-SUMMARY:🎵 [Folk/Acoustic] Shanna in a Dress
-UID:46892345-2be4-4964-8c8e-52b109b1d7eb@4689.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Source: https://www.johnsonsstation.com/calendar/brian-mcguirk
-DTEND:20260329T003000Z
-LOCATION:Johnson's Station\, 1111 Neon Forest Circle\, Longmont\, CO 80501
-DTSTART:20260328T223000Z
-SUMMARY:🎵 Brian McGuirk
-UID:122047e9-f23f-4e50-86cf-5d49e64c3554@1220.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Source: https://www.johnsonsstation.com/calendar/bonnie-lowdermilk-trio
-DTEND:20260825T013000Z
-LOCATION:Johnson's Station\, 1111 Neon Forest Circle\, Longmont\, CO 80501
-DTSTART:20260824T233000Z
-SUMMARY:🎵 [Jazz] Bonnie Lowdermilk Trio
-UID:387e7b1c-aa3f-4b08-a6ae-95f0ca137ac7@387e.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Source: https://www.johnsonsstation.com/calendar/david-coile
-DTEND:20260503T003000Z
-LOCATION:Johnson's Station\, 1111 Neon Forest Circle\, Longmont\, CO 80501
-DTSTART:20260502T223000Z
-SUMMARY:🎵 David Coile w/ Carly Fox
-UID:25a19473-75c1-4f94-abd0-0c07b2c4ba2c@25a1.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Source: https://www.johnsonsstation.com/calendar/gabriel-santiago-duo
-DTEND:20260802T020000Z
-LOCATION:Johnson's Station\, 1111 Neon Forest Circle\, Longmont\, CO 80501
-DTSTART:20260802T000000Z
-SUMMARY:🎵 Gabriel Santiago Duo
-UID:57aa5c53-d8e3-47a5-a6a6-3342d3985316@57aa.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Source: https://www.johnsonsstation.com/calendar/many-mountains
-DTEND:20261019T003000Z
-LOCATION:Johnson's Station\, 1111 Neon Forest Circle\, Longmont\, CO 80501
-DTSTART:20261018T223000Z
-SUMMARY:🎵 [Rock] Many Mountains
-UID:757d90f7-15f8-4bdd-8e3b-c934dd21d5d8@757d.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Source: https://www.johnsonsstation.com/calendar/alex-nikiforoff
-DTEND:20260404T003000Z
-LOCATION:Johnson's Station\, 1111 Neon Forest Circle\, Longmont\, CO 80501
-DTSTART:20260403T223000Z
-SUMMARY:🎵 Alex Nikiforoff
-UID:72d89b05-f098-4d27-913a-fea7c886c534@72d8.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Source: https://www.johnsonsstation.com/calendar/dez-amis
-DTEND:20260530T020000Z
-LOCATION:Johnson's Station\, 1111 Neon Forest Circle\, Longmont\, CO 80501
-DTSTART:20260530T000000Z
-SUMMARY:🎵 Dez Amis
-UID:beb88e7e-dbff-4760-8ea1-dfc10ac80459@beb8.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Source: https://www.johnsonsstation.com/calendar/alex-nikiforoff-atom-collective
-DTEND:20260523T020000Z
-LOCATION:Johnson's Station\, 1111 Neon Forest Circle\, Longmont\, CO 80501
-DTSTART:20260523T000000Z
-SUMMARY:🎵 Alex Nikiforoff & Atom Collective
-UID:fd2cad35-9c59-4c5a-8eff-a676c814fa46@fd2c.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Source: https://www.barnevents.info/events/2019/9/20/the-common-thread-concert-gar92
-DTEND:20260506T030000Z
-LOCATION:The Barn
-DTSTART:20260506T010000Z
-SUMMARY:🎵 [Rock] Tim Ostdiek Band - The Lost Days Album Release Party
-UID:f1952319-fc72-44f2-9894-9f30bd2c7bb8@f195.org
+DESCRIPTION:Source: https://www.downtownlongmont.com/do/quarters-adult-field-trip-to-the-denver-zoo
+DTEND:20260525T180000Z
+LOCATION:Quarters Bar & Arcade\, 475 Main St
+DTSTART:20260525T160000Z
+SUMMARY:🎵 Quarters Adult Field Trip to the Denver Zoo
+UID:895a15f5-5125-4faa-b543-30a820a3bbb9@895a.org
 END:VEVENT
 BEGIN:VEVENT
 DESCRIPTION:Source: https://www.barnevents.info/events/2026/1/14/dance-party-with-the-lovestruck-balladeers
@@ -727,7 +143,103 @@ DTEND:20260418T030000Z
 LOCATION:The Barn
 DTSTART:20260418T010000Z
 SUMMARY:🎵 [Jazz] Dance Party with The Lovestruck Balladeers
-UID:5815f5b8-8cdb-4cf3-a4e8-05249678198f@5815.org
+UID:51ebebf5-846d-4c2e-8526-698817562183@51eb.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Source: https://www.barnevents.info/events/2026/7/17/songs-stories-and-art-lessons-from-strangersa-visual-folk-concert-by-john-john-brown
+DTEND:20260718T030000Z
+LOCATION:The Barn
+DTSTART:20260718T010000Z
+SUMMARY:🎵 [Folk/Acoustic] Songs\, Stories\, and Art: Lessons from Strangers—A Visual Folk Concert by John John Brown
+UID:47dd57ea-350e-4d08-ba45-952b7389f30c@47dd.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Source: https://www.downtownlongmont.com/do/izzy-and-the-icebreakers-at-bootstrap-brewing-2
+DTEND:20260526T020000Z
+LOCATION:Bootstrap Brewing\, 142 Pratt St
+DTSTART:20260526T000000Z
+SUMMARY:🎵 [Rock] Izzy & the Icebreakers at Bootstrap Brewing!
+UID:5161da6a-6e29-4af9-b58b-6af2cd6f01c2@5161.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Source: https://www.barnevents.info/events/2025/8/22/sturtz
+DTEND:20260823T030000Z
+LOCATION:The Barn
+DTSTART:20260823T010000Z
+SUMMARY:🎵 [Rock] Sturtz
+UID:7e820609-59d6-42f9-a983-43d5e2776d5f@7e82.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Source: https://www.barnevents.info/events/2025/6/27/sugar-britches
+DTEND:20260530T030000Z
+LOCATION:The Barn
+DTSTART:20260530T010000Z
+SUMMARY:🎵 [Rock] Sugar Britches
+UID:a8f55c7c-b043-4b04-a576-51a65d370495@a8f5.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Source: https://www.downtownlongmont.com/do/music-at-bricks-on-main-march-to-august
+DTEND:20260526T020000Z
+LOCATION:Bricks on Main\, 471 Main St
+DTSTART:20260526T000000Z
+SUMMARY:🎵 [Folk/Acoustic] Music at Bricks on Main "March to August"
+UID:019eeb65-3cc9-47f3-8a52-79846022cb83@019e.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Source: https://www.barnevents.info/events/2023/8/13/shanna-nd7z2-pgby7
+DTEND:20261116T040000Z
+LOCATION:The Barn
+DTSTART:20261116T020000Z
+SUMMARY:🎵 Shanna in a Dress
+UID:1e89d4e1-82c1-4a11-a42b-57330d1f7ef9@1e89.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Source: https://www.downtownlongmont.com/do/lookin-for-louie-band-performing--the-passenger-2
+DTEND:20260526T020000Z
+LOCATION:The Passenger\, 300 Main St
+DTSTART:20260526T000000Z
+SUMMARY:🎵 [Rock] Lookin' For Louie Band Performing @ the passenger
+UID:58874352-51fc-4368-a622-1d1f1872b695@5887.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Source: https://www.downtownlongmont.com/do/beginner-mahjong-academy-101
+DTEND:20260525T200000Z
+LOCATION:Kuper Wine Bar\, 600 Longs Peak Ave
+DTSTART:20260525T180000Z
+SUMMARY:🎵 Beginner Mahjong Academy 101
+UID:e06252f7-a35f-41ed-8e84-3f4a2712d79d@e062.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Source: https://www.downtownlongmont.com/do/jessicas-birthday-bash-drag-show
+DTEND:20260526T030000Z
+LOCATION:The Passenger\, 300 Main St
+DTSTART:20260526T010000Z
+SUMMARY:🎵 [Electronic] Jessica’s Birthday Bash Drag Show!
+UID:572ee9a2-842b-456e-b6e3-1504f2dea7ab@572e.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Source: https://www.downtownlongmont.com/do/2026-boulder-county-treasurer-democrats-primary-candidate-forum
+DTEND:20260526T020000Z
+LOCATION:Longmont Public Media\, 457 4th Ave
+DTSTART:20260526T000000Z
+SUMMARY:🎵 2026 Boulder County Treasurer (Democrats) Primary Candidate Forum
+UID:f9f8ebf4-58b9-4d25-bfc9-1138d7096f3c@f9f8.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Source: https://www.downtownlongmont.com/do/maggies-farmers-at-bootstrap-brewing-1
+DTEND:20260526T020000Z
+LOCATION:Bootstrap Brewing\, 142 Pratt St
+DTSTART:20260526T000000Z
+SUMMARY:🎵 Maggie's Farmers at Bootstrap Brewing!
+UID:b65d05a0-3c00-4301-a0ad-b8153f2c6d3b@b65d.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Source: https://www.downtownlongmont.com/do/live-music-with-the-silo-sisters
+DTEND:20260526T023000Z
+LOCATION:Butterscotch Studios\, 620 Kimbark St
+DTSTART:20260526T003000Z
+SUMMARY:🎵 [Folk/Acoustic] Live music with The Silo Sisters
+UID:ee51643c-5c25-4a3e-92ab-1ba042f19b38@ee51.org
 END:VEVENT
 BEGIN:VEVENT
 DESCRIPTION:Source: https://www.barnevents.info/events/2023/7/27/carl-sonny-leyland-trio-68ejz-5j3dg
@@ -735,62 +247,270 @@ DTEND:20260728T030000Z
 LOCATION:The Barn
 DTSTART:20260728T010000Z
 SUMMARY:🎵 [Jazz] Dance Party with the Carl Sonny Leyland Trio
-UID:923f1e28-46c1-4fd8-87f3-e7190a7c7c20@923f.org
+UID:0bb1819a-001d-4c0b-bca8-76d087a212b8@0bb1.org
 END:VEVENT
 BEGIN:VEVENT
-DESCRIPTION:Source: https://www.johnsonsstation.com/calendar/mountain-duo
-DTEND:20260920T020000Z
-LOCATION:Johnson's Station\, 1111 Neon Forest Circle\, Longmont\, CO 80501
-DTSTART:20260920T000000Z
-SUMMARY:🎵 Mountain Duo
-UID:c7bc3da9-23ff-4982-8769-81b71e84210e@c7bc.org
+DESCRIPTION:Source: https://www.barnevents.info/events/2019/9/20/the-common-thread-concert-gar92
+DTEND:20260506T030000Z
+LOCATION:The Barn
+DTSTART:20260506T010000Z
+SUMMARY:🎵 [Rock] Tim Ostdiek Band - The Lost Days Album Release Party
+UID:2c90db31-de11-4813-9d5c-37bde6f280a6@2c90.org
 END:VEVENT
 BEGIN:VEVENT
-DESCRIPTION:Source: https://www.johnsonsstation.com/calendar/matthew-popkin
-DTEND:20260726T020000Z
-LOCATION:Johnson's Station\, 1111 Neon Forest Circle\, Longmont\, CO 80501
-DTSTART:20260726T000000Z
-SUMMARY:🎵 Matthew Popkin
-UID:9fdd3a09-ab1c-4501-8d0e-bf6073c34341@9fdd.org
+DESCRIPTION:Source: https://www.downtownlongmont.com/do/free-gala-drink-dress-up-downtown
+DTEND:20260525T180000Z
+LOCATION:The Passenger\, 300 Main St
+DTSTART:20260525T160000Z
+SUMMARY:🎵 [Jazz] Free Gala Drink - Dress Up Downtown
+UID:d59ae513-ad77-43ed-a11b-ce9ed76c30cf@d59a.org
 END:VEVENT
 BEGIN:VEVENT
-DESCRIPTION:Source: https://www.johnsonsstation.com/calendar/the-krueger-brothers
-DTEND:20260322T003000Z
-LOCATION:Johnson's Station\, 1111 Neon Forest Circle\, Longmont\, CO 80501
-DTSTART:20260321T223000Z
-SUMMARY:🎵 The Krueger Brothers
-UID:59902067-d784-4b90-b358-0fa89c32abe4@5990.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Source: https://www.johnsonsstation.com/calendar/jack-hadley-indoor
-DTEND:20260419T003000Z
-LOCATION:Johnson's Station\, 1111 Neon Forest Circle\, Longmont\, CO 80501
-DTSTART:20260418T223000Z
-SUMMARY:🎵 Jack Hadley
-UID:abf9c1fe-046d-4a1f-ae93-dbc605ebd8fa@abf9.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Source: https://www.johnsonsstation.com/calendar/nice-work-jazz
-DTEND:20260829T020000Z
-LOCATION:Johnson's Station\, 1111 Neon Forest Circle\, Longmont\, CO 80501
-DTSTART:20260829T000000Z
-SUMMARY:🎵 [Jazz] Nice Work Jazz
-UID:c557a7cc-30d6-4918-b97c-8deeea6b39d8@c557.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Source: https://www.johnsonsstation.com/calendar/flatwoods-rambler
-DTEND:20260628T020000Z
-LOCATION:Johnson's Station\, 1111 Neon Forest Circle\, Longmont\, CO 80501
-DTSTART:20260628T000000Z
-SUMMARY:🎵 Flatwoods Rambler
-UID:2d1547fc-8b3a-492f-80a0-95f55af8b155@2d15.org
+DESCRIPTION:Source: https://www.barnevents.info/events/2024/alexalennon
+DTEND:20260320T030000Z
+LOCATION:The Barn
+DTSTART:20260320T010000Z
+SUMMARY:🎵 Alexa Wildish and Lennon VanderDoes
+UID:78d48d04-7049-4152-8e8e-3dbea47f82ee@78d4.org
 END:VEVENT
 BEGIN:VEVENT
 DESCRIPTION:Source: https://www.barnevents.info/events/2023/8/13/shanna-nd7z2-pgby7-ee5zy
-DTEND:20260308T230000Z
+DTEND:20260309T030000Z
 LOCATION:The Barn
-DTSTART:20260308T210000Z
+DTSTART:20260309T010000Z
 SUMMARY:🎵 Shanna in a Dress
-UID:2d1658c4-eff6-4421-8d83-68b76962e570@2d16.org
+UID:d552542a-2a4c-4fc0-9d11-dc44990dcbdf@d552.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Source: https://www.downtownlongmont.com/do/midnight-hour-at-bootstrap-brewing-6
+DTEND:20260526T020000Z
+LOCATION:Bootstrap Brewing\, 142 Pratt St
+DTSTART:20260526T000000Z
+SUMMARY:🎵 [Blues] Midnight Hour at Bootstrap Brewing!
+UID:7c556f6a-672e-4217-89ad-e46eaf95df9c@7c55.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Source: https://www.downtownlongmont.com/do/thomas-dow-live-music-1
+DTEND:20260526T023000Z
+LOCATION:300 Suns Brewing\, 335 1st Ave
+DTSTART:20260526T003000Z
+SUMMARY:🎵 [Folk/Acoustic] Thomas Dow - Live Music
+UID:0a090875-e127-4ab9-9ef5-5566d9cc1664@0a09.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Source: https://www.barnevents.info/events/2023/11/4/bonnie-and-taylor-sims
+DTEND:20261105T040000Z
+LOCATION:The Barn
+DTSTART:20261105T020000Z
+SUMMARY:🎵 [Blues] Bonnie and Taylor Sims
+UID:d3b3a5cb-766f-4485-abd2-3c8fb65aad97@d3b3.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Source: https://www.barnevents.info/events/2025/4/4/greg-schochet-and-little-america
+DTEND:20260405T030000Z
+LOCATION:The Barn
+DTSTART:20260405T010000Z
+SUMMARY:🎵 [Jazz] GREG SCHOCHET & LITTLE AMERICA
+UID:c9fe97e9-a74f-4038-aed4-a3799f330b7a@c9fe.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Source: https://www.barnevents.info/events/2024/7/6/rusty-44
+DTEND:20260707T030000Z
+LOCATION:The Barn
+DTSTART:20260707T010000Z
+SUMMARY:🎵 [Folk/Acoustic] Dance Party with Rusty 44
+UID:b7cb4dd6-a858-48b6-9538-605d5e293b31@b7cb.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Source: https://www.downtownlongmont.com/do/dress-up-downtown-gala-night-1
+DTEND:20260526T020000Z
+LOCATION:Quarters Bar & Arcade\, 475 Main St
+DTSTART:20260526T000000Z
+SUMMARY:🎵 Dress Up Downtown Gala Night
+UID:8722caa5-bfed-4ccc-ba13-3665b9f1876f@8722.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Source: https://www.barnevents.info/events/2026/2/28/dance-party-with-dlovelies
+DTEND:20260301T040000Z
+LOCATION:The Barn
+DTSTART:20260301T020000Z
+SUMMARY:🎵 [Jazz] Dance Party with d'Lovelies
+UID:2c26594c-33b8-4c66-a02f-473a35024348@2c26.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Source: https://www.barnevents.info/events/2024/8/25/salome-songbird-and-sarah-dspaw
+DTEND:20260829T030000Z
+LOCATION:The Barn
+DTSTART:20260829T010000Z
+SUMMARY:🎵 [Jazz] Salomé Songbird
+UID:7fdc93e5-03a5-40fb-a397-450cc71bc468@7fdc.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Source: https://www.barnevents.info/events/2023/3/13/strangebyrds
+DTEND:20260625T030000Z
+LOCATION:The Barn
+DTSTART:20260625T010000Z
+SUMMARY:🎵 [Folk/Acoustic] Strangebyrds
+UID:75277c82-1532-4c64-a7e9-fa66f392e892@7527.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Source: https://www.downtownlongmont.com/do/the-heart-of-france-in-80-days-film-screening-qanda-with-the-filmmaker
+DTEND:20260526T013000Z
+LOCATION:457 4th Ave
+DTSTART:20260525T233000Z
+SUMMARY:🎵 The Heart of France in 80 Days
+UID:6cf6a9c9-7943-447e-83d1-03b8e18bc08a@6cf6.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Source: https://www.barnevents.info/events/2023/8/13/shanna
+DTEND:20260812T030000Z
+LOCATION:The Barn
+DTSTART:20260812T010000Z
+SUMMARY:🎵 [Folk/Acoustic] Shanna in a Dress
+UID:c4d1603f-7968-49ed-bb5d-4c9f3089dc1f@c4d1.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Source: https://www.downtownlongmont.com/do/dressup-downtown-costume-crawl-free-glass-of-wine
+DTEND:20260525T230000Z
+LOCATION:Elevated Communities Gently Used Clothing Boutique\, 455 Main St
+DTSTART:20260525T210000Z
+SUMMARY:🎵 DressUp Downtown Costume Crawl - FREE Glass of Wine
+UID:7d47e1ce-b74d-4190-94c4-bf3b36cf7708@7d47.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Source: https://www.downtownlongmont.com/do/in-honor-of-memorial-day
+DTEND:20260526T030000Z
+LOCATION:379 Main St.
+DTSTART:20260526T010000Z
+SUMMARY:🎵 [Country] In Honor of Memorial Day
+UID:9280577f-ff2e-40e9-b80b-d98c30871929@9280.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Source: https://www.barnevents.info/events/2023/8/13/shanna-nd7z2
+DTEND:20261120T040000Z
+LOCATION:The Barn
+DTSTART:20261120T020000Z
+SUMMARY:🎵 [Folk/Acoustic] Shanna in a Dress (Copy)
+UID:319323b6-10c0-45a9-9656-5449d328cdc9@3193.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Source: https://www.downtownlongmont.com/do/costume-crawl-4
+DTEND:20260526T010000Z
+LOCATION:Flavor Of India\, 370 Main St
+DTSTART:20260525T230000Z
+SUMMARY:🎵 Costume Crawl
+UID:d4ac2ab6-2f94-4f8f-924f-ae246d8761be@d4ac.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Source: https://www.downtownlongmont.com/do/dudt-gala-night-at-bricks-on-main-with-live-music
+DTEND:20260526T010000Z
+LOCATION:Bricks on Main\, 471 Main St
+DTSTART:20260525T230000Z
+SUMMARY:🎵 DUDT Gala Night at Bricks on Main with Live Music!
+UID:3c46c2e3-4002-4e48-9c7e-fd1e8ebf7870@3c46.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Source: https://www.downtownlongmont.com/do/funk-it-up-at-bootstrap-brewing-2
+DTEND:20260526T020000Z
+LOCATION:Bootstrap Brewing\, 142 Pratt St
+DTSTART:20260526T000000Z
+SUMMARY:🎵 [Rock] Funk it Up at Bootstrap Brewing!
+UID:97010bc0-8b07-47b7-a1ee-858d17d73557@9701.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Source: https://www.barnevents.info/events/2025/12/13/joy-adams-and-gus-tritsch
+DTEND:20261214T040000Z
+LOCATION:The Barn
+DTSTART:20261214T020000Z
+SUMMARY:🎵 [Folk/Acoustic] Joy Adams and Gus Tritsch
+UID:028c3203-11f9-4373-b329-75f9c5e8df98@028c.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Source: https://www.downtownlongmont.com/do/safe-shelter-annual-cornhole-tournament
+DTEND:20260525T183000Z
+LOCATION:Wibby Brewing\, 209 Emery St
+DTSTART:20260525T163000Z
+SUMMARY:🎵 Safe Shelter Annual Cornhole Tournament
+UID:d56f5c4b-c709-4016-815a-a89d4cd0d1df@d56f.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Source: https://www.barnevents.info/events/2023/7/27/carl-sonny-leyland-trio-68ejz-5j3dg-ahmrh
+DTEND:20260724T030000Z
+LOCATION:The Barn
+DTSTART:20260724T010000Z
+SUMMARY:🎵 [Jazz] Dance Party with the Carl Sonny Leyland Trio
+UID:d30b0039-b9d9-491c-80a9-083ae42ff78c@d30b.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Source: https://www.barnevents.info/events/2025/1/12/4bf9iy3psupoon4exy31wm271pm6z5
+DTEND:20260509T030000Z
+LOCATION:The Barn
+DTSTART:20260509T010000Z
+SUMMARY:🎵 [Rock] Bob Barrick\, Brendan Mayer\, & Peter Mayer
+UID:bfc05388-68c8-48f7-ab57-dce2c6f42723@bfc0.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Source: https://www.downtownlongmont.com/do/first-friday-with-mojazz
+DTEND:20260526T020000Z
+LOCATION:350 Terry St Ste 120
+DTSTART:20260526T000000Z
+SUMMARY:🎵 [Jazz] First Friday with Mojazz
+UID:f1c79cea-320e-435a-8b21-906dab477a4a@f1c7.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Source: https://www.downtownlongmont.com/do/half-price-bottle-night-and-live-music-1
+DTEND:20260525T230000Z
+LOCATION:Kuper Wine Bar\, 600 Longs Peak Ave
+DTSTART:20260525T210000Z
+SUMMARY:🎵 Half Price Bottle Night & Live Music
+UID:3b204022-8e55-4ec5-82ee-6c57525ee75e@3b20.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Source: https://www.downtownlongmont.com/do/reverse-mortgages
+DTEND:20260525T193000Z
+LOCATION:Longmont Area Chamber Of Commerce\, 528 Main St
+DTSTART:20260525T173000Z
+SUMMARY:🎵 [Classical] Reverse Mortgages
+UID:d469435e-51ea-4439-b25f-6deeb8bda5e3@d469.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Source: https://www.downtownlongmont.com/do/bandana-a-tribute-to-santana-at-bootstrap-brewing
+DTEND:20260526T020000Z
+LOCATION:Bootstrap Brewing\, 142 Pratt St
+DTSTART:20260526T000000Z
+SUMMARY:🎵 Bandana - a tribute to Santana at Bootstrap Brewing!
+UID:850bf666-54f2-4d36-9064-d5e5fc2ea043@850b.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Source: https://www.downtownlongmont.com/do/streatbeets
+DTEND:20260526T020000Z
+LOCATION:Bricks on Main\, 471 Main St
+DTSTART:20260526T000000Z
+SUMMARY:🎵 StreatBeets
+UID:b6eadb69-9eba-4775-aa90-1f2972edbaae@b6ea.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Source: https://www.downtownlongmont.com/do/blues-jam--bricks-on-main
+DTEND:20260526T020000Z
+LOCATION:Bricks on Main\, 471 Main St
+DTSTART:20260526T000000Z
+SUMMARY:🎵 [Blues] Blues Jam @ Bricks on Main
+UID:6e2021da-1375-4e25-b272-c168962756aa@6e20.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Source: https://www.barnevents.info/events/2024/4/27/strangebyrds
+DTEND:20260428T030000Z
+LOCATION:The Barn
+DTSTART:20260428T010000Z
+SUMMARY:🎵 [Rock] Strangebyrds
+UID:0e541a2f-584b-4b51-b308-1d4ee4a564e4@0e54.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Source: https://www.barnevents.info/events/2023/7/27/carl-sonny-leyland-trio-68ejz-5j3dg-ahmrh-986wg
+DTEND:20260725T030000Z
+LOCATION:The Barn
+DTSTART:20260725T010000Z
+SUMMARY:🎵 [Jazz] Dance Party with the Carl Sonny Leyland Trio
+UID:0e70ec00-8f5a-4c7c-980f-431f259788e3@0e70.org
 END:VEVENT
 END:VCALENDAR
