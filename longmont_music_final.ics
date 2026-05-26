@@ -2,180 +2,12 @@ BEGIN:VCALENDAR
 VERSION:2.0
 PRODID:ics.py - http://git.io/lLljaA
 BEGIN:VEVENT
-DESCRIPTION:Source: https://www.downtownlongmont.com/do/lookin-for-louie-band-performing--the-passenger-2
-DTEND:20260613T020000Z
-LOCATION:The Passenger\, 300 Main St
-DTSTART:20260613T000000Z
-SUMMARY:🎵 [Rock] Lookin' For Louie Band Performing @ the passenger
-UID:f657b7c2-93df-4ee4-b83b-af1ad595e801@f657.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Source: https://www.downtownlongmont.com/do/dressup-downtown-costume-crawl-free-glass-of-wine
-DTEND:20260530T230000Z
-LOCATION:Elevated Communities Gently Used Clothing Boutique\, 455 Main St
-DTSTART:20260530T210000Z
-SUMMARY:🎵 DressUp Downtown Costume Crawl - FREE Glass of Wine
-UID:844e2dce-a13f-4b66-93bd-967224b886e9@844e.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Source: https://www.barnevents.info/events/2023/7/27/carl-sonny-leyland-trio-68ejz-5j3dg-ahmrh-986wg
-DTEND:20260725T030000Z
-LOCATION:The Barn
-DTSTART:20260725T010000Z
-SUMMARY:🎵 [Jazz] Dance Party with the Carl Sonny Leyland Trio
-UID:1e5531cf-dfcb-46f1-8c08-26ea75b117b0@1e55.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Source: https://www.barnevents.info/events/2023/7/27/carl-sonny-leyland-trio-68ejz-5j3dg
-DTEND:20260728T030000Z
-LOCATION:The Barn
-DTSTART:20260728T010000Z
-SUMMARY:🎵 [Jazz] Dance Party with the Carl Sonny Leyland Trio
-UID:b70fae66-0872-4078-ab7f-6e37fce1df42@b70f.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Source: https://www.downtownlongmont.com/do/blues-jam--bricks-on-main
-DTEND:20260528T020000Z
+DESCRIPTION:Source: https://www.downtownlongmont.com/do/music-at-bricks-on-main-jo-fuller
+DTEND:20260606T020000Z
 LOCATION:Bricks on Main\, 471 Main St
-DTSTART:20260528T000000Z
-SUMMARY:🎵 [Blues] Blues Jam @ Bricks on Main
-UID:a3dd4be9-3b0a-4017-ad26-337d98198977@a3dd.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Source: https://www.downtownlongmont.com/do/bandana-a-tribute-to-santana-at-bootstrap-brewing
-DTEND:20260613T020000Z
-LOCATION:Bootstrap Brewing\, 142 Pratt St
-DTSTART:20260613T000000Z
-SUMMARY:🎵 Bandana - a tribute to Santana at Bootstrap Brewing!
-UID:d4f9aba3-75d5-4ae0-8d12-bb6f8473624e@d4f9.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Source: https://www.downtownlongmont.com/do/music-at-bricks-on-main-rockin-horse-4
-DTEND:20260530T030000Z
-LOCATION:Bricks on Main\, 471 Main St
-DTSTART:20260530T010000Z
-SUMMARY:🎵 Music at Bricks on Main "Rockin Horse"
-UID:86ace02b-59f3-4f64-a62b-583553a1a6df@86ac.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Source: https://www.downtownlongmont.com/do/punketry-at-the-firehouse
-DTEND:20260606T030000Z
-LOCATION:Firehouse Art Center\, 667 4th Ave
-DTSTART:20260606T010000Z
-SUMMARY:🎵 [Rock] Punketry at the Firehouse
-UID:d8193ce9-cdbd-4a9b-be58-71f1f6f945a4@d819.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Source: https://www.downtownlongmont.com/do/costume-crawl-4
-DTEND:20260531T010000Z
-LOCATION:Flavor Of India\, 370 Main St
-DTSTART:20260530T230000Z
-SUMMARY:🎵 Costume Crawl
-UID:aef93ed8-e768-4603-87f3-f59861dca855@aef9.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Source: https://www.barnevents.info/events/2025/12/13/joy-adams-and-gus-tritsch
-DTEND:20261214T040000Z
-LOCATION:The Barn
-DTSTART:20261214T020000Z
-SUMMARY:🎵 [Folk/Acoustic] Joy Adams and Gus Tritsch
-UID:8e6e6d9c-6318-4bd3-9ab4-c4e0f622af1e@8e6e.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Source: https://www.downtownlongmont.com/do/streatbeets
-DTEND:20260612T020000Z
-LOCATION:Bricks on Main\, 471 Main St
-DTSTART:20260612T000000Z
-SUMMARY:🎵 StreatBeets
-UID:07be7a16-2cac-427a-9df1-a7baab94b788@07be.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Source: https://www.downtownlongmont.com/do/the-heart-of-france-in-80-days-film-screening-qanda-with-the-filmmaker
-DTEND:20260601T013000Z
-LOCATION:457 4th Ave
-DTSTART:20260531T233000Z
-SUMMARY:🎵 The Heart of France in 80 Days
-UID:6bf05c89-3ed7-464f-929f-277cc057aa88@6bf0.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Source: https://www.downtownlongmont.com/do/music-at-bricks-on-main-al-ooooh-minium
-DTEND:20260615T020000Z
-LOCATION:Bricks on Main\, 471 Main St
-DTSTART:20260615T000000Z
-SUMMARY:🎵 [Rock] Music at Bricks on Main "Al ooooh minium"
-UID:e0018799-f015-45d9-b948-b866e512b2fa@e001.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Source: https://www.barnevents.info/events/2023/8/13/shanna-nd7z2-pgby7
-DTEND:20261116T040000Z
-LOCATION:The Barn
-DTSTART:20261116T020000Z
-SUMMARY:🎵 Shanna in a Dress
-UID:1b913f2e-3d4c-465c-96e4-4c7e9f6164a6@1b91.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Source: https://www.downtownlongmont.com/do/music-at-bricks-on-main-march-to-august
-DTEND:20260619T020000Z
-LOCATION:Bricks on Main\, 471 Main St
-DTSTART:20260619T000000Z
-SUMMARY:🎵 [Folk/Acoustic] Music at Bricks on Main "March to August"
-UID:a2a2da5d-6064-42c6-b4de-7d9d8145b4bd@a2a2.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Source: https://www.downtownlongmont.com/do/lso-guild-annual-garden-tour-2026
-DTEND:20260612T170000Z
-LOCATION:Longmont local garden locations
-DTSTART:20260612T150000Z
-SUMMARY:🎵 [Classical] LSO Guild: Annual Garden Tour 2026
-UID:e3b519af-ef80-47ab-a081-429684cde221@e3b5.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Source: https://www.barnevents.info/events/2024/5/24/dance-party-with-the-rifters
-DTEND:20260525T030000Z
-LOCATION:The Barn
-DTSTART:20260525T010000Z
-SUMMARY:🎵 [Folk/Acoustic] Dance Party with The Rifters
-UID:1779204a-8a3d-41ff-9cf5-9c34f001ee7e@1779.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Source: https://www.barnevents.info/events/2024/11/24/david-lawrence-amp-the-spoonful
-DTEND:20261125T010000Z
-LOCATION:The Barn
-DTSTART:20261124T230000Z
-SUMMARY:🎵 [Jazz] David Lawrence & the Spoonful: Video Release Celebration
-UID:69795ab8-7b18-47a2-8611-65b0e50ee269@6979.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Source: https://www.downtownlongmont.com/do/midnight-hour-at-bootstrap-brewing-6
-DTEND:20260614T020000Z
-LOCATION:Bootstrap Brewing\, 142 Pratt St
-DTSTART:20260614T000000Z
-SUMMARY:🎵 [Blues] Midnight Hour at Bootstrap Brewing!
-UID:690bf77f-e4c3-4b23-b473-2044c8075a63@690b.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Source: https://www.downtownlongmont.com/do/reverse-mortgages
-DTEND:20260610T193000Z
-LOCATION:Longmont Area Chamber Of Commerce\, 528 Main St
-DTSTART:20260610T173000Z
-SUMMARY:🎵 [Classical] Reverse Mortgages
-UID:3569191c-0621-4496-ad30-6890d303ab8d@3569.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Source: https://www.barnevents.info/events/2023/3/13/strangebyrds
-DTEND:20260625T030000Z
-LOCATION:The Barn
-DTSTART:20260625T010000Z
-SUMMARY:🎵 [Folk/Acoustic] Strangebyrds
-UID:88ddf8e2-e116-4bc9-a0cf-c8eadaf92b55@88dd.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Source: https://www.barnevents.info/events/2023/8/13/shanna-nd7z2-pgby7-ee5zy
-DTEND:20260308T230000Z
-LOCATION:The Barn
-DTSTART:20260308T210000Z
-SUMMARY:🎵 Shanna in a Dress
-UID:2168d149-b6e3-46bb-98a8-060c05414d52@2168.org
+DTSTART:20260606T000000Z
+SUMMARY:🎵 [Rock] Music at Bricks on Main "Jo Fuller"
+UID:153a877d-c1dd-41f4-83eb-b1b01ac8a381@153a.org
 END:VEVENT
 BEGIN:VEVENT
 DESCRIPTION:Source: https://www.barnevents.info/events/2026/7/17/songs-stories-and-art-lessons-from-strangersa-visual-folk-concert-by-john-john-brown
@@ -183,367 +15,15 @@ DTEND:20260718T030000Z
 LOCATION:The Barn
 DTSTART:20260718T010000Z
 SUMMARY:🎵 [Folk/Acoustic] Songs\, Stories\, and Art: Lessons from Strangers—A Visual Folk Concert by John John Brown
-UID:096b1296-13a9-4e96-9253-864d104b9ad7@096b.org
+UID:444b3529-671a-4d5e-8a9b-d03cc497090a@444b.org
 END:VEVENT
 BEGIN:VEVENT
-DESCRIPTION:Source: https://www.downtownlongmont.com/do/mixtape-songwriter-showcase-featuring-bill-huston-and-monica-labonte
-DTEND:20260529T033000Z
-LOCATION:The Times Collaborative / 338 Main St\, 338 Main St
-DTSTART:20260529T013000Z
-SUMMARY:🎵 MIXTAPE: Songwriter Showcase featuring Bill Huston and Monica LaBonte
-UID:7a1a8867-8e49-496d-88a2-e3a1b889d75c@7a1a.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Source: https://www.barnevents.info/events/2025/4/4/greg-schochet-and-little-america
-DTEND:20260405T033000Z
+DESCRIPTION:Source: https://www.barnevents.info/events/2023/8/13/shanna-nd7z2-pgby7-ee5zy
+DTEND:20260308T230000Z
 LOCATION:The Barn
-DTSTART:20260405T013000Z
-SUMMARY:🎵 [Jazz] GREG SCHOCHET & LITTLE AMERICA
-UID:351bb6d0-4d77-4b4d-b5f3-ae2af2c85508@351b.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Source: https://www.johnsonsstation.com/calendar/nice-work-jazz
-DTEND:20260829T020000Z
-LOCATION:Johnson's Station\, 1111 Neon Forest Circle\, Longmont\, CO 80501
-DTSTART:20260829T000000Z
-SUMMARY:🎵 [Jazz] Nice Work Jazz
-UID:10a1d2f8-1326-48d9-b0fc-966134d9df04@10a1.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Source: https://www.downtownlongmont.com/do/lunch-line-dancing-2
-DTEND:20260607T210000Z
-LOCATION:Bricks on Main\, 471 Main St
-DTSTART:20260607T190000Z
-SUMMARY:🎵 Lunch Line Dancing
-UID:3d5046bf-d4d6-46e0-a506-54cf01b90733@3d50.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Source: https://www.downtownlongmont.com/do/free-gala-drink-dress-up-downtown
-DTEND:20260530T180000Z
-LOCATION:The Passenger\, 300 Main St
-DTSTART:20260530T160000Z
-SUMMARY:🎵 [Jazz] Free Gala Drink - Dress Up Downtown
-UID:73ab80e7-81f5-44df-8d88-1657eddd61f9@73ab.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Source: https://www.barnevents.info/events/2023/11/4/bonnie-and-taylor-sims
-DTEND:20261105T040000Z
-LOCATION:The Barn
-DTSTART:20261105T020000Z
-SUMMARY:🎵 [Blues] Bonnie and Taylor Sims
-UID:a8328587-b0b5-4e99-b29d-815620e60c82@a832.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Source: https://www.downtownlongmont.com/do/music-at-bricks-on-main-whitewater-ramble
-DTEND:20260607T020000Z
-LOCATION:Bricks on Main\, 471 Main St
-DTSTART:20260607T000000Z
-SUMMARY:🎵 Music at Bricks on Main "WhiteWater Ramble"
-UID:7b30b408-87db-47b1-b6a7-f13520e2da1f@7b30.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Source: https://www.barnevents.info/events/2023/7/27/carl-sonny-leyland-trio-68ejz-5j3dg-ahmrh
-DTEND:20260724T030000Z
-LOCATION:The Barn
-DTSTART:20260724T010000Z
-SUMMARY:🎵 [Jazz] Dance Party with the Carl Sonny Leyland Trio
-UID:6008f562-f145-4313-ae9f-1ae3a311fed0@6008.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Source: https://www.barnevents.info/events/2026/2/28/dance-party-with-dlovelies
-DTEND:20260301T040000Z
-LOCATION:The Barn
-DTSTART:20260301T020000Z
-SUMMARY:🎵 [Jazz] Dance Party with d'Lovelies
-UID:8c6bae50-374f-4971-8d2b-646aca9def63@8c6b.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Source: https://www.downtownlongmont.com/do/tumbledown-shack-at-bootstrap-brewing-1
-DTEND:20260531T020000Z
-LOCATION:Bootstrap Brewing\, 142 Pratt St
-DTSTART:20260531T000000Z
-SUMMARY:🎵 Tumbledown Shack at Bootstrap Brewing!
-UID:96ce9999-6f05-48a0-9f8e-a2d210ba9854@96ce.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Source: https://www.downtownlongmont.com/do/music-at-bricks-on-main-the-mob-mike-ortiz-band-1
-DTEND:20260608T020000Z
-LOCATION:Bricks on Main\, 471 Main St
-DTSTART:20260608T000000Z
-SUMMARY:🎵 [Blues] Music at Bricks on Main "The M.O.B. (Mike Ortiz Band)"
-UID:12f4a11d-d858-4f92-9a3b-e11ccef42b13@12f4.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Source: https://www.downtownlongmont.com/do/music-at-bricks-on-main-my-wave-band
-DTEND:20260601T030000Z
-LOCATION:Bricks on Main\, 471 Main St
-DTSTART:20260601T010000Z
-SUMMARY:🎵 Music at Bricks on Main "My Wave Band"
-UID:0e428e6f-a726-41a5-9133-b219fea0cac7@0e42.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Source: https://www.barnevents.info/events/2025/8/22/sturtz
-DTEND:20260823T033000Z
-LOCATION:The Barn
-DTSTART:20260823T013000Z
-SUMMARY:🎵 [Rock] Sturtz
-UID:01857e79-9665-4069-bbf5-b991e334a235@0185.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Source: https://www.barnevents.info/events/2024/2/10/greg-schochet-amp-little-america
-DTEND:20260211T043000Z
-LOCATION:The Barn
-DTSTART:20260211T023000Z
-SUMMARY:🎵 [Jazz] Greg Schochet & Little America
-UID:2dc91fbc-f857-4cc6-b17e-b0b1cfe02293@2dc9.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Source: https://www.barnevents.info/events/2023/8/13/shanna-nd7z2
-DTEND:20261120T000000Z
-LOCATION:The Barn
-DTSTART:20261119T220000Z
-SUMMARY:🎵 [Folk/Acoustic] Shanna in a Dress (Copy)
-UID:eb7dcf74-4869-488b-bb03-8abcbd0f0284@eb7d.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Source: https://www.downtownlongmont.com/do/first-friday-with-mojazz
-DTEND:20260606T020000Z
-LOCATION:350 Terry St Ste 120
-DTSTART:20260606T000000Z
-SUMMARY:🎵 [Jazz] First Friday with Mojazz
-UID:930fd22f-8a33-4f7b-b6d3-64ce578a36f5@930f.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Source: https://www.downtownlongmont.com/do/longmont-pride
-DTEND:20260606T190000Z
-LOCATION:Roosevelt Park\, 700 Longs Peak Ave
-DTSTART:20260606T170000Z
-SUMMARY:🎵 Longmont Pride
-UID:cfc2fdf9-4b20-4699-be57-bdef5efbe64c@cfc2.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Source: https://www.downtownlongmont.com/do/casual-community-sings-1
-DTEND:20260530T023000Z
-LOCATION:Trailhead Church Longmont\, 470 Main St
-DTSTART:20260530T003000Z
-SUMMARY:🎵 Casual Community Sings
-UID:609acd4a-d77f-43cf-95be-3127df3eab2a@609a.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Source: https://www.downtownlongmont.com/do/quarters-adult-field-trip-to-the-denver-zoo
-DTEND:20260527T180000Z
-LOCATION:Quarters Bar & Arcade\, 475 Main St
-DTSTART:20260527T160000Z
-SUMMARY:🎵 Quarters Adult Field Trip to the Denver Zoo
-UID:20a019ed-cc3b-447f-bda5-4bc4ef773c49@20a0.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Source: https://www.barnevents.info/events/2024/8/25/salome-songbird-and-sarah
-DTEND:20260826T000000Z
-LOCATION:The Barn
-DTSTART:20260825T220000Z
-SUMMARY:🎵 [Jazz] Double Concert: Salomé Songbird and Sarah Clanton
-UID:5d3f291d-9980-4295-8991-0aabcebae3cb@5d3f.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Source: https://www.downtownlongmont.com/do/funk-it-up-at-bootstrap-brewing-2
-DTEND:20260607T020000Z
-LOCATION:Bootstrap Brewing\, 142 Pratt St
-DTSTART:20260607T000000Z
-SUMMARY:🎵 [Rock] Funk it Up at Bootstrap Brewing!
-UID:28d6f91d-f3b0-4ee0-bd06-47f662e8d066@28d6.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Source: https://www.downtownlongmont.com/do/in-honor-of-memorial-day
-DTEND:20260526T030000Z
-LOCATION:379 Main St.
-DTSTART:20260526T010000Z
-SUMMARY:🎵 [Country] In Honor of Memorial Day
-UID:e88d81eb-a585-4b15-876a-5de9ecba589e@e88d.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Source: https://www.barnevents.info/events/2019/9/20/the-common-thread-concert-gar92
-DTEND:20260506T030000Z
-LOCATION:The Barn
-DTSTART:20260506T010000Z
-SUMMARY:🎵 [Rock] Tim Ostdiek Band - The Lost Days Album Release Party
-UID:1b5a768b-84f6-45a7-aeb3-363752d3c49e@1b5a.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Source: https://www.barnevents.info/events/2024/8/25/salome-songbird-and-sarah-dspaw
-DTEND:20260829T033000Z
-LOCATION:The Barn
-DTSTART:20260829T013000Z
-SUMMARY:🎵 [Jazz] Salomé Songbird
-UID:2ab9e71e-363c-483d-8fef-4cac0b72acf9@2ab9.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Source: https://www.barnevents.info/events/2023/8/13/shanna
-DTEND:20260812T033000Z
-LOCATION:The Barn
-DTSTART:20260812T013000Z
-SUMMARY:🎵 [Folk/Acoustic] Shanna in a Dress
-UID:db1a6022-d19b-41a6-a297-968c62cd6c83@db1a.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Source: https://www.downtownlongmont.com/do/lunch-line-dancing
-DTEND:20260612T030000Z
-LOCATION:Bricks on Main\, 471 Main St
-DTSTART:20260612T010000Z
-SUMMARY:🎵 Lunch Line Dancing
-UID:1d093248-a71f-4d08-8bd7-00db50c4e48b@1d09.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Source: https://www.downtownlongmont.com/do/2026-boulder-county-treasurer-democrats-primary-candidate-forum
-DTEND:20260612T020000Z
-LOCATION:Longmont Public Media\, 457 4th Ave
-DTSTART:20260612T000000Z
-SUMMARY:🎵 2026 Boulder County Treasurer (Democrats) Primary Candidate Forum
-UID:72f2be61-f531-4760-9b99-42f1fce8fd9d@72f2.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Source: https://www.downtownlongmont.com/do/safe-shelter-annual-cornhole-tournament
-DTEND:20260606T183000Z
-LOCATION:Wibby Brewing\, 209 Emery St
-DTSTART:20260606T163000Z
-SUMMARY:🎵 Safe Shelter Annual Cornhole Tournament
-UID:a4f53785-19a5-4d4f-bf48-ccaa64f82d92@a4f5.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Source: https://www.downtownlongmont.com/do/jessicas-birthday-bash-drag-show
-DTEND:20260601T030000Z
-LOCATION:The Passenger\, 300 Main St
-DTSTART:20260601T010000Z
-SUMMARY:🎵 [Electronic] Jessica’s Birthday Bash Drag Show!
-UID:81bea66f-47a0-4e80-8755-1f7ba7831400@81be.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Source: https://www.downtownlongmont.com/do/maggies-farmers-at-bootstrap-brewing-1
-DTEND:20260530T020000Z
-LOCATION:Bootstrap Brewing\, 142 Pratt St
-DTSTART:20260530T000000Z
-SUMMARY:🎵 Maggie's Farmers at Bootstrap Brewing!
-UID:11008d9a-aa09-44fe-aad8-b56f0028aa61@1100.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Source: https://www.downtownlongmont.com/do/izzy-and-the-icebreakers-at-bootstrap-brewing-2
-DTEND:20260606T020000Z
-LOCATION:Bootstrap Brewing\, 142 Pratt St
-DTSTART:20260606T000000Z
-SUMMARY:🎵 [Rock] Izzy & the Icebreakers at Bootstrap Brewing!
-UID:f59f17b5-7ae9-47d4-ab30-ebc7d98f6e25@f59f.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Source: https://www.downtownlongmont.com/do/music-at-bricks-on-main-antonio-tim-and-andy
-DTEND:20260605T020000Z
-LOCATION:Bricks on Main\, 471 Main St
-DTSTART:20260605T000000Z
-SUMMARY:🎵 Music at Bricks on Main "Antonio\, Tim\, and Andy"
-UID:c727a834-fbf5-4a00-8c8c-679ad33901de@c727.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Source: https://www.downtownlongmont.com/do/pride-art-exhiibtion-art-sampler-5-class-session
-DTEND:20260530T200000Z
-LOCATION:Firehouse Art Center\, 667 4th Ave
-DTSTART:20260530T180000Z
-SUMMARY:🎵 Pride Art Exhiibtion- Art Sampler- 5 class session
-UID:fc2dedd5-e95d-4132-b85d-8e1e22c84152@fc2d.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Source: https://www.downtownlongmont.com/do/music-at-bricks-on-main-the-sophie-west-band
-DTEND:20260531T030000Z
-LOCATION:Bricks on Main\, 471 Main St
-DTSTART:20260531T010000Z
-SUMMARY:🎵 [Folk/Acoustic] Music at Bricks on Main "The Sophie West Band"
-UID:27da26fb-855d-4000-a895-fb1637e5f5f9@27da.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Source: https://www.barnevents.info/events/2025/1/12/4bf9iy3psupoon4exy31wm271pm6z5
-DTEND:20260509T030000Z
-LOCATION:The Barn
-DTSTART:20260509T010000Z
-SUMMARY:🎵 [Rock] Bob Barrick\, Brendan Mayer\, & Peter Mayer
-UID:61f2b584-b19d-4c9f-86b0-81bc29640e99@61f2.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Source: https://www.barnevents.info/events/2026/1/14/dance-party-with-the-lovestruck-balladeers
-DTEND:20260418T030000Z
-LOCATION:The Barn
-DTSTART:20260418T010000Z
-SUMMARY:🎵 [Jazz] Dance Party with The Lovestruck Balladeers
-UID:070b848c-2586-4442-9eed-c3061ab8b9da@070b.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Source: https://www.downtownlongmont.com/do/beginner-mahjong-academy-101
-DTEND:20260614T200000Z
-LOCATION:Kuper Wine Bar\, 600 Longs Peak Ave
-DTSTART:20260614T180000Z
-SUMMARY:🎵 Beginner Mahjong Academy 101
-UID:e694aa4f-10d6-453e-9446-518edaaac46b@e694.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Source: https://www.downtownlongmont.com/do/music-at-bricks-on-main-jo-fuller
-DTEND:20260606T020000Z
-LOCATION:Bricks on Main\, 471 Main St
-DTSTART:20260606T000000Z
-SUMMARY:🎵 [Rock] Music at Bricks on Main "Jo Fuller"
-UID:afa9a469-69fd-4f28-914f-48f593ee1218@afa9.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Source: https://www.downtownlongmont.com/do/live-music-with-the-silo-sisters
-DTEND:20260528T023000Z
-LOCATION:Butterscotch Studios\, 620 Kimbark St
-DTSTART:20260528T003000Z
-SUMMARY:🎵 [Folk/Acoustic] Live music with The Silo Sisters
-UID:4dbf2639-fde8-4186-baaa-aa89a30879ce@4dbf.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Source: https://www.barnevents.info/events/2024/7/6/rusty-44
-DTEND:20260707T033000Z
-LOCATION:The Barn
-DTSTART:20260707T013000Z
-SUMMARY:🎵 [Folk/Acoustic] Dance Party with Rusty 44
-UID:9c972b6d-8376-465c-9e5f-f72b4c13e284@9c97.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Source: https://www.barnevents.info/events/2024/alexalennon
-DTEND:20260320T030000Z
-LOCATION:The Barn
-DTSTART:20260320T010000Z
-SUMMARY:🎵 Alexa Wildish and Lennon VanderDoes
-UID:a2161184-894e-4dcb-a5ff-b718075b73d7@a216.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Source: https://www.barnevents.info/events/2024/4/27/strangebyrds
-DTEND:20260428T030000Z
-LOCATION:The Barn
-DTSTART:20260428T010000Z
-SUMMARY:🎵 [Rock] Strangebyrds
-UID:48b12349-784d-4e1f-99f7-dca070dee5a8@48b1.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Source: https://www.barnevents.info/events/2025/6/27/sugar-britches
-DTEND:20260530T030000Z
-LOCATION:The Barn
-DTSTART:20260530T010000Z
-SUMMARY:🎵 [Rock] Sugar Britches
-UID:bd3f8687-39ea-4a16-bebb-26d909932edd@bd3f.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Source: https://www.downtownlongmont.com/do/dudt-gala-night-at-bricks-on-main-with-live-music
-DTEND:20260531T010000Z
-LOCATION:Bricks on Main\, 471 Main St
-DTSTART:20260530T230000Z
-SUMMARY:🎵 DUDT Gala Night at Bricks on Main with Live Music!
-UID:66f245c7-ca43-49f9-b2ea-c19eeb9b7956@66f2.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Source: https://www.downtownlongmont.com/do/half-price-bottle-night-and-live-music-1
-DTEND:20260528T230000Z
-LOCATION:Kuper Wine Bar\, 600 Longs Peak Ave
-DTSTART:20260528T210000Z
-SUMMARY:🎵 Half Price Bottle Night & Live Music
-UID:359956ac-02f5-47ea-9518-a7246ba530f7@3599.org
+DTSTART:20260308T210000Z
+SUMMARY:🎵 Shanna in a Dress
+UID:1f62d7d3-3220-4610-8864-2d08843a1d77@1f62.org
 END:VEVENT
 BEGIN:VEVENT
 DESCRIPTION:Source: https://www.barnevents.info/events/2017/1/19/moors-mccumber
@@ -551,15 +31,535 @@ DTEND:20260320T020000Z
 LOCATION:The Barn
 DTSTART:20260320T000000Z
 SUMMARY:🎵 [Rock] Moors & McCumber: Saint Patrick's Day Concerts\, Two Shows!
-UID:c1af72d6-cb88-4e30-9692-eef2104cee6c@c1af.org
+UID:6e8d799d-6aaf-421d-9839-4b1176954802@6e8d.org
 END:VEVENT
 BEGIN:VEVENT
-DESCRIPTION:Source: https://www.downtownlongmont.com/do/dress-up-downtown-gala-night
+DESCRIPTION:Source: https://www.barnevents.info/events/2024/7/6/rusty-44
+DTEND:20260707T033000Z
+LOCATION:The Barn
+DTSTART:20260707T013000Z
+SUMMARY:🎵 [Folk/Acoustic] Dance Party with Rusty 44
+UID:1479c0d8-736b-46d4-86a8-3399f95c3562@1479.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Source: https://www.downtownlongmont.com/do/jessicas-birthday-bash-drag-show
+DTEND:20260601T030000Z
+LOCATION:The Passenger\, 300 Main St
+DTSTART:20260601T010000Z
+SUMMARY:🎵 [Electronic] Jessica’s Birthday Bash Drag Show!
+UID:9b59cb99-133b-4040-ab3c-053f76d06a5c@9b59.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Source: https://www.downtownlongmont.com/do/half-price-bottle-night-and-live-music-1
+DTEND:20260528T230000Z
+LOCATION:Kuper Wine Bar\, 600 Longs Peak Ave
+DTSTART:20260528T210000Z
+SUMMARY:🎵 Half Price Bottle Night & Live Music
+UID:c07e9372-0c7c-45ab-9621-fcf4843ea9a8@c07e.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Source: https://www.barnevents.info/events/2023/3/13/strangebyrds
+DTEND:20260625T030000Z
+LOCATION:The Barn
+DTSTART:20260625T010000Z
+SUMMARY:🎵 [Folk/Acoustic] Strangebyrds
+UID:effcc811-f14f-4d2e-a595-233116e56ce5@effc.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Source: https://www.downtownlongmont.com/do/bandana-a-tribute-to-santana-at-bootstrap-brewing
+DTEND:20260613T020000Z
+LOCATION:Bootstrap Brewing\, 142 Pratt St
+DTSTART:20260613T000000Z
+SUMMARY:🎵 Bandana - a tribute to Santana at Bootstrap Brewing!
+UID:601fc107-0b26-4f68-a32d-ff037bcb6fbd@601f.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Source: https://www.barnevents.info/events/2025/4/4/greg-schochet-and-little-america
+DTEND:20260405T033000Z
+LOCATION:The Barn
+DTSTART:20260405T013000Z
+SUMMARY:🎵 [Jazz] GREG SCHOCHET & LITTLE AMERICA
+UID:da4e6203-3efc-4740-8c67-7dc74982bb4b@da4e.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Source: https://www.barnevents.info/events/2024/8/25/salome-songbird-and-sarah-dspaw
+DTEND:20260829T033000Z
+LOCATION:The Barn
+DTSTART:20260829T013000Z
+SUMMARY:🎵 [Jazz] Salomé Songbird
+UID:c2f20d10-c82a-41b6-ab75-8a979dee30ef@c2f2.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Source: https://www.downtownlongmont.com/do/tumbledown-shack-at-bootstrap-brewing-1
+DTEND:20260531T020000Z
+LOCATION:Bootstrap Brewing\, 142 Pratt St
+DTSTART:20260531T000000Z
+SUMMARY:🎵 Tumbledown Shack at Bootstrap Brewing!
+UID:2a4d949b-b93c-45db-9097-fb2b9970a2e4@2a4d.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Source: https://www.johnsonsstation.com/calendar/nice-work-jazz
+DTEND:20260829T020000Z
+LOCATION:Johnson's Station\, 1111 Neon Forest Circle\, Longmont\, CO 80501
+DTSTART:20260829T000000Z
+SUMMARY:🎵 [Jazz] Nice Work Jazz
+UID:5e6f0fe6-38f2-4154-aeff-83c65360cdf6@5e6f.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Source: https://www.barnevents.info/events/2023/7/27/carl-sonny-leyland-trio-68ejz-5j3dg-ahmrh
+DTEND:20260724T030000Z
+LOCATION:The Barn
+DTSTART:20260724T010000Z
+SUMMARY:🎵 [Jazz] Dance Party with the Carl Sonny Leyland Trio
+UID:15cee180-3d1a-4a00-88f2-cc30b93ebd53@15ce.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Source: https://www.barnevents.info/events/2023/8/13/shanna
+DTEND:20260812T033000Z
+LOCATION:The Barn
+DTSTART:20260812T013000Z
+SUMMARY:🎵 [Folk/Acoustic] Shanna in a Dress
+UID:a4e5092f-e830-4ec0-9dba-723a48649baa@a4e5.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Source: https://www.downtownlongmont.com/events/calendar/submit
+DTEND:20260526T030000Z
+LOCATION:Longmont\, CO
+DTSTART:20260526T010000Z
+SUMMARY:🎵 Submit An Event
+UID:f6bd2e67-7bf1-496c-b065-468e359f2f71@f6bd.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Source: https://www.downtownlongmont.com/do/pride-art-exhiibtion-art-sampler-5-class-session
+DTEND:20260530T200000Z
+LOCATION:Firehouse Art Center\, 667 4th Ave
+DTSTART:20260530T180000Z
+SUMMARY:🎵 Pride Art Exhiibtion- Art Sampler- 5 class session
+UID:e61f90e3-3c88-444a-8d78-97ccc15018c2@e61f.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Source: https://www.downtownlongmont.com/events/volunteer
+DTEND:20260526T030000Z
+LOCATION:Longmont\, CO
+DTSTART:20260526T010000Z
+SUMMARY:🎵 Volunteer With Us!
+UID:a2daf7c7-d868-4680-b290-985ce8dfb774@a2da.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Source: https://www.downtownlongmont.com/do/music-at-bricks-on-main-the-mob-mike-ortiz-band-1
+DTEND:20260608T020000Z
+LOCATION:Bricks on Main\, 471 Main St
+DTSTART:20260608T000000Z
+SUMMARY:🎵 [Blues] Music at Bricks on Main "The M.O.B. (Mike Ortiz Band)"
+UID:565c5ada-071d-4315-97a4-173a171d00fa@565c.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Source: https://www.downtownlongmont.com/do/music-at-bricks-on-main-my-wave-band
+DTEND:20260601T030000Z
+LOCATION:Bricks on Main\, 471 Main St
+DTSTART:20260601T010000Z
+SUMMARY:🎵 Music at Bricks on Main "My Wave Band"
+UID:dfa59060-5cab-467f-aacd-9f789c1c3221@dfa5.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Source: https://www.barnevents.info/events/2025/6/27/sugar-britches
+DTEND:20260530T030000Z
+LOCATION:The Barn
+DTSTART:20260530T010000Z
+SUMMARY:🎵 [Rock] Sugar Britches
+UID:1de4cbb9-0842-4e90-ab43-87cad78e0ff9@1de4.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Source: https://www.downtownlongmont.com/do/free-gala-drink-dress-up-downtown
+DTEND:20260530T180000Z
+LOCATION:The Passenger\, 300 Main St
+DTSTART:20260530T160000Z
+SUMMARY:🎵 [Jazz] Free Gala Drink - Dress Up Downtown
+UID:c8241391-7f26-46f6-aa2c-c72c7db952d6@c824.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Source: https://www.downtownlongmont.com/do/live-music-with-the-silo-sisters
+DTEND:20260528T023000Z
+LOCATION:Butterscotch Studios\, 620 Kimbark St
+DTSTART:20260528T003000Z
+SUMMARY:🎵 [Folk/Acoustic] Live music with The Silo Sisters
+UID:f6e64cd0-25dd-467e-a6bc-447979379f75@f6e6.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Source: https://www.downtownlongmont.com/do/dressup-downtown-costume-crawl-free-glass-of-wine
+DTEND:20260530T230000Z
+LOCATION:Elevated Communities Gently Used Clothing Boutique\, 455 Main St
+DTSTART:20260530T210000Z
+SUMMARY:🎵 DressUp Downtown Costume Crawl - FREE Glass of Wine
+UID:127cb974-518e-470a-998a-2ebf36415cf9@127c.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Source: https://www.downtownlongmont.com/do/maggies-farmers-at-bootstrap-brewing-1
+DTEND:20260530T020000Z
+LOCATION:Bootstrap Brewing\, 142 Pratt St
+DTSTART:20260530T000000Z
+SUMMARY:🎵 Maggie's Farmers at Bootstrap Brewing!
+UID:263cd0f3-39ca-4401-b9bd-ed2f8ce01c3e@263c.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Source: https://www.downtownlongmont.com/do/costume-crawl-4
 DTEND:20260531T010000Z
-LOCATION:350 Terry St Ste 120
+LOCATION:Flavor Of India\, 370 Main St
 DTSTART:20260530T230000Z
-SUMMARY:🎵 [Rock] Dress Up Downtown Gala Night!
-UID:70338e6b-4038-478b-b4de-ba563ef8af6b@7033.org
+SUMMARY:🎵 Costume Crawl
+UID:2bccf80c-a28a-4394-a1a5-bcfe01ea2a67@2bcc.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Source: https://www.barnevents.info/events/2019/9/20/the-common-thread-concert-gar92
+DTEND:20260506T030000Z
+LOCATION:The Barn
+DTSTART:20260506T010000Z
+SUMMARY:🎵 [Rock] Tim Ostdiek Band - The Lost Days Album Release Party
+UID:96169556-b02d-44d5-bce0-5b7275fc1851@9616.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Source: https://www.barnevents.info/events/2025/1/12/4bf9iy3psupoon4exy31wm271pm6z5
+DTEND:20260509T030000Z
+LOCATION:The Barn
+DTSTART:20260509T010000Z
+SUMMARY:🎵 [Rock] Bob Barrick\, Brendan Mayer\, & Peter Mayer
+UID:e8627c66-a92c-46e7-b800-b284372093e6@e862.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Source: https://www.downtownlongmont.com/do/music-at-bricks-on-main-rockin-horse-4
+DTEND:20260530T030000Z
+LOCATION:Bricks on Main\, 471 Main St
+DTSTART:20260530T010000Z
+SUMMARY:🎵 Music at Bricks on Main "Rockin Horse"
+UID:3eb94c3e-3923-48fe-b23d-1959bdcbc426@3eb9.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Source: https://www.downtownlongmont.com/do/longmont-pride
+DTEND:20260606T190000Z
+LOCATION:Roosevelt Park\, 700 Longs Peak Ave
+DTSTART:20260606T170000Z
+SUMMARY:🎵 Longmont Pride
+UID:2fd9a5e6-69f1-4976-9008-daca42656b7b@2fd9.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Source: https://www.barnevents.info/events/2024/2/10/greg-schochet-amp-little-america
+DTEND:20260211T043000Z
+LOCATION:The Barn
+DTSTART:20260211T023000Z
+SUMMARY:🎵 [Jazz] Greg Schochet & Little America
+UID:2dcca776-7cc3-430c-8680-d9d14334d53b@2dcc.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Source: https://www.downtownlongmont.com/do/flattop-rider
+DTEND:20260620T020000Z
+LOCATION:Bricks on Main\, 471 Main St
+DTSTART:20260620T000000Z
+SUMMARY:🎵 [Country] "Flattop Rider"
+UID:b06072b6-d1f5-4a5a-b1eb-91df51c5481b@b060.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Source: https://www.downtownlongmont.com/do/izzy-and-the-icebreakers-at-bootstrap-brewing-2
+DTEND:20260606T020000Z
+LOCATION:Bootstrap Brewing\, 142 Pratt St
+DTSTART:20260606T000000Z
+SUMMARY:🎵 [Rock] Izzy & the Icebreakers at Bootstrap Brewing!
+UID:63a27e9e-30a2-4e9d-a900-29a18b2602ce@63a2.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Source: https://www.barnevents.info/events/2026/1/14/dance-party-with-the-lovestruck-balladeers
+DTEND:20260418T030000Z
+LOCATION:The Barn
+DTSTART:20260418T010000Z
+SUMMARY:🎵 [Jazz] Dance Party with The Lovestruck Balladeers
+UID:323bb5dc-6953-4338-b744-46f599a3730c@323b.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Source: https://www.barnevents.info/events/2026/2/28/dance-party-with-dlovelies
+DTEND:20260301T040000Z
+LOCATION:The Barn
+DTSTART:20260301T020000Z
+SUMMARY:🎵 [Jazz] Dance Party with d'Lovelies
+UID:6eb9524d-5582-4aa8-86a0-bf06d1ff72c9@6eb9.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Source: https://www.downtownlongmont.com/do/reverse-mortgages
+DTEND:20260610T193000Z
+LOCATION:Longmont Area Chamber Of Commerce\, 528 Main St
+DTSTART:20260610T173000Z
+SUMMARY:🎵 [Classical] Reverse Mortgages
+UID:cbf0f72d-6f48-477d-9e61-28fb175cebe1@cbf0.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Source: https://www.barnevents.info/events/2024/alexalennon
+DTEND:20260320T030000Z
+LOCATION:The Barn
+DTSTART:20260320T010000Z
+SUMMARY:🎵 Alexa Wildish and Lennon VanderDoes
+UID:088ff98c-c6db-4d49-81d1-887d429c52f5@088f.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Source: https://www.downtownlongmont.com/do/blues-jam--bricks-on-main
+DTEND:20260528T020000Z
+LOCATION:Bricks on Main\, 471 Main St
+DTSTART:20260528T000000Z
+SUMMARY:🎵 [Blues] Blues Jam @ Bricks on Main
+UID:939a606d-3855-4059-98d6-6d7dd8f148df@939a.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Source: https://www.downtownlongmont.com/do/beginner-mahjong-academy-101
+DTEND:20260614T200000Z
+LOCATION:Kuper Wine Bar\, 600 Longs Peak Ave
+DTSTART:20260614T180000Z
+SUMMARY:🎵 Beginner Mahjong Academy 101
+UID:533da978-8964-4e0b-b1a1-14960f43aa3e@533d.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Source: https://www.downtownlongmont.com/do/streatbeets
+DTEND:20260612T020000Z
+LOCATION:Bricks on Main\, 471 Main St
+DTSTART:20260612T000000Z
+SUMMARY:🎵 StreatBeets
+UID:7b3f06e5-bb6b-4832-8a98-f27ce0775b9f@7b3f.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Source: https://www.downtownlongmont.com/do/music-at-bricks-on-main-march-to-august
+DTEND:20260619T020000Z
+LOCATION:Bricks on Main\, 471 Main St
+DTSTART:20260619T000000Z
+SUMMARY:🎵 [Folk/Acoustic] Music at Bricks on Main "March to August"
+UID:769d94f3-4f35-454d-bad5-ca0f278fc4eb@769d.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Source: https://www.downtownlongmont.com/do/dress-up-downtown-gala-night-2
+DTEND:20260531T030000Z
+LOCATION:Crystal Joys\, 372 Main St
+DTSTART:20260531T010000Z
+SUMMARY:🎵 Dress Up Downtown: Gala Night!
+UID:5a9ff0ed-f659-4022-8721-ead2a1044c14@5a9f.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Source: https://www.downtownlongmont.com/do/music-at-bricks-on-main-antonio-tim-and-andy
+DTEND:20260605T020000Z
+LOCATION:Bricks on Main\, 471 Main St
+DTSTART:20260605T000000Z
+SUMMARY:🎵 Music at Bricks on Main "Antonio\, Tim\, and Andy"
+UID:addc1e42-7ec6-42ec-ba0f-4203285dfe18@addc.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Source: https://www.barnevents.info/events/2025/12/13/joy-adams-and-gus-tritsch
+DTEND:20261214T040000Z
+LOCATION:The Barn
+DTSTART:20261214T020000Z
+SUMMARY:🎵 [Folk/Acoustic] Joy Adams and Gus Tritsch
+UID:fe60268c-cae5-4ddf-8cef-aaa7bf3ad283@fe60.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Source: https://www.downtownlongmont.com/do/music-at-bricks-on-main-whitewater-ramble
+DTEND:20260607T020000Z
+LOCATION:Bricks on Main\, 471 Main St
+DTSTART:20260607T000000Z
+SUMMARY:🎵 Music at Bricks on Main "WhiteWater Ramble"
+UID:3ff19284-c2ee-4ed0-ac71-dbea228d176d@3ff1.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Source: https://www.downtownlongmont.com/do/mixtape-songwriter-showcase-featuring-bill-huston-and-monica-labonte
+DTEND:20260529T033000Z
+LOCATION:The Times Collaborative / 338 Main St\, 338 Main St
+DTSTART:20260529T013000Z
+SUMMARY:🎵 MIXTAPE: Songwriter Showcase featuring Bill Huston and Monica LaBonte
+UID:243570a7-c531-4f77-a68c-242d68be91ff@2435.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Source: https://www.downtownlongmont.com/do/lunch-line-dancing-2
+DTEND:20260607T210000Z
+LOCATION:Bricks on Main\, 471 Main St
+DTSTART:20260607T190000Z
+SUMMARY:🎵 Lunch Line Dancing
+UID:40b69c7d-01f4-4420-b25b-6fda04e35dbf@40b6.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Source: https://www.barnevents.info/events/2023/8/13/shanna-nd7z2
+DTEND:20261120T000000Z
+LOCATION:The Barn
+DTSTART:20261119T220000Z
+SUMMARY:🎵 [Folk/Acoustic] Shanna in a Dress (Copy)
+UID:2fe19297-abdf-40a3-96c2-009a63d37386@2fe1.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Source: https://www.downtownlongmont.com/do/safe-shelter-annual-cornhole-tournament
+DTEND:20260606T183000Z
+LOCATION:Wibby Brewing\, 209 Emery St
+DTSTART:20260606T163000Z
+SUMMARY:🎵 Safe Shelter Annual Cornhole Tournament
+UID:961c0027-8198-4637-bafd-5f3127993801@961c.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Source: https://www.barnevents.info/events/2023/11/4/bonnie-and-taylor-sims
+DTEND:20261105T040000Z
+LOCATION:The Barn
+DTSTART:20261105T020000Z
+SUMMARY:🎵 [Blues] Bonnie and Taylor Sims
+UID:83b0ddbe-0a46-4fc4-9b89-e07ceca1f3c4@83b0.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Source: https://www.barnevents.info/events/2024/8/25/salome-songbird-and-sarah
+DTEND:20260826T000000Z
+LOCATION:The Barn
+DTSTART:20260825T220000Z
+SUMMARY:🎵 [Jazz] Double Concert: Salomé Songbird and Sarah Clanton
+UID:1b3bb8ef-a460-49e1-a885-109eee33fa2a@1b3b.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Source: https://www.barnevents.info/events/2025/8/22/sturtz
+DTEND:20260823T033000Z
+LOCATION:The Barn
+DTSTART:20260823T013000Z
+SUMMARY:🎵 [Rock] Sturtz
+UID:86b3c654-2a83-4b43-8d12-8d7da8427723@86b3.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Source: https://www.downtownlongmont.com/do/quarters-adult-field-trip-to-the-denver-zoo
+DTEND:20260527T180000Z
+LOCATION:Quarters Bar & Arcade\, 475 Main St
+DTSTART:20260527T160000Z
+SUMMARY:🎵 Quarters Adult Field Trip to the Denver Zoo
+UID:0d92b0ca-6e0a-4fe1-9c87-18cba8baa781@0d92.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Source: https://www.barnevents.info/events/2023/8/13/shanna-nd7z2-pgby7
+DTEND:20261116T040000Z
+LOCATION:The Barn
+DTSTART:20261116T020000Z
+SUMMARY:🎵 Shanna in a Dress
+UID:6dd47de3-b227-40b9-8ff1-4e73d52b5a2e@6dd4.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Source: https://www.downtownlongmont.com/do/lookin-for-louie-band-performing--the-passenger-2
+DTEND:20260613T020000Z
+LOCATION:The Passenger\, 300 Main St
+DTSTART:20260613T000000Z
+SUMMARY:🎵 [Rock] Lookin' For Louie Band Performing @ the passenger
+UID:f20ca040-8e09-47b4-9f7c-9154a6bded72@f20c.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Source: https://www.downtownlongmont.com/do/2026-boulder-county-treasurer-democrats-primary-candidate-forum
+DTEND:20260612T020000Z
+LOCATION:Longmont Public Media\, 457 4th Ave
+DTSTART:20260612T000000Z
+SUMMARY:🎵 2026 Boulder County Treasurer (Democrats) Primary Candidate Forum
+UID:ca3099f0-38f8-4e28-81ec-36b2e51a7a83@ca30.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Source: https://www.downtownlongmont.com/do/lso-guild-annual-garden-tour-2026
+DTEND:20260612T170000Z
+LOCATION:Longmont local garden locations
+DTSTART:20260612T150000Z
+SUMMARY:🎵 [Classical] LSO Guild: Annual Garden Tour 2026
+UID:b865b4ba-7919-4dea-95e0-d7a90711ca96@b865.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Source: https://www.downtownlongmont.com/do/dudt-gala-night-at-bricks-on-main-with-live-music
+DTEND:20260531T010000Z
+LOCATION:Bricks on Main\, 471 Main St
+DTSTART:20260530T230000Z
+SUMMARY:🎵 DUDT Gala Night at Bricks on Main with Live Music!
+UID:efd0c598-d5a5-4be6-92d7-f8b8480dfa89@efd0.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Source: https://www.downtownlongmont.com/do/first-friday-with-mojazz
+DTEND:20260606T020000Z
+LOCATION:350 Terry St Ste 120
+DTSTART:20260606T000000Z
+SUMMARY:🎵 [Jazz] First Friday with Mojazz
+UID:bb0bca26-0717-49c2-851a-0495248e1f42@bb0b.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Source: https://www.downtownlongmont.com/do/music-at-bricks-on-main-al-ooooh-minium
+DTEND:20260615T020000Z
+LOCATION:Bricks on Main\, 471 Main St
+DTSTART:20260615T000000Z
+SUMMARY:🎵 [Rock] Music at Bricks on Main "Al ooooh minium"
+UID:07e56f48-63cb-4bb2-aa39-81aab6bf6627@07e5.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Source: https://www.downtownlongmont.com/do/the-mob-at-bootstrap-brewing-1
+DTEND:20260620T020000Z
+LOCATION:Bootstrap Brewing\, 142 Pratt St
+DTSTART:20260620T000000Z
+SUMMARY:🎵 The MOB at Bootstrap Brewing!
+UID:74f8e282-333b-4544-b8f5-e0c5c5ca07d3@74f8.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Source: https://www.downtownlongmont.com/do/punketry-at-the-firehouse
+DTEND:20260606T030000Z
+LOCATION:Firehouse Art Center\, 667 4th Ave
+DTSTART:20260606T010000Z
+SUMMARY:🎵 [Rock] Punketry at the Firehouse
+UID:e8c30b59-f87a-48e0-88ab-1c65136db2e9@e8c3.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Source: https://www.barnevents.info/events/2023/7/27/carl-sonny-leyland-trio-68ejz-5j3dg-ahmrh-986wg
+DTEND:20260725T030000Z
+LOCATION:The Barn
+DTSTART:20260725T010000Z
+SUMMARY:🎵 [Jazz] Dance Party with the Carl Sonny Leyland Trio
+UID:fb8ac9e5-acf4-4a64-a08b-72241fda6391@fb8a.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Source: https://www.barnevents.info/events/2024/4/27/strangebyrds
+DTEND:20260428T030000Z
+LOCATION:The Barn
+DTSTART:20260428T010000Z
+SUMMARY:🎵 [Rock] Strangebyrds
+UID:f3a9e584-8654-4365-a0e0-422f099fefbd@f3a9.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Source: https://www.downtownlongmont.com/do/midnight-hour-at-bootstrap-brewing-6
+DTEND:20260614T020000Z
+LOCATION:Bootstrap Brewing\, 142 Pratt St
+DTSTART:20260614T000000Z
+SUMMARY:🎵 [Blues] Midnight Hour at Bootstrap Brewing!
+UID:9ecfca55-64f2-4046-82a7-4e17193eccb0@9ecf.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Source: https://www.downtownlongmont.com/do/casual-community-sings-1
+DTEND:20260530T023000Z
+LOCATION:Trailhead Church Longmont\, 470 Main St
+DTSTART:20260530T003000Z
+SUMMARY:🎵 Casual Community Sings
+UID:32c5a3d1-3377-4b7f-9ecc-986da9e29cd6@32c5.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Source: https://www.downtownlongmont.com/do/the-heart-of-france-in-80-days-film-screening-qanda-with-the-filmmaker
+DTEND:20260601T013000Z
+LOCATION:457 4th Ave
+DTSTART:20260531T233000Z
+SUMMARY:🎵 The Heart of France in 80 Days
+UID:e1a9422a-ccae-4f02-80fd-4a379fccf786@e1a9.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Source: https://www.barnevents.info/events/2024/11/24/david-lawrence-amp-the-spoonful
+DTEND:20261125T010000Z
+LOCATION:The Barn
+DTSTART:20261124T230000Z
+SUMMARY:🎵 [Jazz] David Lawrence & the Spoonful: Video Release Celebration
+UID:6ebf6f05-ad70-4503-abd4-462120b6a483@6ebf.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Source: https://www.downtownlongmont.com/do/funk-it-up-at-bootstrap-brewing-2
+DTEND:20260607T020000Z
+LOCATION:Bootstrap Brewing\, 142 Pratt St
+DTSTART:20260607T000000Z
+SUMMARY:🎵 [Rock] Funk it Up at Bootstrap Brewing!
+UID:e4efdcbd-b77d-4c75-b00a-170219964a41@e4ef.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Source: https://www.barnevents.info/events/2023/7/27/carl-sonny-leyland-trio-68ejz-5j3dg
+DTEND:20260728T030000Z
+LOCATION:The Barn
+DTSTART:20260728T010000Z
+SUMMARY:🎵 [Jazz] Dance Party with the Carl Sonny Leyland Trio
+UID:4a74b10e-1963-4404-811b-7c0c9ef7b5a4@4a74.org
 END:VEVENT
 BEGIN:VEVENT
 DESCRIPTION:Source: https://www.downtownlongmont.com/do/thomas-dow-live-music-1
@@ -567,6 +567,30 @@ DTEND:20260607T023000Z
 LOCATION:300 Suns Brewing\, 335 1st Ave
 DTSTART:20260607T003000Z
 SUMMARY:🎵 [Folk/Acoustic] Thomas Dow - Live Music
-UID:e44b87ef-091a-4d64-a747-d212b9c091cb@e44b.org
+UID:6a60b1e7-3f4f-471b-81c4-d0905e7901d8@6a60.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Source: https://www.barnevents.info/events/2024/5/24/dance-party-with-the-rifters
+DTEND:20260525T030000Z
+LOCATION:The Barn
+DTSTART:20260525T010000Z
+SUMMARY:🎵 [Folk/Acoustic] Dance Party with The Rifters
+UID:1a44fb8d-9dd2-44e8-9368-a6f10298df58@1a44.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Source: https://www.downtownlongmont.com/do/lunch-line-dancing
+DTEND:20260612T030000Z
+LOCATION:Bricks on Main\, 471 Main St
+DTSTART:20260612T010000Z
+SUMMARY:🎵 Lunch Line Dancing
+UID:9b784cd4-a015-45af-9627-a2c1369e7c73@9b78.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Source: https://www.downtownlongmont.com/do/music-at-bricks-on-main-the-sophie-west-band
+DTEND:20260531T030000Z
+LOCATION:Bricks on Main\, 471 Main St
+DTSTART:20260531T010000Z
+SUMMARY:🎵 [Folk/Acoustic] Music at Bricks on Main "The Sophie West Band"
+UID:60361af1-ab32-4e21-ae2c-d2749bbf3278@6036.org
 END:VEVENT
 END:VCALENDAR
