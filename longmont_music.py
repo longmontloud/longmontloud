@@ -4,7 +4,6 @@ from ics import Calendar, Event
 from datetime import datetime, timedelta
 import pytz
 import re
-import json
 
 # --- CONFIG ---
 OUTPUT_FILE = "longmont_music_final.ics"
@@ -36,7 +35,7 @@ GENRE_MAP = {
     'Country': ['country', 'western', 'honky tonk', 'cowboy']
 }
 
-TRUSTED_DOMAINS = ['barnevents.info', 'johnsonsstation.com', 'supperclub']
+TRUSTED_DOMAINS = ['barnevents.info', 'johnsonsstation.com', 'supperclub', 'eatsummittacos.com']
 
 def detect_genre(text):
     t = text.lower()
@@ -56,19 +55,87 @@ def extract_time(text):
         return hr, mn
     return 19, 0 
 
+def parse_atc_date(date_str):
+    """Parses standard calendar plugin date formats."""
+    formats = ["%Y-%m-%d %H:%M:%S", "%Y-%m-%d %H:%M", "%m/%d/%Y %I:%M %p", "%Y-%m-%d"]
+    for fmt in formats:
+        try:
+            return datetime.strptime(date_str.strip(), fmt)
+        except ValueError:
+            continue
+    return None
+
 def main():
-    print("🚀 Running Precision Time/Date Context Scraper...")
-    targets = [
-        ("https://www.downtownlongmont.com/events/calendar", "https://www.downtownlongmont.com"),
-        ("https://www.johnsonsstation.com/calendar", "https://www.johnsonsstation.com"),
-        ("https://www.barnevents.info/events", "https://www.barnevents.info")
-    ]
-    
+    print("🚀 Running Production Context Match Scraper...")
     cal = Calendar()
     seen_links, seen_events = set(), set()
     count = 0
 
-    for base_url, domain in targets:
+    # --- 1. SINGLE-PAGE TARGETS (Like Summit Tacos) ---
+    print("\n🔍 Scanning Single-Page Targets...")
+    summit_url = "https://eatsummittacos.com/longmont-downtown-longmont-summit-tacos-events"
+    try:
+        res = requests.get(summit_url, headers=HEADERS, timeout=15)
+        soup = BeautifulSoup(res.text, 'html.parser')
+        events_holder = soup.find(class_=re.compile('events-holder'))
+        
+        if events_holder:
+            for title_var in events_holder.find_all('var', class_='atc_title'):
+                try:
+                    container = title_var.parent
+                    event_title = title_var.get_text(strip=True)
+                    if not event_title: continue
+                    
+                    start_var = container.find('var', class_='atc_date_start')
+                    desc_var = container.find('var', class_='atc_description')
+                    
+                    body_text = desc_var.get_text(" ", strip=True) if desc_var else ""
+                    combined_text = (event_title + " " + body_text).lower()
+                    
+                    # --- FILTERS ---
+                    if any(x in event_title.lower() for x in EXCLUDE): continue
+                    if any(x in combined_text for x in EXCLUDE) and not any(m in event_title.lower() for m in MUSIC_KEYWORDS): continue
+                    
+                    # --- DATE PARSING ---
+                    start_str = start_var.get_text(strip=True) if start_var else ""
+                    parsed_dt = parse_atc_date(start_str)
+                    if not parsed_dt: continue
+                    
+                    # Assume 2026 if no year provided, though standard formats include it
+                    if parsed_dt.year != 2026:
+                        parsed_dt = parsed_dt.replace(year=2026)
+                        
+                    start_dt = LOCAL_TZ.localize(parsed_dt)
+
+                    venue_loc = "Summit Tacos, 237 Collyer St, Longmont CO 80501"
+                    
+                    fingerprint = f"{start_dt.strftime('%Y%m%d')}_{event_title[:15].lower()}"
+                    if fingerprint in seen_events: continue
+                    seen_events.add(fingerprint)
+
+                    e = Event()
+                    e.name = f"🎵 {detect_genre(combined_text)}{event_title}"
+                    e.begin = start_dt
+                    e.end = start_dt + timedelta(hours=2)
+                    e.location = venue_loc
+                    e.description = f"Source: {summit_url}"
+                    cal.events.add(e)
+                    count += 1
+                    print(f"  [+] {start_dt.strftime('%B %d, %I:%M%p')} | {event_title} @ {venue_loc}")
+                except Exception:
+                    continue
+    except Exception as e:
+        print(f"Failed to scan Summit Tacos: {e}")
+
+    # --- 2. MULTI-PAGE TARGETS (Original Logic) ---
+    print("\n🔍 Scanning Multi-Page Targets...")
+    multi_targets = [
+        ("https://www.downtownlongmont.com/events/calendar", "https://www.downtownlongmont.com"),
+        ("https://www.johnsonsstation.com/calendar", "https://www.johnsonsstation.com"),
+        ("https://www.barnevents.info/events", "https://www.barnevents.info")
+    ]
+
+    for base_url, domain in multi_targets:
         try:
             res = requests.get(base_url, headers=HEADERS, timeout=15)
             soup = BeautifulSoup(res.text, 'html.parser')
@@ -84,7 +151,6 @@ def main():
                     ev_res = requests.get(full_url, headers=HEADERS, timeout=10)
                     ev_soup = BeautifulSoup(ev_res.text, 'html.parser')
                     
-                    # --- TITLE (Preserving your Cross-Eyed Possum hyphen fix!) ---
                     event_title = ""
                     sqs_title = ev_soup.find(class_="eventitem-title")
                     if sqs_title: event_title = sqs_title.get_text(strip=True)
@@ -95,12 +161,9 @@ def main():
                     if not event_title or event_title.lower() in ["barn events", "johnson's station", "calendar"]: continue
                     event_title = event_title.split('|')[0].strip()
 
-                   # --- TARGETED DATE & TIME FIX ---
                     date_time_block = ""
-                    start_hr, start_min = 19, 0  # Defaults
-                    month_val, day_val = None, None
-
-                    # If it's Downtown Longmont, use the exact precision spans you found!
+                    start_hr, start_min = 19, 0  
+                    
                     dl_date_span = ev_soup.find('span', class_='dldate')
                     dl_time_span = ev_soup.find('span', class_='dltime')
 
@@ -109,14 +172,10 @@ def main():
                         time_text = dl_time_span.get_text(" ", strip=True)
                         start_hr, start_min = extract_time(time_text)
                     else:
-                        # Fallback for other domains (The Barn / Johnson's Station)
                         main_content = ev_soup.select_one('.description, .details, .eventitem-description, .sqs-block-content, article')
                         date_time_block = main_content.get_text(" ", strip=True) if main_content else ev_soup.get_text(" ", strip=True)[:1000]
                         start_hr, start_min = extract_time(date_time_block)
 
-                    # --- FILTERS ---
-
-                    # --- FILTERS ---
                     body_text = ev_soup.get_text(" ", strip=True)[:2000]
                     combined_text = (event_title + " " + body_text).lower()
                     if any(x in event_title.lower() for x in EXCLUDE): continue
@@ -129,14 +188,12 @@ def main():
                         if not any(m in event_title.lower() for m in MUSIC_KEYWORDS):
                             continue
 
-                    # --- DATE PARSING FROM PINPOINTED BLOCK ---
                     date_match = re.search(r'(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)[a-z]*\.?\s+(\d{1,2})', date_time_block)
                     if not date_match: continue
                     
                     month_val = datetime.strptime(date_match.group(1)[:3], "%b").month
                     start_dt = LOCAL_TZ.localize(datetime(2026, month_val, int(date_match.group(2)), start_hr, start_min))
 
-                    # --- VENUE FIX ---
                     venue_loc = "Longmont, CO"
                     if "barnevents.info" in full_url:
                         venue_loc = "The Barn"
@@ -168,7 +225,7 @@ def main():
 
     with open(OUTPUT_FILE, 'w', encoding='utf-8') as f:
         f.writelines(cal.serialize_iter())
-    print(f"\n✅ Success! {count} Music Events saved.")
+    print(f"\n✅ Success! {count} Music Events saved to {OUTPUT_FILE}.")
 
 if __name__ == "__main__":
     main()
