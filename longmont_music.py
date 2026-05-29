@@ -15,13 +15,14 @@ EXCLUDE = [
     'karaoke', 'open mic', 'canvas classic', 'dinner', 'paperback tour', 'open sing', 'trivia', 'bingo', 'workshop', 'meeting', 'retail', 'watercolor', 'exhibition', 'the golden bee', 'sing-along', 'easel', 'studio tour', 'art materials', 'seminar', 'documentary',
     'comedy', 'yoga', 'poker', 'drawing class', 'craft class', 'create club', 'teen', 'crochet', 'wine dinner', 'tasting', 'pairing', 'prix fixe', 'shakespeare', 'happy day plants', 'headshot', 'stitch', 'embroidery',
     'storytime', 'book club', 'knitting', 'market', 'board game', 'meditation', 'speaker series', 'stationery', 'wolf & wren', 'talk', 'tarot', 'blackbird house', 'barbed wire books', 'dining', 'crafts & cocktails', 
-    'teacher', 'discussion', 'ragen', 'networking', 'discovery days', 'uke jam', 'painting', 'sip', 'wines', '720-453-4733', 'date night', '303-651-8374', 'open-house', 'open house', 'crackpots', 'bubbly', 'joke', 'potting',
+    'teacher', 'discussion', 'rogen', 'networking', 'discovery days', 'uke jam', 'painting', 'sip', 'wines', '720-453-4733', 'date night', '303-651-8374', 'open-house', 'open house', 'crackpots', 'bubbly', 'joke', 'potting',
     'your stage', 'tangerine', 'composition', 'ballet', 'dance class', 'movie', 'bubbles', 'sewing', 'brunch', 'mimosas', 'bellinis', 'denim day', 'poetry night', 'poetry slam', 'sewing', 'sew', 'guest speakers', 'bloody mary',
+    'wrestling', 'smack down', 'rockymountainpro', 'plant sale', 'pop up', 'skincare' # Added specific safety nets
 ]
 
 MUSIC_KEYWORDS = [
     'live music', 'live band', 'symphony', 'acoustic', 'jazz', 'supper club', 'sessions',
-    'blues', 'rock', 'singer', 'songwriter', 'orchestra', 'dj', 'live',
+    'blues', 'rock', 'singer', 'songwriter', 'orchestra', 'dj',
     'rave', 'grunge', 'folk', 'metal', 'punk', 'hip-hop', 'brass'
 ]
 
@@ -35,7 +36,7 @@ GENRE_MAP = {
     'Country': ['country', 'western', 'honky tonk', 'cowboy']
 }
 
-TRUSTED_DOMAINS = ['barnevents.info', 'johnsonsstation.com', 'supperclub', 'eatsummittacos.com']
+TRUSTED_DOMAINS = ['barnevents.info', 'johnsonsstation.com', 'supperclub']
 
 def detect_genre(text):
     t = text.lower()
@@ -56,7 +57,6 @@ def extract_time(text):
     return 19, 0 
 
 def parse_atc_date(date_str):
-    """Parses standard calendar plugin date formats."""
     formats = ["%Y-%m-%d %H:%M:%S", "%Y-%m-%d %H:%M", "%m/%d/%Y %I:%M %p", "%Y-%m-%d"]
     for fmt in formats:
         try:
@@ -65,74 +65,79 @@ def parse_atc_date(date_str):
             continue
     return None
 
+def has_music_keyword(text):
+    t = text.lower()
+    return any(re.search(rf"\b{re.escape(m)}\b", t) for m in MUSIC_KEYWORDS)
+
 def main():
     print("🚀 Running Production Context Match Scraper...")
     cal = Calendar()
     seen_links, seen_events = set(), set()
+    now_dt = datetime.now(LOCAL_TZ) # Establish today's horizon line
     count = 0
 
-    # --- 1. SINGLE-PAGE TARGETS (Like Summit Tacos) ---
+    # --- 1. SINGLE-PAGE TARGETS (Summit Tacos) ---
     print("\n🔍 Scanning Single-Page Targets...")
     summit_url = "https://eatsummittacos.com/longmont-downtown-longmont-summit-tacos-events"
     try:
         res = requests.get(summit_url, headers=HEADERS, timeout=15)
         soup = BeautifulSoup(res.text, 'html.parser')
-        events_holder = soup.find(class_=re.compile('events-holder'))
+        atc_titles = soup.find_all('var', class_=re.compile('atc_title'))
         
-        if events_holder:
-            for title_var in events_holder.find_all('var', class_='atc_title'):
-                try:
-                    container = title_var.parent
-                    event_title = title_var.get_text(strip=True)
-                    if not event_title: continue
+        for title_var in atc_titles:
+            try:
+                container = title_var.find_parent() 
+                event_title = title_var.get_text(strip=True)
+                if not event_title: continue
+                
+                start_var = title_var.find_next_sibling('var', class_=re.compile('atc_date_start')) or container.find('var', class_=re.compile('atc_date_start'))
+                desc_var = title_var.find_next_sibling('var', class_=re.compile('atc_description')) or container.find('var', class_=re.compile('atc_description'))
+                
+                body_text = desc_var.get_text(" ", strip=True) if desc_var else ""
+                combined_text = (event_title + " " + body_text).lower()
+                
+                if any(x in event_title.lower() for x in EXCLUDE): continue
+                if any(x in combined_text for x in EXCLUDE) and not has_music_keyword(event_title): continue
+                if not has_music_keyword(combined_text): continue
+                
+                start_str = start_var.get_text(strip=True) if start_var else ""
+                parsed_dt = parse_atc_date(start_str)
+                if not parsed_dt: continue
+                
+                if parsed_dt.year != 2026:
+                    parsed_dt = parsed_dt.replace(year=2026)
                     
-                    start_var = container.find('var', class_='atc_date_start')
-                    desc_var = container.find('var', class_='atc_description')
-                    
-                    body_text = desc_var.get_text(" ", strip=True) if desc_var else ""
-                    combined_text = (event_title + " " + body_text).lower()
-                    
-                    # --- FILTERS ---
-                    if any(x in event_title.lower() for x in EXCLUDE): continue
-                    if any(x in combined_text for x in EXCLUDE) and not any(m in event_title.lower() for m in MUSIC_KEYWORDS): continue
-                    
-                    # --- DATE PARSING ---
-                    start_str = start_var.get_text(strip=True) if start_var else ""
-                    parsed_dt = parse_atc_date(start_str)
-                    if not parsed_dt: continue
-                    
-                    # Assume 2026 if no year provided, though standard formats include it
-                    if parsed_dt.year != 2026:
-                        parsed_dt = parsed_dt.replace(year=2026)
-                        
-                    start_dt = LOCAL_TZ.localize(parsed_dt)
+                start_dt = LOCAL_TZ.localize(parsed_dt)
+                
+                # --- PAST EVENT GATEKEEPER ---
+                if start_dt.date() < now_dt.date(): continue
 
-                    venue_loc = "Summit Tacos, 237 Collyer St, Longmont CO 80501"
-                    
-                    fingerprint = f"{start_dt.strftime('%Y%m%d')}_{event_title[:15].lower()}"
-                    if fingerprint in seen_events: continue
-                    seen_events.add(fingerprint)
+                venue_loc = "Summit Tacos, 237 Collyer St, Longmont CO 80501"
+                fingerprint = f"{start_dt.strftime('%Y%m%d')}_{event_title[:15].lower()}"
+                if fingerprint in seen_events: continue
+                seen_events.add(fingerprint)
 
-                    e = Event()
-                    e.name = f"🎵 {detect_genre(combined_text)}{event_title}"
-                    e.begin = start_dt
-                    e.end = start_dt + timedelta(hours=2)
-                    e.location = venue_loc
-                    e.description = f"Source: {summit_url}"
-                    cal.events.add(e)
-                    count += 1
-                    print(f"  [+] {start_dt.strftime('%B %d, %I:%M%p')} | {event_title} @ {venue_loc}")
-                except Exception:
-                    continue
+                e = Event()
+                e.name = f"🎵 {detect_genre(combined_text)}{event_title}"
+                e.begin = start_dt
+                e.end = start_dt + timedelta(hours=2)
+                e.location = venue_loc
+                e.description = f"Source: {summit_url}"
+                cal.events.add(e)
+                count += 1
+                print(f"  [+] {start_dt.strftime('%B %d, %I:%M%p')} | {event_title} @ {venue_loc}")
+            except Exception:
+                continue
     except Exception as e:
         print(f"Failed to scan Summit Tacos: {e}")
 
-    # --- 2. MULTI-PAGE TARGETS (Original Logic) ---
+    # --- 2. MULTI-PAGE TARGETS ---
     print("\n🔍 Scanning Multi-Page Targets...")
     multi_targets = [
         ("https://www.downtownlongmont.com/events/calendar", "https://www.downtownlongmont.com"),
         ("https://www.johnsonsstation.com/calendar", "https://www.johnsonsstation.com"),
-        ("https://www.barnevents.info/events", "https://www.barnevents.info")
+        ("https://www.barnevents.info/events", "https://www.barnevents.info"),
+        ("https://www.stvraincidery.com/events", "https://www.stvraincidery.com")
     ]
 
     for base_url, domain in multi_targets:
@@ -159,7 +164,26 @@ def main():
                         if h1: event_title = h1.get_text(strip=True)
                     
                     if not event_title or event_title.lower() in ["barn events", "johnson's station", "calendar"]: continue
-                    event_title = event_title.split('|')[0].strip()
+                    raw_title = event_title
+
+                    # Adaptive "Smart-Pipe" Engine & Venue Taxonomy Filter
+                    explicit_music = False
+                    skip_event = False
+                    if '|' in event_title:
+                        parts = [p.strip() for p in event_title.split('|')]
+                        prefix = parts[0].lower()
+                        if prefix in ['music', 'live music']:
+                            explicit_music = True
+                            event_title = parts[1]
+                        elif prefix in ['class', 'discussion', 'workshop', 'art', 'pop up', 'event']:
+                            # Trust venue structure: if tagged explicitly non-music, drop it unless title fights back
+                            if not has_music_keyword(parts[1]):
+                                skip_event = True
+                            event_title = parts[1]
+                        else:
+                            event_title = parts[0]
+                    
+                    if skip_event: continue
 
                     date_time_block = ""
                     start_hr, start_min = 19, 0  
@@ -172,20 +196,25 @@ def main():
                         time_text = dl_time_span.get_text(" ", strip=True)
                         start_hr, start_min = extract_time(time_text)
                     else:
-                        main_content = ev_soup.select_one('.description, .details, .eventitem-description, .sqs-block-content, article')
+                        main_content = ev_soup.select_one('.eventitem-description, .description, .details, .sqs-block-content, article')
                         date_time_block = main_content.get_text(" ", strip=True) if main_content else ev_soup.get_text(" ", strip=True)[:1000]
                         start_hr, start_min = extract_time(date_time_block)
 
-                    body_text = ev_soup.get_text(" ", strip=True)[:2000]
-                    combined_text = (event_title + " " + body_text).lower()
-                    if any(x in event_title.lower() for x in EXCLUDE): continue
+                    # --- ISOLATED DESCRIPTION PARSING (Stops Sidebar Leaks) ---
+                    content_block = ev_soup.select_one('.eventitem-description, .sqs-block-content, article')
+                    body_text = content_block.get_text(" ", strip=True)[:2000] if content_block else ev_soup.get_text(" ", strip=True)[:1500]
+                    combined_text = (raw_title + " " + body_text).lower()
+                    
+                    # --- STRICT FILTERS ---
+                    if any(x in event_title.lower() for x in EXCLUDE) or any(x in raw_title.lower() for x in EXCLUDE): 
+                        continue
                     
                     is_trusted = any(d in full_url for d in TRUSTED_DOMAINS)
-                    has_music = any(m in combined_text for m in MUSIC_KEYWORDS)
+                    has_music = explicit_music or has_music_keyword(combined_text)
                     if not (is_trusted or has_music): continue
                     
                     if any(x in combined_text for x in EXCLUDE):
-                        if not any(m in event_title.lower() for m in MUSIC_KEYWORDS):
+                        if not (explicit_music or has_music_keyword(event_title)):
                             continue
 
                     date_match = re.search(r'(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)[a-z]*\.?\s+(\d{1,2})', date_time_block)
@@ -194,11 +223,16 @@ def main():
                     month_val = datetime.strptime(date_match.group(1)[:3], "%b").month
                     start_dt = LOCAL_TZ.localize(datetime(2026, month_val, int(date_match.group(2)), start_hr, start_min))
 
+                    # --- PAST EVENT GATEKEEPER ---
+                    if start_dt.date() < now_dt.date(): continue
+
                     venue_loc = "Longmont, CO"
                     if "barnevents.info" in full_url:
                         venue_loc = "The Barn"
                     elif "johnsonsstation.com" in full_url:
                         venue_loc = "Johnson's Station, 1111 Neon Forest Circle, Longmont, CO 80501"
+                    elif "stvraincidery.com" in full_url:
+                        venue_loc = "St. Vrain Cidery, 350 Terry St #130, Longmont, CO 80501"
                     else:
                         loc_header = ev_soup.find('h2', class_='on-detail', string=re.compile('Location', re.I))
                         if loc_header:
