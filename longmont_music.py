@@ -130,13 +130,14 @@ def main():
     except Exception as e:
         print(f"Failed to scan Summit Tacos: {e}")
 
-# --- 2. HUMANITIX FIREWALL-BYPASS HARVESTER ---
+# --- 2. HUMANITIX FIREWALL-BYPASS HARVESTER (STRUCTURAL DATE ENGINE) ---
     print("\n🔍 Querying Caching CDN Layer for Humanitix (Bypassing Cloudflare)...")
     target_url = "https://events.humanitix.com/host/lunar-lux-music-and-arts-festival"
-    archive_api = f"https://archive.org/wayback/available?url={target_url}"
+    
+    current_year_month = now_dt.strftime("%Y%m%d")
+    archive_api = f"https://archive.org/wayback/available?url={target_url}&timestamp={current_year_month}"
     
     try:
-        # Step 1: Query the archive delivery mirror for the freshest snapshot link
         res = requests.get(archive_api, headers=HEADERS, timeout=15)
         if res.status_code == 200:
             archive_data = res.json()
@@ -144,10 +145,10 @@ def main():
             
             if closest_snapshot and closest_snapshot.get("available"):
                 snapshot_url = closest_snapshot.get("url")
-                # Rewrite snapshot URL to deliver raw un-rewritten structural text content
                 raw_snapshot_url = snapshot_url.replace("/http", "id_/http")
                 
-                print(f"  [+] Unprotected caching layer located. Downloading data frame...")
+                print(f"  [+] Fresh caching snapshot located: {closest_snapshot.get('timestamp')}")
+                print(f"  [+] Downloading data frame...")
                 snap_res = requests.get(raw_snapshot_url, headers=HEADERS, timeout=20)
                 
                 if snap_res.status_code == 200:
@@ -155,24 +156,50 @@ def main():
                     soup = BeautifulSoup(html_content, 'html.parser')
                     script_tags = soup.find_all('script', type='application/ld+json')
                     
-                    events_list = []
+                    raw_entries = []
                     for tag in script_tags:
                         try:
+                            if not tag.string: continue
                             data = json.loads(tag.string)
                             if isinstance(data, dict):
                                 if data.get("@type") == "ItemList" and "itemListElement" in data:
-                                    events_list.extend([el.get("item") for el in data["itemListElement"] if el.get("item")])
+                                    raw_entries.extend([el.get("item") for el in data["itemListElement"] if el.get("item")])
                                 elif data.get("@type") == "Event":
-                                    events_list.append(data)
+                                    raw_entries.append(data)
                         except:
                             continue
                     
-                    print(f"  [!] Cache parsed completely. Isolated {len(events_list)} schema records.")
-                    
-                    # Step 2: Route structural definitions straight into the existing filtering engine
-                    for ev in events_list:
-                        if not isinstance(ev, dict): continue
+                    # STRUCTURAL FIX: Flatten Master Events containing Sub-Events / Recurring Schedules
+                    events_list = []
+                    for entry in raw_entries:
+                        if not isinstance(entry, dict): continue
                         
+                        # Check if Humanitix nested individual recurring dates inside a subEvent block
+                        sub_events = entry.get("subEvent") or entry.get("subEvents")
+                        
+                        if sub_events:
+                            # If it's a single dict, wrap it in a list; otherwise use the list
+                            sub_list = [sub_events] if isinstance(sub_events, dict) else sub_events
+                            if isinstance(sub_list, list):
+                                for sub in sub_list:
+                                    if not isinstance(sub, dict): continue
+                                    # Clone the master details (name, desc, location) but overwrite with the specific sub-date
+                                    cloned_event = entry.copy()
+                                    if "subEvent" in cloned_event: del cloned_event["subEvent"]
+                                    if "subEvents" in cloned_event: del cloned_event["subEvents"]
+                                    
+                                    cloned_event["startDate"] = sub.get("startDate") or sub.get("start")
+                                    cloned_event["endDate"] = sub.get("endDate") or sub.get("end")
+                                    events_list.append(cloned_event)
+                                continue
+                        
+                        # If there are no nested sub-events, treat it as a standard standalone entry
+                        events_list.append(entry)
+                    
+                    print(f"  [!] Cache expanded successfully. Processing {len(events_list)} flattened timeline records.")
+                    
+                    # Route records into the production filtering engine
+                    for ev in events_list:
                         event_title = ev.get("name", "").strip()
                         raw_desc = ev.get("description", "")
                         combined_text = f"{event_title} {raw_desc}".lower()
@@ -182,34 +209,43 @@ def main():
                         if any(x in combined_text for x in EXCLUDE) and not has_music_keyword(event_title): continue
                         if not has_music_keyword(combined_text): continue
                         
-                        # Target pristine timestamps provided by the schema structural keys
                         start_str = ev.get("startDate")
-                        if not start_str: continue
+                        if not start_str or len(start_str) < 10: continue
                         
                         try:
-                            if re.search(r'[-+]\d{4}$', start_str):
-                                start_str = start_str[:-2] + ":" + start_str[-2:]
-                            parsed_dt = datetime.fromisoformat(start_str)
-                        except ValueError:
-                            continue
+                            # Safe character position parsing to guarantee absolute layout mapping
+                            raw_year = int(start_str[0:4])
+                            raw_month = int(start_str[5:7])
+                            raw_day = int(start_str[8:10])
+                            
+                            raw_hour, raw_minute = 19, 0
+                            if 'T' in start_str and len(start_str) >= 16:
+                                raw_hour = int(start_str[11:13])
+                                raw_minute = int(start_str[14:16])
+                            
+                            start_dt = LOCAL_TZ.localize(datetime(raw_year, raw_month, raw_day, raw_hour, raw_minute))
+                        except:
+                            try:
+                                start_dt = datetime.fromisoformat(start_str).astimezone(LOCAL_TZ)
+                            except:
+                                continue
                         
-                        start_dt = parsed_dt.astimezone(LOCAL_TZ)
-                        # Keep calendar window fully updated
+                        # Ensure only upcoming current events stream to output
                         if start_dt.date() < now_dt.date(): continue
                         
-                        # Map locations cleanly out of the structured schema tree
+                        # Map locations cleanly
                         loc_data = ev.get("location", {})
-                        venue_name = loc_data.get("name", "Bizarre Electronics Repair")
+                        venue_name = loc_data.get("name", "Bizarre Electronics Repair 📱🔧")
                         address_data = loc_data.get("address", {})
                         street = address_data.get("streetAddress", "506 11th Ave, Longmont, CO 80501") if isinstance(address_data, dict) else "Longmont, CO"
                         venue_loc = f"{venue_name}, {street}"
                         
-                        # Production Cross-Site Deduplication check
+                        # Cross-Site Deduplication Check
                         fingerprint = f"{start_dt.strftime('%Y%m%d')}_{event_title[:15].lower()}"
                         if fingerprint in seen_events: continue
                         seen_events.add(fingerprint)
                         
-                        # Create standard output model entry
+                        # Construct output event entry
                         e = Event()
                         e.name = f"🎵 {detect_genre(combined_text)}{event_title}"
                         e.begin = start_dt
@@ -217,8 +253,8 @@ def main():
                         end_str = ev.get("endDate")
                         if end_str:
                             try:
-                                if re.search(r'[-+]\d{4}$', end_str): end_str = end_str[:-2] + ":" + end_str[-2:]
-                                e.end = datetime.fromisoformat(end_str).astimezone(LOCAL_TZ)
+                                base_end_str = end_str.split('-')[0][:19]
+                                e.end = LOCAL_TZ.localize(datetime.strptime(base_end_str, "%Y-%m-%dT%H:%M:%S"))
                             except:
                                 e.end = start_dt + timedelta(hours=3)
                         else:
@@ -229,7 +265,7 @@ def main():
                         
                         cal.events.add(e)
                         count += 1
-                        print(f"  [+] {start_dt.strftime('%B %d, %I:%M%p')} | {event_title} @ {venue_name}")
+                        print(f"  [+] Syncing: {start_dt.strftime('%B %d, %I:%M%p')} | {event_title} @ {venue_name}")
                 else:
                     print("  [-] Failed to download cached page stream from proxy mirror.")
             else:
