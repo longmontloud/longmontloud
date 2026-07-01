@@ -136,7 +136,6 @@ def main():
     # PASTE THE ISOLATED HOST ID HERE
     HUMANITIX_HOST_ID = "YOUR_FOUND_HOST_ID_HERE" 
     
-    import eprint # Import if your script relies on ics components
     from ics import Calendar as IcsCalendar
     
     humanitix_ics_url = f"https://events.humanitix.com/api/v1/hosts/6763d04868b5a9c8017c9767/ical"
