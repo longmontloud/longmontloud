@@ -138,6 +138,93 @@ def main():
         ("https://www.johnsonsstation.com/calendar", "https://www.johnsonsstation.com"),
         ("https://www.barnevents.info/events", "https://www.barnevents.info"),
         ("https://www.stvraincidery.com/events", "https://www.stvraincidery.com")
+
+    # --- 3. HUMANITIX SCHEMATIC TARGETS ---
+    print("\n🔍 Scanning Humanitix Targets...")
+    humanitix_urls = [
+        "https://events.humanitix.com/host/lunar-lux-music-and-arts-festival"
+    ]
+    
+    import json  # Ensure json is imported at the top of your file
+
+    for hx_url in humanitix_urls:
+        try:
+            res = requests.get(hx_url, headers=HEADERS, timeout=15)
+            soup = BeautifulSoup(res.text, 'html.parser')
+            
+            # Find all SEO/Schema structured data blocks on the page
+            script_tags = soup.find_all('script', type='application/ld+json')
+            
+            for tag in script_tags:
+                try:
+                    data = json.loads(tag.string)
+                    
+                    # Humanitix often wraps listings inside an ItemList element
+                    events_list = []
+                    if isinstance(data, dict):
+                        if data.get("@type") == "ItemList" and "itemListElement" in data:
+                            events_list = [el.get("item") for el in data["itemListElement"] if el.get("item")]
+                        elif data.get("@type") == "Event":
+                            events_list = [data]
+                    
+                    for ev in events_list:
+                        if not ev or ev.get("@type") != "Event": continue
+                        
+                        event_title = ev.get("name", "").strip()
+                        raw_desc = ev.get("description", "")
+                        combined_text = f"{event_title} {raw_desc}".lower()
+                        
+                        # --- STRICT MUSIC FILTERS ---
+                        if any(x in event_title.lower() for x in EXCLUDE): continue
+                        if any(x in combined_text for x in EXCLUDE) and not has_music_keyword(event_title): continue
+                        if not has_music_keyword(combined_text): continue
+                        
+                        # Parse out the clean ISO 8601 Timestamp (e.g., 2026-07-11T19:00:00-0600)
+                        start_str = ev.get("startDate")
+                        if not start_str: continue
+                        
+                        # Strip trailing timezone offsets if Python's fromisoformat needs a cleaner string
+                        # split on '-' or '+' for the timezone offset if needed, or parse directly:
+                        try:
+                            # fromisoformat handles offsets like -06:00, we replace -0600 to -06:00 if necessary
+                            if re.search(r'[-+]\d{4}$', start_str):
+                                start_str = start_str[:-2] + ":" + start_str[-2:]
+                            parsed_dt = datetime.fromisoformat(start_str)
+                        except ValueError:
+                            continue
+                        
+                        # Ensure timezone awareness matches Mountain Time
+                        start_dt = parsed_dt.astimezone(LOCAL_TZ)
+                        if start_dt.date() < now_dt.date(): continue
+                        
+                        # Extract the exact location metadata nested in the schema
+                        loc_data = ev.get("location", {})
+                        venue_name = loc_data.get("name", "Lunar Lux Festival Location")
+                        address_data = loc_data.get("address", {})
+                        street = address_data.get("streetAddress", "Longmont, CO")
+                        venue_loc = f"{venue_name}, {street}"
+                        
+                        # Deduplication Engine Fingerprint
+                        fingerprint = f"{start_dt.strftime('%Y%m%d')}_{event_title[:15].lower()}"
+                        if fingerprint in seen_events: continue
+                        seen_events.add(fingerprint)
+                        
+                        # Build and save standard ICS Event
+                        e = Event()
+                        e.name = f"🎵 {detect_genre(combined_text)}{event_title}"
+                        e.begin = start_dt
+                        e.end = start_dt + timedelta(hours=3) # Music events/festivals run a bit longer
+                        e.location = venue_loc
+                        e.description = f"Source: {ev.get('url', hx_url)}"
+                        
+                        cal.events.add(e)
+                        count += 1
+                        print(f"  [+] {start_dt.strftime('%B %d, %I:%M%p')} | {event_title} @ {venue_name}")
+                        
+                except (json.JSONDecodeError, TypeError, AttributeError):
+                    continue
+        except Exception as e:
+            print(f"Failed to scan Humanitix target {hx_url}: {e}")
     ]
 
     for base_url, domain in multi_targets:
