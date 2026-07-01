@@ -130,70 +130,29 @@ def main():
     except Exception as e:
         print(f"Failed to scan Summit Tacos: {e}")
 
-# --- 2. HUMANITIX GOOGLE CACHE HARVESTER ---
-    print("\n🔍 Querying Global Search Index Layer for Humanitix (Bypassing Firewall)...")
-    target_url = "https://events.humanitix.com/host/lunar-lux-music-and-arts-festival"
+# --- 2. HUMANITIX OFFICIAL ICS MERGE ENGINE ---
+    print("\n🔍 Fetching Direct Humanitix Calendar Feed...")
     
-    # Target Google's public web cache proxy delivery mirror
-    google_cache_url = f"https://webcache.googleusercontent.com/search?q=cache:{target_url}"
+    # PASTE THE ISOLATED HOST ID HERE
+    HUMANITIX_HOST_ID = "YOUR_FOUND_HOST_ID_HERE" 
     
-    # Standard desktop headers tell Google Cache we are browsing the text logs
-    CACHE_HEADERS = {
-        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
-    }
+    import eprint # Import if your script relies on ics components
+    from ics import Calendar as IcsCalendar
+    
+    humanitix_ics_url = f"https://events.humanitix.com/api/v1/hosts/6763d04868b5a9c8017c9767/ical"
     
     try:
-        res = requests.get(google_cache_url, headers=CACHE_HEADERS, timeout=15)
+        # Standard request hits their open data asset pipeline cleanly
+        res = requests.get(humanitix_ics_url, headers=HEADERS, timeout=15)
         
-        # Fallback to a secondary cache node if Google responds tightly
-        if res.status_code != 200:
-            print("  [-] Primary cache busy, attempting backup delivery mirror...")
-            archive_api = f"https://archive.org/wayback/available?url={target_url}"
-            archive_res = requests.get(archive_api, headers=CACHE_HEADERS, timeout=15)
-            if archive_res.status_code == 200 and archive_res.json().get("archived_snapshots", {}).get("closest", {}).get("available"):
-                snap_url = archive_res.json()["archived_snapshots"]["closest"]["url"].replace("/http", "id_/http")
-                res = requests.get(snap_url, headers=CACHE_HEADERS, timeout=15)
-
         if res.status_code == 200:
-            html_content = res.text
-            soup = BeautifulSoup(html_content, 'html.parser')
-            script_tags = soup.find_all('script', type='application/ld+json')
+            # Parse the incoming raw data string straight into a temporary ICS calendar object
+            remote_cal = IcsCalendar(res.text)
+            print(f"  [!] Stream accessed successfully. Processing {len(remote_cal.events)} live entries...")
             
-            raw_entries = []
-            for tag in script_tags:
-                try:
-                    if not tag.string: continue
-                    data = json.loads(tag.string)
-                    if isinstance(data, dict):
-                        if data.get("@type") == "ItemList" and "itemListElement" in data:
-                            raw_entries.extend([el.get("item") for el in data["itemListElement"] if el.get("item")])
-                        elif data.get("@type") == "Event":
-                            raw_entries.append(data)
-                except:
-                    continue
-            
-            # Flatten Master Events containing Sub-Events / Recurring Schedules
-            events_list = []
-            for entry in raw_entries:
-                if not isinstance(entry, dict): continue
-                sub_events = entry.get("subEvent") or entry.get("subEvents")
-                if sub_events:
-                    sub_list = [sub_events] if isinstance(sub_events, dict) else sub_events
-                    if isinstance(sub_list, list):
-                        for sub in sub_list:
-                            if not isinstance(sub, dict): continue
-                            cloned_event = entry.copy()
-                            cloned_event["startDate"] = sub.get("startDate") or sub.get("start")
-                            cloned_event["endDate"] = sub.get("endDate") or sub.get("end")
-                            events_list.append(cloned_event)
-                        continue
-                events_list.append(entry)
-            
-            print(f"  [!] Global Index Cache accessed! Processing {len(events_list)} timeline records...")
-            
-            for ev in events_list:
-                event_title = ev.get("name", "").strip()
-                raw_desc = ev.get("description", "")
+            for remote_event in remote_cal.events:
+                event_title = remote_event.name.strip()
+                raw_desc = remote_event.description or ""
                 combined_text = f"{event_title} {raw_desc}".lower()
                 
                 # --- MASTER MUSIC PRODUCTION FILTERS ---
@@ -201,67 +160,31 @@ def main():
                 if any(x in combined_text for x in EXCLUDE) and not has_music_keyword(event_title): continue
                 if not has_music_keyword(combined_text): continue
                 
-                start_str = ev.get("startDate")
-                if not start_str or len(start_str) < 10: continue
-                
-                try:
-                    # Parse explicitly based on text character index arrays to prevent timezone mutation shifts
-                    raw_year = int(start_str[0:4])
-                    raw_month = int(start_str[5:7])
-                    raw_day = int(start_str[8:10])
-                    
-                    raw_hour, raw_minute = 19, 0
-                    if 'T' in start_str and len(start_str) >= 16:
-                        raw_hour = int(start_str[11:13])
-                        raw_minute = int(start_str[14:16])
-                        
-                    start_dt = LOCAL_TZ.localize(datetime(raw_year, raw_month, raw_day, raw_hour, raw_minute))
-                except:
-                    try:
-                        start_dt = datetime.fromisoformat(start_str).astimezone(LOCAL_TZ)
-                    except:
-                        continue
-                        
+                # Natively read the exact localized date tracking parameters
+                start_dt = remote_event.begin.astimezone(LOCAL_TZ)
                 if start_dt.date() < now_dt.date(): continue
                 
-                # Map locations cleanly
-                loc_data = ev.get("location", {})
-                venue_name = loc_data.get("name", "Bizarre Electronics Repair 📱🔧")
-                address_data = loc_data.get("address", {})
-                street = address_data.get("streetAddress", "506 11th Ave, Longmont, CO 80501") if isinstance(address_data, dict) else "Longmont, CO"
-                venue_loc = f"{venue_name}, {street}"
-                
-                # Deduplication Check
+                # Production Cross-Site Deduplication Check
                 fingerprint = f"{start_dt.strftime('%Y%m%d')}_{event_title[:15].lower()}"
                 if fingerprint in seen_events: continue
                 seen_events.add(fingerprint)
                 
-                # Construct output event entry
+                # Map parameters cleanly straight into your production output structure
                 e = Event()
                 e.name = f"🎵 {detect_genre(combined_text)}{event_title}"
                 e.begin = start_dt
-                
-                end_str = ev.get("endDate")
-                if end_str:
-                    try:
-                        base_end_str = end_str.split('-')[0][:19]
-                        e.end = LOCAL_TZ.localize(datetime.strptime(base_end_str, "%Y-%m-%dT%H:%M:%S"))
-                    except:
-                        e.end = start_dt + timedelta(hours=3)
-                else:
-                    e.end = start_dt + timedelta(hours=3)
-                    
-                e.location = venue_loc
-                e.description = f"Source: {ev.get('url', target_url)}"
+                e.end = remote_event.end.astimezone(LOCAL_TZ) if remote_event.end else start_dt + timedelta(hours=3)
+                e.location = remote_event.location or "Longmont, CO"
+                e.description = raw_desc if raw_desc.startswith("http") else f"Source: https://events.humanitix.com/host/lunar-lux-music-and-arts-festival"
                 
                 cal.events.add(e)
                 count += 1
-                print(f"  [+] Syncing: {start_dt.strftime('%B %d, %I:%M%p')} | {event_title} @ {venue_name}")
+                print(f"  [+] Unified Live Sync: {start_dt.strftime('%B %d, %I:%M%p')} | {event_title}")
         else:
-            print(f"  [-] Both primary and fallback index caching nodes rejected the scraper request.")
+            print(f"  [-] Failed to download file frame. Code: {res.status_code}")
             
     except Exception as e:
-        print(f"Failed to extract records using global cache routing network: {e}")
+        print(f"Failed to cleanly merge Humanitix ICS core: {e}")
 
     # --- 3. MULTI-PAGE TARGETS ---
     print("\n🔍 Scanning Multi-Page Targets...")
