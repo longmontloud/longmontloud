@@ -130,12 +130,12 @@ def main():
     except Exception as e:
         print(f"Failed to scan Summit Tacos: {e}")
 
-# --- 2. HUMANITIX FIREWALL-BYPASS HARVESTER (STRUCTURAL DATE ENGINE) ---
+# --- 2. HUMANITIX FIREWALL-BYPASS HARVESTER (SMART SNAPSHOT ENGINE) ---
     print("\n🔍 Querying Caching CDN Layer for Humanitix (Bypassing Cloudflare)...")
     target_url = "https://events.humanitix.com/host/lunar-lux-music-and-arts-festival"
     
-    current_year_month = now_dt.strftime("%Y%m%d")
-    archive_api = f"https://archive.org/wayback/available?url={target_url}&timestamp={current_year_month}"
+    # Dropping the rigid timestamp parameter forces Wayback to return the single freshest copy it owns
+    archive_api = f"https://archive.org/wayback/available?url={target_url}"
     
     try:
         res = requests.get(archive_api, headers=HEADERS, timeout=15)
@@ -145,9 +145,10 @@ def main():
             
             if closest_snapshot and closest_snapshot.get("available"):
                 snapshot_url = closest_snapshot.get("url")
+                # Ensure raw data stream delivery frame
                 raw_snapshot_url = snapshot_url.replace("/http", "id_/http")
                 
-                print(f"  [+] Fresh caching snapshot located: {closest_snapshot.get('timestamp')}")
+                print(f"  [+] Caching snapshot located! Timestamp: {closest_snapshot.get('timestamp')}")
                 print(f"  [+] Downloading data frame...")
                 snap_res = requests.get(raw_snapshot_url, headers=HEADERS, timeout=20)
                 
@@ -169,21 +170,17 @@ def main():
                         except:
                             continue
                     
-                    # STRUCTURAL FIX: Flatten Master Events containing Sub-Events / Recurring Schedules
+                    # Flatten Master Events containing Sub-Events / Recurring Schedules
                     events_list = []
                     for entry in raw_entries:
                         if not isinstance(entry, dict): continue
                         
-                        # Check if Humanitix nested individual recurring dates inside a subEvent block
                         sub_events = entry.get("subEvent") or entry.get("subEvents")
-                        
                         if sub_events:
-                            # If it's a single dict, wrap it in a list; otherwise use the list
                             sub_list = [sub_events] if isinstance(sub_events, dict) else sub_events
                             if isinstance(sub_list, list):
                                 for sub in sub_list:
                                     if not isinstance(sub, dict): continue
-                                    # Clone the master details (name, desc, location) but overwrite with the specific sub-date
                                     cloned_event = entry.copy()
                                     if "subEvent" in cloned_event: del cloned_event["subEvent"]
                                     if "subEvents" in cloned_event: del cloned_event["subEvents"]
@@ -193,7 +190,6 @@ def main():
                                     events_list.append(cloned_event)
                                 continue
                         
-                        # If there are no nested sub-events, treat it as a standard standalone entry
                         events_list.append(entry)
                     
                     print(f"  [!] Cache expanded successfully. Processing {len(events_list)} flattened timeline records.")
@@ -269,7 +265,7 @@ def main():
                 else:
                     print("  [-] Failed to download cached page stream from proxy mirror.")
             else:
-                print("  [-] Target address profile hasn't been cached by proxy storage nodes yet.")
+                print("  [-] No available snapshot found anywhere in the archive cluster for this URL.")
         else:
             print(f"  [-] Cache distribution node returned unexpected status string: {res.status_code}")
             
