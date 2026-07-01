@@ -141,6 +141,9 @@ def main():
             res = requests.get(hx_url, headers=HEADERS, timeout=15)
             soup = BeautifulSoup(res.text, 'html.parser')
             script_tags = soup.find_all('script', type='application/ld+json')
+
+            # Add this temporary debug line:
+print(f"DEBUG: Found {len(script_tags)} JSON-LD tags on Humanitix!")
             
             for tag in script_tags:
                 try:
