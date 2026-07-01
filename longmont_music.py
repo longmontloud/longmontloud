@@ -130,81 +130,126 @@ def main():
     except Exception as e:
         print(f"Failed to scan Summit Tacos: {e}")
 
- # --- 2. HUMANITIX DYNAMIC API TARGETS ---
+# --- 2. HUMANITIX EXTRACTION ENGINE ---
     print("\n🔍 Scanning Humanitix Targets...")
-    # Target the direct background api data endpoint rather than the empty HTML host shell
-    humanitix_api_urls = [
-        "https://events.humanitix.com/api/v1/hosts/lunar-lux-music-and-arts-festival/events"
+    humanitix_urls = [
+        "https://events.humanitix.com/host/lunar-lux-music-and-arts-festival"
     ]
     
-    for api_url in humanitix_api_urls:
+    # Advanced browser emulation headers to bypass automated scraping blocks
+    HUMANITIX_HEADERS = {
+        "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36",
+        "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8",
+        "Accept-Language": "en-US,en;q=0.9",
+        "Cache-Control": "max-age=0",
+        "Sec-Ch-Ua": '"Chromium";v="124", "Google Chrome";v="124", "Not-A.Brand";v="99"',
+        "Sec-Ch-Ua-Mobile": "?0",
+        "Sec-Ch-Ua-Platform": '"macOS"',
+        "Sec-Fetch-Dest": "document",
+        "Sec-Fetch-Mode": "navigate",
+        "Sec-Fetch-Site": "none",
+        "Sec-Fetch-User": "?1",
+        "Upgrade-Insecure-Requests": "1"
+    }
+
+    for hx_url in humanitix_urls:
         try:
-            # Fetch the raw dynamic payload dataset directly
-            res = requests.get(api_url, headers=HEADERS, timeout=15)
-            if res.status_code != 200: continue
+            res = requests.get(hx_url, headers=HUMANITIX_HEADERS, timeout=15)
+            html_content = res.text
             
-            # Read the target array straight into a Python list dictionary structure
-            payload = res.json()
-            events_list = payload.get("events", []) if isinstance(payload, dict) else payload
+            # Extract events by scanning for JSON-LD data or deeply nested data frames
+            soup = BeautifulSoup(html_content, 'html.parser')
+            script_tags = soup.find_all('script', type='application/ld+json')
             
-            if not isinstance(events_list, list): continue
+            events_list = []
             
-            for ev in events_list:
+            # Strategy A: Parse embedded JSON-LD if our browser headers unblocked it
+            for tag in script_tags:
                 try:
-                    event_title = ev.get("name", "").strip()
-                    raw_desc = ev.get("description", "")
-                    combined_text = f"{event_title} {raw_desc}".lower()
-                    
-                    # --- MUSIC FILTERS ---
-                    if any(x in event_title.lower() for x in EXCLUDE): continue
-                    if any(x in combined_text for x in EXCLUDE) and not has_music_keyword(event_title): continue
-                    if not has_music_keyword(combined_text): continue
-                    
-                    # Target clean structural date payloads (ISO Format natively)
-                    start_str = ev.get("startDate") or ev.get("start")
-                    if not start_str: continue
-                    
-                    try:
-                        if re.search(r'[-+]\d{4}$', start_str):
-                            start_str = start_str[:-2] + ":" + start_str[-2:]
-                        parsed_dt = datetime.fromisoformat(start_str)
-                    except ValueError:
-                        continue
-                    
-                    start_dt = parsed_dt.astimezone(LOCAL_TZ)
-                    if start_dt.date() < now_dt.date(): continue
-                    
-                    # Extract location dictionary strings natively
-                    loc_data = ev.get("location", {})
-                    venue_name = loc_data.get("name", "Lunar Lux Festival Location")
-                    address_str = loc_data.get("address", "Longmont, CO")
-                    venue_loc = f"{venue_name}, {address_str}"
-                    
-                    # Deduplication Engine Fingerprint
-                    fingerprint = f"{start_dt.strftime('%Y%m%d')}_{event_title[:15].lower()}"
-                    if fingerprint in seen_events: continue
-                    seen_events.add(fingerprint)
-                    
-                    # Construct and add to final .ics Calendar
-                    e = Event()
-                    e.name = f"🎵 {detect_genre(combined_text)}{event_title}"
-                    e.begin = start_dt
-                    e.end = start_dt + timedelta(hours=3)
-                    e.location = venue_loc
-                    
-                    # Construct matching fallback source path links
-                    slug = ev.get("slug", "")
-                    event_url = f"https://events.humanitix.com/{slug}" if slug else api_url
-                    e.description = f"Source: {event_url}"
-                    
-                    cal.events.add(e)
-                    count += 1
-                    print(f"  [+] {start_dt.strftime('%B %d, %I:%M%p')} | {event_title} @ {venue_name}")
-                    
-                except (TypeError, KeyError, AttributeError):
+                    data = json.loads(tag.string)
+                    if isinstance(data, dict):
+                        if data.get("@type") == "ItemList" and "itemListElement" in data:
+                            events_list.extend([el.get("item") for el in data["itemListElement"] if el.get("item")])
+                        elif data.get("@type") == "Event":
+                            events_list.append(data)
+                except:
                     continue
+
+            # Strategy B: If structural tags are blank, carve data directly out of the NextJS frame using regex
+            if not events_list:
+                # Look for typical data chunks embedded by the React hydration engine
+                data_match = re.search(r'__NEXT_DATA__[^>]*>([\s\S]*?)</script>', html_content)
+                if data_match:
+                    try:
+                        next_json = json.loads(data_match.group(1))
+                        # Drill into common event cache paths for NextJS/Humanitix
+                        queries = next_json.get("props", {}).get("pageProps", {}).get("initialState", {}).get("events", {})
+                        if isinstance(queries, list):
+                            events_list = queries
+                        elif isinstance(queries, dict):
+                            events_list = queries.get("results", [])
+                    except:
+                        pass
+
+            # Process any found events through our standard filters
+            for ev in events_list:
+                if not ev: continue
+                
+                # Normalize field tracking across schema formats vs raw object arrays
+                event_title = (ev.get("name") or ev.get("title", "")).strip()
+                raw_desc = ev.get("description", "")
+                combined_text = f"{event_title} {raw_desc}".lower()
+                
+                # --- MUSIC FILTERS ---
+                if any(x in event_title.lower() for x in EXCLUDE): continue
+                if any(x in combined_text for x in EXCLUDE) and not has_music_keyword(event_title): continue
+                if not has_music_keyword(combined_text): continue
+                
+                # Extract clean ISO Timestamps
+                start_str = ev.get("startDate") or ev.get("start") or ev.get("startTime")
+                if not start_str: continue
+                
+                try:
+                    if isinstance(start_str, str) and re.search(r'[-+]\d{4}$', start_str):
+                        start_str = start_str[:-2] + ":" + start_str[-2:]
+                    parsed_dt = datetime.fromisoformat(start_str)
+                except ValueError:
+                    continue
+                
+                start_dt = parsed_dt.astimezone(LOCAL_TZ)
+                if start_dt.date() < now_dt.date(): continue
+                
+                # Gather location parameters safely
+                loc_data = ev.get("location", {})
+                if isinstance(loc_data, dict):
+                    venue_name = loc_data.get("name", "Lunar Lux Festival")
+                    address_str = loc_data.get("address", {}).get("streetAddress", "Longmont, CO") if isinstance(loc_data.get("address"), dict) else loc_data.get("address", "Longmont, CO")
+                else:
+                    venue_name = "Lunar Lux Festival"
+                    address_str = str(loc_data)
+                venue_loc = f"{venue_name}, {address_str}"
+                
+                # Deduplication Fingerprint 
+                fingerprint = f"{start_dt.strftime('%Y%m%d')}_{event_title[:15].lower()}"
+                if fingerprint in seen_events: continue
+                seen_events.add(fingerprint)
+                
+                # Append to calendar structure
+                e = Event()
+                e.name = f"🎵 {detect_genre(combined_text)}{event_title}"
+                e.begin = start_dt
+                e.end = start_dt + timedelta(hours=3)
+                e.location = venue_loc
+                
+                slug = ev.get("slug") or ev.get("url", hx_url)
+                e.description = f"Source: {slug if slug.startswith('http') else 'https://events.humanitix.com/' + slug}"
+                
+                cal.events.add(e)
+                count += 1
+                print(f"  [+] {start_dt.strftime('%B %d, %I:%M%p')} | {event_title} @ {venue_name}")
+                
         except Exception as e:
-            print(f"Failed to scan Humanitix dataset: {e}")
+            print(f"Failed to process Humanitix pipeline: {e}")
 
     # --- 3. MULTI-PAGE TARGETS ---
     print("\n🔍 Scanning Multi-Page Targets...")
