@@ -130,147 +130,134 @@ def main():
     except Exception as e:
         print(f"Failed to scan Summit Tacos: {e}")
 
-# --- 2. HUMANITIX FIREWALL-BYPASS HARVESTER (SMART SNAPSHOT ENGINE) ---
-    print("\n🔍 Querying Caching CDN Layer for Humanitix (Bypassing Cloudflare)...")
-    target_url = "https://events.humanitix.com/host/lunar-lux-music-and-arts-festival"
+# --- 2. HUMANITIX LIVE WIDGET API ENGINE ---
+    print("\n🔍 Querying Live Humanitix Widget Pipeline...")
     
-    # Dropping the rigid timestamp parameter forces Wayback to return the single freshest copy it owns
-    archive_api = f"https://archive.org/wayback/available?url={target_url}"
+    # This direct asset engine serves live ticket data and completely bypasses the HTML wrapper page
+    humanitix_api = "https://events.humanitix.com/api/v1/widgets/hosts/lunar-lux-music-and-arts-festival/events"
+    
+    # Precise signature payload required to authorize the cross-origin pipeline response
+    LIVE_HEADERS = {
+        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36",
+        "Accept": "application/json, text/plain, */*",
+        "Accept-Language": "en-US,en;q=0.9",
+        "Origin": "https://events.humanitix.com",
+        "Referer": "https://events.humanitix.com/",
+        "Sec-Fetch-Dest": "empty",
+        "Sec-Fetch-Mode": "cors",
+        "Sec-Fetch-Site": "same-origin",
+        "X-Requested-With": "XMLHttpRequest"
+    }
     
     try:
-        res = requests.get(archive_api, headers=HEADERS, timeout=15)
+        res = requests.get(humanitix_api, headers=LIVE_HEADERS, timeout=15)
+        
         if res.status_code == 200:
-            archive_data = res.json()
-            closest_snapshot = archive_data.get("archived_snapshots", {}).get("closest", {})
+            payload = res.json()
+            raw_entries = []
             
-            if closest_snapshot and closest_snapshot.get("available"):
-                snapshot_url = closest_snapshot.get("url")
-                # Ensure raw data stream delivery frame
-                raw_snapshot_url = snapshot_url.replace("/http", "id_/http")
+            # Extract out of standard object or array wrappers natively
+            if isinstance(payload, dict):
+                raw_entries = payload.get("events") or payload.get("results") or [payload]
+            elif isinstance(payload, list):
+                raw_entries = payload
                 
-                print(f"  [+] Caching snapshot located! Timestamp: {closest_snapshot.get('timestamp')}")
-                print(f"  [+] Downloading data frame...")
-                snap_res = requests.get(raw_snapshot_url, headers=HEADERS, timeout=20)
+            # Flatten repeating items/master manifests down to individual date tracks
+            events_list = []
+            for entry in raw_entries:
+                if not isinstance(entry, dict): continue
+                sub_events = entry.get("subEvent") or entry.get("subEvents")
+                if sub_events:
+                    sub_list = [sub_events] if isinstance(sub_events, dict) else sub_events
+                    if isinstance(sub_list, list):
+                        for sub in sub_list:
+                            if not isinstance(sub, dict): continue
+                            cloned = entry.copy()
+                            cloned["startDate"] = sub.get("startDate") or sub.get("start")
+                            cloned["endDate"] = sub.get("endDate") or sub.get("end")
+                            events_list.append(cloned)
+                        continue
+                events_list.append(entry)
                 
-                if snap_res.status_code == 200:
-                    html_content = snap_res.text
-                    soup = BeautifulSoup(html_content, 'html.parser')
-                    script_tags = soup.find_all('script', type='application/ld+json')
+            print(f"  [!] Live data stream unlocked! Processing {len(events_list)} up-to-date events...")
+            
+            for ev in events_list:
+                event_title = ev.get("name", "").strip()
+                raw_desc = ev.get("description", "")
+                combined_text = f"{event_title} {raw_desc}".lower()
+                
+                # --- MASTER MUSIC PRODUCTION FILTERS ---
+                if any(x in event_title.lower() for x in EXCLUDE): continue
+                if any(x in combined_text for x in EXCLUDE) and not has_music_keyword(event_title): continue
+                if not has_music_keyword(combined_text): continue
+                
+                start_str = ev.get("startDate") or ev.get("start")
+                if not start_str or len(start_str) < 10: continue
+                
+                try:
+                    # Parse explicitly based on text character index arrays to prevent timezone mutation shifts
+                    raw_year = int(start_str[0:4])
+                    raw_month = int(start_str[5:7])
+                    raw_day = int(start_str[8:10])
                     
-                    raw_entries = []
-                    for tag in script_tags:
-                        try:
-                            if not tag.string: continue
-                            data = json.loads(tag.string)
-                            if isinstance(data, dict):
-                                if data.get("@type") == "ItemList" and "itemListElement" in data:
-                                    raw_entries.extend([el.get("item") for el in data["itemListElement"] if el.get("item")])
-                                elif data.get("@type") == "Event":
-                                    raw_entries.append(data)
-                        except:
-                            continue
-                    
-                    # Flatten Master Events containing Sub-Events / Recurring Schedules
-                    events_list = []
-                    for entry in raw_entries:
-                        if not isinstance(entry, dict): continue
+                    raw_hour, raw_minute = 19, 0
+                    if 'T' in start_str and len(start_str) >= 16:
+                        raw_hour = int(start_str[11:13])
+                        raw_minute = int(start_str[14:16])
                         
-                        sub_events = entry.get("subEvent") or entry.get("subEvents")
-                        if sub_events:
-                            sub_list = [sub_events] if isinstance(sub_events, dict) else sub_events
-                            if isinstance(sub_list, list):
-                                for sub in sub_list:
-                                    if not isinstance(sub, dict): continue
-                                    cloned_event = entry.copy()
-                                    if "subEvent" in cloned_event: del cloned_event["subEvent"]
-                                    if "subEvents" in cloned_event: del cloned_event["subEvents"]
-                                    
-                                    cloned_event["startDate"] = sub.get("startDate") or sub.get("start")
-                                    cloned_event["endDate"] = sub.get("endDate") or sub.get("end")
-                                    events_list.append(cloned_event)
-                                continue
+                    start_dt = LOCAL_TZ.localize(datetime(raw_year, raw_month, raw_day, raw_hour, raw_minute))
+                except:
+                    try:
+                        start_dt = datetime.fromisoformat(start_str).astimezone(LOCAL_TZ)
+                    except:
+                        continue
                         
-                        events_list.append(entry)
-                    
-                    print(f"  [!] Cache expanded successfully. Processing {len(events_list)} flattened timeline records.")
-                    
-                    # Route records into the production filtering engine
-                    for ev in events_list:
-                        event_title = ev.get("name", "").strip()
-                        raw_desc = ev.get("description", "")
-                        combined_text = f"{event_title} {raw_desc}".lower()
-                        
-                        # --- MASTER MUSIC PRODUCTION FILTERS ---
-                        if any(x in event_title.lower() for x in EXCLUDE): continue
-                        if any(x in combined_text for x in EXCLUDE) and not has_music_keyword(event_title): continue
-                        if not has_music_keyword(combined_text): continue
-                        
-                        start_str = ev.get("startDate")
-                        if not start_str or len(start_str) < 10: continue
-                        
-                        try:
-                            # Safe character position parsing to guarantee absolute layout mapping
-                            raw_year = int(start_str[0:4])
-                            raw_month = int(start_str[5:7])
-                            raw_day = int(start_str[8:10])
-                            
-                            raw_hour, raw_minute = 19, 0
-                            if 'T' in start_str and len(start_str) >= 16:
-                                raw_hour = int(start_str[11:13])
-                                raw_minute = int(start_str[14:16])
-                            
-                            start_dt = LOCAL_TZ.localize(datetime(raw_year, raw_month, raw_day, raw_hour, raw_minute))
-                        except:
-                            try:
-                                start_dt = datetime.fromisoformat(start_str).astimezone(LOCAL_TZ)
-                            except:
-                                continue
-                        
-                        # Ensure only upcoming current events stream to output
-                        if start_dt.date() < now_dt.date(): continue
-                        
-                        # Map locations cleanly
-                        loc_data = ev.get("location", {})
-                        venue_name = loc_data.get("name", "Bizarre Electronics Repair 📱🔧")
-                        address_data = loc_data.get("address", {})
-                        street = address_data.get("streetAddress", "506 11th Ave, Longmont, CO 80501") if isinstance(address_data, dict) else "Longmont, CO"
-                        venue_loc = f"{venue_name}, {street}"
-                        
-                        # Cross-Site Deduplication Check
-                        fingerprint = f"{start_dt.strftime('%Y%m%d')}_{event_title[:15].lower()}"
-                        if fingerprint in seen_events: continue
-                        seen_events.add(fingerprint)
-                        
-                        # Construct output event entry
-                        e = Event()
-                        e.name = f"🎵 {detect_genre(combined_text)}{event_title}"
-                        e.begin = start_dt
-                        
-                        end_str = ev.get("endDate")
-                        if end_str:
-                            try:
-                                base_end_str = end_str.split('-')[0][:19]
-                                e.end = LOCAL_TZ.localize(datetime.strptime(base_end_str, "%Y-%m-%dT%H:%M:%S"))
-                            except:
-                                e.end = start_dt + timedelta(hours=3)
-                        else:
-                            e.end = start_dt + timedelta(hours=3)
-                            
-                        e.location = venue_loc
-                        e.description = f"Source: {ev.get('url', target_url)}"
-                        
-                        cal.events.add(e)
-                        count += 1
-                        print(f"  [+] Syncing: {start_dt.strftime('%B %d, %I:%M%p')} | {event_title} @ {venue_name}")
+                if start_dt.date() < now_dt.date(): continue
+                
+                # Capture location dictionaries safely
+                loc_data = ev.get("location", {})
+                venue_name = "Lunar Lux Event Spot"
+                street_address = "Longmont, CO"
+                
+                if isinstance(loc_data, dict):
+                    venue_name = loc_data.get("name") or venue_name
+                    addr = loc_data.get("address", {})
+                    street_address = addr.get("streetAddress") if isinstance(addr, dict) else str(addr)
+                venue_loc = f"{venue_name}, {street_address}"
+                
+                # Deduplication Check
+                fingerprint = f"{start_dt.strftime('%Y%m%d')}_{event_title[:15].lower()}"
+                if fingerprint in seen_events: continue
+                seen_events.add(fingerprint)
+                
+                # Append structured parameters to master output calendar track
+                e = Event()
+                e.name = f"🎵 {detect_genre(combined_text)}{event_title}"
+                e.begin = start_dt
+                
+                end_str = ev.get("endDate") or ev.get("end")
+                if end_str:
+                    try:
+                        base_end_str = end_str.split('-')[0][:19]
+                        e.end = LOCAL_TZ.localize(datetime.strptime(base_end_str, "%Y-%m-%dT%H:%M:%S"))
+                    except:
+                        e.end = start_dt + timedelta(hours=3)
                 else:
-                    print("  [-] Failed to download cached page stream from proxy mirror.")
-            else:
-                print("  [-] No available snapshot found anywhere in the archive cluster for this URL.")
+                    e.end = start_dt + timedelta(hours=3)
+                    
+                e.location = venue_loc
+                slug = ev.get("slug") or ev.get("url")
+                e.description = f"Source: {slug if str(slug).startswith('http') else 'https://events.humanitix.com/' + str(slug)}"
+                
+                cal.events.add(e)
+                count += 1
+                print(f"  [+] Live Sync: {start_dt.strftime('%B %d, %I:%M%p')} | {event_title} @ {venue_name}")
+                
         else:
-            print(f"  [-] Cache distribution node returned unexpected status string: {res.status_code}")
+            print(f"  [-] Live engine request failed with server error code: {res.status_code}")
             
     except Exception as e:
-        print(f"Failed to extract records using proxy network pipeline: {e}")
+        print(f"Failed to communicate with live Humanitix API channel: {e}")
 
     # --- 3. MULTI-PAGE TARGETS ---
     print("\n🔍 Scanning Multi-Page Targets...")
