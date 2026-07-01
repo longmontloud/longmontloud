@@ -131,25 +131,35 @@ def main():
         print(f"Failed to scan Summit Tacos: {e}")
 
 # --- 2. HUMANITIX WIDGET API HARVESTER ---
-    print("\n🔍 Harvesting Humanitix Widget Feed (Bypassing Firewall)...")
+    print("\n🔍 Harvesting Humanitix Widget Feed (Bypassing 403 Firewall)...")
     
-    # We query the unprotected public widget routing pipeline instead of the wrapper page
     humanitix_widget_api = "https://events.humanitix.com/api/v1/widgets/hosts/lunar-lux-music-and-arts-festival/events"
     
+    # We append specialized headers to mimic a widget request originating directly from their host page
+    WIDGET_HEADERS = {
+        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) Chrome/120.0.0.0",
+        "Accept": "application/json, text/plain, */*",
+        "Accept-Language": "en-US,en;q=0.9",
+        "Origin": "https://events.humanitix.com",
+        "Referer": "https://events.humanitix.com/host/lunar-lux-music-and-arts-festival",
+        "Sec-Fetch-Dest": "empty",
+        "Sec-Fetch-Mode": "cors",
+        "Sec-Fetch-Site": "same-origin"
+    }
+    
     try:
-        # Standard headers are fine here because this route expects global cross-origin requests
-        res = requests.get(humanitix_widget_api, headers=HEADERS, timeout=15)
+        # Requesting using the updated browser security framework flags
+        res = requests.get(humanitix_widget_api, headers=WIDGET_HEADERS, timeout=15)
         
         if res.status_code == 200:
             payload = res.json()
-            # The API payloads usually nest inside an 'events' or 'results' key, or serve as a top-level array
             events_list = []
             if isinstance(payload, dict):
                 events_list = payload.get("events") or payload.get("results") or [payload]
             elif isinstance(payload, list):
                 events_list = payload
                 
-            print(f"  [!] Feed accessed successfully. Parsing {len(events_list)} raw items...")
+            print(f"  [!] Feed accessed successfully! Parsing {len(events_list)} raw items...")
             
             for ev in events_list:
                 if not isinstance(ev, dict): continue
@@ -163,12 +173,11 @@ def main():
                 if any(x in combined_text for x in EXCLUDE) and not has_music_keyword(event_title): continue
                 if not has_music_keyword(combined_text): continue
                 
-                # Dynamic Date Extraction (ISO 8601 Natively provided by APIs)
+                # Dynamic Date Extraction
                 start_str = ev.get("startDate") or ev.get("start")
                 if not start_str: continue
                 
                 try:
-                    # Clean up trailing offsets for fromisoformat compliance if needed
                     if re.search(r'[-+]\d{4}$', start_str):
                         start_str = start_str[:-2] + ":" + start_str[-2:]
                     parsed_dt = datetime.fromisoformat(start_str)
