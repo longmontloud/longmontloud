@@ -130,60 +130,63 @@ def main():
     except Exception as e:
         print(f"Failed to scan Summit Tacos: {e}")
 
-# --- 2. HUMANITIX OFFICIAL ICS MERGE ENGINE ---
-    print("\n🔍 Fetching Direct Humanitix Calendar Feed...")
+# --- 2. HUMANITIX LOCAL ICS MERGE ENGINE ---
+    print("\n🔍 Reading Local Humanitix Calendar Payload (Bypassing Network Firewall)...")
     
-    # PASTE THE ISOLATED HOST ID HERE
-    HUMANITIX_HOST_ID = "YOUR_FOUND_HOST_ID_HERE" 
-    
+    import os
     from ics import Calendar as IcsCalendar
     
-    humanitix_ics_url = f"https://events.humanitix.com/api/v1/hosts/6763d04868b5a9c8017c9767/ical"
+    local_ics_file = "humanitix_live.ics"
     
     try:
-        # Standard request hits their open data asset pipeline cleanly
-        res = requests.get(humanitix_ics_url, headers=HEADERS, timeout=15)
-        
-        if res.status_code == 200:
-            # Parse the incoming raw data string straight into a temporary ICS calendar object
-            remote_cal = IcsCalendar(res.text)
-            print(f"  [!] Stream accessed successfully. Processing {len(remote_cal.events)} live entries...")
+        # Check if the GitHub Action successfully downloaded the file
+        if os.path.exists(local_ics_file) and os.path.getsize(local_ics_file) > 0:
             
-            for remote_event in remote_cal.events:
-                event_title = remote_event.name.strip()
-                raw_desc = remote_event.description or ""
-                combined_text = f"{event_title} {raw_desc}".lower()
+            with open(local_ics_file, 'r', encoding='utf-8') as f:
+                raw_text = f.read()
                 
-                # --- MASTER MUSIC PRODUCTION FILTERS ---
-                if any(x in event_title.lower() for x in EXCLUDE): continue
-                if any(x in combined_text for x in EXCLUDE) and not has_music_keyword(event_title): continue
-                if not has_music_keyword(combined_text): continue
+            # If curl got caught by a 403 HTML page instead of an ICS file, catch it here
+            if "BEGIN:VCALENDAR" not in raw_text:
+                print("  [-] Error: The downloaded file contains firewall HTML rather than a calendar stream.")
+            else:
+                remote_cal = IcsCalendar(raw_text)
+                print(f"  [!] Local file parsed successfully. Processing {len(remote_cal.events)} live entries...")
                 
-                # Natively read the exact localized date tracking parameters
-                start_dt = remote_event.begin.astimezone(LOCAL_TZ)
-                if start_dt.date() < now_dt.date(): continue
-                
-                # Production Cross-Site Deduplication Check
-                fingerprint = f"{start_dt.strftime('%Y%m%d')}_{event_title[:15].lower()}"
-                if fingerprint in seen_events: continue
-                seen_events.add(fingerprint)
-                
-                # Map parameters cleanly straight into your production output structure
-                e = Event()
-                e.name = f"🎵 {detect_genre(combined_text)}{event_title}"
-                e.begin = start_dt
-                e.end = remote_event.end.astimezone(LOCAL_TZ) if remote_event.end else start_dt + timedelta(hours=3)
-                e.location = remote_event.location or "Longmont, CO"
-                e.description = raw_desc if raw_desc.startswith("http") else f"Source: https://events.humanitix.com/host/lunar-lux-music-and-arts-festival"
-                
-                cal.events.add(e)
-                count += 1
-                print(f"  [+] Unified Live Sync: {start_dt.strftime('%B %d, %I:%M%p')} | {event_title}")
+                for remote_event in remote_cal.events:
+                    event_title = remote_event.name.strip()
+                    raw_desc = remote_event.description or ""
+                    combined_text = f"{event_title} {raw_desc}".lower()
+                    
+                    # --- MASTER MUSIC PRODUCTION FILTERS ---
+                    if any(x in event_title.lower() for x in EXCLUDE): continue
+                    if any(x in combined_text for x in EXCLUDE) and not has_music_keyword(event_title): continue
+                    if not has_music_keyword(combined_text): continue
+                    
+                    # Natively read the exact localized date tracking parameters
+                    start_dt = remote_event.begin.astimezone(LOCAL_TZ)
+                    if start_dt.date() < now_dt.date(): continue
+                    
+                    # Production Cross-Site Deduplication Check
+                    fingerprint = f"{start_dt.strftime('%Y%m%d')}_{event_title[:15].lower()}"
+                    if fingerprint in seen_events: continue
+                    seen_events.add(fingerprint)
+                    
+                    # Map parameters cleanly straight into your production output structure
+                    e = Event()
+                    e.name = f"🎵 {detect_genre(combined_text)}{event_title}"
+                    e.begin = start_dt
+                    e.end = remote_event.end.astimezone(LOCAL_TZ) if remote_event.end else start_dt + timedelta(hours=3)
+                    e.location = remote_event.location or "Longmont, CO"
+                    e.description = raw_desc if raw_desc.startswith("http") else f"Source: https://events.humanitix.com/host/lunar-lux-music-and-arts-festival"
+                    
+                    cal.events.add(e)
+                    count += 1
+                    print(f"  [+] Unified Live Sync: {start_dt.strftime('%B %d, %I:%M%p')} | {event_title}")
         else:
-            print(f"  [-] Failed to download file frame. Code: {res.status_code}")
+            print(f"  [-] Local data payload '{local_ics_file}' was missing or empty.")
             
     except Exception as e:
-        print(f"Failed to cleanly merge Humanitix ICS core: {e}")
+        print(f"Failed to cleanly merge Humanitix local ICS payload: {e}")
 
     # --- 3. MULTI-PAGE TARGETS ---
     print("\n🔍 Scanning Multi-Page Targets...")
