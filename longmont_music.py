@@ -137,7 +137,7 @@ def main():
         ("https://www.downtownlongmont.com/events/calendar", "https://www.downtownlongmont.com"),
         ("https://www.johnsonsstation.com/calendar", "https://www.johnsonsstation.com"),
         ("https://www.barnevents.info/events", "https://www.barnevents.info"),
-        ("https://www.stvraincidery.com/events", "https://www.stvraincidery.com"),
+        ("https://www.stvraincidery.com/events", "https://www.stvraincidery.com")]
 
     # --- 3. HUMANITIX SCHEMATIC TARGETS ---
     print("\n🔍 Scanning Humanitix Targets...")
