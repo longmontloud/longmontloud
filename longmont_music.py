@@ -130,80 +130,81 @@ def main():
     except Exception as e:
         print(f"Failed to scan Summit Tacos: {e}")
 
-    # --- 2. HUMANITIX SCHEMATIC TARGETS ---
+ # --- 2. HUMANITIX DYNAMIC API TARGETS ---
     print("\n🔍 Scanning Humanitix Targets...")
-    humanitix_urls = [
-        "https://events.humanitix.com/host/lunar-lux-music-and-arts-festival"
+    # Target the direct background api data endpoint rather than the empty HTML host shell
+    humanitix_api_urls = [
+        "https://events.humanitix.com/api/v1/hosts/lunar-lux-music-and-arts-festival/events"
     ]
     
-    for hx_url in humanitix_urls:
+    for api_url in humanitix_api_urls:
         try:
-            res = requests.get(hx_url, headers=HEADERS, timeout=15)
-            soup = BeautifulSoup(res.text, 'html.parser')
-            script_tags = soup.find_all('script', type='application/ld+json')
-
-            # Add this temporary debug line:
-print(f"DEBUG: Found {len(script_tags)} JSON-LD tags on Humanitix!")
+            # Fetch the raw dynamic payload dataset directly
+            res = requests.get(api_url, headers=HEADERS, timeout=15)
+            if res.status_code != 200: continue
             
-            for tag in script_tags:
+            # Read the target array straight into a Python list dictionary structure
+            payload = res.json()
+            events_list = payload.get("events", []) if isinstance(payload, dict) else payload
+            
+            if not isinstance(events_list, list): continue
+            
+            for ev in events_list:
                 try:
-                    data = json.loads(tag.string)
-                    events_list = []
-                    if isinstance(data, dict):
-                        if data.get("@type") == "ItemList" and "itemListElement" in data:
-                            events_list = [el.get("item") for el in data["itemListElement"] if el.get("item")]
-                        elif data.get("@type") == "Event":
-                            events_list = [data]
+                    event_title = ev.get("name", "").strip()
+                    raw_desc = ev.get("description", "")
+                    combined_text = f"{event_title} {raw_desc}".lower()
                     
-                    for ev in events_list:
-                        if not ev or ev.get("@type") != "Event": continue
-                        
-                        event_title = ev.get("name", "").strip()
-                        raw_desc = ev.get("description", "")
-                        combined_text = f"{event_title} {raw_desc}".lower()
-                        
-                        if any(x in event_title.lower() for x in EXCLUDE): continue
-                        if any(x in combined_text for x in EXCLUDE) and not has_music_keyword(event_title): continue
-                        if not has_music_keyword(combined_text): continue
-                        
-                        start_str = ev.get("startDate")
-                        if not start_str: continue
-                        
-                        try:
-                            if re.search(r'[-+]\d{4}$', start_str):
-                                start_str = start_str[:-2] + ":" + start_str[-2:]
-                            parsed_dt = datetime.fromisoformat(start_str)
-                        except ValueError:
-                            continue
-                        
-                        start_dt = parsed_dt.astimezone(LOCAL_TZ)
-                        if start_dt.date() < now_dt.date(): continue
-                        
-                        loc_data = ev.get("location", {})
-                        venue_name = loc_data.get("name", "Lunar Lux Festival Location")
-                        address_data = loc_data.get("address", {})
-                        street = address_data.get("streetAddress", "Longmont, CO")
-                        venue_loc = f"{venue_name}, {street}"
-                        
-                        fingerprint = f"{start_dt.strftime('%Y%m%d')}_{event_title[:15].lower()}"
-                        if fingerprint in seen_events: continue
-                        seen_events.add(fingerprint)
-                        
-                        e = Event()
-                        e.name = f"🎵 {detect_genre(combined_text)}{event_title}"
-                        e.begin = start_dt
-                        e.end = start_dt + timedelta(hours=3)
-                        e.location = venue_loc
-                        e.description = f"Source: {ev.get('url', hx_url)}"
-                        
-                        cal.events.add(e)
-                        count += 1
-                        print(f"  [+] {start_dt.strftime('%B %d, %I:%M%p')} | {event_title} @ {venue_name}")
-                        
-                except (json.JSONDecodeError, TypeError, AttributeError):
+                    # --- MUSIC FILTERS ---
+                    if any(x in event_title.lower() for x in EXCLUDE): continue
+                    if any(x in combined_text for x in EXCLUDE) and not has_music_keyword(event_title): continue
+                    if not has_music_keyword(combined_text): continue
+                    
+                    # Target clean structural date payloads (ISO Format natively)
+                    start_str = ev.get("startDate") or ev.get("start")
+                    if not start_str: continue
+                    
+                    try:
+                        if re.search(r'[-+]\d{4}$', start_str):
+                            start_str = start_str[:-2] + ":" + start_str[-2:]
+                        parsed_dt = datetime.fromisoformat(start_str)
+                    except ValueError:
+                        continue
+                    
+                    start_dt = parsed_dt.astimezone(LOCAL_TZ)
+                    if start_dt.date() < now_dt.date(): continue
+                    
+                    # Extract location dictionary strings natively
+                    loc_data = ev.get("location", {})
+                    venue_name = loc_data.get("name", "Lunar Lux Festival Location")
+                    address_str = loc_data.get("address", "Longmont, CO")
+                    venue_loc = f"{venue_name}, {address_str}"
+                    
+                    # Deduplication Engine Fingerprint
+                    fingerprint = f"{start_dt.strftime('%Y%m%d')}_{event_title[:15].lower()}"
+                    if fingerprint in seen_events: continue
+                    seen_events.add(fingerprint)
+                    
+                    # Construct and add to final .ics Calendar
+                    e = Event()
+                    e.name = f"🎵 {detect_genre(combined_text)}{event_title}"
+                    e.begin = start_dt
+                    e.end = start_dt + timedelta(hours=3)
+                    e.location = venue_loc
+                    
+                    # Construct matching fallback source path links
+                    slug = ev.get("slug", "")
+                    event_url = f"https://events.humanitix.com/{slug}" if slug else api_url
+                    e.description = f"Source: {event_url}"
+                    
+                    cal.events.add(e)
+                    count += 1
+                    print(f"  [+] {start_dt.strftime('%B %d, %I:%M%p')} | {event_title} @ {venue_name}")
+                    
+                except (TypeError, KeyError, AttributeError):
                     continue
         except Exception as e:
-            print(f"Failed to scan Humanitix target {hx_url}: {e}")
+            print(f"Failed to scan Humanitix dataset: {e}")
 
     # --- 3. MULTI-PAGE TARGETS ---
     print("\n🔍 Scanning Multi-Page Targets...")
