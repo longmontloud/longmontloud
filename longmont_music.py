@@ -245,128 +245,98 @@ def main():
     except Exception as e:
         print(f"Failed to process Wibby Brewing open calendar pipeline: {e}")
 
-# --- 4. OSKAR BLUES LONGMONT HARVESTER (CARD RESILIENT) ---
-    print("\n🔍 Scraping Oskar Blues Longmont Happenings...")
-    ob_url = "https://www.oskarbluesfooderies.com/longmont-happenings"
+# --- 4. OSKAR BLUES LONGMONT HARVESTER (DIRECT API) ---
+    print("\n🔍 Querying Oskar Blues Live Popmenu Database Pipeline...")
+    
+    # Direct, unsecured public JSON endpoint supplying the Longmont calendar widget
+    ob_api_url = "https://api.popmenu.com/v2/public/events?location_id=2334&per=50&page=1"
+    
+    POPMENU_HEADERS = {
+        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36",
+        "Accept": "application/json",
+        "Referer": "https://www.oskarbluesfooderies.com/"
+    }
     
     try:
-        res = requests.get(ob_url, headers=HEADERS, timeout=15)
+        res = requests.get(ob_api_url, headers=POPMENU_HEADERS, timeout=15)
         if res.status_code == 200:
-            soup = BeautifulSoup(res.text, 'html.parser')
+            payload = res.json()
             
-            # Target the structural containers on the page
-            # We look for all generic container segments that wrap event data blocks
-            potential_cards = soup.find_all(['div', 'li', 'article'])
+            # Popmenu keeps its array inside an 'events' or 'results' key block
+            raw_events = payload.get("events", []) if isinstance(payload, dict) else []
+            if not raw_events and isinstance(payload, list):
+                raw_events = payload
+                
+            print(f"  [!] Database accessed successfully. Scanning {len(raw_events)} live events...")
             
             ob_count = 0
-            processed_fingerprints = set()
-            
-            for card in potential_cards:
-                card_text = card.get_text(" ", strip=True)
+            for item in raw_events:
+                if not isinstance(item, dict): continue
                 
-                # Check if this specific element block starts with an explicit Date Badge
-                # e.g., "Jul 1", "Jul 10", "Aug 3"
-                date_match = re.search(r'\b(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)\s*(\d{1,2})\b', card_text)
-                if not date_match:
-                    continue
-                    
-                # Isolate the Time element within this block (e.g., "6:00 pm")
-                time_match = re.search(r'(\d{1,2}):(\d{2})\s*(pm|am)', card_text.lower())
-                if not time_match:
-                    continue
-                
-                # Clean out navigation blocks or system menus that happen to contain dates
-                if "skip to main" in card_text.lower() or "reservations" in card_text.lower():
-                    continue
-                
-                month_str = date_match.group(1)
-                day_str = date_match.group(2)
-                
-                # Extract the Artist Title safely
-                # Look for heading components inside the card first
-                heading_el = card.find(['h1', 'h2', 'h3', 'h4', 'h5', 'strong'])
-                if heading_el and len(heading_el.get_text(strip=True)) > 2:
-                    event_title = heading_el.get_text(strip=True)
-                else:
-                    # Fallback text segmentation if headings are flattened
-                    # Take the first slice of text that isn't the date badge
-                    clean_text_chunk = card_text.replace(f"{month_str} {day_str}", "").strip()
-                    event_title = clean_text_chunk.split(",")[0].split(" at ")[0].strip()
-                
-                # Prevent picking up short menu fragments or unparsed script noise
-                if len(event_title) < 3 or len(event_title) > 80:
-                    continue
-                    
-                combined_text = card_text.lower()
+                event_title = item.get("title", "").strip()
+                raw_desc = item.get("description", "") or ""
+                combined_text = f"{event_title} {raw_desc}".lower()
                 
                 # --- MASTER MUSIC PRODUCTION FILTERS ---
                 if any(x in event_title.lower() for x in EXCLUDE): continue
                 if any(x in combined_text for x in EXCLUDE) and not has_music_keyword(event_title): continue
                 if not has_music_keyword(combined_text): continue
                 
-                # --- DATE GENERATION MATRIX ---
+                # Popmenu provides standard clean ISO datetime timestamps natively
+                start_str = item.get("start_at") or item.get("date")
+                if not start_str: continue
+                
                 try:
-                    target_year = now_dt.year
-                    month_num = datetime.strptime(month_str, "%b").month
-                    day_num = int(day_str)
+                    # Clean up timestamps (e.g., '2026-07-10T18:00:00.000Z')
+                    base_time = start_str.split('.')[0].replace('Z', '')
+                    start_dt = datetime.fromisoformat(base_time)
                     
-                    # Handle calendar year rollover boundaries cleanly
-                    if month_num == 1 and now_dt.month == 12:
-                        target_year += 1
-                        
-                    h, m, ampm = time_match.groups()
-                    hour = int(h)
-                    minute = int(m)
-                    if ampm == "pm" and hour != 12: hour += 12
-                    if ampm == "am" and hour == 12: hour = 0
-                    
-                    start_dt = LOCAL_TZ.localize(datetime(target_year, month_num, day_num, hour, minute))
+                    # Apply local Colorado timezone localization boundaries
+                    if start_dt.tzinfo is None:
+                        start_dt = LOCAL_TZ.localize(start_dt)
+                    else:
+                        start_dt = start_dt.astimezone(LOCAL_TZ)
                 except Exception:
                     continue
                     
                 if start_dt.date() < now_dt.date(): continue
                 
-                # Deduplicate overlapping sub-elements within the same card structure
+                # Cross-Site Deduplication Check
                 fingerprint = f"{start_dt.strftime('%Y%m%d')}_{event_title[:15].lower()}"
-                if fingerprint in processed_fingerprints or fingerprint in seen_events: 
-                    continue
-                processed_fingerprints.add(fingerprint)
+                if fingerprint in seen_events: continue
                 seen_events.add(fingerprint)
                 
-                # Build master output event properties
+                # Map structured data straight to output parameters
                 e = Event()
                 e.name = f"🎵 {detect_genre(combined_text)}{event_title}"
                 e.begin = start_dt
                 
-                # Safely attempt to scan for an explicit end-time frame marker
-                end_match = re.search(r'-\s*(\d{1,2}):(\d{2})\s*(pm|am)', card_text.lower())
-                if end_match:
+                # Capture optional end times or default to 2.5 hours
+                end_str = item.get("end_at")
+                if end_str:
                     try:
-                        eh, em, eampm = end_match.groups()
-                        end_hour = int(eh)
-                        end_minute = int(em)
-                        if eampm == "pm" and end_hour != 12: end_hour += 12
-                        if eampm == "am" and end_hour == 12: end_hour = 0
-                        e.end = LOCAL_TZ.localize(datetime(target_year, month_num, day_num, end_hour, end_minute))
+                        base_end = end_str.split('.')[0].replace('Z', '')
+                        end_dt = datetime.fromisoformat(base_end)
+                        e.end = LOCAL_TZ.localize(end_dt) if end_dt.tzinfo is None else end_dt.astimezone(LOCAL_TZ)
                     except Exception:
-                        e.end = start_dt + timedelta(hours=2)
+                        e.end = start_dt + timedelta(hours=2, minutes=30)
                 else:
-                    e.end = start_dt + timedelta(hours=2)
+                    e.end = start_dt + timedelta(hours=2, minutes=30)
                     
                 e.location = "Oskar Blues Home Made Liquids & Solids, 1555 Hover St, Longmont, CO 80501"
-                e.description = f"{card_text}\n\nSource: {ob_url}"
+                e.description = f"{raw_desc}\n\nSource: https://www.oskarbluesfooderies.com/longmont-happenings"
                 
                 cal.events.add(e)
                 ob_count += 1
                 count += 1
-                print(f"  [+] Synced: {start_dt.strftime('%B %d, %I:%M%p')} | {event_title}")
+                print(f"  [+] Unified Live Sync: {start_dt.strftime('%B %d, %I:%M%p')} | {event_title}")
                 
             print(f"  [!] Oskar Blues Sync complete. Added {ob_count} live music events.")
         else:
-            print(f"  [-] Failed to download Oskar Blues web layout. Status: {res.status_code}")
+            print(f"  [-] Failed to communicate with Popmenu asset database. Code: {res.status_code}")
             
     except Exception as e:
-        print(f"Failed to execute Oskar Blues parsing pipeline: {e}")
+        print(f"Failed to execute Oskar Blues pipeline integration: {e}")
     
     # --- 5. MULTI-PAGE TARGETS ---
     print("\n🔍 Scanning Multi-Page Targets...")
