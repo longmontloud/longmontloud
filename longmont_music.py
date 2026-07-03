@@ -245,7 +245,7 @@ def main():
     except Exception as e:
         print(f"Failed to process Wibby Brewing open calendar pipeline: {e}")
 
-# --- 4. OSKAR BLUES LONGMONT HARVESTER ---
+# --- 4. OSKAR BLUES LONGMONT HARVESTER (FIXED) ---
     print("\n🔍 Scraping Oskar Blues Longmont Happenings...")
     ob_url = "https://www.oskarbluesfooderies.com/longmont-happenings"
     
@@ -254,74 +254,81 @@ def main():
         if res.status_code == 200:
             soup = BeautifulSoup(res.text, 'html.parser')
             
-            # Locate all list item elements or block grids containing event text
-            # The template packs them inside standard block sections or list components
-            event_elements = soup.find_all(['li', 'div', 'article'])
+            # Target the parent container holding the timeline items
+            # The event summary blocks are wrapped inside target data components
+            events_list = []
             
+            # Find elements containing text starting with month structures or class components
+            # We look for text strings matching the explicit layout blocks
+            all_text_blocks = soup.find_all(text=True)
+            
+            # Track down individual items sequentially from the DOM content
             ob_count = 0
-            seen_ob_blocks = set()
             
-            for elem in event_elements:
-                text_content = elem.get_text(" ", strip=True)
+            # Locate all sections that look like standard event grids or contain the target dates
+            # Based on layout tracking, we can grab items by checking explicit date flags
+            # e.g. "Jul10" or "Jul11" tightly bound to the content titles
+            page_text = soup.get_text("||", strip=True)
+            segments = page_text.split("||")
+            
+            # Alternative structural extraction: Use clean regex splits to find content cards
+            # We search for lines starting with short month names immediately followed by numbers
+            raw_matches = []
+            current_event = None
+            
+            for seg in segments:
+                # Catch the date block flag (e.g., "Jul1", "Jul10")
+                date_m = re.match(r'^(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)\s*(\d{1,2})$', seg)
+                if date_m:
+                    if current_event:
+                        raw_matches.append(current_event)
+                    current_event = {"month": date_m.group(1), "day": date_m.group(2), "lines": []}
+                elif current_event:
+                    # Append description lines following the date block until next date hits
+                    if "Upcoming Events" in seg or "Featured" in seg or "Load More" in seg:
+                        raw_matches.append(current_event)
+                        current_event = None
+                    else:
+                        current_event["lines"].append(seg)
+                        
+            if current_event:
+                raw_matches.append(current_event)
+
+            print(f"  [!] Extracted {len(raw_matches)} raw text blocks from DOM array. Filtering fields...")
+
+            for item in raw_matches:
+                month_str = item["month"]
+                day_str = item["day"]
+                lines = item["lines"]
                 
-                # We target blocks explicitly starting with month identifiers to avoid menu text
-                # e.g., "Jul10. Jordan Grey...", "Jul11. Douglas James..."
-                match = re.match(r'^(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)\s*(\d{1,2})\s*\.\s*(.+)$', text_content)
-                if not match:
-                    continue
-                    
-                # Deduplicate overlapping HTML wrapper tags matching the same string
-                if text_content in seen_ob_blocks: continue
-                seen_ob_blocks.add(text_content)
+                if not lines: continue
                 
-                month_str, day_str, details_blob = match.groups()
+                # Title is typically the first string after the date block
+                event_title = lines[0].strip()
                 
-                # Isolate the Title (everything up until the day-of-week timing marker)
-                # Text looks like: "Jordan Grey, Mackenzie Rae... Fri, Jul 10, 6:00 pm."
-                time_marker = re.search(r'(Mon|Tue|Wed|Thu|Fri|Sat|Sun),\s+(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)', details_blob)
-                weekly_marker = re.search(r'Weekly\s+(Mon|Tue|Wed|Thu|Fri|Sat|Sun)', details_blob)
-                
-                event_title = "Oskar Blues Live Music"
-                time_segment = ""
-                raw_desc = details_blob
-                
-                if time_marker:
-                    idx = time_marker.start()
-                    event_title = details_blob[:idx].strip(". ")
-                    time_segment = details_blob[idx:]
-                elif weekly_marker:
-                    idx = weekly_marker.start()
-                    event_title = details_blob[:idx].strip(". ")
-                    time_segment = details_blob[idx:]
-                else:
-                    # Fallback structural cut if explicit separators are missing
-                    parts = details_blob.split(". ", 1)
-                    event_title = parts[0]
-                    if len(parts) > 1: time_segment = parts[1]
-                
-                combined_text = f"{event_title} {raw_desc}".lower()
+                # Reconstruct time strings and remaining descriptors out of trailing text lines
+                remaining_text = " ".join(lines[1:])
+                combined_text = f"{event_title} {remaining_text}".lower()
                 
                 # --- MASTER MUSIC PRODUCTION FILTERS ---
                 if any(x in event_title.lower() for x in EXCLUDE): continue
                 if any(x in combined_text for x in EXCLUDE) and not has_music_keyword(event_title): continue
                 if not has_music_keyword(combined_text): continue
                 
+                # Isolate specific show times (e.g. "6:00 pm", "2:00 pm")
+                time_segment = ""
+                time_match = re.search(r'(\d{1,2}):(\d{2})\s*(pm|am)', remaining_text.lower())
+                
                 # --- DATE GENERATION MATRIX ---
                 try:
-                    # Establish target year based on runtime date tracking parameters
                     target_year = now_dt.year
-                    # Convert month short text to integer
                     month_num = datetime.strptime(month_str, "%b").month
                     day_num = int(day_str)
                     
-                    # Handle year rollover safely if script scans late December for January dates
                     if month_num == 1 and now_dt.month == 12:
                         target_year += 1
                         
-                    # Extract hours and minutes out of the time text segment
-                    # e.g., "6:00 pm"
                     hour, minute = 18, 0 # Default to 6:00 PM if parsing fails
-                    time_match = re.search(r'(\d{1,2}):(\d{2})\s*(pm|am)', time_segment.lower())
                     if time_match:
                         h, m, ampm = time_match.groups()
                         hour = int(h)
@@ -345,8 +352,8 @@ def main():
                 e.name = f"🎵 {detect_genre(combined_text)}{event_title}"
                 e.begin = start_dt
                 
-                # Handle end times safely (look for secondary time marker or default to 2.5 hours)
-                end_match = re.search(r'-\s*(\d{1,2}):(\d{2})\s*(pm|am)', time_segment.lower())
+                # Handle end times safely (look for secondary time marker or default to 2 hours)
+                end_match = re.search(r'-\s*(\d{1,2}):(\d{2})\s*(pm|am)', remaining_text.lower())
                 if end_match:
                     try:
                         eh, em, eampm = end_match.groups()
@@ -356,12 +363,12 @@ def main():
                         if eampm == "am" and end_hour == 12: end_hour = 0
                         e.end = LOCAL_TZ.localize(datetime(target_year, month_num, day_num, end_hour, end_minute))
                     except:
-                        e.end = start_dt + timedelta(hours=2, minutes=30)
+                        e.end = start_dt + timedelta(hours=2)
                 else:
-                    e.end = start_dt + timedelta(hours=2, minutes=30)
+                    e.end = start_dt + timedelta(hours=2)
                     
                 e.location = "Oskar Blues Home Made Liquids & Solids, 1555 Hover St, Longmont, CO 80501"
-                e.description = f"{raw_desc}\n\nSource: {ob_url}"
+                e.description = f"{remaining_text}\n\nSource: {ob_url}"
                 
                 cal.events.add(e)
                 ob_count += 1
