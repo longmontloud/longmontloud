@@ -245,7 +245,7 @@ def main():
     except Exception as e:
         print(f"Failed to process Wibby Brewing open calendar pipeline: {e}")
 
-# --- 4. OSKAR BLUES LONGMONT HARVESTER (FIXED) ---
+# --- 4. OSKAR BLUES LONGMONT HARVESTER (CARD RESILIENT) ---
     print("\n🔍 Scraping Oskar Blues Longmont Happenings...")
     ob_url = "https://www.oskarbluesfooderies.com/longmont-happenings"
     
@@ -254,70 +254,55 @@ def main():
         if res.status_code == 200:
             soup = BeautifulSoup(res.text, 'html.parser')
             
-            # Target the parent container holding the timeline items
-            # The event summary blocks are wrapped inside target data components
-            events_list = []
+            # Target the structural containers on the page
+            # We look for all generic container segments that wrap event data blocks
+            potential_cards = soup.find_all(['div', 'li', 'article'])
             
-            # Find elements containing text starting with month structures or class components
-            # We look for text strings matching the explicit layout blocks
-            all_text_blocks = soup.find_all(text=True)
-            
-            # Track down individual items sequentially from the DOM content
             ob_count = 0
+            processed_fingerprints = set()
             
-            # Locate all sections that look like standard event grids or contain the target dates
-            # Based on layout tracking, we can grab items by checking explicit date flags
-            # e.g. "Jul10" or "Jul11" tightly bound to the content titles
-            page_text = soup.get_text("||", strip=True)
-            segments = page_text.split("||")
-            
-            # Alternative structural extraction: Use clean regex splits to find content cards
-            # We search for lines starting with short month names immediately followed by numbers
-            raw_matches = []
-            current_event = None
-            
-            for seg in segments:
-                # Catch the date block flag (e.g., "Jul1", "Jul10")
-                date_m = re.match(r'^(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)\s*(\d{1,2})$', seg)
-                if date_m:
-                    if current_event:
-                        raw_matches.append(current_event)
-                    current_event = {"month": date_m.group(1), "day": date_m.group(2), "lines": []}
-                elif current_event:
-                    # Append description lines following the date block until next date hits
-                    if "Upcoming Events" in seg or "Featured" in seg or "Load More" in seg:
-                        raw_matches.append(current_event)
-                        current_event = None
-                    else:
-                        current_event["lines"].append(seg)
-                        
-            if current_event:
-                raw_matches.append(current_event)
-
-            print(f"  [!] Extracted {len(raw_matches)} raw text blocks from DOM array. Filtering fields...")
-
-            for item in raw_matches:
-                month_str = item["month"]
-                day_str = item["day"]
-                lines = item["lines"]
+            for card in potential_cards:
+                card_text = card.get_text(" ", strip=True)
                 
-                if not lines: continue
+                # Check if this specific element block starts with an explicit Date Badge
+                # e.g., "Jul 1", "Jul 10", "Aug 3"
+                date_match = re.search(r'\b(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)\s*(\d{1,2})\b', card_text)
+                if not date_match:
+                    continue
+                    
+                # Isolate the Time element within this block (e.g., "6:00 pm")
+                time_match = re.search(r'(\d{1,2}):(\d{2})\s*(pm|am)', card_text.lower())
+                if not time_match:
+                    continue
                 
-                # Title is typically the first string after the date block
-                event_title = lines[0].strip()
+                # Clean out navigation blocks or system menus that happen to contain dates
+                if "skip to main" in card_text.lower() or "reservations" in card_text.lower():
+                    continue
                 
-                # Reconstruct time strings and remaining descriptors out of trailing text lines
-                remaining_text = " ".join(lines[1:])
-                combined_text = f"{event_title} {remaining_text}".lower()
+                month_str = date_match.group(1)
+                day_str = date_match.group(2)
+                
+                # Extract the Artist Title safely
+                # Look for heading components inside the card first
+                heading_el = card.find(['h1', 'h2', 'h3', 'h4', 'h5', 'strong'])
+                if heading_el and len(heading_el.get_text(strip=True)) > 2:
+                    event_title = heading_el.get_text(strip=True)
+                else:
+                    # Fallback text segmentation if headings are flattened
+                    # Take the first slice of text that isn't the date badge
+                    clean_text_chunk = card_text.replace(f"{month_str} {day_str}", "").strip()
+                    event_title = clean_text_chunk.split(",")[0].split(" at ")[0].strip()
+                
+                # Prevent picking up short menu fragments or unparsed script noise
+                if len(event_title) < 3 or len(event_title) > 80:
+                    continue
+                    
+                combined_text = card_text.lower()
                 
                 # --- MASTER MUSIC PRODUCTION FILTERS ---
                 if any(x in event_title.lower() for x in EXCLUDE): continue
                 if any(x in combined_text for x in EXCLUDE) and not has_music_keyword(event_title): continue
                 if not has_music_keyword(combined_text): continue
-                
-                # Isolate specific show times (e.g. "6:00 pm", "2:00 pm")
-                time_segment = ""
-                time_match = re.search(r'(\d{1,2}):(\d{2})\s*(pm|am)', remaining_text.lower())
                 
                 # --- DATE GENERATION MATRIX ---
                 try:
@@ -325,35 +310,36 @@ def main():
                     month_num = datetime.strptime(month_str, "%b").month
                     day_num = int(day_str)
                     
+                    # Handle calendar year rollover boundaries cleanly
                     if month_num == 1 and now_dt.month == 12:
                         target_year += 1
                         
-                    hour, minute = 18, 0 # Default to 6:00 PM if parsing fails
-                    if time_match:
-                        h, m, ampm = time_match.groups()
-                        hour = int(h)
-                        minute = int(m)
-                        if ampm == "pm" and hour != 12: hour += 12
-                        if ampm == "am" and hour == 12: hour = 0
-                        
+                    h, m, ampm = time_match.groups()
+                    hour = int(h)
+                    minute = int(m)
+                    if ampm == "pm" and hour != 12: hour += 12
+                    if ampm == "am" and hour == 12: hour = 0
+                    
                     start_dt = LOCAL_TZ.localize(datetime(target_year, month_num, day_num, hour, minute))
-                except Exception as date_err:
+                except Exception:
                     continue
                     
                 if start_dt.date() < now_dt.date(): continue
                 
-                # Production Cross-Site Deduplication Check
+                # Deduplicate overlapping sub-elements within the same card structure
                 fingerprint = f"{start_dt.strftime('%Y%m%d')}_{event_title[:15].lower()}"
-                if fingerprint in seen_events: continue
+                if fingerprint in processed_fingerprints or fingerprint in seen_events: 
+                    continue
+                processed_fingerprints.add(fingerprint)
                 seen_events.add(fingerprint)
                 
-                # Map parameters cleanly straight into your production output structure
+                # Build master output event properties
                 e = Event()
                 e.name = f"🎵 {detect_genre(combined_text)}{event_title}"
                 e.begin = start_dt
                 
-                # Handle end times safely (look for secondary time marker or default to 2 hours)
-                end_match = re.search(r'-\s*(\d{1,2}):(\d{2})\s*(pm|am)', remaining_text.lower())
+                # Safely attempt to scan for an explicit end-time frame marker
+                end_match = re.search(r'-\s*(\d{1,2}):(\d{2})\s*(pm|am)', card_text.lower())
                 if end_match:
                     try:
                         eh, em, eampm = end_match.groups()
@@ -362,13 +348,13 @@ def main():
                         if eampm == "pm" and end_hour != 12: end_hour += 12
                         if eampm == "am" and end_hour == 12: end_hour = 0
                         e.end = LOCAL_TZ.localize(datetime(target_year, month_num, day_num, end_hour, end_minute))
-                    except:
+                    except Exception:
                         e.end = start_dt + timedelta(hours=2)
                 else:
                     e.end = start_dt + timedelta(hours=2)
                     
                 e.location = "Oskar Blues Home Made Liquids & Solids, 1555 Hover St, Longmont, CO 80501"
-                e.description = f"{remaining_text}\n\nSource: {ob_url}"
+                e.description = f"{card_text}\n\nSource: {ob_url}"
                 
                 cal.events.add(e)
                 ob_count += 1
