@@ -245,37 +245,35 @@ def main():
     except Exception as e:
         print(f"Failed to process Wibby Brewing open calendar pipeline: {e}")
 
-# --- 4. OSKAR BLUES LONGMONT HARVESTER (BOOTSTRAP TEXT SLICER) ---
-    print("\n🔍 Scraping Oskar Blues via Embedded Configuration Blueprints...")
-    ob_url = "https://www.oskarbluesfooderies.com/longmont-happenings"
+# --- 4. OSKAR BLUES LONGMONT HARVESTER (CALENDAR ID ENGINE) ---
+    print("\n🔍 Querying Oskar Blues Targeted Popmenu Calendar Pipeline...")
+    
+    # Using the exact 7-digit calendar identifier you discovered in the DOM source
+    ob_calendar_api = "https://api.popmenu.com/widgets/v2/calendars/3900249/events"
+    
+    API_HEADERS = {
+        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36",
+        "Accept": "application/json",
+        "Referer": "https://www.oskarbluesfooderies.com/"
+    }
     
     try:
-        res = requests.get(ob_url, headers=HEADERS, timeout=15)
+        res = requests.get(ob_calendar_api, headers=API_HEADERS, timeout=15)
+        
         if res.status_code == 200:
-            soup = BeautifulSoup(res.text, 'html.parser')
-            page_source = res.text
+            payload = res.json()
             
-            # Extract the raw, un-executed JSON definitions embedded inside the text tags
-            # Popmenu structures its variables using clear 'title', 'description', and 'start_at' keys
-            titles = re.findall(r'"title"\s*:\s*"([^"]+)"', page_source)
-            descriptions = re.findall(r'"description"\s*:\s*"([^"]*)"', page_source)
-            start_times = re.findall(r'"start_at"\s*:\s*"([^"]+)"', page_source)
-            end_times = re.findall(r'"end_at"\s*:\s*"([^"]+)"', page_source)
+            # Popmenu structures widget event arrays directly inside a root list or a 'data' block
+            raw_events = payload if isinstance(payload, list) else payload.get("data", payload.get("events", []))
             
-            # Align the text arrays safely
-            discovered_loops = min(len(titles), len(start_times))
-            print(f"  [!] Configuration arrays located. Processing {discovered_loops} raw timeline items...")
+            print(f"  [!] Direct pipeline accessed. Scanning {len(raw_events)} live calendar rows...")
             
             ob_count = 0
-            for i in range(discovered_loops):
-                # Unescape standard unicode text symbols safely (e.g., \u0026 to &)
-                try:
-                    event_title = titles[i].encode().decode('unicode-escape').strip()
-                    raw_desc = descriptions[i].encode().decode('unicode-escape') if i < len(descriptions) else ""
-                except Exception:
-                    event_title = titles[i].strip()
-                    raw_desc = descriptions[i] if i < len(descriptions) else ""
-                    
+            for item in raw_events:
+                if not isinstance(item, dict): continue
+                
+                event_title = item.get("title", "").strip()
+                raw_desc = item.get("description", "") or ""
                 combined_text = f"{event_title} {raw_desc}".lower()
                 
                 # --- MASTER MUSIC PRODUCTION FILTERS ---
@@ -283,10 +281,12 @@ def main():
                 if any(x in combined_text for x in EXCLUDE) and not has_music_keyword(event_title): continue
                 if not has_music_keyword(combined_text): continue
                 
-                start_str = start_times[i]
+                # Popmenu provides pure standard ISO 8601 strings natively
+                start_str = item.get("start_at") or item.get("date")
+                if not start_str: continue
+                
                 try:
-                    # Parse raw clean ISO text string dates natively
-                    # Format: '2026-07-10T18:00:00.000-06:00'
+                    # Clean up timestamps natively (e.g., '2026-07-10T18:00:00.000-06:00')
                     base_time = start_str.split('.')[0].split('-0')[0].replace('Z', '')
                     start_dt = datetime.fromisoformat(base_time)
                     
@@ -304,14 +304,15 @@ def main():
                 if fingerprint in seen_events: continue
                 seen_events.add(fingerprint)
                 
-                # Assign output variables
+                # Map parameters straight to output data schema
                 e = Event()
                 e.name = f"🎵 {detect_genre(combined_text)}{event_title}"
                 e.begin = start_dt
                 
-                if i < len(end_times):
+                end_str = item.get("end_at")
+                if end_str:
                     try:
-                        base_end = end_times[i].split('.')[0].split('-0')[0].replace('Z', '')
+                        base_end = end_str.split('.')[0].split('-0')[0].replace('Z', '')
                         end_dt = datetime.fromisoformat(base_end)
                         e.end = LOCAL_TZ.localize(end_dt) if end_dt.tzinfo is None else end_dt.astimezone(LOCAL_TZ)
                     except Exception:
@@ -329,10 +330,10 @@ def main():
                 
             print(f"  [!] Oskar Blues Sync complete. Added {ob_count} live music events.")
         else:
-            print(f"  [-] Failed to access Oskar Blues web source code. Status: {res.status_code}")
+            print(f"  [-] Failed to reach target calendar node. Status: {res.status_code}")
             
     except Exception as e:
-        print(f"Failed to execute Oskar Blues structural text pass: {e}")
+        print(f"Failed to execute targeted Popmenu calendar link: {e}")
     
     # --- 5. MULTI-PAGE TARGETS ---
     print("\n🔍 Scanning Multi-Page Targets...")
