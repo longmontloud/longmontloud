@@ -244,8 +244,138 @@ def main():
             
     except Exception as e:
         print(f"Failed to process Wibby Brewing open calendar pipeline: {e}")
+
+# --- 4. OSKAR BLUES LONGMONT HARVESTER ---
+    print("\n🔍 Scraping Oskar Blues Longmont Happenings...")
+    ob_url = "https://www.oskarbluesfooderies.com/longmont-happenings"
     
-    # --- 4. MULTI-PAGE TARGETS ---
+    try:
+        res = requests.get(ob_url, headers=HEADERS, timeout=15)
+        if res.status_code == 200:
+            soup = BeautifulSoup(res.text, 'html.parser')
+            
+            # Locate all list item elements or block grids containing event text
+            # The template packs them inside standard block sections or list components
+            event_elements = soup.find_all(['li', 'div', 'article'])
+            
+            ob_count = 0
+            seen_ob_blocks = set()
+            
+            for elem in event_elements:
+                text_content = elem.get_text(" ", strip=True)
+                
+                # We target blocks explicitly starting with month identifiers to avoid menu text
+                # e.g., "Jul10. Jordan Grey...", "Jul11. Douglas James..."
+                match = re.match(r'^(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)\s*(\d{1,2})\s*\.\s*(.+)$', text_content)
+                if not match:
+                    continue
+                    
+                # Deduplicate overlapping HTML wrapper tags matching the same string
+                if text_content in seen_ob_blocks: continue
+                seen_ob_blocks.add(text_content)
+                
+                month_str, day_str, details_blob = match.groups()
+                
+                # Isolate the Title (everything up until the day-of-week timing marker)
+                # Text looks like: "Jordan Grey, Mackenzie Rae... Fri, Jul 10, 6:00 pm."
+                time_marker = re.search(r'(Mon|Tue|Wed|Thu|Fri|Sat|Sun),\s+(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)', details_blob)
+                weekly_marker = re.search(r'Weekly\s+(Mon|Tue|Wed|Thu|Fri|Sat|Sun)', details_blob)
+                
+                event_title = "Oskar Blues Live Music"
+                time_segment = ""
+                raw_desc = details_blob
+                
+                if time_marker:
+                    idx = time_marker.start()
+                    event_title = details_blob[:idx].strip(". ")
+                    time_segment = details_blob[idx:]
+                elif weekly_marker:
+                    idx = weekly_marker.start()
+                    event_title = details_blob[:idx].strip(". ")
+                    time_segment = details_blob[idx:]
+                else:
+                    # Fallback structural cut if explicit separators are missing
+                    parts = details_blob.split(". ", 1)
+                    event_title = parts[0]
+                    if len(parts) > 1: time_segment = parts[1]
+                
+                combined_text = f"{event_title} {raw_desc}".lower()
+                
+                # --- MASTER MUSIC PRODUCTION FILTERS ---
+                if any(x in event_title.lower() for x in EXCLUDE): continue
+                if any(x in combined_text for x in EXCLUDE) and not has_music_keyword(event_title): continue
+                if not has_music_keyword(combined_text): continue
+                
+                # --- DATE GENERATION MATRIX ---
+                try:
+                    # Establish target year based on runtime date tracking parameters
+                    target_year = now_dt.year
+                    # Convert month short text to integer
+                    month_num = datetime.strptime(month_str, "%b").month
+                    day_num = int(day_str)
+                    
+                    # Handle year rollover safely if script scans late December for January dates
+                    if month_num == 1 and now_dt.month == 12:
+                        target_year += 1
+                        
+                    # Extract hours and minutes out of the time text segment
+                    # e.g., "6:00 pm"
+                    hour, minute = 18, 0 # Default to 6:00 PM if parsing fails
+                    time_match = re.search(r'(\d{1,2}):(\d{2})\s*(pm|am)', time_segment.lower())
+                    if time_match:
+                        h, m, ampm = time_match.groups()
+                        hour = int(h)
+                        minute = int(m)
+                        if ampm == "pm" and hour != 12: hour += 12
+                        if ampm == "am" and hour == 12: hour = 0
+                        
+                    start_dt = LOCAL_TZ.localize(datetime(target_year, month_num, day_num, hour, minute))
+                except Exception as date_err:
+                    continue
+                    
+                if start_dt.date() < now_dt.date(): continue
+                
+                # Production Cross-Site Deduplication Check
+                fingerprint = f"{start_dt.strftime('%Y%m%d')}_{event_title[:15].lower()}"
+                if fingerprint in seen_events: continue
+                seen_events.add(fingerprint)
+                
+                # Map parameters cleanly straight into your production output structure
+                e = Event()
+                e.name = f"🎵 {detect_genre(combined_text)}{event_title}"
+                e.begin = start_dt
+                
+                # Handle end times safely (look for secondary time marker or default to 2.5 hours)
+                end_match = re.search(r'-\s*(\d{1,2}):(\d{2})\s*(pm|am)', time_segment.lower())
+                if end_match:
+                    try:
+                        eh, em, eampm = end_match.groups()
+                        end_hour = int(eh)
+                        end_minute = int(em)
+                        if eampm == "pm" and end_hour != 12: end_hour += 12
+                        if eampm == "am" and end_hour == 12: end_hour = 0
+                        e.end = LOCAL_TZ.localize(datetime(target_year, month_num, day_num, end_hour, end_minute))
+                    except:
+                        e.end = start_dt + timedelta(hours=2, minutes=30)
+                else:
+                    e.end = start_dt + timedelta(hours=2, minutes=30)
+                    
+                e.location = "Oskar Blues Home Made Liquids & Solids, 1555 Hover St, Longmont, CO 80501"
+                e.description = f"{raw_desc}\n\nSource: {ob_url}"
+                
+                cal.events.add(e)
+                ob_count += 1
+                count += 1
+                print(f"  [+] Synced: {start_dt.strftime('%B %d, %I:%M%p')} | {event_title}")
+                
+            print(f"  [!] Oskar Blues Sync complete. Added {ob_count} live music events.")
+        else:
+            print(f"  [-] Failed to download Oskar Blues web layout. Status: {res.status_code}")
+            
+    except Exception as e:
+        print(f"Failed to execute Oskar Blues parsing pipeline: {e}")
+    
+    # --- 5. MULTI-PAGE TARGETS ---
     print("\n🔍 Scanning Multi-Page Targets...")
     multi_targets = [
         ("https://www.downtownlongmont.com/events/calendar", "https://www.downtownlongmont.com"),
