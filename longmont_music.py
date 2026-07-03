@@ -188,7 +188,64 @@ def main():
     except Exception as e:
         print(f"Failed to cleanly merge Humanitix local ICS payload: {e}")
 
-    # --- 3. MULTI-PAGE TARGETS ---
+# --- 3. WIBBY BREWING UNPROTECTED ICS FILTRATION ENGINE ---
+    print("\n🔍 Downloading and Filtering Wibby Brewing Calendar...")
+    
+    # Replace this placeholder string with Wibby's actual public .ics subscription link
+    WIBBY_ICS_URL = "https://data.accentapi.com/widget_export_calendar/25605810"
+    
+    try:
+        # Standard requests work perfectly here because the endpoint is an open data asset
+        res = requests.get(WIBBY_ICS_URL, headers=HEADERS, timeout=15)
+        
+        if res.status_code == 200:
+            from ics import Calendar as IcsCalendar
+            
+            wibby_cal = IcsCalendar(res.text)
+            print(f"  [!] Stream accessed successfully. Scanning {len(wibby_cal.events)} raw brewery entries...")
+            
+            wibby_count = 0
+            for remote_event in wibby_cal.events:
+                event_title = remote_event.name.strip()
+                raw_desc = remote_event.description or ""
+                combined_text = f"{event_title} {raw_desc}".lower()
+                
+                # --- MASTER MUSIC PRODUCTION FILTERS ---
+                # This completely isolates and trashes Trivia, Bingo, Running Clubs, and Yoga!
+                if any(x in event_title.lower() for x in EXCLUDE): continue
+                if any(x in combined_text for x in EXCLUDE) and not has_music_keyword(event_title): continue
+                if not has_music_keyword(combined_text): continue
+                
+                # Natively read and convert timezone parameters
+                start_dt = remote_event.begin.astimezone(LOCAL_TZ)
+                if start_dt.date() < now_dt.date(): continue
+                
+                # Production Cross-Site Deduplication Check
+                fingerprint = f"{start_dt.strftime('%Y%m%d')}_{event_title[:15].lower()}"
+                if fingerprint in seen_events: continue
+                seen_events.add(fingerprint)
+                
+                # Construct the filtered, music-only output event entry
+                e = Event()
+                e.name = f"🎵 {detect_genre(combined_text)}{event_title}"
+                e.begin = start_dt
+                e.end = remote_event.end.astimezone(LOCAL_TZ) if remote_event.end else start_dt + timedelta(hours=3)
+                e.location = remote_event.location or "Wibby Brewing, 209 Emery St, Longmont, CO 80501"
+                e.description = raw_desc if raw_desc.strip() else f"Source: {WIBBY_ICS_URL}"
+                
+                cal.events.add(e)
+                wibby_count += 1
+                count += 1
+                print(f"  [+] Filter Accepted: {start_dt.strftime('%B %d, %I:%M%p')} | {event_title}")
+                
+            print(f"  [!] Wibby Sync complete. Kept {wibby_count} music events, discarded the rest.")
+        else:
+            print(f"  [-] Failed to download Wibby calendar feed. Status: {res.status_code}")
+            
+    except Exception as e:
+        print(f"Failed to process Wibby Brewing open calendar pipeline: {e}")
+    
+    # --- 4. MULTI-PAGE TARGETS ---
     print("\n🔍 Scanning Multi-Page Targets...")
     multi_targets = [
         ("https://www.downtownlongmont.com/events/calendar", "https://www.downtownlongmont.com"),
