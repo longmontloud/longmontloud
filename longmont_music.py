@@ -245,95 +245,131 @@ def main():
     except Exception as e:
         print(f"Failed to process Wibby Brewing open calendar pipeline: {e}")
 
-# --- 4. OSKAR BLUES LONGMONT HARVESTER (WIDGET EXTRACTOR) ---
-    print("\n🔍 Extracting Oskar Blues Live Events from JavaScript Widget...")
-    
-    # This public widget bundle serves the live event arrays directly to the layout
-    ob_widget_url = "https://api.popmenu.com/widgets/events/location/2334"
-    
-    WIDGET_HEADERS = {
-        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36",
-        "Accept": "*/*",
-        "Referer": "https://www.oskarbluesfooderies.com/"
-    }
+# --- 4. OSKAR BLUES LONGMONT HARVESTER (RAW PATTERN ENGINE) ---
+    print("\n🔍 Extracting Oskar Blues Events via Raw Text Pattern Match...")
+    ob_url = "https://www.oskarbluesfooderies.com/longmont-happenings"
     
     try:
-        res = requests.get(ob_widget_url, headers=WIDGET_HEADERS, timeout=15)
+        res = requests.get(ob_url, headers=HEADERS, timeout=15)
         if res.status_code == 200:
-            js_content = res.text
+            soup = BeautifulSoup(res.text, 'html.parser')
             
-            # Use regex to find all titles, descriptions, and start dates embedded in the JS strings
-            # Look for patterns like "title":"...", "description":"...", "start_at":"..."
-            titles = re.findall(r'"title"\s*:\s*"([^"]+)"', js_content)
-            descriptions = re.findall(r'"description"\s*:\s*"([^"]*)"', js_content)
-            start_times = re.findall(r'"start_at"\s*:\s*"([^"]+)"', js_content)
-            end_times = re.findall(r'"end_at"\s*:\s*"([^"]+)"', js_content)
+            # Extract pure visible text strings separated by clean spaces
+            raw_page_text = soup.get_text(" ", strip=True)
             
-            # Align the matches cleanly into a zip loop array frame
-            min_length = min(len(titles), len(start_times))
-            print(f"  [!] Widget data block unpacked. Processing {min_length} discovered timeline rows...")
+            # RegEx targeting the exact text token layout structures
+            # Matches standard three-letter month abbreviations fused directly to day digits
+            # e.g., "Jul1", "Jul10", "Aug24"
+            date_flags = list(re.finditer(r'\b(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)(\d{1,2})\b', raw_page_text))
+            
+            print(f"  [!] Discovered {len(date_flags)} event text token markers on page.")
             
             ob_count = 0
-            for i in range(min_length):
-                event_title = titles[i].encode().decode('unicode-escape').strip()
-                raw_desc = descriptions[i].encode().decode('unicode-escape') if i < len(descriptions) else ""
-                combined_text = f"{event_title} {raw_desc}".lower()
+            
+            for index, match in enumerate(date_flags):
+                month_str = match.group(1)
+                day_str = match.group(2)
+                
+                # Capture the text window spanning from this date flag to the next sequential date flag
+                start_pos = match.end()
+                end_pos = date_flags[index + 1].start() if index + 1 < len(date_flags) else len(raw_page_text)
+                
+                event_blob = raw_page_text[start_pos:end_pos].strip()
+                
+                # Clean up navigation/footer overflows if we exceed calendar content bounds
+                if "featured" in event_blob.lower() or "load more" in event_blob.lower() or "sign in" in event_blob.lower():
+                    continue
+                
+                # Locate the day-of-week time stamp bounds within the trailing string window
+                # e.g., "Wed, Jul 01, 6:00 pm" or "Weekly Thu at 6:00 pm"
+                time_marker = re.search(r'\b(Mon|Tue|Wed|Thu|Fri|Sat|Sun),\s+(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)\s+\d{1,2},?\s+(\d{1,2}):(\d{2})\s*(pm|am)\b', event_blob)
+                weekly_marker = re.search(r'\bWeekly\s+(Mon|Tue|Wed|Thu|Fri|Sat|Sun)\s+at\s+(\d{1,2}):(\d{2})\s*(pm|am)\b', event_blob, re.IGNORECASE)
+                
+                event_title = ""
+                hour, minute = 18, 0 # Fallback default
+                
+                if time_marker:
+                    # Everything up until the calendar day name stamp is our Title
+                    event_title = event_blob[:time_marker.start()].strip(" .-_,")
+                    h, m, ampm = time_marker.group(3), time_marker.group(4), time_marker.group(5)
+                    hour, minute = int(h), int(m)
+                    if ampm.lower() == "pm" and hour != 12: hour += 12
+                    if ampm.lower() == "am" and hour == 12: hour = 0
+                elif weekly_marker:
+                    event_title = event_blob[:weekly_marker.start()].strip(" .-_,")
+                    h, m, ampm = weekly_marker.group(2), weekly_marker.group(3), weekly_marker.group(4)
+                    hour, minute = int(h), int(m)
+                    if ampm.lower() == "pm" and hour != 12: hour += 12
+                    if ampm.lower() == "am" and hour == 12: hour = 0
+                else:
+                    # If an explicit timestamp can't be mapped, extract the leading line block as title
+                    parts = event_blob.split("  ")
+                    event_title = parts[0].strip(" .-_,")
+                    
+                if len(event_title) < 3 or "skip to" in event_title.lower():
+                    continue
+                    
+                combined_text = f"{event_title} {event_blob}".lower()
                 
                 # --- MASTER MUSIC PRODUCTION FILTERS ---
                 if any(x in event_title.lower() for x in EXCLUDE): continue
                 if any(x in combined_text for x in EXCLUDE) and not has_music_keyword(event_title): continue
                 if not has_music_keyword(combined_text): continue
                 
-                start_str = start_times[i]
+                # --- DATE GENERATION MATRIX ---
                 try:
-                    # Parse standard ISO timestamp markers natively
-                    base_time = start_str.split('.')[0].replace('Z', '')
-                    start_dt = datetime.fromisoformat(base_time)
+                    target_year = now_dt.year
+                    month_num = datetime.strptime(month_str, "%b").month
+                    day_num = int(day_str)
                     
-                    if start_dt.tzinfo is None:
-                        start_dt = LOCAL_TZ.localize(start_dt)
-                    else:
-                        start_dt = start_dt.astimezone(LOCAL_TZ)
+                    if month_num == 1 and now_dt.month == 12:
+                        target_year += 1
+                        
+                    start_dt = LOCAL_TZ.localize(datetime(target_year, month_num, day_num, hour, minute))
                 except Exception:
                     continue
                     
                 if start_dt.date() < now_dt.date(): continue
                 
-                # Cross-Site Deduplication Check
+                # Production Cross-Site Deduplication Check
                 fingerprint = f"{start_dt.strftime('%Y%m%d')}_{event_title[:15].lower()}"
                 if fingerprint in seen_events: continue
                 seen_events.add(fingerprint)
                 
-                # Build master output parameters
+                # Map variables into final structural schema
                 e = Event()
                 e.name = f"🎵 {detect_genre(combined_text)}{event_title}"
                 e.begin = start_dt
                 
-                # Assign end dates if provided in the text payload
-                if i < len(end_times):
+                # Handle end times parsing boundaries safely
+                end_match = re.search(r'-\s*(\d{1,2}):(\d{2})\s*(pm|am)', event_blob.lower())
+                if end_match:
                     try:
-                        base_end = end_times[i].split('.')[0].replace('Z', '')
-                        end_dt = datetime.fromisoformat(base_end)
-                        e.end = LOCAL_TZ.localize(end_dt) if end_dt.tzinfo is None else end_dt.astimezone(LOCAL_TZ)
+                        eh, em, eampm = end_match.group(1), end_match.group(2), end_match.group(3)
+                        end_hour = int(eh)
+                        end_minute = int(em)
+                        if eampm == "pm" and end_hour != 12: end_hour += 12
+                        if eampm == "am" and end_hour == 12: end_hour = 0
+                        e.end = LOCAL_TZ.localize(datetime(target_year, month_num, day_num, end_hour, end_minute))
                     except Exception:
                         e.end = start_dt + timedelta(hours=2, minutes=30)
                 else:
                     e.end = start_dt + timedelta(hours=2, minutes=30)
                     
                 e.location = "Oskar Blues Home Made Liquids & Solids, 1555 Hover St, Longmont, CO 80501"
-                e.description = f"{raw_desc}\n\nSource: https://www.oskarbluesfooderies.com/longmont-happenings"
+                e.description = f"{event_blob}\n\nSource: {ob_url}"
                 
                 cal.events.add(e)
                 ob_count += 1
                 count += 1
-                print(f"  [+] Widget Live Sync: {start_dt.strftime('%B %d, %I:%M%p')} | {event_title}")
+                print(f"  [+] Match Accepted: {start_dt.strftime('%B %d, %I:%M%p')} | {event_title}")
                 
             print(f"  [!] Oskar Blues Sync complete. Added {ob_count} live music events.")
         else:
-            print(f"  [-] Popmenu public script asset frame rejected. Code: {res.status_code}")
+            print(f"  [-] Failed to download Oskar Blues text layout. Status: {res.status_code}")
             
     except Exception as e:
-        print(f"Failed to extract records using public widget tracker channel: {e}")
+        print(f"Failed to execute Oskar Blues raw regex matching: {e}")
     
     # --- 5. MULTI-PAGE TARGETS ---
     print("\n🔍 Scanning Multi-Page Targets...")
