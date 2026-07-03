@@ -245,36 +245,38 @@ def main():
     except Exception as e:
         print(f"Failed to process Wibby Brewing open calendar pipeline: {e}")
 
-# --- 4. OSKAR BLUES LONGMONT HARVESTER (DIRECT API) ---
-    print("\n🔍 Querying Oskar Blues Live Popmenu Database Pipeline...")
+# --- 4. OSKAR BLUES LONGMONT HARVESTER (WIDGET EXTRACTOR) ---
+    print("\n🔍 Extracting Oskar Blues Live Events from JavaScript Widget...")
     
-    # Direct, unsecured public JSON endpoint supplying the Longmont calendar widget
-    ob_api_url = "https://api.popmenu.com/v2/public/events?location_id=2334&per=50&page=1"
+    # This public widget bundle serves the live event arrays directly to the layout
+    ob_widget_url = "https://api.popmenu.com/widgets/events/location/2334"
     
-    POPMENU_HEADERS = {
+    WIDGET_HEADERS = {
         "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36",
-        "Accept": "application/json",
+        "Accept": "*/*",
         "Referer": "https://www.oskarbluesfooderies.com/"
     }
     
     try:
-        res = requests.get(ob_api_url, headers=POPMENU_HEADERS, timeout=15)
+        res = requests.get(ob_widget_url, headers=WIDGET_HEADERS, timeout=15)
         if res.status_code == 200:
-            payload = res.json()
+            js_content = res.text
             
-            # Popmenu keeps its array inside an 'events' or 'results' key block
-            raw_events = payload.get("events", []) if isinstance(payload, dict) else []
-            if not raw_events and isinstance(payload, list):
-                raw_events = payload
-                
-            print(f"  [!] Database accessed successfully. Scanning {len(raw_events)} live events...")
+            # Use regex to find all titles, descriptions, and start dates embedded in the JS strings
+            # Look for patterns like "title":"...", "description":"...", "start_at":"..."
+            titles = re.findall(r'"title"\s*:\s*"([^"]+)"', js_content)
+            descriptions = re.findall(r'"description"\s*:\s*"([^"]*)"', js_content)
+            start_times = re.findall(r'"start_at"\s*:\s*"([^"]+)"', js_content)
+            end_times = re.findall(r'"end_at"\s*:\s*"([^"]+)"', js_content)
+            
+            # Align the matches cleanly into a zip loop array frame
+            min_length = min(len(titles), len(start_times))
+            print(f"  [!] Widget data block unpacked. Processing {min_length} discovered timeline rows...")
             
             ob_count = 0
-            for item in raw_events:
-                if not isinstance(item, dict): continue
-                
-                event_title = item.get("title", "").strip()
-                raw_desc = item.get("description", "") or ""
+            for i in range(min_length):
+                event_title = titles[i].encode().decode('unicode-escape').strip()
+                raw_desc = descriptions[i].encode().decode('unicode-escape') if i < len(descriptions) else ""
                 combined_text = f"{event_title} {raw_desc}".lower()
                 
                 # --- MASTER MUSIC PRODUCTION FILTERS ---
@@ -282,16 +284,12 @@ def main():
                 if any(x in combined_text for x in EXCLUDE) and not has_music_keyword(event_title): continue
                 if not has_music_keyword(combined_text): continue
                 
-                # Popmenu provides standard clean ISO datetime timestamps natively
-                start_str = item.get("start_at") or item.get("date")
-                if not start_str: continue
-                
+                start_str = start_times[i]
                 try:
-                    # Clean up timestamps (e.g., '2026-07-10T18:00:00.000Z')
+                    # Parse standard ISO timestamp markers natively
                     base_time = start_str.split('.')[0].replace('Z', '')
                     start_dt = datetime.fromisoformat(base_time)
                     
-                    # Apply local Colorado timezone localization boundaries
                     if start_dt.tzinfo is None:
                         start_dt = LOCAL_TZ.localize(start_dt)
                     else:
@@ -306,16 +304,15 @@ def main():
                 if fingerprint in seen_events: continue
                 seen_events.add(fingerprint)
                 
-                # Map structured data straight to output parameters
+                # Build master output parameters
                 e = Event()
                 e.name = f"🎵 {detect_genre(combined_text)}{event_title}"
                 e.begin = start_dt
                 
-                # Capture optional end times or default to 2.5 hours
-                end_str = item.get("end_at")
-                if end_str:
+                # Assign end dates if provided in the text payload
+                if i < len(end_times):
                     try:
-                        base_end = end_str.split('.')[0].replace('Z', '')
+                        base_end = end_times[i].split('.')[0].replace('Z', '')
                         end_dt = datetime.fromisoformat(base_end)
                         e.end = LOCAL_TZ.localize(end_dt) if end_dt.tzinfo is None else end_dt.astimezone(LOCAL_TZ)
                     except Exception:
@@ -329,14 +326,14 @@ def main():
                 cal.events.add(e)
                 ob_count += 1
                 count += 1
-                print(f"  [+] Unified Live Sync: {start_dt.strftime('%B %d, %I:%M%p')} | {event_title}")
+                print(f"  [+] Widget Live Sync: {start_dt.strftime('%B %d, %I:%M%p')} | {event_title}")
                 
             print(f"  [!] Oskar Blues Sync complete. Added {ob_count} live music events.")
         else:
-            print(f"  [-] Failed to communicate with Popmenu asset database. Code: {res.status_code}")
+            print(f"  [-] Popmenu public script asset frame rejected. Code: {res.status_code}")
             
     except Exception as e:
-        print(f"Failed to execute Oskar Blues pipeline integration: {e}")
+        print(f"Failed to extract records using public widget tracker channel: {e}")
     
     # --- 5. MULTI-PAGE TARGETS ---
     print("\n🔍 Scanning Multi-Page Targets...")
