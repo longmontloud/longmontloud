@@ -131,62 +131,62 @@ def main():
         print(f"Failed to scan Summit Tacos: {e}")
 
 # --- 2. HUMANITIX LOCAL ICS MERGE ENGINE ---
-    print("\n🔍 Reading Local Humanitix Calendar Payload (Bypassing Network Firewall)...")
-    
-    import os
-    from ics import Calendar as IcsCalendar
-    
-    local_ics_file = "humanitix_live.ics"
-    
-    try:
+#    print("\n🔍 Reading Local Humanitix Calendar Payload (Bypassing Network Firewall)...")
+#    
+#    import os
+#    from ics import Calendar as IcsCalendar
+#    
+#    local_ics_file = "humanitix_live.ics"
+#    
+#    try:
         # Check if the GitHub Action successfully downloaded the file
-        if os.path.exists(local_ics_file) and os.path.getsize(local_ics_file) > 0:
-            
-            with open(local_ics_file, 'r', encoding='utf-8') as f:
-                raw_text = f.read()
-                
+#        if os.path.exists(local_ics_file) and os.path.getsize(local_ics_file) > 0:
+#           
+#            with open(local_ics_file, 'r', encoding='utf-8') as f:
+#                raw_text = f.read()
+#                
             # If curl got caught by a 403 HTML page instead of an ICS file, catch it here
-            if "BEGIN:VCALENDAR" not in raw_text:
-                print("  [-] Error: The downloaded file contains firewall HTML rather than a calendar stream.")
-            else:
-                remote_cal = IcsCalendar(raw_text)
-                print(f"  [!] Local file parsed successfully. Processing {len(remote_cal.events)} live entries...")
-                
-                for remote_event in remote_cal.events:
-                    event_title = remote_event.name.strip()
-                    raw_desc = remote_event.description or ""
-                    combined_text = f"{event_title} {raw_desc}".lower()
-                    
+#            if "BEGIN:VCALENDAR" not in raw_text:
+#                print("  [-] Error: The downloaded file contains firewall HTML rather than a calendar stream.")
+#            else:
+#                remote_cal = IcsCalendar(raw_text)
+#                print(f"  [!] Local file parsed successfully. Processing {len(remote_cal.events)} live entries...")
+#                
+#                for remote_event in remote_cal.events:
+#                    event_title = remote_event.name.strip()
+#                    raw_desc = remote_event.description or ""
+#                    combined_text = f"{event_title} {raw_desc}".lower()
+#                    
                     # --- MASTER MUSIC PRODUCTION FILTERS ---
-                    if any(x in event_title.lower() for x in EXCLUDE): continue
-                    if any(x in combined_text for x in EXCLUDE) and not has_music_keyword(event_title): continue
-                    if not has_music_keyword(combined_text): continue
-                    
+#                    if any(x in event_title.lower() for x in EXCLUDE): continue
+#                    if any(x in combined_text for x in EXCLUDE) and not has_music_keyword(event_title): continue
+#                    if not has_music_keyword(combined_text): continue
+#                    
                     # Natively read the exact localized date tracking parameters
-                    start_dt = remote_event.begin.astimezone(LOCAL_TZ)
-                    if start_dt.date() < now_dt.date(): continue
-                    
+#                    start_dt = remote_event.begin.astimezone(LOCAL_TZ)
+#                    if start_dt.date() < now_dt.date(): continue
+#                    
                     # Production Cross-Site Deduplication Check
-                    fingerprint = f"{start_dt.strftime('%Y%m%d')}_{event_title[:15].lower()}"
-                    if fingerprint in seen_events: continue
-                    seen_events.add(fingerprint)
-                    
+#                    fingerprint = f"{start_dt.strftime('%Y%m%d')}_{event_title[:15].lower()}"
+#                    if fingerprint in seen_events: continue
+#                    seen_events.add(fingerprint)
+#                    
                     # Map parameters cleanly straight into your production output structure
-                    e = Event()
-                    e.name = f"🎵 {detect_genre(combined_text)}{event_title}"
-                    e.begin = start_dt
-                    e.end = remote_event.end.astimezone(LOCAL_TZ) if remote_event.end else start_dt + timedelta(hours=3)
-                    e.location = remote_event.location or "Longmont, CO"
-                    e.description = raw_desc if raw_desc.startswith("http") else f"Source: https://events.humanitix.com/host/lunar-lux-music-and-arts-festival"
-                    
-                    cal.events.add(e)
-                    count += 1
-                    print(f"  [+] Unified Live Sync: {start_dt.strftime('%B %d, %I:%M%p')} | {event_title}")
-        else:
-            print(f"  [-] Local data payload '{local_ics_file}' was missing or empty.")
-            
-    except Exception as e:
-        print(f"Failed to cleanly merge Humanitix local ICS payload: {e}")
+#                    e = Event()
+#                    e.name = f"🎵 {detect_genre(combined_text)}{event_title}"
+#                    e.begin = start_dt
+#                    e.end = remote_event.end.astimezone(LOCAL_TZ) if remote_event.end else start_dt + timedelta(hours=3)
+#                    e.location = remote_event.location or "Longmont, CO"
+#                    e.description = raw_desc if raw_desc.startswith("http") else f"Source: https://events.humanitix.com/host/lunar-lux-music-and-arts-festival"
+#                    
+#                    cal.events.add(e)
+#                    count += 1
+#                    print(f"  [+] Unified Live Sync: {start_dt.strftime('%B %d, %I:%M%p')} | {event_title}")
+#        else:
+#            print(f"  [-] Local data payload '{local_ics_file}' was missing or empty.")
+#            
+#    except Exception as e:
+#        print(f"Failed to cleanly merge Humanitix local ICS payload: {e}")
 
 # --- 3. WIBBY BREWING UNPROTECTED ICS FILTRATION ENGINE ---
     print("\n🔍 Downloading and Filtering Wibby Brewing Calendar...")
@@ -246,95 +246,95 @@ def main():
         print(f"Failed to process Wibby Brewing open calendar pipeline: {e}")
 
 # --- 4. OSKAR BLUES LONGMONT HARVESTER (CALENDAR ID ENGINE) ---
-    print("\n🔍 Querying Oskar Blues Targeted Popmenu Calendar Pipeline...")
-    
+#    print("\n🔍 Querying Oskar Blues Targeted Popmenu Calendar Pipeline...")
+#    
     # Using the exact 7-digit calendar identifier you discovered in the DOM source
-    ob_calendar_api = "https://api.popmenu.com/widgets/v2/calendars/3900249/events"
-    
-    API_HEADERS = {
-        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36",
-        "Accept": "application/json",
-        "Referer": "https://www.oskarbluesfooderies.com/"
-    }
-    
-    try:
-        res = requests.get(ob_calendar_api, headers=API_HEADERS, timeout=15)
-        
-        if res.status_code == 200:
-            payload = res.json()
-            
+#    ob_calendar_api = "https://api.popmenu.com/widgets/v2/calendars/3900249/events"
+#    
+#    API_HEADERS = {
+#        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36",
+#        "Accept": "application/json",
+#        "Referer": "https://www.oskarbluesfooderies.com/"
+#    }
+#    
+#    try:
+#        res = requests.get(ob_calendar_api, headers=API_HEADERS, timeout=15)
+#        
+#        if res.status_code == 200:
+#            payload = res.json()
+#            
             # Popmenu structures widget event arrays directly inside a root list or a 'data' block
-            raw_events = payload if isinstance(payload, list) else payload.get("data", payload.get("events", []))
-            
-            print(f"  [!] Direct pipeline accessed. Scanning {len(raw_events)} live calendar rows...")
-            
-            ob_count = 0
-            for item in raw_events:
-                if not isinstance(item, dict): continue
-                
-                event_title = item.get("title", "").strip()
-                raw_desc = item.get("description", "") or ""
-                combined_text = f"{event_title} {raw_desc}".lower()
-                
+#            raw_events = payload if isinstance(payload, list) else payload.get("data", payload.get("events", []))
+#            
+#            print(f"  [!] Direct pipeline accessed. Scanning {len(raw_events)} live calendar rows...")
+#            
+#            ob_count = 0
+#            for item in raw_events:
+#                if not isinstance(item, dict): continue
+#                
+#                event_title = item.get("title", "").strip()
+#                raw_desc = item.get("description", "") or ""
+#                combined_text = f"{event_title} {raw_desc}".lower()
+#                
                 # --- MASTER MUSIC PRODUCTION FILTERS ---
-                if any(x in event_title.lower() for x in EXCLUDE): continue
-                if any(x in combined_text for x in EXCLUDE) and not has_music_keyword(event_title): continue
-                if not has_music_keyword(combined_text): continue
-                
+#                if any(x in event_title.lower() for x in EXCLUDE): continue
+#                if any(x in combined_text for x in EXCLUDE) and not has_music_keyword(event_title): continue
+#                if not has_music_keyword(combined_text): continue
+#                
                 # Popmenu provides pure standard ISO 8601 strings natively
-                start_str = item.get("start_at") or item.get("date")
-                if not start_str: continue
-                
-                try:
-                    # Clean up timestamps natively (e.g., '2026-07-10T18:00:00.000-06:00')
-                    base_time = start_str.split('.')[0].split('-0')[0].replace('Z', '')
-                    start_dt = datetime.fromisoformat(base_time)
-                    
-                    if start_dt.tzinfo is None:
-                        start_dt = LOCAL_TZ.localize(start_dt)
-                    else:
-                        start_dt = start_dt.astimezone(LOCAL_TZ)
-                except Exception:
-                    continue
-                    
-                if start_dt.date() < now_dt.date(): continue
-                
+#                start_str = item.get("start_at") or item.get("date")
+#                if not start_str: continue
+#                
+#                try:
+#                    # Clean up timestamps natively (e.g., '2026-07-10T18:00:00.000-06:00')
+#                    base_time = start_str.split('.')[0].split('-0')[0].replace('Z', '')
+#                    start_dt = datetime.fromisoformat(base_time)
+#                    
+#                    if start_dt.tzinfo is None:
+#                        start_dt = LOCAL_TZ.localize(start_dt)
+#                    else:
+#                        start_dt = start_dt.astimezone(LOCAL_TZ)
+#                except Exception:
+#                    continue
+#                    
+#                if start_dt.date() < now_dt.date(): continue
+#                
                 # Production Cross-Site Deduplication Check
-                fingerprint = f"{start_dt.strftime('%Y%m%d')}_{event_title[:15].lower()}"
-                if fingerprint in seen_events: continue
-                seen_events.add(fingerprint)
-                
+#                fingerprint = f"{start_dt.strftime('%Y%m%d')}_{event_title[:15].lower()}"
+#                if fingerprint in seen_events: continue
+#                seen_events.add(fingerprint)
+#                
                 # Map parameters straight to output data schema
-                e = Event()
-                e.name = f"🎵 {detect_genre(combined_text)}{event_title}"
-                e.begin = start_dt
-                
-                end_str = item.get("end_at")
-                if end_str:
-                    try:
-                        base_end = end_str.split('.')[0].split('-0')[0].replace('Z', '')
-                        end_dt = datetime.fromisoformat(base_end)
-                        e.end = LOCAL_TZ.localize(end_dt) if end_dt.tzinfo is None else end_dt.astimezone(LOCAL_TZ)
-                    except Exception:
-                        e.end = start_dt + timedelta(hours=2, minutes=30)
-                else:
-                    e.end = start_dt + timedelta(hours=2, minutes=30)
-                    
-                e.location = "Oskar Blues Home Made Liquids & Solids, 1555 Hover St, Longmont, CO 80501"
-                e.description = f"{raw_desc}\n\nSource: {ob_url}"
-                
-                cal.events.add(e)
-                ob_count += 1
-                count += 1
-                print(f"  [+] Synced Live: {start_dt.strftime('%B %d, %I:%M%p')} | {event_title}")
-                
-            print(f"  [!] Oskar Blues Sync complete. Added {ob_count} live music events.")
-        else:
-            print(f"  [-] Failed to reach target calendar node. Status: {res.status_code}")
-            
-    except Exception as e:
-        print(f"Failed to execute targeted Popmenu calendar link: {e}")
-    
+#                e = Event()
+#                e.name = f"🎵 {detect_genre(combined_text)}{event_title}"
+#                e.begin = start_dt
+#                
+#                end_str = item.get("end_at")
+#                if end_str:
+#                    try:
+#                        base_end = end_str.split('.')[0].split('-0')[0].replace('Z', '')
+#                        end_dt = datetime.fromisoformat(base_end)
+#                        e.end = LOCAL_TZ.localize(end_dt) if end_dt.tzinfo is None else end_dt.astimezone(LOCAL_TZ)
+#                    except Exception:
+#                        e.end = start_dt + timedelta(hours=2, minutes=30)
+#                else:
+#                    e.end = start_dt + timedelta(hours=2, minutes=30)
+#                    
+#                e.location = "Oskar Blues Home Made Liquids & Solids, 1555 Hover St, Longmont, CO 80501"
+#                e.description = f"{raw_desc}\n\nSource: {ob_url}"
+#                
+#                cal.events.add(e)
+#                ob_count += 1
+#                count += 1
+#                print(f"  [+] Synced Live: {start_dt.strftime('%B %d, %I:%M%p')} | {event_title}")
+#                
+#            print(f"  [!] Oskar Blues Sync complete. Added {ob_count} live music events.")
+#        else:
+#            print(f"  [-] Failed to reach target calendar node. Status: {res.status_code}")
+#            
+#    except Exception as e:
+#        print(f"Failed to execute targeted Popmenu calendar link: {e}")
+#    
     # --- 5. MULTI-PAGE TARGETS ---
     print("\n🔍 Scanning Multi-Page Targets...")
     multi_targets = [
